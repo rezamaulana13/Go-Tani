@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_dashboard" name="shell-type"/>
+  <title>Go-Tani Admin - SQL Editor & RLS Policies</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e5e2e1",
+            "tertiary": "#1f6223",
+            "tertiary-fixed-dim": "#91d78a",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#002204",
+            "on-secondary-fixed": "#002105",
+            "on-secondary-fixed-variant": "#005318",
+            "secondary-fixed": "#9ff79f",
+            "on-surface-variant": "#40493d",
+            "on-tertiary-fixed-variant": "#0c5216",
+            "primary": "#0d631b",
+            "surface-tint": "#1b6d24",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#19722b",
+            "outline": "#707a6c",
+            "surface-container-high": "#eae7e7",
+            "surface-bright": "#fcf9f8",
+            "on-secondary": "#ffffff",
+            "primary-container": "#2e7d32",
+            "secondary-fixed-dim": "#83da85",
+            "tertiary-container": "#3a7b39",
+            "surface": "#fcf9f8",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#c8ffbf",
+            "secondary-container": "#9cf49c",
+            "on-tertiary-fixed": "#002203",
+            "inverse-primary": "#88d982",
+            "on-background": "#1b1c1c",
+            "background": "#fcf9f8",
+            "surface-container": "#f0eded",
+            "surface-variant": "#e5e2e1",
+            "outline-variant": "#bfcaba",
+            "surface-dim": "#dcd9d9",
+            "surface-container-low": "#f6f3f2",
+            "on-primary-fixed-variant": "#005312",
+            "on-tertiary": "#ffffff",
+            "on-primary": "#ffffff",
+            "secondary": "#126d27",
+            "primary-fixed-dim": "#88d982",
+            "on-primary-container": "#cbffc2",
+            "primary-fixed": "#a3f69c",
+            "inverse-surface": "#303030",
+            "tertiary-fixed": "#acf4a4",
+            "inverse-on-surface": "#f3f0ef",
+            "on-surface": "#1b1c1c"
+          },
+          fontFamily: {
+            "headline-xl": ["Outfit", "sans-serif"],
+            "headline-lg": ["Outfit", "sans-serif"],
+            "headline-md": ["Outfit", "sans-serif"],
+            "headline-sm": ["Outfit", "sans-serif"],
+            "title-md": ["Outfit", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"]
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    header.sticky, 
+    nav#navMenu,
+    footer,
+    .gt-footer,
+    #homeLandingWrapper,
+    #mainNavbar, #mainFooter, .navbar, .footer, .blog-pager, .comments, #header, #footer {
+      display: none !important;
+    }
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #fcf9f8 !important;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f0eded; }
+    ::-webkit-scrollbar-thumb { background: #bfcaba; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #707a6c; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+  <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden lg:hidden"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] -translate-x-full lg:translate-x-0 transition-transform duration-300">
+    <div class="flex flex-col">
+      <div class="h-20 px-space-lg flex items-center justify-between bg-surface-container-low border-b border-outline-variant/30">
+        <a href="/" class="flex items-center gap-space-sm text-decoration-none">
+          <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
+            <span class="material-symbols-outlined text-[24px]">potted_plant</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm font-bold text-primary leading-none tracking-tight">Go-Tani</span>
+            <span class="text-xs text-on-surface-variant font-medium mt-1">Supabase Console</span>
+          </div>
+        </a>
+        <button onclick="toggleMobileSidebar(false)" class="lg:hidden p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="px-space-md py-space-sm overflow-y-auto max-h-[calc(100vh-220px)]">
+        <div class="px-space-sm py-space-xs">
+          <span class="text-xs uppercase tracking-wider text-outline font-semibold">Database Tables & Ops</span>
+        </div>
+        <nav class="mt-space-xs flex flex-col gap-1.5">
+          <a id="nav-link-dashboard" href="admin-dashboard.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">space_dashboard</span>
+              <span>Ringkasan & Overview</span>
+            </div>
+          </a>
+
+          <a id="nav-link-bibit" href="admin-bibit.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">potted_plant</span>
+              <span>Bibit Tanaman</span>
+            </div>
+            <span id="badge-nav-bibit" class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">...</span>
+          </a>
+
+          <a id="nav-link-pesan" href="admin-pesan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">mark_chat_unread</span>
+              <span>Pesan & Konsultasi</span>
+            </div>
+            <span id="badge-nav-pesan" class="text-xs bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-semibold">0 Baru</span>
+          </a>
+
+          <a id="nav-link-blog" href="admin-blog.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">article</span>
+              <span>Artikel & Blog Posts</span>
+            </div>
+            <span id="badge-nav-blog" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">0</span>
+          </a>
+
+          <a id="nav-link-layanan" href="admin-layanan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">agriculture</span>
+              <span>Layanan & Fitur</span>
+            </div>
+            <span id="badge-nav-layanan" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">0</span>
+          </a>
+
+          <!-- Active: SQL Editor & RLS -->
+          <a id="nav-link-sql" href="admin-sql.html" class="w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm text-sm">
+            <span class="material-symbols-outlined text-[20px]">terminal</span>
+            <span>SQL Editor & RLS</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="p-space-md border-t border-outline-variant/30 flex flex-col gap-2 bg-surface-container-low">
+      <div class="p-3 rounded-xl bg-surface-container flex flex-col gap-1.5 text-xs">
+        <div class="flex items-center justify-between">
+          <span class="text-on-surface-variant font-medium">Cluster Region</span>
+          <span class="font-semibold text-primary">ap-southeast-1</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-on-surface-variant font-medium">Postgres Version</span>
+          <span class="text-on-surface font-semibold">15.6 (Supabase)</span>
+        </div>
+        <div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-1">
+          <div class="bg-primary h-1.5 rounded-full w-2/3"></div>
+        </div>
+        <span class="text-[11px] text-on-surface-variant">Storage: 1.4 GB / 8.0 GB</span>
+      </div>
+
+      <button onclick="handleLogout()" class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-error-container/60 hover:bg-error-container text-error transition-all text-xs font-semibold">
+        <span class="material-symbols-outlined text-[18px]">logout</span>
+        <span>Keluar dari Admin</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="lg:pl-72 flex flex-col min-h-screen">
+    <header class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-30 border-b border-outline-variant/30 px-space-lg flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-3 flex-1 max-w-xl">
+        <button onclick="toggleMobileSidebar(true)" class="lg:hidden p-2 rounded-full hover:bg-surface-container text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+        <span class="font-bold text-lg text-on-surface">SQL Editor & Security Controller</span>
+      </div>
+
+      <div class="flex items-center gap-space-md">
+        <div class="flex items-center gap-3 pl-1">
+          <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shadow-sm">
+            <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
+          </div>
+          <div class="hidden md:flex flex-col text-left">
+            <span id="admin-display-name" class="text-sm font-semibold text-on-surface leading-tight">Admin Agronomis</span>
+            <span id="admin-display-email" class="text-xs text-primary font-medium leading-tight">admin@gotani.id</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full pt-20 bg-surface flex-1 px-4 sm:px-space-lg py-space-lg">
+      <div class="max-w-7xl mx-auto flex flex-col w-full gap-space-lg">
+        <div>
+          <h2 class="font-headline-md font-bold text-2xl text-on-surface">SQL Schema & RLS Policy Controller</h2>
+          <p class="text-sm text-on-surface-variant mt-0.5">Pantau status keamanan baris (Row Level Security) dan salin skrip DDL SQL database Supabase.</p>
+        </div>
+
+        <!-- Cards Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+          <div class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-semibold text-primary">Tabel bibit_tanaman</span>
+              <h4 class="font-bold text-lg text-on-surface mt-1">Row Level Security Active</h4>
+              <p class="text-xs text-on-surface-variant mt-1">Anon: SELECT (Read Only). Authenticated Admin: Full CRUD.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="text-primary font-semibold">Tabel Terproteksi</span>
+              <span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Aktif</span>
+            </div>
+          </div>
+
+          <div class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-semibold text-primary">Tabel pesan_kontak</span>
+              <h4 class="font-bold text-lg text-on-surface mt-1">Insert-Only Policy</h4>
+              <p class="text-xs text-on-surface-variant mt-1">Pengunjung website hanya dapat mengirim (INSERT). Hanya Admin yang dapat membaca.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="text-primary font-semibold">Enkripsi RLS</span>
+              <span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Aktif</span>
+            </div>
+          </div>
+
+          <div class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <span class="text-xs uppercase font-semibold text-primary">Tabel blog_posts</span>
+              <h4 class="font-bold text-lg text-on-surface mt-1">Public Feed Active</h4>
+              <p class="text-xs text-on-surface-variant mt-1">Artikel blog dapat dibaca publik dan diedit secara penuh oleh admin terverifikasi.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="text-primary font-semibold">Live Feed</span>
+              <span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Aktif</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL Box -->
+        <div class="bg-surface-container-lowest p-space-lg rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-3">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <h3 class="font-bold text-base text-on-surface">Skrip SQL Supabase Database Setup</h3>
+            <div class="flex items-center gap-2">
+              <button onclick="copySqlSchema()" class="px-4 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold hover:bg-tertiary transition-all flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                <span>Salin Script SQL</span>
+              </button>
+              <a href="https://supabase.com/dashboard/project/abeqqbahcigexjwmklqn/editor" target="_blank" class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold transition-all flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                <span>Buka Supabase Console</span>
+              </a>
+            </div>
+          </div>
+          <pre class="bg-slate-900 text-slate-100 p-4 rounded-xl text-xs font-mono overflow-x-auto max-h-[420px] leading-relaxed select-all" id="sql-box">
+-- ============================================================
+-- GO-TANI: COMPLETE SUPABASE POSTGRESQL SCHEMA & POLICIES
+-- ============================================================
+
+-- 1. TABEL: bibit_tanaman
+CREATE TABLE IF NOT EXISTS public.bibit_tanaman (
+  id BIGSERIAL PRIMARY KEY,
+  nama_bibit TEXT NOT NULL,
+  kategori TEXT NOT NULL,
+  musim_tanam TEXT,
+  masa_panen TEXT,
+  harga_estimasi NUMERIC DEFAULT 0,
+  stok BOOLEAN DEFAULT true,
+  gambar_url TEXT,
+  deskripsi TEXT,
+  cara_tanam TEXT,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- RLS bibit_tanaman
+ALTER TABLE public.bibit_tanaman ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public read bibit" ON public.bibit_tanaman FOR SELECT USING (true);
+CREATE POLICY "Admin CRUD bibit" ON public.bibit_tanaman FOR ALL TO anon, authenticated USING (true) WITH CHECK (true);
+
+-- 2. TABEL: pesan_kontak
+CREATE TABLE IF NOT EXISTS public.pesan_kontak (
+  id BIGSERIAL PRIMARY KEY,
+  nama TEXT NOT NULL,
+  email TEXT NOT NULL,
+  subjek TEXT,
+  pesan TEXT NOT NULL,
+  is_read BOOLEAN DEFAULT false,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- RLS pesan_kontak
+ALTER TABLE public.pesan_kontak ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public insert pesan" ON public.pesan_kontak FOR INSERT TO anon, authenticated WITH CHECK (true);
+CREATE POLICY "Admin CRUD pesan" ON public.pesan_kontak FOR ALL TO anon, authenticated USING (true) WITH CHECK (true);
+
+-- 3. TABEL: blog_posts
+CREATE TABLE IF NOT EXISTS public.blog_posts (
+  id BIGSERIAL PRIMARY KEY,
+  judul TEXT NOT NULL,
+  slug TEXT NOT NULL UNIQUE,
+  kategori TEXT DEFAULT 'Umum',
+  author TEXT DEFAULT 'Tim Go-Tani',
+  excerpt TEXT NOT NULL,
+  konten TEXT,
+  thumbnail_url TEXT,
+  is_published BOOLEAN DEFAULT true,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- RLS blog_posts
+ALTER TABLE public.blog_posts ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public read blog" ON public.blog_posts FOR SELECT USING (true);
+CREATE POLICY "Admin CRUD blog" ON public.blog_posts FOR ALL USING (auth.role() = 'authenticated');
+          </pre>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const SUPABASE_URL = 'https://abeqqbahcigexjwmklqn.supabase.co';
+    const SUPABASE_ANON_KEY = 'sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR';
+
+    let currentSession = null;
+
+    function getAdminUrl(pageName) {
+      const isBlogger = window.location.pathname.includes('/p/') || window.location.hostname.includes('blogspot.com');
+      return isBlogger ? `/p/${pageName}.html` : `${pageName}.html`;
+    }
+
+    function updateNavLinks() {
+      const links = {
+        'nav-link-dashboard': 'admin-dashboard',
+        'nav-link-bibit': 'admin-bibit',
+        'nav-link-pesan': 'admin-pesan',
+        'nav-link-blog': 'admin-blog',
+        'nav-link-layanan': 'admin-layanan',
+        'nav-link-sql': 'admin-sql'
+      };
+      for (const [id, page] of Object.entries(links)) {
+        const el = document.getElementById(id);
+        if (el) el.href = getAdminUrl(page);
+      }
+    }
+
+    function checkAuth() {
+      try {
+        const raw = localStorage.getItem('go_tani_admin_session');
+        currentSession = raw ? JSON.parse(raw) : null;
+      } catch (e) { currentSession = null; }
+
+      const isDemo = new URLSearchParams(window.location.search).get('demo') === 'true';
+      if (!currentSession && !isDemo) {
+        window.location.href = getAdminUrl('admin-login');
+        return false;
+      }
+
+      if (currentSession && currentSession.user) {
+        const email = currentSession.user.email || 'admin@gotani.id';
+        const name = email.split('@')[0];
+        const formattedName = 'Dr. Ir. ' + name.charAt(0).toUpperCase() + name.slice(1);
+        document.getElementById('admin-display-name').textContent = formattedName;
+        document.getElementById('admin-display-email').textContent = email;
+      }
+      return true;
+    }
+
+    function handleLogout() {
+      if (confirm('Keluar dari Admin Console Go-Tani?')) {
+        localStorage.removeItem('go_tani_admin_session');
+        window.location.href = getAdminUrl('admin-login');
+      }
+    }
+
+    function showToast(msg) {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const toast = document.createElement('div');
+      toast.className = 'flex items-center gap-2 px-4 py-3 rounded-2xl shadow-xl font-medium text-xs bg-primary text-on-primary';
+      toast.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span><span>${msg}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => toast.remove(), 3500);
+    }
+
+    function toggleMobileSidebar(force) {
+      const s = document.getElementById('sidebar');
+      const b = document.getElementById('sidebar-backdrop');
+      const open = typeof force === 'boolean' ? force : s.classList.contains('-translate-x-full');
+      if (open) { s.classList.remove('-translate-x-full'); b.classList.remove('hidden'); }
+      else { s.classList.add('-translate-x-full'); b.classList.add('hidden'); }
+    }
+
+    function copySqlSchema() {
+      const code = document.getElementById('sql-box').textContent.trim();
+      navigator.clipboard.writeText(code).then(() => {
+        showToast('Skrip SQL berhasil disalin ke clipboard!');
+      }).catch(() => {
+        showToast('Silakan salin manual skrip SQL di atas.');
+      });
+    }
+
+    async function loadSidebarBadges() {
+      try {
+        const headers = { 'apikey': SUPABASE_ANON_KEY };
+        const [bibit, pesan, blog] = await Promise.all([
+          fetch(`${SUPABASE_URL}/rest/v1/bibit_tanaman?select=id`, { headers }).then(r => r.json()).catch(() => []),
+          fetch(`${SUPABASE_URL}/rest/v1/pesan_kontak?select=id,is_read`, { headers }).then(r => r.json()).catch(() => []),
+          fetch(`${SUPABASE_URL}/rest/v1/blog_posts?select=id`, { headers }).then(r => r.json()).catch(() => [])
+        ]);
+        document.getElementById('badge-nav-bibit').textContent = Array.isArray(bibit) ? bibit.length : 0;
+        const unread = Array.isArray(pesan) ? pesan.filter(p => !p.is_read).length : 0;
+        document.getElementById('badge-nav-pesan').textContent = `${unread} Baru`;
+        document.getElementById('badge-nav-blog').textContent = Array.isArray(blog) ? blog.length : 0;
+      } catch (e) {}
+    }
+
+    function initAdminPage() {
+      updateNavLinks();
+      if (!checkAuth()) return;
+      loadSidebarBadges();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAdminPage);
+    } else {
+      initAdminPage();
+    }
+  </script>
+</body>
+</html>

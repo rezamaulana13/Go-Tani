@@ -1,0 +1,628 @@
+<!-- ============================================================ -->
+<!-- GO-TANI: HALAMAN TENTANG KAMI (Clean, Modern & Editorial)     -->
+<!-- Salin dan tempel SELURUH KODE INI ke Mode HTML Halaman Blogger -->
+<!-- Judul Halaman di Blogger: Tentang Kami                        -->
+<!-- ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+<style>
+  .gt-about-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px 60px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1B1C1C;
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  .gt-about-wrap * {
+    box-sizing: border-box;
+  }
+
+  /* Breadcrumb Navigation */
+  .gt-breadcrumb {
+    font-size: 13px;
+    color: #6B7280;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .gt-breadcrumb a {
+    color: #0D631B;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .gt-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  /* Section 1: Hero Editorial */
+  .gt-hero-center {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gt-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #E8F5E9;
+    color: #0D631B;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+    border: 1px solid #C8E6C9;
+  }
+  .gt-hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #1B1C1C;
+    line-height: 1.25;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.5px;
+  }
+  .gt-hero-desc {
+    font-size: 17px;
+    color: #40493D;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 720px;
+  }
+
+  /* Hero Image Box with Float Tag */
+  .gt-hero-media {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 56px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    background: #E5E2E1;
+  }
+  .gt-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+  .gt-hero-media:hover img {
+    transform: scale(1.015);
+  }
+  .gt-media-floating-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    color: #1B1C1C;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .gt-pulse-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #2E7D32;
+    display: inline-block;
+  }
+
+  /* Section 2: 3 Pillars Grid */
+  .gt-section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+  .gt-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1B1C1C;
+    margin: 0 0 8px 0;
+  }
+  .gt-section-subtitle {
+    font-size: 15px;
+    color: #5F6368;
+    margin: 0;
+  }
+
+  .gt-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+  .gt-pillar-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.25s ease;
+  }
+  .gt-pillar-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(46, 125, 50, 0.08);
+    border-color: #A3F69C;
+  }
+  .gt-pillar-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #E8F5E9;
+    color: #0D631B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .gt-pillar-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B1C1C;
+    margin: 0 0 10px 0;
+  }
+  .gt-pillar-card p {
+    font-size: 14px;
+    color: #40493D;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+  }
+  .gt-pillar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0D631B;
+    text-decoration: none;
+  }
+
+  /* Section 3: Stats Strip */
+  .gt-stats-strip {
+    background: #F8FAF8;
+    border: 1px solid #E0E0E0;
+    border-radius: 18px;
+    padding: 32px 24px;
+    margin-bottom: 56px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .gt-stat-item .num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #0D631B;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .gt-stat-item .label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5F6368;
+  }
+
+  /* Section 4: Story & Commitments */
+  .gt-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+    margin-bottom: 56px;
+  }
+  .gt-story-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .gt-story-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0D631B;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .gt-story-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1B1C1C;
+    line-height: 1.3;
+    margin: 0;
+  }
+  .gt-story-p {
+    font-size: 15px;
+    color: #40493D;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .gt-founder-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 10px;
+  }
+  .gt-founder-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #E8F5E9;
+    color: #0D631B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .gt-founder-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1B1C1C;
+  }
+  .gt-founder-role {
+    font-size: 13px;
+    color: #5F6368;
+  }
+
+  .gt-story-right {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .gt-commit-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B1C1C;
+    margin: 0;
+  }
+  .gt-commit-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .gt-commit-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #E8F5E9;
+    color: #0D631B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .gt-commit-item h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1B1C1C;
+    margin: 0 0 4px 0;
+  }
+  .gt-commit-item p {
+    font-size: 13px;
+    color: #5F6368;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Section 5: Soft CTA Banner */
+  .gt-cta-box {
+    background: #E8F5E9;
+    border: 1px solid #C8E6C9;
+    border-radius: 20px;
+    padding: 44px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gt-cta-icon {
+    color: #0D631B;
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+  .gt-cta-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1B1C1C;
+    max-width: 620px;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+  }
+  .gt-cta-desc {
+    font-size: 15px;
+    color: #40493D;
+    max-width: 540px;
+    margin: 0 0 24px 0;
+  }
+  .gt-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .gt-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0D631B;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(13, 99, 27, 0.2);
+  }
+  .gt-btn-primary:hover {
+    background: #2E7D32;
+    transform: translateY(-2px);
+  }
+  .gt-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    color: #0D631B !important;
+    border: 1px solid #C8E6C9;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 26px;
+    border-radius: 30px;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+  }
+  .gt-btn-secondary:hover {
+    background: #F8FAF8;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 992px) {
+    .gt-pillars-grid { grid-template-columns: 1fr; }
+    .gt-stats-strip { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .gt-story-grid { grid-template-columns: 1fr; }
+    .gt-hero-media { height: 320px; }
+  }
+  @media (max-width: 640px) {
+    .gt-hero-title { font-size: 26px; }
+    .gt-hero-desc { font-size: 15px; }
+    .gt-stats-strip { grid-template-columns: 1fr 1fr; padding: 24px 16px; }
+    .gt-stat-item .num { font-size: 28px; }
+    .gt-hero-media { height: 260px; }
+    .gt-media-floating-tag { font-size: 11px; padding: 6px 12px; bottom: 12px; left: 12px; }
+    .gt-btn-primary, .gt-btn-secondary { width: 100%; justify-content: center; }
+  }
+</style>
+
+<div class="gt-about-wrap">
+
+  <!-- Breadcrumb -->
+  <div class="gt-breadcrumb">
+    <a href="/">Beranda</a>
+    <span>/</span>
+    <span>Tentang Kami</span>
+  </div>
+
+  <!-- SECTION 1: Simple & Warm Hero Section -->
+  <div class="gt-hero-center">
+    <div class="gt-badge">
+      <span class="material-symbols-outlined" style="font-size:16px;">eco</span>
+      <span>Tentang Go-Tani</span>
+    </div>
+    <h1 class="gt-hero-title">
+      Membantu Petani Indonesia Menemukan Benih Terbaik dengan Pendekatan Cerdas &amp; Presisi.
+    </h1>
+    <p class="gt-hero-desc">
+      Go-Tani hadir menjembatani riset agronomi modern teruji dengan realitas lahan pertanian lokal secara praktis, tanpa jargon rumit. Kami memastikan setiap benih yang ditanam memiliki peluang panen optimal sesuai ekosistem tanah dan iklim setempat.
+    </p>
+  </div>
+
+  <!-- Editorial Photography Box -->
+  <div class="gt-hero-media">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTJLFesyY5nfBXeEFqtnktCmzwEUclwYfeJKpbe1IBfBCbrnbL_N69Hx6G0UGgk84kfj5MO1EARXuaZJJjtcNihMSwC3E2iZtupPnIz3LydaZVtex_J3SJk__F6Kv-g2fUFkObkG7zj-_LKVPh_GNS6vtn2pzGirGprT8pznattybUn698FyYuPrdOmAbsCLEPxvJCLKh9ZOEQC-bcizWWPh434hoXVqgQdSQpbAp4DXV4ZuvsjBtXyg" 
+         onerror="this.onerror=null; this.src='https://images.wsrv.nl/?url=images.unsplash.com/photo-1592417817098-8f3d6910985b?w=1200&amp;output=webp';" 
+         alt="Lahan Observasi &amp; Riset Benih Go-Tani" />
+    <div class="gt-media-floating-tag">
+      <span class="gt-pulse-dot"></span>
+      <span>Lahan Observasi &amp; Uji Benih Bogor, Jawa Barat</span>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Tiga Pilar Nilai -->
+  <div class="gt-section-header">
+    <h2 class="gt-section-title">Tiga Pilar Kepastian Tani</h2>
+    <p class="gt-section-subtitle">Dedikasi kami untuk meminimalkan risiko gagal panen sejak benih pertama disemai.</p>
+  </div>
+
+  <div class="gt-pillars-grid">
+    <!-- Pilar 1 -->
+    <div class="gt-pillar-card">
+      <div>
+        <div class="gt-pillar-icon">
+          <span class="material-symbols-outlined" style="font-size:24px;">verified</span>
+        </div>
+        <h3>Kurasi Benih Unggul</h3>
+        <p>
+          Seleksi ketat hanya untuk varietas tersertifikasi resmi dengan daya kecambah teruji di atas 85% dan resistensi patogen unggul.
+        </p>
+      </div>
+      <a href="/p/bibit.html" class="gt-pillar-link">
+        <span>Standarisasi Mutu Nasional</span>
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Pilar 2 -->
+    <div class="gt-pillar-card">
+      <div>
+        <div class="gt-pillar-icon">
+          <span class="material-symbols-outlined" style="font-size:24px;">thermostat</span>
+        </div>
+        <h3>Presisi Agroklimat</h3>
+        <p>
+          Pencocokan varietas bibit yang tepat berbasis ketinggian elevasi lahan (MDPL), tekstur tanah, dan pola curah hujan mikro wilayah Anda.
+        </p>
+      </div>
+      <a href="/p/bibit.html" class="gt-pillar-link">
+        <span>Adaptasi Iklim Mikro</span>
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Pilar 3 -->
+    <div class="gt-pillar-card">
+      <div>
+        <div class="gt-pillar-icon">
+          <span class="material-symbols-outlined" style="font-size:24px;">support_agent</span>
+        </div>
+        <h3>Dukungan Nyata</h3>
+        <p>
+          Konsultasi langsung tanpa birokrasi dengan praktisi agronomi lapangan untuk mendampingi masa persemaian hingga fase awal vegetatif.
+        </p>
+      </div>
+      <a href="/p/kontak.html" class="gt-pillar-link">
+        <span>Pendampingan Ahli</span>
+        <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Stats Strip -->
+  <div class="gt-stats-strip">
+    <div class="gt-stat-item">
+      <div class="num">500+</div>
+      <div class="label">Varietas Bibit Unggul</div>
+    </div>
+    <div class="gt-stat-item">
+      <div class="num">98%</div>
+      <div class="label">Tingkat Tumbuh Terverifikasi</div>
+    </div>
+    <div class="gt-stat-item">
+      <div class="num">24</div>
+      <div class="label">Provinsi Terjangkau</div>
+    </div>
+    <div class="gt-stat-item">
+      <div class="num">14.000+</div>
+      <div class="label">Mitra Petani &amp; Pekebun</div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Cerita & Komitmen -->
+  <div class="gt-story-grid">
+    <!-- Left Column: Story -->
+    <div class="gt-story-left">
+      <div class="gt-story-tag">
+        <span class="material-symbols-outlined" style="font-size:18px;">history_edu</span>
+        <span>Awal Perjalanan</span>
+      </div>
+      <h2 class="gt-story-title">Berawal dari Keprihatinan atas Maraknya Benih Tanpa Jaminan</h2>
+      <p class="gt-story-p">
+        Go-Tani bermula dari interaksi langsung di sentra-sentra pertanian Nusantara. Kami kerap menyaksikan petani gigih merugi karena benih yang dibeli tidak murni, berdaya berkecambah rendah, atau dipaksakan ditanam di elevasi yang tidak kompatibel.
+      </p>
+      <p class="gt-story-p">
+        Kami percaya kedaulatan pangan dimulai dari ketenangan pikiran saat menaruh benih ke dalam tanah. Teknologi rekomendasi kami dibangun sederhana: memberi kepastian data agronomis yang akurat, terlepas apakah Anda menanam di pekarangan 100 m² atau mengelola hamparan berhektare-hektare.
+      </p>
+      
+      <div class="gt-founder-box">
+        <div class="gt-founder-icon">
+          <span class="material-symbols-outlined" style="font-size:22px;">agriculture</span>
+        </div>
+        <div>
+          <div class="gt-founder-name">Tim Kurator Agronomi Go-Tani</div>
+          <div class="gt-founder-role">Mendedikasikan riset untuk kemakmuran bumi Nusantara</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Commitments -->
+    <div class="gt-story-right">
+      <h3 class="gt-commit-title">Komitmen Kualitas Tanpa Kompromi</h3>
+      
+      <div class="gt-commit-item">
+        <div class="gt-commit-icon">
+          <span class="material-symbols-outlined" style="font-size:20px;">check_circle</span>
+        </div>
+        <div>
+          <h4>100% Kemurnian Genetik Varietas</h4>
+          <p>Setiap batch benih teruji bebas kontaminasi varietas silang liar dengan sertifikat keaslian resmi dari balai benih terakreditasi.</p>
+        </div>
+      </div>
+
+      <div class="gt-commit-item">
+        <div class="gt-commit-icon">
+          <span class="material-symbols-outlined" style="font-size:20px;">package_2</span>
+        </div>
+        <div>
+          <h4>Kemasan Kedap Anti-Lembap</h4>
+          <p>Proteksi multi-lapis aluminium foil dengan kelembapan mikro stabil menjaga masa dormansi embrio benih tetap aktif maksimal hingga tiba di lokasi Anda.</p>
+        </div>
+      </div>
+
+      <div class="gt-commit-item">
+        <div class="gt-commit-icon">
+          <span class="material-symbols-outlined" style="font-size:20px;">psychology_alt</span>
+        </div>
+        <div>
+          <h4>Pendampingan Pasca-Tanam</h4>
+          <p>Bimbingan aplikasi pemupukan dasar dan penanganan hama dini yang dapat diakses secara gratis oleh seluruh pemilik benih Go-Tani.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: CTA Banner Ringkas -->
+  <div class="gt-cta-box">
+    <span class="material-symbols-outlined gt-cta-icon">potted_plant</span>
+    <h2 class="gt-cta-title">Ingin berkonsultasi atau mencari bibit yang cocok untuk lahan Anda?</h2>
+    <p class="gt-cta-desc">Temukan varietas unggul yang sesuai ketinggian dan iklim wilayah Anda hanya dalam beberapa langkah mudah.</p>
+    <div class="gt-cta-buttons">
+      <a href="/p/bibit.html" class="gt-btn-primary">
+        <span>Jelajahi Katalog Bibit</span>
+        <span class="material-symbols-outlined" style="font-size:18px;">search</span>
+      </a>
+      <a href="/p/kontak.html" class="gt-btn-secondary">
+        <span>Hubungi Tim Agronomi</span>
+        <span class="material-symbols-outlined" style="font-size:18px;">forum</span>
+      </a>
+    </div>
+  </div>
+
+</div>

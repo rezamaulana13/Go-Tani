@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  <meta content='Go-Tani — Platform Rekomendasi &amp; Edukasi Bibit Tanaman Unggul Teruji untuk Petani Indonesia.' name='description'/>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap' rel='stylesheet'/>
+  
+  <!-- Lucide Icons -->
+  <script src='https://unpkg.com/lucide@latest/dist/umd/lucide.min.js'></script>
+
+  <!-- Tailwind CSS CDN & Custom Config -->
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script id='tailwind-config'>
+  //<![CDATA[
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d631b",
+            "primary-container": "#2e7d32",
+            "primary-fixed": "#a3f69c",
+            "primary-fixed-dim": "#88d982",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#cbffc2",
+            "on-primary-fixed": "#002204",
+            "on-primary-fixed-variant": "#005312",
+            "secondary": "#126d27",
+            "secondary-container": "#9cf49c",
+            "secondary-fixed": "#9ff79f",
+            "secondary-fixed-dim": "#83da85",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#19722b",
+            "on-secondary-fixed": "#002105",
+            "on-secondary-fixed-variant": "#005318",
+            "surface": "#fcf9f8",
+            "surface-dim": "#dcd9d9",
+            "surface-bright": "#fcf9f8",
+            "surface-variant": "#e5e2e1",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f6f3f2",
+            "surface-container": "#f0eded",
+            "surface-container-high": "#eae7e7",
+            "surface-container-highest": "#e5e2e1",
+            "on-surface": "#1b1c1c",
+            "on-surface-variant": "#40493d",
+            "outline": "#707a6c",
+            "outline-variant": "#bfcaba",
+            "background": "#fcf9f8",
+            "on-background": "#1b1c1c"
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            outfit: ["Outfit", "sans-serif"]
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem"
+          }
+        }
+      }
+    };
+  //]]>
+  </script>
+
+  <b:skin><![CDATA[
+    #navbar-iframe, .header, .sidebar, .footer-outer,
+    .blog-feeds, .post-feeds, .quickedit, .widget-item-control,
+    .status-msg-wrap, .blog-pager, .post-footer, .comments,
+    .fauxborder-left, .fauxborder-right, .content-cap-top, .content-cap-bottom,
+    .feed-links, .titlewrapper, .descriptionwrapper {
+      display: none !important;
+      border: none !important;
+      background: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    *, *::before, *::after {
+      outline: none;
+    }
+
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      background-color: #FCF9F8 !important;
+      background-image: none !important;
+      overflow-x: hidden !important;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    .main-outer, .content-inner, .columns,
+    .main, #main, .post, .post-body, .entry-content, .post-outer {
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      background: transparent !important;
+      border: none !important;
+    }
+
+    #pageContentWrapper {
+      display: none;
+      width: 100%;
+      min-height: 80vh;
+    }
+  ]]></b:skin>
+</head>
+
+<body class='bg-surface-container-lowest text-on-surface antialiased font-sans'>
+
+  <!-- ============================================================ -->
+  <!-- STICKY HEADER NAVIGATION                                     -->
+  <!-- ============================================================ -->
+  <header class='sticky top-0 z-50 w-full bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.05)]'>
+    <div class='h-20 max-w-[1200px] mx-auto px-gutter flex items-center justify-between gap-space-md'>
+      
+      <!-- Brand Logo -->
+      <a class='flex items-center gap-space-sm' href='/'>
+        <img alt='Go-Tani Logo' class='h-8 w-auto object-contain' src='https://lh3.googleusercontent.com/aida/AEtjO1VNKrzeyOO14-SUzSsuttNuU6cnXdEOmLd6uZR_QtDTlLADhxz8xJutLZS2WJMx4rC1m0fJHtKzbxwrV0Aafv-JVMQQoNOrlwjmJsCkcgt3kGMxEMECKI2uIB5oaSw_gyvrpihXzw2_dbF8qLrflV2F02gHQqhL7TK1LB8ub191HehJgARGnFX-_3-I7A6m6duZ1rXmOe4Gv0JfdA4xgRkpGavoA3thee2XeDDesJESzEP2jkTYHz52J6GT'/>
+        <span class='font-outfit font-bold text-xl text-primary tracking-tight'>Go-Tani</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class='hidden md:flex items-center gap-space-lg' id='navMenu'>
+        <a class='nav-link font-medium text-sm text-on-surface-variant hover:text-on-surface transition-all px-space-md py-space-xs rounded-full' data-nav='beranda' href='/'>Beranda</a>
+        <a class='nav-link font-medium text-sm text-on-surface-variant hover:text-on-surface transition-all px-space-md py-space-xs rounded-full' data-nav='tentang' href='/p/tentang.html'>Tentang</a>
+        <a class='nav-link font-medium text-sm text-on-surface-variant hover:text-on-surface transition-all px-space-md py-space-xs rounded-full' data-nav='bibit' href='/p/bibit.html'>Bibit</a>
+        <a class='nav-link font-medium text-sm text-on-surface-variant hover:text-on-surface transition-all px-space-md py-space-xs rounded-full' data-nav='blog' href='/p/blog_0702227196.html'>Blog</a>
+        <a class='nav-link font-medium text-sm text-on-surface-variant hover:text-on-surface transition-all px-space-md py-space-xs rounded-full' data-nav='kontak' href='/p/kontak.html'>Kontak</a>
+      </nav>
+
+      <!-- Right Action & Profile Button -->
+      <div class='flex items-center gap-space-md'>
+        <a class='hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary font-medium text-sm px-space-lg py-space-sm hover:bg-primary transition-colors shadow-[0_4px_12px_rgba(0,0,0,0.06)]' href='/p/bibit.html'>
+          Cari Rekomendasi
+        </a>
+        <a class='w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center hover:opacity-90 transition-opacity' href='/p/admin-login.html' title='Login Admin'>
+          <span class='material-symbols-outlined text-[18px]'>person</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- MAIN HOMEPAGE WRAPPER                                        -->
+  <!-- ============================================================ -->
+  <div id='homeLandingWrapper'>
+    <main class='w-full max-w-[1200px] mx-auto px-gutter pt-6 bg-surface-container-lowest min-h-[calc(100vh-80px)]'>
+      <div class='flex flex-col w-full'>
+
+        <!-- SECTION 1: HERO / BERANDA -->
+        <section class='w-full bg-secondary-container/20 rounded-[2rem] p-space-lg md:p-space-xl my-space-md relative overflow-hidden' id='beranda'>
+          <div class='absolute -right-24 -top-24 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none'></div>
+          <div class='absolute -left-20 bottom-0 w-80 h-80 bg-secondary-container/40 rounded-full blur-2xl pointer-events-none'></div>
+          
+          <div class='relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center'>
+            <div class='lg:col-span-7 flex flex-col gap-space-md'>
+              <div class='inline-flex items-center gap-space-xs self-start px-space-md py-space-xs rounded-full bg-surface-container-lowest shadow-sm'>
+                <span class='material-symbols-outlined text-primary text-[18px]' style='font-variation-settings: &quot;FILL&quot; 1;'>eco</span>
+                <span class='text-xs font-semibold text-primary uppercase tracking-wider'>Inovasi Agroteknologi Terpercaya</span>
+              </div>
+              
+              <h1 class='font-outfit text-3xl md:text-5xl font-bold text-on-surface leading-tight'>
+                Temukan Bibit Tanaman Terbaik untuk Hasil Panen Maksimal
+              </h1>
+              
+              <p class='text-base md:text-lg text-on-surface-variant max-w-xl leading-relaxed'>
+                Platform pintar kurasi &amp; rekomendasi bibit unggul teruji bersertifikat untuk petani modern, pekarangan rumah, dan agribisnis skala besar.
+              </p>
+
+              <div class='flex flex-wrap items-center gap-space-md pt-space-xs'>
+                <a class='inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary text-sm font-semibold px-space-xl py-space-sm hover:bg-primary transition-all shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:shadow-md' href='/p/bibit.html'>
+                  Jelajahi Bibit Unggul
+                </a>
+                <a class='inline-flex items-center justify-center rounded-full bg-surface-container-lowest/80 text-primary-container text-sm font-semibold px-space-lg py-space-sm hover:bg-secondary-container/40 transition-colors shadow-sm' href='/p/kontak.html'>
+                  Konsultasi Tani
+                </a>
+              </div>
+
+              <!-- Quick Stats Grid -->
+              <div class='grid grid-cols-3 gap-space-sm pt-space-lg'>
+                <div class='flex flex-col bg-surface-container-lowest/90 backdrop-blur rounded-2xl p-space-md shadow-sm'>
+                  <span class='font-outfit text-2xl font-bold text-primary'>500+</span>
+                  <span class='text-xs font-medium text-on-surface-variant'>Varietas Bibit</span>
+                </div>
+                <div class='flex flex-col bg-surface-container-lowest/90 backdrop-blur rounded-2xl p-space-md shadow-sm'>
+                  <span class='font-outfit text-2xl font-bold text-primary'>98%</span>
+                  <span class='text-xs font-medium text-on-surface-variant'>Daya Tumbuh</span>
+                </div>
+                <div class='flex flex-col bg-surface-container-lowest/90 backdrop-blur rounded-2xl p-space-md shadow-sm'>
+                  <span class='font-outfit text-2xl font-bold text-primary'>12.000+</span>
+                  <span class='text-xs font-medium text-on-surface-variant'>Petani Mitra</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class='lg:col-span-5 relative'>
+              <div class='relative w-full rounded-2xl overflow-hidden shadow-xl bg-surface-container-low aspect-[4/5] max-h-[500px]'>
+                <img alt='Greenhouse Riset Go-Tani' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuAoR-_W0wTVEJDtltzLHD2PjxYU65aQqldW-2-_G7DAggZgJN92qScgvdG3ghcSU1BxLFFUXkluPGlm5i_VbKm0kJHBoNDPx1H3pFR2NTnvPabCWfAeW8y8zFAOnC3IzyS9FKss7M3tCEyVu1TNgrmYwJaxoay19qZR-GEaRdtaIliiOrtI60K14qYg7aEY_hOLm705hM7QShXT6jKexP7IYKw1Do-r0d2YI9KBCfw9fSkErtc5DFbvUw'/>
+                <div class='absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent'></div>
+                <div class='absolute bottom-space-md left-space-md right-space-md bg-surface-container-lowest/95 backdrop-blur-md rounded-xl p-space-sm shadow-lg flex items-center gap-space-sm'>
+                  <div class='w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container'>
+                    <span class='material-symbols-outlined text-[22px]'>verified</span>
+                  </div>
+                  <div class='flex flex-col'>
+                    <span class='font-outfit font-bold text-sm text-on-surface leading-snug'>Sertifikasi Bibit F1 Murni</span>
+                    <span class='text-xs text-on-surface-variant'>Uji laboratorium benih &amp; karantina resmi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: TENTANG KAMI -->
+        <section class='w-full bg-surface-container-lowest py-space-xl my-space-md' id='tentang'>
+          <div class='grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center'>
+            
+            <div class='lg:col-span-7 flex flex-col gap-space-md'>
+              <div class='inline-flex items-center gap-space-xs text-primary text-xs font-semibold uppercase tracking-wider'>
+                <span class='material-symbols-outlined text-[16px]'>psychology_alt</span>
+                <span>Tentang Go-Tani</span>
+              </div>
+              
+              <h2 class='font-outfit text-2xl md:text-3xl font-bold text-on-surface'>
+                Solusi Cerdas Memilih Bibit Berkualitas
+              </h2>
+              
+              <p class='text-sm md:text-base text-on-surface-variant leading-relaxed'>
+                Go-Tani hadir menjembatani kemajuan riset agrikultur modern langsung ke tangan petani dan pegiat kebun. Kami memahami bahwa bibit unggul dengan toleransi iklim terukur adalah fondasi utama keberhasilan 70% siklus budidaya hingga masa panen raya.
+              </p>
+
+              <!-- 3 Feature Pillars -->
+              <div class='flex flex-col gap-space-sm pt-space-xs'>
+                <div class='flex items-start gap-space-md p-space-md rounded-2xl bg-surface-container-low/70'>
+                  <div class='w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm'>
+                    <span class='material-symbols-outlined text-[24px]'>verified_user</span>
+                  </div>
+                  <div class='flex flex-col'>
+                    <h3 class='font-outfit font-bold text-sm text-on-surface'>1. Bersertifikat Balitbangtan</h3>
+                    <p class='text-xs text-on-surface-variant'>Semua benih terdaftar secara formal, bebas patogen tular-benih, dan melewati standar kemurnian genetik 99%.</p>
+                  </div>
+                </div>
+
+                <div class='flex items-start gap-space-md p-space-md rounded-2xl bg-surface-container-low/70'>
+                  <div class='w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm'>
+                    <span class='material-symbols-outlined text-[24px]'>menu_book</span>
+                  </div>
+                  <div class='flex flex-col'>
+                    <h3 class='font-outfit font-bold text-sm text-on-surface'>2. Panduan Tanam Lengkap dari Semai hingga Panen</h3>
+                    <p class='text-xs text-on-surface-variant'>Dilengkapi SOP nutrisi mingguan, takaran pupuk hayati, kalender semai terstruktur, dan penanganan OPT adaptif.</p>
+                  </div>
+                </div>
+
+                <div class='flex items-start gap-space-md p-space-md rounded-2xl bg-surface-container-low/70'>
+                  <div class='w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm'>
+                    <span class='material-symbols-outlined text-[24px]'>landscape</span>
+                  </div>
+                  <div class='flex flex-col'>
+                    <h3 class='font-outfit font-bold text-sm text-on-surface'>3. Rekomendasi Sesuai Iklim &amp; Ketinggian MDPL</h3>
+                    <p class='text-xs text-on-surface-variant'>Kalkulator agroklimat cerdas memetakan elevasi 0–1800 mdpl guna mencegah gagal bunga dan kerdil tanaman.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual Showcase -->
+            <div class='lg:col-span-5 relative'>
+              <div class='relative w-full rounded-2xl overflow-hidden shadow-md bg-surface-container'>
+                <img alt='Inspeksi Benih Unggul' class='w-full h-80 object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuBwNreuzS0j8nFl5Ro13oBykT51Wdr-5c-arjkk9yQy3P7QiaPrvkRYMM6Ij9IMcajbtXBliWAdP-Pvuvd2pvVB2jzXDEtg6cMJAFScMkwVaqX3PKfUmjnWDLwl4eAhiNFmnyGv4-uEUV_SeNbfu8p9C6f9-xQa3lTHVBzKJcg7ZKPbQunDTmQI-be4bN3TgtPRdXwXLZLxWn9Qg0h6OmoxWY8oUeDMjx9s7kMvGjPKYiKYzCq7jzqDrA'/>
+                <div class='p-space-lg bg-surface-container-lowest flex flex-col gap-space-xs'>
+                  <div class='inline-flex self-start items-center gap-1 bg-secondary-container text-on-secondary-container px-space-sm py-space-xs rounded-full text-xs font-semibold'>
+                    <span class='material-symbols-outlined text-[16px]'>task_alt</span>
+                    Terakreditasi BPSB
+                  </div>
+                  <h4 class='font-outfit font-bold text-sm text-on-surface'>Standar Pengujian Benih Hortikultura</h4>
+                  <p class='text-xs text-on-surface-variant'>Memenuhi parameter vigor daya simpan dan kecepatan tumbuh seragam untuk efisiensi modal tani Anda.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 3: FITUR BIBIT & REKOMENDASI -->
+        <section class='w-full bg-secondary-container/20 rounded-[2rem] p-space-lg md:p-space-xl my-space-md' id='bibit'>
+          <div class='flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xs mb-space-lg'>
+            <span class='text-xs font-semibold text-primary uppercase tracking-widest'>KATALOG UNGGULAN</span>
+            <h2 class='font-outfit text-2xl md:text-3xl font-bold text-on-surface'>Rekomendasi Bibit Paling Populer</h2>
+            <p class='text-sm text-on-surface-variant'>
+              Pilihan varietas tahan cuaca ekstrem dan tahan hama dengan riwayat produktivitas tertinggi dari petani binaan se-Nusantara.
+            </p>
+          </div>
+
+          <!-- Search & Filter Controls -->
+          <div class='w-full max-w-3xl mx-auto flex flex-col gap-space-md mb-space-xl'>
+            <div class='w-full bg-surface-container-lowest rounded-full h-[52px] px-space-md flex items-center gap-space-sm shadow-[0_4px_12px_rgba(0,0,0,0.06)]'>
+              <span class='material-symbols-outlined text-outline text-[22px]'>search</span>
+              <input class='w-full bg-transparent text-sm text-on-surface placeholder-outline focus:outline-none' id='bibitSearchInput' placeholder='Cari nama bibit (misal: Cabai Rawit Ori, Tomat Servo)...' type='text'/>
+              <button class='text-outline hover:text-on-surface hidden' id='clearSearchBtn'>
+                <span class='material-symbols-outlined text-[18px]'>close</span>
+              </button>
+            </div>
+
+            <!-- Filter Pills -->
+            <div class='flex items-center justify-center flex-wrap gap-space-xs' id='filterContainer'>
+              <button class='filter-pill px-space-md py-space-xs rounded-full text-xs font-semibold bg-primary-container text-on-primary transition-colors shadow-sm' data-category='all'>Semua Kategori</button>
+              <button class='filter-pill px-space-md py-space-xs rounded-full text-xs font-semibold bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors shadow-sm' data-category='sayuran-hijau'>Sayuran Hijau</button>
+              <button class='filter-pill px-space-md py-space-xs rounded-full text-xs font-semibold bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors shadow-sm' data-category='cabai-tomat'>Cabai &amp; Tomat</button>
+              <button class='filter-pill px-space-md py-space-xs rounded-full text-xs font-semibold bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors shadow-sm' data-category='buah-unggulan'>Buah Unggulan</button>
+              <button class='filter-pill px-space-md py-space-xs rounded-full text-xs font-semibold bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors shadow-sm' data-category='padi-palawija'>Padi &amp; Palawija</button>
+            </div>
+          </div>
+
+          <!-- Seed Cards Grid -->
+          <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg' id='seedCardsGrid'>
+            <!-- Card 1 -->
+            <div class='seed-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform' data-category='cabai-tomat' data-title='Cabai Rawit Ori 212'>
+              <div class='relative w-full h-48 bg-surface-container-low overflow-hidden'>
+                <img alt='Cabai Rawit Ori 212' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuChGWOEn6NtOgXrnY2TB_FYScRNjZ_R5CeycRFfv9gzjxtAnsOJcpC_pDF_TGZYO22xvs53rfm9Lf1zyv5sMghFSAF3nlmYOCdT_bld05YkExX92-96IUsubvnpB6rGIs6rhujW3YsOElGqrFBwrTNAY7bGTpqRe2Kjr07xt_lnpD-P-yaT44h7Mc6AyiwL92jci2Gbtbxt50bllSj1RQ2AJf21YA-Q2pmKeecFIgHAQL_sZ_Z0nXUXZg'/>
+                <span class='absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded-full text-xs font-medium'>Cabai &amp; Tomat</span>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <h3 class='font-outfit font-bold text-lg text-on-surface'>Cabai Rawit Ori 212</h3>
+                  <p class='text-xs text-on-surface-variant'>Toleran layu bakteri &amp; trips, percabangan lebat dan buah padat berbobot.</p>
+                  <div class='mt-space-xs p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1 text-xs'>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Potensi Hasil:</span><span class='font-semibold text-primary'>18–20 Ton/Ha</span></div>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Daya Kecambah:</span><span class='font-semibold text-primary'>95%</span></div>
+                  </div>
+                </div>
+                <a class='w-full py-space-sm rounded-full bg-primary-container text-on-primary text-xs font-semibold hover:bg-primary transition-colors text-center shadow-sm block' href='/p/bibit.html'>
+                  Lihat Detail
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class='seed-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform' data-category='cabai-tomat' data-title='Tomat Servo F1'>
+              <div class='relative w-full h-48 bg-surface-container-low overflow-hidden'>
+                <img alt='Tomat Servo F1' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuBcAz5lERKQT7lmG22GYsq7iLDRiK2G-H3sUcgvwBlhKG9_aNQ0wZWLVGU4UY-jT3vk8o7eI3rcdH6fvbr-QWjM73JGFtxpmo4LPTarQGOs9_QrGbgceNpyi7Q3Nzr-lh0S45-YdU_RcNgmyQQTLz3axDJ69UMOXpRt3XjzCeXY2c3-TD8ttP8Fns_joor0wNFoR5EHWazBmKvNPNGIKMhI58XzJg3i-Ve9h4BEuROokY75xNzyK33JjQ'/>
+                <span class='absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded-full text-xs font-medium'>Sayuran Buah</span>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <h3 class='font-outfit font-bold text-lg text-on-surface'>Tomat Servo F1</h3>
+                  <p class='text-xs text-on-surface-variant'>Varietas primadona petani, sangat tahan virus Gemini dan pembusukan ujung buah.</p>
+                  <div class='mt-space-xs p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1 text-xs'>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Kesesuaian:</span><span class='font-semibold text-primary'>Dataran Rendah - Menengah</span></div>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Masa Panen:</span><span class='font-semibold text-primary'>65 - 70 HST</span></div>
+                  </div>
+                </div>
+                <a class='w-full py-space-sm rounded-full bg-primary-container text-on-primary text-xs font-semibold hover:bg-primary transition-colors text-center shadow-sm block' href='/p/bibit.html'>
+                  Lihat Detail
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class='seed-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform' data-category='buah-unggulan' data-title='Melon Golden Aroma F1'>
+              <div class='relative w-full h-48 bg-surface-container-low overflow-hidden'>
+                <img alt='Melon Golden Aroma F1' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuCkCy302jWL41r0RSoZxL2ubVG6zpqDeVCKOgeaKvt9lqq5J6u4wu7nel7ZFlCYbn9gn0pFv5195vBwsE-7FfHxUMOjcCgiVOENvKIhvr_8RJ1TS9tQ9BS6MI9wk7HESDg2dlsJNljMok5GD3n47wSP2RKLaOdOQXHNUUnnU0BaJttviJILOc-3TH6R04eXxhrlOH3dIQ95YsrfURIro46dhAUbNZO7T8jI5FvmYKYF3kCPQC6aNiKLyA'/>
+                <span class='absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded-full text-xs font-medium'>Buah Unggulan</span>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <h3 class='font-outfit font-bold text-lg text-on-surface'>Melon Golden Aroma F1</h3>
+                  <p class='text-xs text-on-surface-variant'>Kulit kuning emas cerah dengan tekstur daging renyah dan aroma manis khas pasar premium.</p>
+                  <div class='mt-space-xs p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1 text-xs'>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Kadar Manis:</span><span class='font-semibold text-primary'>Brix 14 - 16%</span></div>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Bobot Rata-rata:</span><span class='font-semibold text-primary'>1.8 - 2.5 Kg/Buah</span></div>
+                  </div>
+                </div>
+                <a class='w-full py-space-sm rounded-full bg-primary-container text-on-primary text-xs font-semibold hover:bg-primary transition-colors text-center shadow-sm block' href='/p/bibit.html'>
+                  Lihat Detail
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class='seed-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform' data-category='sayuran-hijau' data-title='Selada Grand Rapids'>
+              <div class='relative w-full h-48 bg-surface-container-low overflow-hidden'>
+                <img alt='Selada Grand Rapids' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuD6pDSVyjSGM9m3L5_gqUOuqUmWJg40OfbyOEx8qFh_jzwwoG_Ub71cZfNkyygVN1WwEjIO5BSX7wxD5EMzj9Ssz_AUm8fKCZy-zOdNkBIBL1vMNoT1yoebme32J_LNWzmg2qhyJNcBPY_1FtQwRPl3mrFttTFtBja6sQ2VXGm5k5DhOYIPPIc8Kin547uU8BKIcFbpDobcYriYMVRvswskUQcE1BiV2aOr-OYPUz2azIe5y1QmNaR3gA'/>
+                <span class='absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded-full text-xs font-medium'>Sayuran Hijau</span>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <h3 class='font-outfit font-bold text-lg text-on-surface'>Selada Grand Rapids</h3>
+                  <p class='text-xs text-on-surface-variant'>Tahan panas dan tahan tipburn daun, sangat direkomendasikan untuk hidroponik.</p>
+                  <div class='mt-space-xs p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1 text-xs'>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Masa Panen:</span><span class='font-semibold text-primary'>30–35 HST</span></div>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Tekstur Daun:</span><span class='font-semibold text-primary'>Renyah &amp; Lembut</span></div>
+                  </div>
+                </div>
+                <a class='w-full py-space-sm rounded-full bg-primary-container text-on-primary text-xs font-semibold hover:bg-primary transition-colors text-center shadow-sm block' href='/p/bibit.html'>
+                  Lihat Detail
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class='seed-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform' data-category='padi-palawija' data-title='Padi Inpari 32 HDB'>
+              <div class='relative w-full h-48 bg-surface-container-low overflow-hidden'>
+                <img alt='Padi Inpari 32 HDB' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuDbEcqUNlFdCoL2eG78WdezJ9y0nmbpnat8TXwMyIJdowkLXsDPN-1XyvcJPQTsMdwxwNx9K6v0OL2mB_G26jrv580zLcqw__sVC4_7tRaqlmFxgTWL5J2cZq6zPZVOlnYk2YULyK8_PusKoGqyMTwZcY4O609XAC3YvbHyIl0h8PX_oikVRGAQlbCg_tmNtvMg81aRW84Xz08mx-6mpuGknHzlfJyOMVwdpm2zjCQ286ECzQLpzb_UEw'/>
+                <span class='absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded-full text-xs font-medium'>Padi &amp; Palawija</span>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <h3 class='font-outfit font-bold text-lg text-on-surface'>Padi Inpari 32 HDB</h3>
+                  <p class='text-xs text-on-surface-variant'>Tahan hawar daun bakteri strain III, IV, dan VIII. Batang kokoh anti-rebah.</p>
+                  <div class='mt-space-xs p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1 text-xs'>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Potensi Panen:</span><span class='font-semibold text-primary'>10.5 Ton/Ha</span></div>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Kualitas Beras:</span><span class='font-semibold text-primary'>Nasi Putih Pulen</span></div>
+                  </div>
+                </div>
+                <a class='w-full py-space-sm rounded-full bg-primary-container text-on-primary text-xs font-semibold hover:bg-primary transition-colors text-center shadow-sm block' href='/p/bibit.html'>
+                  Lihat Detail
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class='seed-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform' data-category='padi-palawija' data-title='Jagung Manis Talenta F1'>
+              <div class='relative w-full h-48 bg-surface-container-low overflow-hidden'>
+                <img alt='Jagung Manis Talenta F1' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuAp6i_Q3umGTYa1JT1fVS4XI1dCNhDZ0lpSM8P-Wwce7PAQJ8KYt6y4B9Yn1sySpjtLpEJfJmhVkwu3GfTyqmnhZ-gD2LoWR9U1FmMCyMATjkCiBN8x05bmpkRdFwki55RortYpWX1z8GYw1LkILRPMEg0DQ5bITBTjQwnIT9CgS1nIOTf9UDgV4n3tclLuY9qMkSsPKITcNJhwl-bQfKa1h35MlEOUneNabu7qhO-rpKlxXLIalT139Q'/>
+                <span class='absolute top-3 left-3 bg-secondary-container text-on-secondary-container px-space-sm py-0.5 rounded-full text-xs font-medium'>Palawija</span>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <h3 class='font-outfit font-bold text-lg text-on-surface'>Jagung Manis Talenta F1</h3>
+                  <p class='text-xs text-on-surface-variant'>Tongkol besar terisi penuh hingga ujung, daya simpan manis tidak cepat berubah tepung.</p>
+                  <div class='mt-space-xs p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1 text-xs'>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Kemanisan:</span><span class='font-semibold text-primary'>Brix 13–14%</span></div>
+                    <div class='flex justify-between'><span class='text-on-surface-variant'>Bobot Tongkol:</span><span class='font-semibold text-primary'>350 - 450 Gram</span></div>
+                  </div>
+                </div>
+                <a class='w-full py-space-sm rounded-full bg-primary-container text-on-primary text-xs font-semibold hover:bg-primary transition-colors text-center shadow-sm block' href='/p/bibit.html'>
+                  Lihat Detail
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class='flex justify-center mt-space-xl'>
+            <a class='px-space-xl py-space-sm rounded-full bg-surface-container-lowest text-primary font-outfit font-bold text-sm hover:bg-primary hover:text-on-primary transition-colors shadow-sm inline-flex items-center gap-space-xs' href='/p/bibit.html'>
+              <span>Lihat Semua 240+ Bibit Tersedia</span>
+              <span class='material-symbols-outlined text-[20px]'>arrow_forward</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- SECTION 4: BLOG & TIPS BUDIDAYA -->
+        <section class='w-full bg-surface-container-lowest py-space-xl my-space-md' id='blog'>
+          <div class='flex flex-col items-center text-center max-w-2xl mx-auto gap-space-xs mb-space-xl'>
+            <span class='text-xs font-semibold text-primary uppercase tracking-widest'>PANDUAN &amp; EDUKASI</span>
+            <h2 class='font-outfit text-2xl md:text-3xl font-bold text-on-surface'>Artikel &amp; Tips Tani Terkini</h2>
+            <p class='text-sm text-on-surface-variant'>
+              Tingkatkan wawasan agroteknologi Anda dengan panduan praktis berbasis riset dan pengalaman lapangan para ahli agronomis kami.
+            </p>
+          </div>
+
+          <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg'>
+            <!-- Article 1 -->
+            <article class='flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform'>
+              <div class='relative w-full h-48 overflow-hidden bg-surface-container-low'>
+                <img alt='Tips Menyemai Benih' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuA_-AsqZJBRuERBWGtHBVqvPHxEptN1Oma6Fqr_PmtMtARmpThyehVMAfQAAyM0xecepRgkq7Yfo1mxCC2OXaDUfqm1w1ik7_phicy4sxqduF5079iOCKf3cjmKdOcT6Fe0McjyJy75esCP5ZPcgBvav80KdUYPAsPLlOT55dHR-brGuBdHCLGDNEh7ICgYj7Q1dKdAuCVxYU7MA6XfiNHGK19CgMWoFtMV84c9dnY8YiTFiULBqPGrsg'/>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <span class='text-xs text-outline'>18 Sep 2026 • 5 menit baca</span>
+                  <h3 class='font-outfit font-bold text-base text-on-surface line-clamp-2'>
+                    Cara Tepat Menyemai Benih Cabai Agar Tumbuh Serempak
+                  </h3>
+                  <p class='text-xs text-on-surface-variant line-clamp-2'>
+                    Langkah perendaman air hangat kuku dan pengaturan aerasi media semai cocopeat-kompos untuk tingkat germinasi hingga 98%.
+                  </p>
+                </div>
+                <a class='inline-flex items-center gap-1 text-xs text-primary hover:text-primary-container font-semibold transition-colors' href='/p/blog_0702227196.html'>
+                  <span>Baca Selengkapnya</span>
+                  <span class='material-symbols-outlined text-[16px]'>arrow_forward</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class='flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform'>
+              <div class='relative w-full h-48 overflow-hidden bg-surface-container-low'>
+                <img alt='Panduan Elevasi MDPL' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuB1agn1xBlny6ZNPDbBs5zqzhnfRUYurO2I-TtgGyyrZb5g7aOP-S8t__pPLYDO2MWDKINbcG4n9gbexJIIzphD0cmFueHrOEG4VtIKswYIs4_01y52OpwVZD2v3F7sz7zHQarc7je2fqVlj4T7D6JIPsFL8PuA4rfIsPyND9gRlrUhkfOAufICbwvipxwkWv_bMZmM69fOikOnDDpaQeE21C8vo2-H-enQDZCZnu1LukBUSMetgCB-Mg'/>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <span class='text-xs text-outline'>15 Sep 2026 • 7 menit baca</span>
+                  <h3 class='font-outfit font-bold text-base text-on-surface line-clamp-2'>
+                    Panduan Memilih Bibit Tanaman Sesuai Ketinggian Daerah (MDPL)
+                  </h3>
+                  <p class='text-xs text-on-surface-variant line-clamp-2'>
+                    Ketahui perbedaan varietas dataran rendah, menengah, dan tinggi agar tanaman tidak mengalami kerontokan bunga akibat suhu.
+                  </p>
+                </div>
+                <a class='inline-flex items-center gap-1 text-xs text-primary hover:text-primary-container font-semibold transition-colors' href='/p/blog_0702227196.html'>
+                  <span>Baca Selengkapnya</span>
+                  <span class='material-symbols-outlined text-[16px]'>arrow_forward</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class='flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-transform'>
+              <div class='relative w-full h-48 overflow-hidden bg-surface-container-low'>
+                <img alt='Pengendalian Hama Alami' class='w-full h-full object-cover' src='https://lh3.googleusercontent.com/aida-public/AB6AXuBWd5VFep6CcoJA8esh4dXNxf6HOgi4lDjik5iZVgUDzRtcnZWXdXJ-FZ6X5ZNKTWtyc52cvtSvw4Z1G2_Wguks0oLGhwMCsn6iycuuHUpBUvWmCtKCJr7vDzD3PY2Z_U2DsKCisTe0asHiLNTsl81i92ZFMbNEuov84vCBKXPbUOrVJh9cFv3xhHALnsTEiWD1o6xqzJr3hY94_kDgNEhWE8QDpI64XZ40g7fXr_f71VhSZkSeHF1E3g'/>
+              </div>
+              <div class='p-space-lg flex flex-col flex-1 justify-between gap-space-md'>
+                <div class='flex flex-col gap-space-xs'>
+                  <span class='text-xs text-outline'>10 Sep 2026 • 4 menit baca</span>
+                  <h3 class='font-outfit font-bold text-base text-on-surface line-clamp-2'>
+                    Kiat Pengendalian Hama Alami pada Tanaman Sayuran Pekarangan
+                  </h3>
+                  <p class='text-xs text-on-surface-variant line-clamp-2'>
+                    Formulasi pestisida nabati dari ekstrak daun mimba dan bawang putih yang ramah lingkungan tanpa merusak mikroba tanah.
+                  </p>
+                </div>
+                <a class='inline-flex items-center gap-1 text-xs text-primary hover:text-primary-container font-semibold transition-colors' href='/p/blog_0702227196.html'>
+                  <span>Baca Selengkapnya</span>
+                  <span class='material-symbols-outlined text-[16px]'>arrow_forward</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- SECTION 5: KONTAK & KONSULTASI -->
+        <section class='w-full bg-secondary-container/20 rounded-[2rem] p-space-lg md:p-space-xl my-space-md' id='kontak'>
+          <div class='grid grid-cols-1 lg:grid-cols-12 gap-space-xl'>
+            
+            <!-- Left Column: Form Konsultasi Bibit -->
+            <div class='lg:col-span-7 bg-surface-container-lowest rounded-2xl p-space-lg md:p-space-xl shadow-md'>
+              <div class='flex flex-col gap-space-xs mb-space-md'>
+                <span class='text-xs font-semibold text-primary uppercase tracking-wider'>KONSULTASI AGRONOMI</span>
+                <h2 class='font-outfit text-xl font-bold text-on-surface'>Tanyakan Kebutuhan Bibit Lahan Anda</h2>
+                <p class='text-xs text-on-surface-variant'>Tim spesialis pertanian Go-Tani siap memberikan diagnosa dan rekomendasi bibit yang paling tepat sasaran.</p>
+              </div>
+
+              <form class='flex flex-col gap-space-md' id='consultationForm'>
+                <div class='grid grid-cols-1 sm:grid-cols-2 gap-space-md'>
+                  <div class='flex flex-col gap-space-xs'>
+                    <label class='text-xs font-medium text-on-surface-variant'>Nama Lengkap</label>
+                    <input class='rounded-xl px-space-md py-space-sm bg-surface-container-low text-on-surface text-xs shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container' placeholder='misal: Pak Joko Widodo' required='required' type='text'/>
+                  </div>
+                  <div class='flex flex-col gap-space-xs'>
+                    <label class='text-xs font-medium text-on-surface-variant'>Nomor WhatsApp</label>
+                    <input class='rounded-xl px-space-md py-space-sm bg-surface-container-low text-on-surface text-xs shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container' placeholder='0812-xxxx-xxxx' required='required' type='tel'/>
+                  </div>
+                </div>
+
+                <div class='grid grid-cols-1 sm:grid-cols-2 gap-space-md'>
+                  <div class='flex flex-col gap-space-xs'>
+                    <label class='text-xs font-medium text-on-surface-variant'>Lokasi Lahan / Elevasi MDPL</label>
+                    <input class='rounded-xl px-space-md py-space-sm bg-surface-container-low text-on-surface text-xs shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container' placeholder='misal: Lembang, 1.200 MDPL' type='text'/>
+                  </div>
+                  <div class='flex flex-col gap-space-xs'>
+                    <label class='text-xs font-medium text-on-surface-variant'>Jenis Tanaman Diminati</label>
+                    <select class='rounded-xl px-space-md py-space-sm bg-surface-container-low text-on-surface text-xs shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container'>
+                      <option value='hortikultura'>Cabai / Sayuran Hortikultura</option>
+                      <option value='buah'>Buah Melon / Semangka / Pepaya</option>
+                      <option value='pangan'>Padi &amp; Jagung Pangan</option>
+                      <option value='hidroponik'>Sayuran Daun Hidroponik</option>
+                      <option value='lainnya'>Lainnya / Belum Ditentukan</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class='flex flex-col gap-space-xs'>
+                  <label class='text-xs font-medium text-on-surface-variant'>Pesan / Pertanyaan Spesifik</label>
+                  <textarea class='rounded-xl p-space-md bg-surface-container-low text-on-surface text-xs shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container' placeholder='Ceritakan kondisi tanah, riwayat hama, atau target panen...' rows='3'></textarea>
+                </div>
+
+                <button class='inline-flex items-center justify-center gap-space-xs rounded-full bg-primary-container text-on-primary text-xs font-semibold px-space-xl py-space-sm hover:bg-primary transition-colors shadow-[0_4px_12px_rgba(0,0,0,0.06)] self-start mt-space-xs' type='submit'>
+                  <span class='material-symbols-outlined text-[18px]'>send</span>
+                  <span>Kirim Pesan Konsultasi</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Right Column: Direct Info & Quick FAQ -->
+            <div class='lg:col-span-5 flex flex-col gap-space-md'>
+              <div class='bg-surface-container-lowest rounded-2xl p-space-lg shadow-md flex flex-col gap-space-md'>
+                <h3 class='font-outfit font-bold text-base text-on-surface'>Kontak Langsung Tim Agronomis</h3>
+                <div class='flex flex-col gap-space-sm text-xs'>
+                  <div class='flex items-center gap-space-sm text-on-surface'>
+                    <div class='w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0'>
+                      <span class='material-symbols-outlined text-[20px]'>chat</span>
+                    </div>
+                    <div>
+                      <div class='font-semibold'>WhatsApp Hotline Petani</div>
+                      <div class='text-on-surface-variant'>+62 821-3456-7890 (Respon Cepat)</div>
+                    </div>
+                  </div>
+
+                  <div class='flex items-center gap-space-sm text-on-surface'>
+                    <div class='w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0'>
+                      <span class='material-symbols-outlined text-[20px]'>schedule</span>
+                    </div>
+                    <div>
+                      <div class='font-semibold'>Jam Layanan Konsultasi</div>
+                      <div class='text-on-surface-variant'>Senin - Sabtu: 07.30 - 17.00 WIB</div>
+                    </div>
+                  </div>
+
+                  <div class='flex items-center gap-space-sm text-on-surface'>
+                    <div class='w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0'>
+                      <span class='material-symbols-outlined text-[20px]'>storefront</span>
+                    </div>
+                    <div>
+                      <div class='font-semibold'>Demo Plot &amp; Kebun Riset</div>
+                      <div class='text-on-surface-variant'>Bogor Agrotech Valley, Jawa Barat</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick FAQ Card -->
+              <div class='bg-surface-container-lowest rounded-2xl p-space-lg shadow-md flex flex-col gap-space-sm'>
+                <h3 class='font-outfit font-bold text-base text-on-surface'>Pertanyaan Umum (FAQ)</h3>
+                <div class='flex flex-col gap-space-xs text-on-surface'>
+                  <p class='text-xs font-semibold text-primary'>Apakah bibit memiliki jaminan daya kecambah?</p>
+                  <p class='text-xs text-on-surface-variant'>Ya, seluruh benih bergaransi daya tumbuh 85%-98% dan lolos uji viabilitas resmi.</p>
+                </div>
+                <div class='flex flex-col gap-space-xs text-on-surface pt-space-xs'>
+                  <p class='text-xs font-semibold text-primary'>Bagaimana pengiriman bibit ke luar pulau?</p>
+                  <p class='text-xs text-on-surface-variant'>Kemasan kedap udara anti-lembap memastikan bibit tiba dalam kondisi prima di seluruh Indonesia.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- BLOGGER STATIC PAGE BODY CONTAINER                           -->
+  <!-- ============================================================ -->
+  <div id='pageContentWrapper'>
+    <b:section class='main' id='main' showaddelement='no'>
+      <b:widget id='Blog1' locked='true' title='Posting Blog' type='Blog'>
+        <b:includable id='main' var='top'>
+          <b:loop values='data:posts' var='post'>
+            <b:include data='post' name='post'/>
+          </b:loop>
+        </b:includable>
+        <b:includable id='post' var='post'>
+          <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
+            <data:post.body/>
+          </div>
+        </b:includable>
+        <b:includable id='status-message'/>
+        <b:includable id='comment-form'/>
+        <b:includable id='backlinks'/>
+        <b:includable id='post-quickedit'/>
+        <b:includable id='commentDeleteHost'/>
+        <b:includable id='feedLinks'/>
+        <b:includable id='feedLinksBody'/>
+        <b:includable id='comments'/>
+      </b:widget>
+    </b:section>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- PUBLIC FOOTER                                                -->
+  <!-- ============================================================ -->
+  <footer class='w-full bg-primary text-on-primary mt-space-xl'>
+    <div class='max-w-[1200px] mx-auto px-gutter py-space-xl grid grid-cols-1 md:grid-cols-3 gap-space-xl'>
+      
+      <div class='flex flex-col gap-space-md'>
+        <div class='flex items-center gap-space-sm'>
+          <img alt='Go-Tani Logo' class='h-8 w-auto object-contain brightness-0 invert' src='https://lh3.googleusercontent.com/aida/AEtjO1VNKrzeyOO14-SUzSsuttNuU6cnXdEOmLd6uZR_QtDTlLADhxz8xJutLZS2WJMx4rC1m0fJHtKzbxwrV0Aafv-JVMQQoNOrlwjmJsCkcgt3kGMxEMECKI2uIB5oaSw_gyvrpihXzw2_dbF8qLrflV2F02gHQqhL7TK1LB8ub191HehJgARGnFX-_3-I7A6m6duZ1rXmOe4Gv0JfdA4xgRkpGavoA3thee2XeDDesJESzEP2jkTYHz52J6GT'/>
+          <span class='font-outfit font-bold text-xl text-on-primary'>Go-Tani</span>
+        </div>
+        <p class='text-xs text-on-primary/80 leading-relaxed max-w-sm'>
+          Platform rekomendasi bibit tanaman unggul dan adaptif terpercaya di Indonesia. Membantu petani serta pegiat agrikultur menemukan varietas terbaik untuk hasil panen optimal.
+        </p>
+      </div>
+
+      <div class='flex flex-col gap-space-md'>
+        <h3 class='font-outfit font-bold text-base text-on-primary'>Tautan Cepat</h3>
+        <ul class='flex flex-col gap-space-sm text-xs'>
+          <li><a class='text-on-primary/80 hover:text-on-primary transition-colors' href='/'>Beranda</a></li>
+          <li><a class='text-on-primary/80 hover:text-on-primary transition-colors' href='/p/tentang.html'>Tentang Kami</a></li>
+          <li><a class='text-on-primary/80 hover:text-on-primary transition-colors' href='/p/bibit.html'>Katalog Bibit</a></li>
+          <li><a class='text-on-primary/80 hover:text-on-primary transition-colors' href='/p/blog_0702227196.html'>Blog &amp; Panduan Tani</a></li>
+          <li><a class='text-on-primary/80 hover:text-on-primary transition-colors' href='/p/kontak.html'>Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class='flex flex-col gap-space-md'>
+        <h3 class='font-outfit font-bold text-base text-on-primary'>Kontak &amp; Info</h3>
+        <div class='flex flex-col gap-space-sm text-xs text-on-primary/80'>
+          <div class='flex items-center gap-space-sm'><span class='material-symbols-outlined text-[18px]'>mail</span><span>halo@go-tani.id</span></div>
+          <div class='flex items-center gap-space-sm'><span class='material-symbols-outlined text-[18px]'>call</span><span>+62 821-3456-7890</span></div>
+          <div class='flex items-start gap-space-sm'><span class='material-symbols-outlined text-[18px]'>location_on</span><span>Bogor Agrotech Valley, Jawa Barat</span></div>
+          <div class='pt-2'><a class='text-secondary-fixed font-semibold hover:underline' href='/p/admin-login.html'>🔒 Portal Login Admin</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class='w-full bg-black/10 py-space-md border-t border-white/10'>
+      <div class='max-w-[1200px] mx-auto px-gutter flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left'>
+        <p class='text-xs text-on-primary/80'>© 2026 Go-Tani. Hak Cipta Dilindungi.</p>
+        <div class='flex items-center gap-space-md text-xs text-on-primary/80'>
+          <a class='hover:text-on-primary' href='/p/kebijakan-privasi.html'>Kebijakan Privasi</a>
+          <a class='hover:text-on-primary' href='/p/syarat-ketentuan.html'>Syarat &amp; Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- CLIENT JAVASCRIPT                                            -->
+  <!-- ============================================================ -->
+  <script>
+  //<![CDATA[
+    document.addEventListener('DOMContentLoaded', () => {
+      const path = (window.location.pathname || '').toLowerCase();
+      const isStaticPage = path.includes('/p/') || path.includes('/b/') || (path.length > 1 && path.endsWith('.html'));
+      const isAdminPage = path.includes('admin');
+
+      const homeWrapper = document.getElementById('homeLandingWrapper');
+      const pageWrapper = document.getElementById('pageContentWrapper');
+      const themeHeader = document.querySelector('header.sticky');
+      const themeFooter = document.querySelector('footer');
+
+      if (isAdminPage) {
+        if (themeHeader) themeHeader.style.display = 'none';
+        if (themeFooter) themeFooter.style.display = 'none';
+      }
+
+      // Routing: Tampilkan landing page di root (/), konten Blogger di /p/*.html
+      if (homeWrapper && pageWrapper) {
+        if (isStaticPage) {
+          homeWrapper.style.display = 'none';
+          pageWrapper.style.display = 'block';
+
+          // Periksa apakah Blogger sudah menampilkan konten halaman
+          const entryBody = pageWrapper.querySelector('.post-body, .entry-content');
+          const hasContent = entryBody && entryBody.textContent.trim().length > 15;
+
+          // Fallback load via Blogger Feed API jika widget Blogger kosong
+          if (!hasContent) {
+            const pageSlug = path.replace('/p/', '').replace('.html', '').replace(/^\/+|\/+$/g, '').toLowerCase();
+            fetch('/feeds/pages/default?alt=json')
+              .then(res => res.json())
+              .then(data => {
+                if (data && data.feed && data.feed.entry) {
+                  const entry = data.feed.entry.find(e => {
+                    const altLink = (e.link || []).find(l => l.rel === 'alternate');
+                    const linkHref = (altLink ? altLink.href : '').toLowerCase();
+                    const entrySlug = linkHref.includes('/p/') ? linkHref.split('/p/')[1].replace('.html', '') : '';
+                    const titleText = (e.title && e.title.$t ? e.title.$t : '').toLowerCase().trim();
+                    return entrySlug === pageSlug || titleText === pageSlug || linkHref.endsWith('/' + pageSlug + '.html');
+                  });
+                  if (entry && entry.content && entry.content.$t) {
+                    pageWrapper.innerHTML = '<div class="post-body entry-content">' + entry.content.$t + '</div>';
+                    pageWrapper.querySelectorAll('script').forEach(oldScript => {
+                      const newScript = document.createElement('script');
+                      Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                      oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                  }
+                }
+              })
+              .catch(err => console.error('Gagal memuat konten halaman:', err));
+          }
+        } else {
+          homeWrapper.style.display = 'block';
+          pageWrapper.style.display = 'none';
+        }
+      }
+
+      // Highlight Active Menu
+      document.querySelectorAll('#navMenu a').forEach(a => {
+        const href = a.getAttribute('href').toLowerCase();
+        if ((!isStaticPage && href === '/') || (isStaticPage && href !== '/' && path.includes(href.replace('/p/', '').replace('.html', '')))) {
+          a.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+          a.classList.remove('text-on-surface-variant');
+        } else {
+          a.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+          a.classList.add('text-on-surface-variant');
+        }
+      });
+
+      // Filter & Search Functionality for Seed Catalog
+      const filterButtons = document.querySelectorAll('.filter-pill');
+      const cards = document.querySelectorAll('.seed-card');
+      const searchInput = document.getElementById('bibitSearchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+      let currentFilter = 'all';
+      let currentSearch = '';
+
+      function applyFilters() {
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const title = (card.getAttribute('data-title') || '').toLowerCase();
+          
+          const matchesCategory = (currentFilter === 'all' || category === currentFilter);
+          const matchesSearch = title.includes(currentSearch);
+
+          if (matchesCategory && matchesSearch) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary');
+            b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+          btn.classList.add('bg-primary-container', 'text-on-primary');
+
+          currentFilter = btn.getAttribute('data-category');
+          applyFilters();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value.toLowerCase().trim();
+          if (clearSearchBtn) {
+            if (currentSearch.length > 0) {
+              clearSearchBtn.classList.remove('hidden');
+            } else {
+              clearSearchBtn.classList.add('hidden');
+            }
+          }
+          applyFilters();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          if (searchInput) {
+            searchInput.value = '';
+            currentSearch = '';
+            clearSearchBtn.classList.add('hidden');
+            applyFilters();
+          }
+        });
+      }
+
+      // Consultation Form Toast Handler
+      const consultForm = document.getElementById('consultationForm');
+      if (consultForm) {
+        consultForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Terima kasih! Pesan konsultasi Anda telah diterima oleh tim agronomis Go-Tani. Kami akan segera menghubungi nomor WhatsApp Anda.');
+          consultForm.reset();
+        });
+      }
+
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  //]]>
+  </script>
+</body>
+</html>

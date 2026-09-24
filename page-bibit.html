@@ -1,0 +1,1412 @@
+<!-- ============================================================ -->
+<!-- GO-TANI: HALAMAN KATALOG BIBIT & VARIETAS UNGGUL              -->
+<!-- Salin dan tempel SELURUH KODE INI ke Mode HTML Halaman Blogger -->
+<!-- Judul Halaman di Blogger: Bibit (atau Katalog Bibit)          -->
+<!-- ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+<style>
+  .gt-bibit-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px 70px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1B1C1C;
+    box-sizing: border-box;
+    line-height: 1.6;
+  }
+  .gt-bibit-wrap * {
+    box-sizing: border-box;
+  }
+
+  /* Breadcrumb */
+  .gt-breadcrumb {
+    font-size: 13px;
+    color: #6B7280;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .gt-breadcrumb a {
+    color: #0D631B;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .gt-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  /* Top Banner */
+  .gt-banner-box {
+    position: relative;
+    background: #F6F3F2;
+    border: 1px solid #E5E2E1;
+    border-radius: 20px;
+    padding: 36px 32px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media (min-width: 768px) {
+    .gt-banner-box {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  .gt-badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(46, 125, 50, 0.12);
+    color: #0D631B;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+  }
+  .gt-banner-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #1B1C1C;
+    line-height: 1.25;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+  }
+  .gt-banner-desc {
+    font-size: 15px;
+    color: #40493D;
+    max-width: 640px;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .gt-metrics-pill {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #FFFFFF;
+    border: 1px solid #E5E2E1;
+    padding: 16px 22px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    flex-shrink: 0;
+  }
+  .metric-col {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .metric-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #0D631B;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .metric-icon-box.sec {
+    background: #9CF49C;
+    color: #19722B;
+  }
+  .metric-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1B1C1C;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  .metric-lbl {
+    font-size: 12px;
+    color: #5F6368;
+  }
+  .metric-divider {
+    width: 1px;
+    height: 32px;
+    background: #E5E2E1;
+  }
+
+  /* Filter & Search Bar Container */
+  .gt-controls-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .gt-search-sort-bar {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  @media (min-width: 992px) {
+    .gt-search-sort-bar {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .gt-search-input-box {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .gt-search-input-box span.search-icon {
+    position: absolute;
+    left: 14px;
+    color: #5F6368;
+    pointer-events: none;
+  }
+  .gt-search-input-box input {
+    width: 100%;
+    height: 46px;
+    padding: 10px 42px 10px 44px;
+    border-radius: 30px;
+    border: 1px solid #E5E2E1;
+    background: #F6F3F2;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  .gt-search-input-box input:focus {
+    background: #FFFFFF;
+    border-color: #0D631B;
+    box-shadow: 0 0 0 3px rgba(13, 99, 27, 0.1);
+  }
+  .gt-clear-btn {
+    position: absolute;
+    right: 14px;
+    background: transparent;
+    border: none;
+    color: #5F6368;
+    cursor: pointer;
+    display: none;
+  }
+  .gt-sort-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .gt-sort-box label {
+    font-size: 13px;
+    color: #5F6368;
+    font-weight: 500;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .gt-sort-select {
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 30px;
+    border: 1px solid #E5E2E1;
+    background: #F6F3F2;
+    font-size: 13px;
+    font-family: inherit;
+    color: #1B1C1C;
+    outline: none;
+    cursor: pointer;
+  }
+
+  /* Filter Badges Box */
+  .gt-chips-filter-box {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 20px 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .filter-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  @media (min-width: 768px) {
+    .filter-row {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .filter-row-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #40493D;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .chips-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filter-chip {
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #E5E2E1;
+    background: #F6F3F2;
+    color: #40493D;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .filter-chip:hover {
+    background: #EAE7E7;
+  }
+  .filter-chip.active {
+    background: #0D631B;
+    color: #FFFFFF;
+    border-color: #0D631B;
+    font-weight: 600;
+  }
+  .summary-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid #F0EDED;
+    font-size: 13px;
+    color: #5F6368;
+  }
+
+  /* Grid of Seed Cards */
+  .gt-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 640px) {
+    .gt-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .gt-cards-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .seed-item-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+  }
+  .seed-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(13, 99, 27, 0.1);
+    border-color: #88D982;
+  }
+  .seed-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #E5E2E1;
+    margin-bottom: 14px;
+  }
+  .seed-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .seed-item-card:hover .seed-img-wrap img {
+    transform: scale(1.04);
+  }
+  .seed-badge-type {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #126d27;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .seed-germ-pill {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    color: #0D631B;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .seed-category-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11.5px;
+    color: #5F6368;
+    margin-bottom: 4px;
+  }
+  .seed-category-row span.mdpl {
+    color: #0D631B;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .seed-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1B1C1C;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+  }
+  .seed-desc {
+    font-size: 12.5px;
+    color: #40493D;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .seed-specs-grid {
+    background: #F6F3F2;
+    border-radius: 12px;
+    padding: 8px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    font-size: 11.5px;
+    color: #1B1C1C;
+    margin-bottom: 14px;
+  }
+  .spec-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .spec-item span.icon {
+    color: #0D631B;
+    font-size: 15px;
+  }
+  .seed-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px solid #F0EDED;
+  }
+  .seed-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .seed-price-label {
+    font-size: 11px;
+    color: #5F6368;
+  }
+  .seed-price-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0D631B;
+  }
+  .btn-seed-detail {
+    width: 100%;
+    padding: 9px 14px;
+    border-radius: 30px;
+    background: #2E7D32;
+    color: #FFFFFF !important;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    text-decoration: none !important;
+  }
+  .btn-seed-detail:hover {
+    background: #0D631B;
+  }
+
+  /* Empty state */
+  .gt-empty-state {
+    display: none;
+    padding: 48px 20px;
+    text-align: center;
+    background: #F6F3F2;
+    border-radius: 20px;
+    margin: 20px 0;
+  }
+  .gt-empty-state.show {
+    display: block;
+  }
+
+  /* Skeleton Loading & Stock Badge */
+  .seed-skeleton-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E2E1;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 440px;
+  }
+  .skeleton-box {
+    background: linear-gradient(90deg, #ece9e8 25%, #f7f5f4 50%, #ece9e8 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite;
+    border-radius: 8px;
+  }
+  @keyframes skeleton-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .seed-badge-stock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(220, 38, 38, 0.92);
+    color: #FFFFFF;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+  }
+
+  /* Seed Calculator Widget */
+  .gt-calc-section {
+    background: #F6F3F2;
+    border: 1px solid #E5E2E1;
+    border-radius: 24px;
+    padding: 36px 28px;
+    margin-bottom: 48px;
+  }
+  .gt-calc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  @media (min-width: 992px) {
+    .gt-calc-grid { grid-template-columns: 1fr 1.2fr; align-items: center; }
+  }
+  .calc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ACF4A4;
+    color: #0C5216;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .calc-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #1B1C1C;
+    margin: 0 0 10px 0;
+  }
+  .calc-desc {
+    font-size: 14px;
+    color: #40493D;
+    line-height: 1.6;
+    margin: 0 0 18px 0;
+  }
+  .calc-tip-box {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    gap: 10px;
+    font-size: 12.5px;
+    color: #40493D;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  }
+  .calc-tool-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  }
+  .calc-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 600px) {
+    .calc-inputs-grid { grid-template-columns: 1fr 1fr; }
+    .calc-inputs-grid .full { grid-column: span 2; }
+  }
+  .calc-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #40493D;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .calc-input, .calc-select {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid #E5E2E1;
+    background: #F6F3F2;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+  }
+  .calc-result-box {
+    background: rgba(13, 99, 27, 0.08);
+    border: 1px solid rgba(13, 99, 27, 0.15);
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  @media (min-width: 600px) {
+    .calc-result-box {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .calc-res-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0D631B;
+  }
+  .calc-res-val {
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #0D631B;
+    line-height: 1.1;
+  }
+  .calc-res-unit {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0D631B;
+  }
+  .calc-res-sub {
+    font-size: 12px;
+    color: #5F6368;
+  }
+  .calc-saran-card {
+    background: #FFFFFF;
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: right;
+  }
+
+  /* Modal Detail */
+  .gt-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .gt-modal-backdrop.open {
+    display: flex;
+  }
+  .gt-modal-card {
+    background: #FFFFFF;
+    border-radius: 22px;
+    padding: 28px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: modalPop 0.25s ease-out;
+  }
+  @keyframes modalPop {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .modal-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F6F3F2;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<div class="gt-bibit-wrap">
+
+  <!-- Breadcrumb -->
+  <div class="gt-breadcrumb">
+    <a href="/">Beranda</a>
+    <span>/</span>
+    <span>Katalog Bibit</span>
+  </div>
+
+  <!-- 1. Top Context Banner -->
+  <div class="gt-banner-box">
+    <div>
+      <div class="gt-badge-tag">
+        <span class="material-symbols-outlined" style="font-size:16px;">verified</span>
+        <span>Basis Data Benih Tersertifikasi BPSB &amp; Kementan RI</span>
+      </div>
+      <h1 class="gt-banner-title">Katalog Bibit &amp; Varietas Unggul</h1>
+      <p class="gt-banner-desc">
+        Temukan rekomendasi bibit presisi berdaya kecambah tinggi (&gt;85%) dengan kecocokan agroklimat mikrokosmos, elevasi MDPL, dan ketahanan spesifik hama-penyakit di Indonesia.
+      </p>
+    </div>
+
+    <!-- Quick Metrics -->
+    <div class="gt-metrics-pill">
+      <div class="metric-col">
+        <div class="metric-icon-box">
+          <span class="material-symbols-outlined" style="font-size:20px;">spa</span>
+        </div>
+        <div>
+          <div class="metric-num">148+</div>
+          <div class="metric-lbl">Varietas Terdaftar</div>
+        </div>
+      </div>
+      <div class="metric-divider"></div>
+      <div class="metric-col">
+        <div class="metric-icon-box sec">
+          <span class="material-symbols-outlined" style="font-size:20px;">psychology_alt</span>
+        </div>
+        <div>
+          <div class="metric-num">98.2%</div>
+          <div class="metric-lbl">Akurasi MDPL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Search & Controls -->
+  <div class="gt-controls-wrap">
+    
+    <div class="gt-search-sort-bar">
+      <div class="gt-search-input-box">
+        <span class="material-symbols-outlined search-icon" style="font-size:20px;">search</span>
+        <input type="text" id="seed-search-input" placeholder="Cari nama varietas, hama toleran, atau komoditas (misal: Ori 212, Gemini, Servo)..." />
+        <button id="clear-search-btn" class="gt-clear-btn" title="Hapus">
+          <span class="material-symbols-outlined" style="font-size:18px;">close</span>
+        </button>
+      </div>
+
+      <div class="gt-sort-box">
+        <label for="sort-select">
+          <span class="material-symbols-outlined" style="font-size:18px;">swap_vert</span>
+          Urutkan:
+        </label>
+        <select id="sort-select" class="gt-sort-select">
+          <option value="popular">Paling Populer</option>
+          <option value="germination">Daya Tumbuh Tertinggi</option>
+          <option value="harvest">Waktu Panen Tercepat</option>
+          <option value="yield">Potensi Hasil Tertinggi</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Multi-dimension Filter Chips -->
+    <div class="gt-chips-filter-box">
+      <!-- Elevasi MDPL -->
+      <div class="filter-row">
+        <span class="filter-row-title">
+          <span class="material-symbols-outlined" style="font-size:16px;">landscape</span>
+          Ketinggian Lahan:
+        </span>
+        <div class="chips-group" id="mdpl-filters">
+          <button class="filter-chip active filter-mdpl" data-mdpl="all">Semua MDPL</button>
+          <button class="filter-chip filter-mdpl" data-mdpl="low">Dataran Rendah (0-400 mdpl)</button>
+          <button class="filter-chip filter-mdpl" data-mdpl="medium">Dataran Menengah (400-800 mdpl)</button>
+          <button class="filter-chip filter-mdpl" data-mdpl="high">Dataran Tinggi (&gt;800 mdpl)</button>
+        </div>
+      </div>
+
+      <!-- Komoditas -->
+      <div class="filter-row">
+        <span class="filter-row-title">
+          <span class="material-symbols-outlined" style="font-size:16px;">category</span>
+          Komoditas:
+        </span>
+        <div class="chips-group" id="commodity-filters">
+          <button class="filter-chip active filter-cat" data-cat="all">Semua Jenis</button>
+          <button class="filter-chip filter-cat" data-cat="Sayur">Sayuran</button>
+          <button class="filter-chip filter-cat" data-cat="Buah">Buah-buahan</button>
+          <button class="filter-chip filter-cat" data-cat="Palawija">Pangan &amp; Palawija</button>
+          <button class="filter-chip filter-cat" data-cat="Rempah">Rempah &amp; Herbal</button>
+        </div>
+      </div>
+
+      <!-- Tipe Varietas -->
+      <div class="summary-row">
+        <div class="chips-group" style="align-items:center;">
+          <span style="font-weight:600; color:#40493D; margin-right:4px;">Jenis Bibit:</span>
+          <button class="filter-chip active filter-type" data-type="all">Semua</button>
+          <button class="filter-chip filter-type" data-type="f1">Hibrida (F1)</button>
+          <button class="filter-chip filter-type" data-type="local">Unggul Bebas / Lokal</button>
+        </div>
+        <div>
+          Menampilkan <strong id="visible-count" style="color:#0D631B; font-size:15px;">...</strong> dari <span id="total-count" style="font-weight:600;">...</span> bibit terdaftar
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 3. Seed Cards Grid (Dynamic Supabase Container) -->
+  <div class="gt-cards-grid" id="seed-cards-container">
+    <!-- Skeleton Loaders -->
+    <div class="seed-skeleton-card">
+      <div>
+        <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:14px; border-radius:14px;"></div>
+        <div class="skeleton-box" style="width:40%; height:14px; margin-bottom:8px;"></div>
+        <div class="skeleton-box" style="width:80%; height:20px; margin-bottom:10px;"></div>
+        <div class="skeleton-box" style="width:100%; height:36px; margin-bottom:12px;"></div>
+        <div class="skeleton-box" style="width:100%; height:40px; margin-bottom:14px;"></div>
+      </div>
+      <div class="skeleton-box" style="width:100%; height:38px; border-radius:30px;"></div>
+    </div>
+    <div class="seed-skeleton-card">
+      <div>
+        <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:14px; border-radius:14px;"></div>
+        <div class="skeleton-box" style="width:40%; height:14px; margin-bottom:8px;"></div>
+        <div class="skeleton-box" style="width:80%; height:20px; margin-bottom:10px;"></div>
+        <div class="skeleton-box" style="width:100%; height:36px; margin-bottom:12px;"></div>
+        <div class="skeleton-box" style="width:100%; height:40px; margin-bottom:14px;"></div>
+      </div>
+      <div class="skeleton-box" style="width:100%; height:38px; border-radius:30px;"></div>
+    </div>
+    <div class="seed-skeleton-card">
+      <div>
+        <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:14px; border-radius:14px;"></div>
+        <div class="skeleton-box" style="width:40%; height:14px; margin-bottom:8px;"></div>
+        <div class="skeleton-box" style="width:80%; height:20px; margin-bottom:10px;"></div>
+        <div class="skeleton-box" style="width:100%; height:36px; margin-bottom:12px;"></div>
+        <div class="skeleton-box" style="width:100%; height:40px; margin-bottom:14px;"></div>
+      </div>
+      <div class="skeleton-box" style="width:100%; height:38px; border-radius:30px;"></div>
+    </div>
+  </div>
+
+  <!-- Empty State Alert -->
+  <div class="gt-empty-state" id="no-results-msg">
+    <span class="material-symbols-outlined" style="font-size:48px; color:#5F6368;">search_off</span>
+    <h3 style="font-family:'Outfit',sans-serif; font-size:20px; font-weight:700; margin:8px 0 4px;">Varietas Tidak Ditemukan</h3>
+    <p style="font-size:14px; color:#5F6368; max-width:400px; margin:0 auto 16px;">Coba sesuaikan kata kunci pencarian atau ubah kriteria filter MDPL dan jenis komoditas.</p>
+    <button onclick="resetAllFilters()" style="padding:10px 24px; border-radius:30px; background:#0D631B; color:#FFFFFF; border:none; cursor:pointer; font-weight:600; font-size:13px;">
+      Reset Semua Filter
+    </button>
+  </div>
+
+  <!-- 4. Interactive Seed Quantity Calculator -->
+  <div class="gt-calc-section">
+    <div class="gt-calc-grid">
+      
+      <div>
+        <div class="calc-badge">
+          <span class="material-symbols-outlined" style="font-size:16px;">calculate</span>
+          Fitur Pintar Agronomi
+        </div>
+        <h2 class="calc-title">Kalkulator Kebutuhan Benih</h2>
+        <p class="calc-desc">
+          Hindari pemborosan modal atau kekurangan populasi tanaman di lahan. Hitung estimasi gramatur dan jumlah sachet benih berdasarkan luas lahan dan jarak tanam rekomendasi.
+        </p>
+
+        <div class="calc-tip-box">
+          <span class="material-symbols-outlined" style="color:#0D631B; font-size:22px; flex-shrink:0;">tips_and_updates</span>
+          <p style="margin:0; line-height:1.5;">
+            Perhitungan telah menyertakan faktor pengaman penyulaman mandiri sebesar <strong>10-15%</strong> dari total populasi lubang tanam.
+          </p>
+        </div>
+      </div>
+
+      <div class="calc-tool-card">
+        <div class="calc-inputs-grid">
+          <div>
+            <label class="calc-label" for="calc-crop">Pilih Komoditas Tanaman</label>
+            <select id="calc-crop" class="calc-select">
+              <option value="chili" data-rate="150" data-pop="18000" data-pack="10">Cabai Rawit / Keriting</option>
+              <option value="tomato" data-rate="120" data-pop="20000" data-pack="5">Tomat Sayur / Buah</option>
+              <option value="corn" data-rate="15000" data-pop="65000" data-pack="250">Jagung Manis</option>
+              <option value="melon" data-rate="300" data-pop="15000" data-pack="20">Melon / Semangka</option>
+              <option value="paddy" data-rate="25000" data-pop="160000" data-pack="5000">Padi Sawah (Inbrida)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="calc-label" for="calc-area-unit">Satuan Luas Lahan</label>
+            <select id="calc-area-unit" class="calc-select">
+              <option value="sqm">Meter Persegi (m²)</option>
+              <option value="ha">Hektar (Ha)</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label class="calc-label" for="calc-area-val">Masukkan Luas Lahan</label>
+            <input type="number" id="calc-area-val" class="calc-input" value="1000" min="10" step="10" />
+          </div>
+        </div>
+
+        <div class="calc-result-box">
+          <div>
+            <div class="calc-res-title">Estimasi Kebutuhan Benih:</div>
+            <div>
+              <span id="res-weight" class="calc-res-val">15.0</span>
+              <span id="res-weight-unit" class="calc-res-unit">Gram</span>
+            </div>
+            <div id="res-population" class="calc-res-sub">Estimasi ±1.800 lubang tanam</div>
+          </div>
+
+          <div class="calc-saran-card">
+            <div style="font-size:11px; color:#5F6368;">Saran Pembelian:</div>
+            <div id="res-packs" style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:800; color:#0D631B;">2 Sachet</div>
+            <div style="font-size:11px; color:#5F6368;">Ukuran reguler</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal Pop-up Drawer -->
+  <div class="gt-modal-backdrop" id="seed-modal">
+    <div class="gt-modal-card">
+      <button class="modal-close-btn" onclick="closeSeedModal()">
+        <span class="material-symbols-outlined" style="font-size:18px;">close</span>
+      </button>
+      
+      <div style="display:flex; align-items:center; gap:6px; color:#0D631B; font-size:12px; font-weight:700;">
+        <span class="material-symbols-outlined" style="font-size:16px;">verified_user</span>
+        <span>Spesifikasi &amp; Rekomendasi Agronomis</span>
+      </div>
+
+      <div>
+        <h3 id="modal-title" style="font-family:'Outfit',sans-serif; font-size:22px; font-weight:700; color:#1B1C1C; margin:0 0 2px;">Nama Benih</h3>
+        <p id="modal-category" style="font-size:13px; color:#5F6368; margin:0;">Kategori</p>
+      </div>
+
+      <div style="background:#F6F3F2; border-radius:14px; padding:12px 14px; display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:12px;">
+        <div>
+          <span style="color:#5F6368; display:block; font-size:11px;">Daya Berkecambah:</span>
+          <strong id="modal-germ" style="color:#0D631B; font-size:14px;">95%</strong>
+        </div>
+        <div>
+          <span style="color:#5F6368; display:block; font-size:11px;">Estimasi Panen:</span>
+          <strong id="modal-harvest" style="font-size:14px;">85 - 90 HST</strong>
+        </div>
+        <div>
+          <span style="color:#5F6368; display:block; font-size:11px;">Estimasi Harga:</span>
+          <strong id="modal-yield" style="font-size:14px;">Rp35.000</strong>
+        </div>
+        <div>
+          <span style="color:#5F6368; display:block; font-size:11px;">Musim &amp; Elevasi:</span>
+          <strong id="modal-mdpl" style="font-size:14px;">0 - 800 mdpl</strong>
+        </div>
+      </div>
+
+      <div>
+        <span style="font-size:11px; font-weight:700; color:#5F6368; text-transform:uppercase; letter-spacing:0.5px;">Deskripsi Keunggulan:</span>
+        <p id="modal-notes" style="font-size:13px; color:#1B1C1C; background:rgba(246,243,242,0.6); padding:10px 12px; border-radius:10px; margin:4px 0 0; line-height:1.5;">
+          Instruksi budidaya...
+        </p>
+      </div>
+
+      <div id="modal-caratanam-wrap">
+        <span style="font-size:11px; font-weight:700; color:#5F6368; text-transform:uppercase; letter-spacing:0.5px;">Panduan Cara Tanam:</span>
+        <p id="modal-caratanam" style="font-size:13px; color:#1B1C1C; background:rgba(246,243,242,0.6); padding:10px 12px; border-radius:10px; margin:4px 0 0; line-height:1.5;">
+          -
+        </p>
+      </div>
+
+      <div style="display:flex; gap:10px; margin-top:6px;">
+        <a href="/p/kontak.html" style="flex:1; padding:11px; border-radius:30px; background:#0D631B; color:#FFFFFF !important; text-align:center; font-size:13px; font-weight:600; text-decoration:none;">
+          Konsultasi Agronomis Gratis
+        </a>
+        <button onclick="closeSeedModal()" style="padding:11px 20px; border-radius:30px; background:#F6F3F2; color:#1B1C1C; border:none; cursor:pointer; font-size:13px; font-weight:600;">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Client-side Logic Script with Supabase Database Connection -->
+<script>
+  (function() {
+    // 1. SUPABASE CONFIGURATION
+    const SUPABASE_URL = 'https://abeqqbahcigexjwmklqn.supabase.co';
+    const SUPABASE_ANON_KEY = 'sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR';
+
+    let allSeeds = [];
+    let currentCards = [];
+    const currentFilters = {
+      search: '',
+      mdpl: 'all',
+      cat: 'all',
+      type: 'all',
+      sort: 'popular'
+    };
+
+    const searchInput = document.getElementById('seed-search-input');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const sortSelect = document.getElementById('sort-select');
+    const visibleCountEl = document.getElementById('visible-count');
+    const totalCountEl = document.getElementById('total-count');
+    const noResultsMsg = document.getElementById('no-results-msg');
+    const cardsContainer = document.getElementById('seed-cards-container');
+
+    // Utility: Deteksi ketinggian MDPL dari teks musim tanam / deskripsi
+    function detectMdpl(text) {
+      const t = (text || '').toLowerCase();
+      const mdpls = [];
+      if (t.includes('rendah') || t.includes('<400') || t.includes('0-400') || t.includes('0-600') || t.includes('0-800') || t.includes('0 - 800') || t.includes('<600') || t.includes('rawa')) {
+        mdpls.push('low');
+      }
+      if (t.includes('menengah') || t.includes('400-800') || t.includes('400-1200') || t.includes('700-1000') || t.includes('700-1200') || t.includes('0-800') || t.includes('0 - 800') || t.includes('600-1500')) {
+        mdpls.push('medium');
+      }
+      if (t.includes('tinggi') || t.includes('>800') || t.includes('700-1000') || t.includes('700-1200') || t.includes('400-1200') || t.includes('600-1500')) {
+        mdpls.push('high');
+      }
+      if (mdpls.length === 0 || t.includes('sepanjang tahun') || t.includes('adaptif')) {
+        return 'low,medium,high';
+      }
+      return mdpls.join(',');
+    }
+
+    // Utility: Deteksi tipe varietas (F1 vs Lokal)
+    function detectType(item) {
+      const name = (item.nama_bibit || '').toUpperCase();
+      const desc = (item.deskripsi || '').toUpperCase();
+      if (name.includes('F1') || name.includes('G9') || name.includes('IPB') || name.includes('TM ') || name.includes('TM 999') || desc.includes('HIBRIDA')) {
+        return { code: 'f1', label: name.includes('F1') ? 'Hibrida F1' : 'Kultivar Unggul' };
+      }
+      return { code: 'local', label: 'Unggul Lokal' };
+    }
+
+    // Utility: Parse estimasi hari panen untuk sorting
+    function parseHarvestDays(str) {
+      if (!str) return 70;
+      const s = str.toLowerCase();
+      if (s.includes('tahun')) {
+        const m = s.match(/(\d+)/);
+        return m ? parseInt(m[0]) * 365 : 365;
+      }
+      if (s.includes('bulan')) {
+        const m = s.match(/(\d+)/);
+        return m ? parseInt(m[0]) * 30 : 180;
+      }
+      const m = s.match(/(\d+)/);
+      return m ? parseInt(m[0]) : 60;
+    }
+
+    // Modal Details Opener
+    const modal = document.getElementById('seed-modal');
+    window.openSeedDetail = function(title, cat, germ, harvest, yld, mdpl, notes, caraTanam) {
+      if (!modal) return;
+      document.getElementById('modal-title').innerText = title || '-';
+      document.getElementById('modal-category').innerText = `Kategori: ${cat || 'Tanaman Unggul'}`;
+      document.getElementById('modal-germ').innerText = germ || '95%';
+      document.getElementById('modal-harvest').innerText = harvest || '-';
+      document.getElementById('modal-yield').innerText = yld || '-';
+      document.getElementById('modal-mdpl').innerText = mdpl || 'Adaptif';
+      document.getElementById('modal-notes').innerText = notes || '-';
+      
+      const caraTanamEl = document.getElementById('modal-caratanam');
+      const caraTanamWrap = document.getElementById('modal-caratanam-wrap');
+      if (caraTanamEl && caraTanamWrap) {
+        if (caraTanam && caraTanam.trim()) {
+          caraTanamEl.innerText = caraTanam;
+          caraTanamWrap.style.display = 'block';
+        } else {
+          caraTanamWrap.style.display = 'none';
+        }
+      }
+
+      modal.classList.add('open');
+    };
+
+    window.closeSeedModal = function() {
+      if (modal) modal.classList.remove('open');
+    };
+
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeSeedModal();
+      });
+    }
+
+    // Render Cards dari Database
+    function renderCards(seeds) {
+      if (!cardsContainer) return;
+      cardsContainer.innerHTML = '';
+
+      if (!seeds || seeds.length === 0) {
+        if (visibleCountEl) visibleCountEl.innerText = '0';
+        if (totalCountEl) totalCountEl.innerText = '0';
+        cardsContainer.innerHTML = `
+          <div class="gt-empty-state show" style="display:block; grid-column: 1 / -1; padding: 48px 16px; text-align: center;">
+            <span class="material-symbols-outlined" style="font-size: 48px; color: #707A6C;">potted_plant</span>
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; margin: 10px 0 6px; color: #1B1C1C;">Belum Ada Bibit Terdaftar</h3>
+            <p style="font-size: 14px; color: #5F6368; max-width: 440px; margin: 0 auto;">Saat ini belum ada varietas bibit tanaman di database. Silakan tambahkan bibit baru melalui Admin Dashboard.</p>
+          </div>
+        `;
+        if (noResultsMsg) noResultsMsg.classList.remove('show');
+        return;
+      }
+
+      seeds.forEach((item, index) => {
+        const typeInfo = detectType(item);
+        const mdplCodes = detectMdpl((item.musim_tanam || '') + ' ' + (item.deskripsi || ''));
+        const harvestDays = parseHarvestDays(item.masa_panen);
+        const germVal = 92 + (Number(item.id || index) % 7); // 92-98%
+        const fallbackImg = 'https://images.wsrv.nl/?url=images.unsplash.com/photo-1592841200221-a6898f307baa?w=500&output=webp';
+        const formattedPrice = Number(item.harga_estimasi || 0) > 0 
+          ? `Rp${Number(item.harga_estimasi).toLocaleString('id-ID')}` 
+          : 'Hubungi Kami';
+
+        let mdplLabel = '0 - 800 mdpl';
+        if (item.musim_tanam) {
+          const mMatch = item.musim_tanam.match(/\d+[\s-–]+\d+\s*mdpl|\d+\s*mdpl|<\s*\d+\s*mdpl|>\s*\d+\s*mdpl/i);
+          if (mMatch) mdplLabel = mMatch[0];
+          else if (item.musim_tanam.toLowerCase().includes('tinggi')) mdplLabel = '> 700 mdpl';
+          else if (item.musim_tanam.toLowerCase().includes('rendah')) mdplLabel = '0 - 400 mdpl';
+          else if (item.musim_tanam.toLowerCase().includes('sepanjang tahun')) mdplLabel = 'Adaptif MDPL';
+        }
+
+        const card = document.createElement('article');
+        card.className = 'seed-item-card';
+        card.dataset.cat = item.kategori || 'Sayur';
+        card.dataset.type = typeInfo.code;
+        card.dataset.mdpl = mdplCodes;
+        card.dataset.germ = germVal;
+        card.dataset.harvest = harvestDays;
+        card.dataset.price = item.harga_estimasi || 0;
+        card.dataset.id = item.id || index;
+
+        card.innerHTML = `
+          <div>
+            <div class="seed-img-wrap">
+              <img src="${item.gambar_url || fallbackImg}" alt="${item.nama_bibit}" loading="lazy" onerror="this.src='${fallbackImg}';" />
+              <span class="seed-badge-type">${typeInfo.label}</span>
+              ${item.stok === false ? '<span class="seed-badge-stock">Stok Kosong</span>' : ''}
+              <div class="seed-germ-pill">
+                <span class="material-symbols-outlined" style="font-size:14px;">eco</span>
+                ${germVal}% Tumbuh
+              </div>
+            </div>
+
+            <div class="seed-category-row">
+              <span>${item.kategori || 'Varietas Unggul'}</span>
+              <span class="mdpl">
+                <span class="material-symbols-outlined" style="font-size:14px;">terrain</span> ${mdplLabel}
+              </span>
+            </div>
+
+            <h2 class="seed-name">${item.nama_bibit}</h2>
+            <p class="seed-desc">${item.deskripsi || 'Bibit tanaman unggul pilihan petani dengan kualitas dan produktivitas teruji.'}</p>
+
+            <div class="seed-specs-grid">
+              <div class="spec-item" title="Masa Panen: ${item.masa_panen || '-'}">
+                <span class="material-symbols-outlined icon">calendar_today</span>
+                <span>${item.masa_panen ? item.masa_panen.slice(0, 16) : 'Panen Cepat'}</span>
+              </div>
+              <div class="spec-item" title="Kondisi: ${item.musim_tanam || '-'}">
+                <span class="material-symbols-outlined icon">water_drop</span>
+                <span>${item.musim_tanam ? item.musim_tanam.split(',')[0].slice(0, 16) : 'Irigasi Rutin'}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="seed-card-footer">
+            <div class="seed-price-row">
+              <span class="seed-price-label">Estimasi Harga:</span>
+              <span class="seed-price-num">${formattedPrice}</span>
+            </div>
+            <button class="btn-seed-detail">
+              <span>Detail &amp; Panduan</span>
+              <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+            </button>
+          </div>
+        `;
+
+        const btn = card.querySelector('.btn-seed-detail');
+        if (btn) {
+          btn.addEventListener('click', () => {
+            openSeedDetail(
+              item.nama_bibit,
+              item.kategori,
+              `${germVal}%`,
+              item.masa_panen || '60 - 90 HST',
+              formattedPrice,
+              item.musim_tanam || mdplLabel,
+              item.deskripsi || '-',
+              item.cara_tanam || 'Siapkan lahan dan media tanam yang gembur, siram teratur serta berikan pupuk berimbang secara berkala.'
+            );
+          });
+        }
+
+        cardsContainer.appendChild(card);
+      });
+
+      currentCards = Array.from(cardsContainer.querySelectorAll('.seed-item-card'));
+      if (totalCountEl) totalCountEl.innerText = seeds.length;
+      applyFilters();
+    }
+
+    // Filter and Sort Engine
+    function applyFilters() {
+      if (!currentCards || currentCards.length === 0) return;
+      let visibleCount = 0;
+
+      currentCards.forEach(card => {
+        const textContent = card.innerText.toLowerCase();
+        const matchesSearch = !currentFilters.search || textContent.includes(currentFilters.search.toLowerCase());
+        
+        const cardMdpls = (card.dataset.mdpl || '').split(',');
+        const matchesMdpl = currentFilters.mdpl === 'all' || cardMdpls.includes(currentFilters.mdpl);
+
+        const cardCat = card.dataset.cat;
+        const matchesCat = currentFilters.cat === 'all' || cardCat === currentFilters.cat;
+
+        const cardType = card.dataset.type;
+        const matchesType = currentFilters.type === 'all' || cardType === currentFilters.type;
+
+        if (matchesSearch && matchesMdpl && matchesCat && matchesType) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Sort cards
+      const visibleCards = currentCards.filter(card => card.style.display !== 'none');
+      visibleCards.sort((a, b) => {
+        if (currentFilters.sort === 'germination') {
+          return parseInt(b.dataset.germ || 0) - parseInt(a.dataset.germ || 0);
+        } else if (currentFilters.sort === 'harvest') {
+          return parseInt(a.dataset.harvest || 0) - parseInt(b.dataset.harvest || 0);
+        } else if (currentFilters.sort === 'yield') {
+          return parseInt(b.dataset.price || 0) - parseInt(a.dataset.price || 0);
+        }
+        return parseInt(a.dataset.id || 0) - parseInt(b.dataset.id || 0);
+      });
+
+      visibleCards.forEach(c => cardsContainer.appendChild(c));
+
+      if (visibleCountEl) visibleCountEl.innerText = visibleCount;
+      if (noResultsMsg) {
+        if (visibleCount === 0) {
+          noResultsMsg.classList.add('show');
+        } else {
+          noResultsMsg.classList.remove('show');
+        }
+      }
+    }
+
+    // Search input listener
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentFilters.search = e.target.value.trim();
+        if (clearSearchBtn) {
+          clearSearchBtn.style.display = currentFilters.search.length > 0 ? 'block' : 'none';
+        }
+        applyFilters();
+      });
+    }
+
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = '';
+          currentFilters.search = '';
+          clearSearchBtn.style.display = 'none';
+          applyFilters();
+        }
+      });
+    }
+
+    if (sortSelect) {
+      sortSelect.addEventListener('change', (e) => {
+        currentFilters.sort = e.target.value;
+        applyFilters();
+      });
+    }
+
+    function setupFilterButtons(selector, filterKey) {
+      const buttons = document.querySelectorAll(selector);
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilters[filterKey] = btn.getAttribute(`data-${filterKey}`);
+          applyFilters();
+        });
+      });
+    }
+
+    setupFilterButtons('.filter-mdpl', 'mdpl');
+    setupFilterButtons('.filter-cat', 'cat');
+    setupFilterButtons('.filter-type', 'type');
+
+    window.resetAllFilters = function() {
+      if (searchInput) searchInput.value = '';
+      currentFilters.search = '';
+      if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+
+      const defMdpl = document.querySelector('.filter-mdpl[data-mdpl="all"]');
+      if (defMdpl) defMdpl.click();
+      const defCat = document.querySelector('.filter-cat[data-cat="all"]');
+      if (defCat) defCat.click();
+      const defType = document.querySelector('.filter-type[data-type="all"]');
+      if (defType) defType.click();
+      if (sortSelect) sortSelect.value = 'popular';
+      currentFilters.sort = 'popular';
+      applyFilters();
+    };
+
+    // Load from Supabase Database (100% Dynamic & Synchronized with Admin)
+    async function loadSeedsFromSupabase() {
+      try {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/bibit_tanaman?select=*&order=id.asc`, {
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP Error ${response.status}`);
+        }
+
+        const data = await response.json();
+        allSeeds = Array.isArray(data) ? data : [];
+        renderCards(allSeeds);
+      } catch (err) {
+        console.error('Koneksi Supabase bibit:', err);
+        if (cardsContainer) {
+          cardsContainer.innerHTML = `
+            <div class="gt-empty-state show" style="display:block; grid-column: 1 / -1; padding: 48px 16px; text-align: center;">
+              <span class="material-symbols-outlined" style="font-size: 48px; color: #BA1A1A;">cloud_off</span>
+              <h3 style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; margin: 10px 0 6px; color: #1B1C1C;">Koneksi Database Terputus</h3>
+              <p style="font-size: 14px; color: #5F6368; max-width: 440px; margin: 0 auto 18px;">Tidak dapat mengambil data bibit dari Supabase database. Silakan periksa koneksi internet Anda.</p>
+              <button onclick="loadSeedsFromSupabase()" style="padding: 10px 24px; border-radius: 30px; background: #0D631B; color: #FFFFFF; border: none; cursor: pointer; font-weight: 600; font-size: 13px;">
+                Coba Muat Ulang
+              </button>
+            </div>
+          `;
+        }
+        if (visibleCountEl) visibleCountEl.innerText = '0';
+        if (totalCountEl) totalCountEl.innerText = '0';
+      }
+    }
+
+    // Seed Quantity Calculator Logic
+    const cropSelect = document.getElementById('calc-crop');
+    const unitSelect = document.getElementById('calc-area-unit');
+    const areaInput = document.getElementById('calc-area-val');
+    const resWeight = document.getElementById('res-weight');
+    const resWeightUnit = document.getElementById('res-weight-unit');
+    const resPopulation = document.getElementById('res-population');
+    const resPacks = document.getElementById('res-packs');
+
+    function calculateSeedRequirement() {
+      if (!cropSelect || !unitSelect || !areaInput) return;
+      const selectedOption = cropSelect.options[cropSelect.selectedIndex];
+      const ratePerHa = parseFloat(selectedOption.dataset.rate);
+      const popPerHa = parseFloat(selectedOption.dataset.pop);
+      const packSize = parseFloat(selectedOption.dataset.pack);
+
+      let areaVal = parseFloat(areaInput.value) || 0;
+      let areaInHa = unitSelect.value === 'ha' ? areaVal : areaVal / 10000;
+
+      const totalGramsNeeded = areaInHa * ratePerHa;
+      const totalPop = Math.round(areaInHa * popPerHa);
+      const packsNeeded = Math.ceil(totalGramsNeeded / packSize);
+
+      if (resWeight && resWeightUnit) {
+        if (totalGramsNeeded >= 1000) {
+          resWeight.innerText = (totalGramsNeeded / 1000).toFixed(2);
+          resWeightUnit.innerText = 'Kilogram (Kg)';
+        } else {
+          resWeight.innerText = totalGramsNeeded < 1 ? totalGramsNeeded.toFixed(2) : totalGramsNeeded.toFixed(1);
+          resWeightUnit.innerText = 'Gram';
+        }
+      }
+
+      if (resPopulation) resPopulation.innerText = `Estimasi ±${totalPop.toLocaleString('id-ID')} lubang tanam`;
+      if (resPacks) resPacks.innerText = `${packsNeeded} Sachet`;
+    }
+
+    if (cropSelect) cropSelect.addEventListener('change', calculateSeedRequirement);
+    if (unitSelect) unitSelect.addEventListener('change', calculateSeedRequirement);
+    if (areaInput) areaInput.addEventListener('input', calculateSeedRequirement);
+
+    calculateSeedRequirement();
+    
+    // Inisialisasi Memuat Data Supabase
+    loadSeedsFromSupabase();
+  })();
+</script>

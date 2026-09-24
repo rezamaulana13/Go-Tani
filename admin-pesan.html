@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_dashboard" name="shell-type"/>
+  <title>Go-Tani Admin - Pesan & Konsultasi Petani</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e5e2e1",
+            "tertiary": "#1f6223",
+            "tertiary-fixed-dim": "#91d78a",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "on-primary-fixed": "#002204",
+            "on-secondary-fixed": "#002105",
+            "on-secondary-fixed-variant": "#005318",
+            "secondary-fixed": "#9ff79f",
+            "on-surface-variant": "#40493d",
+            "on-tertiary-fixed-variant": "#0c5216",
+            "primary": "#0d631b",
+            "surface-tint": "#1b6d24",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#19722b",
+            "outline": "#707a6c",
+            "surface-container-high": "#eae7e7",
+            "surface-bright": "#fcf9f8",
+            "on-secondary": "#ffffff",
+            "primary-container": "#2e7d32",
+            "secondary-fixed-dim": "#83da85",
+            "tertiary-container": "#3a7b39",
+            "surface": "#fcf9f8",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#c8ffbf",
+            "secondary-container": "#9cf49c",
+            "on-tertiary-fixed": "#002203",
+            "inverse-primary": "#88d982",
+            "on-background": "#1b1c1c",
+            "background": "#fcf9f8",
+            "surface-container": "#f0eded",
+            "surface-variant": "#e5e2e1",
+            "outline-variant": "#bfcaba",
+            "surface-dim": "#dcd9d9",
+            "surface-container-low": "#f6f3f2",
+            "on-primary-fixed-variant": "#005312",
+            "on-tertiary": "#ffffff",
+            "on-primary": "#ffffff",
+            "secondary": "#126d27",
+            "primary-fixed-dim": "#88d982",
+            "on-primary-container": "#cbffc2",
+            "primary-fixed": "#a3f69c",
+            "inverse-surface": "#303030",
+            "tertiary-fixed": "#acf4a4",
+            "inverse-on-surface": "#f3f0ef",
+            "on-surface": "#1b1c1c"
+          },
+          fontFamily: {
+            "headline-xl": ["Outfit", "sans-serif"],
+            "headline-lg": ["Outfit", "sans-serif"],
+            "headline-md": ["Outfit", "sans-serif"],
+            "headline-sm": ["Outfit", "sans-serif"],
+            "title-md": ["Outfit", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"]
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    header.sticky, 
+    nav#navMenu,
+    footer,
+    .gt-footer,
+    #homeLandingWrapper,
+    #mainNavbar, #mainFooter, .navbar, .footer, .blog-pager, .comments, #header, #footer {
+      display: none !important;
+    }
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #fcf9f8 !important;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f0eded; }
+    ::-webkit-scrollbar-thumb { background: #bfcaba; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #707a6c; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .modal-backdrop { transition: opacity 0.2s ease, visibility 0.2s ease; }
+    .modal-backdrop.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .modal-backdrop:not(.hidden) { opacity: 1; visibility: visible; pointer-events: auto; }
+    .modal-dialog { transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease; }
+    .modal-backdrop.hidden .modal-dialog { transform: translateY(16px) scale(0.97); opacity: 0; }
+    .modal-backdrop:not(.hidden) .modal-dialog { transform: translateY(0) scale(1); opacity: 1; }
+  </style>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+  <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden lg:hidden"></div>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar" class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] -translate-x-full lg:translate-x-0 transition-transform duration-300">
+    <div class="flex flex-col">
+      <div class="h-20 px-space-lg flex items-center justify-between bg-surface-container-low border-b border-outline-variant/30">
+        <a href="/" class="flex items-center gap-space-sm text-decoration-none">
+          <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
+            <span class="material-symbols-outlined text-[24px]">potted_plant</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm font-bold text-primary leading-none tracking-tight">Go-Tani</span>
+            <span class="text-xs text-on-surface-variant font-medium mt-1">Supabase Console</span>
+          </div>
+        </a>
+        <button onclick="toggleMobileSidebar(false)" class="lg:hidden p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <div class="px-space-md py-space-sm overflow-y-auto max-h-[calc(100vh-220px)]">
+        <div class="px-space-sm py-space-xs">
+          <span class="text-xs uppercase tracking-wider text-outline font-semibold">Database Tables & Ops</span>
+        </div>
+        <nav class="mt-space-xs flex flex-col gap-1.5">
+          <a id="nav-link-dashboard" href="admin-dashboard.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">space_dashboard</span>
+              <span>Ringkasan & Overview</span>
+            </div>
+          </a>
+
+          <a id="nav-link-bibit" href="admin-bibit.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">potted_plant</span>
+              <span>Bibit Tanaman</span>
+            </div>
+            <span id="badge-nav-bibit" class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">...</span>
+          </a>
+
+          <!-- Active: Pesan & Konsultasi -->
+          <a id="nav-link-pesan" href="admin-pesan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm text-sm">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">mark_chat_unread</span>
+              <span>Pesan & Konsultasi</span>
+            </div>
+            <span id="badge-nav-pesan" class="text-xs bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-semibold">0 Baru</span>
+          </a>
+
+          <a id="nav-link-blog" href="admin-blog.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">article</span>
+              <span>Artikel & Blog Posts</span>
+            </div>
+            <span id="badge-nav-blog" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">0</span>
+          </a>
+
+          <a id="nav-link-layanan" href="admin-layanan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">agriculture</span>
+              <span>Layanan & Fitur</span>
+            </div>
+            <span id="badge-nav-layanan" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">0</span>
+          </a>
+
+          <a id="nav-link-sql" href="admin-sql.html" class="w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+            <span class="material-symbols-outlined text-[20px]">terminal</span>
+            <span>SQL Editor & RLS</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="p-space-md border-t border-outline-variant/30 flex flex-col gap-2 bg-surface-container-low">
+      <div class="p-3 rounded-xl bg-surface-container flex flex-col gap-1.5 text-xs">
+        <div class="flex items-center justify-between">
+          <span class="text-on-surface-variant font-medium">Cluster Region</span>
+          <span class="font-semibold text-primary">ap-southeast-1</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-on-surface-variant font-medium">Postgres Version</span>
+          <span class="text-on-surface font-semibold">15.6 (Supabase)</span>
+        </div>
+        <div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-1">
+          <div class="bg-primary h-1.5 rounded-full w-2/3"></div>
+        </div>
+        <span class="text-[11px] text-on-surface-variant">Storage: 1.4 GB / 8.0 GB</span>
+      </div>
+
+      <button onclick="handleLogout()" class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-error-container/60 hover:bg-error-container text-error transition-all text-xs font-semibold">
+        <span class="material-symbols-outlined text-[18px]">logout</span>
+        <span>Keluar dari Admin</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="lg:pl-72 flex flex-col min-h-screen">
+    <header class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-30 border-b border-outline-variant/30 px-space-lg flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-3 flex-1 max-w-xl">
+        <button onclick="toggleMobileSidebar(true)" class="lg:hidden p-2 rounded-full hover:bg-surface-container text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+        <div class="relative w-full flex items-center">
+          <span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px]">search</span>
+          <input id="search-input" oninput="renderPesanList()" class="w-full h-11 pl-11 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline text-sm rounded-full outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/40 transition-all" placeholder="Cari nama pengirim, email, atau isi pesan..." type="text"/>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-space-md">
+        <a href="page-kontak.html" target="_blank" class="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all text-xs font-semibold">
+          <span class="material-symbols-outlined text-[16px]">visibility</span>
+          <span>Buka Form Kontak User</span>
+        </a>
+        <div class="flex items-center gap-3 pl-1">
+          <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shadow-sm">
+            <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
+          </div>
+          <div class="hidden md:flex flex-col text-left">
+            <span id="admin-display-name" class="text-sm font-semibold text-on-surface leading-tight">Admin Agronomis</span>
+            <span id="admin-display-email" class="text-xs text-primary font-medium leading-tight">admin@gotani.id</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full pt-20 bg-surface flex-1 px-4 sm:px-space-lg py-space-lg">
+      <div class="max-w-7xl mx-auto flex flex-col w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-space-lg">
+          <div>
+            <h2 class="font-headline-md font-bold text-2xl text-on-surface">Pesan & Konsultasi Petani</h2>
+            <p class="text-sm text-on-surface-variant mt-0.5">Pertanyaan, pemesanan bibit, dan permohonan konsultasi dari formulir kontak website Go-Tani.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="markAllPesanAsRead()" class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold transition-all">
+              <span class="material-symbols-outlined text-[18px]">done_all</span>
+              <span>Tandai Semua Dibaca</span>
+            </button>
+            <button onclick="loadPesanData()" class="p-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" title="Refresh Pesan">
+              <span class="material-symbols-outlined text-[18px]">sync</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Status Tabs -->
+        <div class="flex items-center gap-2 mb-space-md">
+          <button onclick="setFilterStatus('all')" id="btn-filter-all" class="px-4 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold shadow-sm transition-all">
+            Semua Pesan (<span id="count-all">0</span>)
+          </button>
+          <button onclick="setFilterStatus('unread')" id="btn-filter-unread" class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-xs font-semibold transition-all">
+            Belum Dibaca (<span id="count-unread">0</span>)
+          </button>
+          <button onclick="setFilterStatus('read')" id="btn-filter-read" class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-xs font-semibold transition-all">
+            Sudah Dibaca (<span id="count-read">0</span>)
+          </button>
+        </div>
+
+        <!-- Messages List Container -->
+        <div id="pesan-container" class="flex flex-col gap-3">
+          <div class="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 text-on-surface-variant text-sm">
+            <div class="inline-block animate-spin rounded-full h-6 w-6 border-2 border-primary border-t-transparent mr-2 align-middle"></div>
+            Memuat pesan masuk dari Supabase...
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- MODAL: Confirm Delete -->
+  <div id="modal-confirm-delete" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
+    <div class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-sm w-full p-6 shadow-2xl flex flex-col items-center text-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center">
+        <span class="material-symbols-outlined text-[28px]">delete_forever</span>
+      </div>
+      <h3 class="font-headline-sm font-bold text-lg text-on-surface">Hapus Pesan</h3>
+      <p id="delete-confirm-msg" class="text-xs text-on-surface-variant leading-relaxed">
+        Apakah Anda yakin ingin menghapus pesan ini dari database?
+      </p>
+      <div class="flex items-center gap-2 w-full mt-2">
+        <button onclick="closeModal('modal-confirm-delete')" class="flex-1 py-2.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors">
+          Batal
+        </button>
+        <button id="btn-execute-delete" class="flex-1 py-2.5 rounded-full bg-error text-on-error text-xs font-semibold hover:bg-red-700 transition-colors shadow-sm">
+          Ya, Hapus
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const SUPABASE_URL = 'https://abeqqbahcigexjwmklqn.supabase.co';
+    const SUPABASE_ANON_KEY = 'sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR';
+
+    let currentSession = null;
+    let allPesanData = [];
+    let currentFilter = 'all';
+    let pendingDeleteAction = null;
+
+    function getAdminUrl(pageName) {
+      const isBlogger = window.location.pathname.includes('/p/') || window.location.hostname.includes('blogspot.com');
+      return isBlogger ? `/p/${pageName}.html` : `${pageName}.html`;
+    }
+
+    function updateNavLinks() {
+      const links = {
+        'nav-link-dashboard': 'admin-dashboard',
+        'nav-link-bibit': 'admin-bibit',
+        'nav-link-pesan': 'admin-pesan',
+        'nav-link-blog': 'admin-blog',
+        'nav-link-layanan': 'admin-layanan',
+        'nav-link-sql': 'admin-sql'
+      };
+      for (const [id, page] of Object.entries(links)) {
+        const el = document.getElementById(id);
+        if (el) el.href = getAdminUrl(page);
+      }
+    }
+
+    function checkAuth() {
+      try {
+        const raw = localStorage.getItem('go_tani_admin_session');
+        currentSession = raw ? JSON.parse(raw) : null;
+      } catch (e) { currentSession = null; }
+
+      const isDemo = new URLSearchParams(window.location.search).get('demo') === 'true';
+      if (!currentSession && !isDemo) {
+        window.location.href = getAdminUrl('admin-login');
+        return false;
+      }
+
+      if (currentSession && currentSession.user) {
+        const email = currentSession.user.email || 'admin@gotani.id';
+        const name = email.split('@')[0];
+        const formattedName = 'Dr. Ir. ' + name.charAt(0).toUpperCase() + name.slice(1);
+        document.getElementById('admin-display-name').textContent = formattedName;
+        document.getElementById('admin-display-email').textContent = email;
+      }
+      return true;
+    }
+
+    function handleLogout() {
+      if (confirm('Keluar dari Admin Console Go-Tani?')) {
+        localStorage.removeItem('go_tani_admin_session');
+        window.location.href = getAdminUrl('admin-login');
+      }
+    }
+
+    function isTokenExpired(token) {
+      if (!token) return true;
+      try {
+        const parts = token.split('.');
+        if (parts.length < 2) return true;
+        const payload = JSON.parse(atob(parts[1]));
+        return (payload.exp * 1000) < Date.now();
+      } catch (e) {
+        return true;
+      }
+    }
+
+    function getApiHeaders() {
+      const headers = { 
+        'apikey': SUPABASE_ANON_KEY, 
+        'Content-Type': 'application/json',
+        'Prefer': 'return=representation'
+      };
+      if (currentSession && currentSession.access_token && !isTokenExpired(currentSession.access_token)) {
+        headers['Authorization'] = `Bearer ${currentSession.access_token}`;
+      } else {
+        headers['Authorization'] = `Bearer ${SUPABASE_ANON_KEY}`;
+      }
+      return headers;
+    }
+
+    async function apiFetch(endpoint, options = {}) {
+      const headers = { ...getApiHeaders(), ...(options.headers || {}) };
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/${endpoint}`, { ...options, headers });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.message || `API Error ${res.status}: ${res.statusText}`);
+      }
+      if (options.method === 'DELETE' || res.status === 204) return true;
+      const text = await res.text();
+      return text ? JSON.parse(text) : null;
+    }
+
+    function showToast(msg, type = 'success') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const toast = document.createElement('div');
+      const bgColors = { success: 'bg-primary text-on-primary', error: 'bg-error text-on-error', info: 'bg-surface-container-highest text-on-surface' };
+      toast.className = `flex items-center gap-2 px-4 py-3 rounded-2xl shadow-xl font-medium text-xs pointer-events-auto transform transition-all duration-300 translate-y-[-10px] opacity-0 ${bgColors[type] || bgColors.success}`;
+      toast.innerHTML = `<span class="material-symbols-outlined text-[18px]">${type === 'error' ? 'error' : 'check_circle'}</span><span>${msg}</span>`;
+      container.appendChild(toast);
+      requestAnimationFrame(() => toast.classList.remove('translate-y-[-10px]', 'opacity-0'));
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-[-10px]');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    function openModal(id) { document.getElementById(id)?.classList.remove('hidden'); }
+    function closeModal(id) { document.getElementById(id)?.classList.add('hidden'); }
+    function toggleMobileSidebar(force) {
+      const s = document.getElementById('sidebar');
+      const b = document.getElementById('sidebar-backdrop');
+      const open = typeof force === 'boolean' ? force : s.classList.contains('-translate-x-full');
+      if (open) { s.classList.remove('-translate-x-full'); b.classList.remove('hidden'); }
+      else { s.classList.add('-translate-x-full'); b.classList.add('hidden'); }
+    }
+
+    async function loadPesanData() {
+      try {
+        const data = await apiFetch('pesan_kontak?select=*&order=created_at.desc');
+        allPesanData = Array.isArray(data) ? data : [];
+
+        const unread = allPesanData.filter(p => !p.is_read).length;
+        const read = allPesanData.length - unread;
+
+        document.getElementById('badge-nav-pesan').textContent = `${unread} Baru`;
+        document.getElementById('count-all').textContent = allPesanData.length;
+        document.getElementById('count-unread').textContent = unread;
+        document.getElementById('count-read').textContent = read;
+
+        renderPesanList();
+      } catch (err) {
+        showToast('Gagal memuat pesan: ' + err.message, 'error');
+      }
+    }
+
+    async function loadSidebarBadges() {
+      try {
+        const [bibit, blog, layanan] = await Promise.all([
+          apiFetch('bibit_tanaman?select=id').catch(() => []),
+          apiFetch('blog_posts?select=id').catch(() => []),
+          apiFetch('layanan_fitur?select=id').catch(() => [])
+        ]);
+        document.getElementById('badge-nav-bibit').textContent = Array.isArray(bibit) ? bibit.length : 0;
+        document.getElementById('badge-nav-blog').textContent = Array.isArray(blog) ? blog.length : 0;
+        document.getElementById('badge-nav-layanan').textContent = Array.isArray(layanan) ? layanan.length : 6;
+      } catch (e) {}
+    }
+
+    function setFilterStatus(status) {
+      currentFilter = status;
+      ['all', 'unread', 'read'].forEach(k => {
+        const btn = document.getElementById(`btn-filter-${k}`);
+        if (btn) {
+          if (k === status) {
+            btn.className = "px-4 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold shadow-sm transition-all";
+          } else {
+            btn.className = "px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-xs font-semibold transition-all";
+          }
+        }
+      });
+      renderPesanList();
+    }
+
+    function renderPesanList() {
+      const container = document.getElementById('pesan-container');
+      if (!container) return;
+
+      const search = (document.getElementById('search-input')?.value || '').toLowerCase();
+      let filtered = allPesanData.filter(p => {
+        const matchSearch = !search || (p.nama || '').toLowerCase().includes(search) || (p.email || '').toLowerCase().includes(search) || (p.pesan || '').toLowerCase().includes(search);
+        const matchStatus = currentFilter === 'all' || (currentFilter === 'unread' ? !p.is_read : p.is_read);
+        return matchSearch && matchStatus;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 text-on-surface-variant text-sm">Tidak ada pesan yang sesuai filter.</div>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map(p => `
+        <div class="bg-surface-container-lowest p-5 rounded-2xl border ${!p.is_read ? 'border-primary/40 shadow-md bg-gradient-to-r from-surface-container-low/40 to-surface-container-lowest' : 'border-outline-variant/30 shadow-sm'} flex flex-col gap-3 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl ${!p.is_read ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'} font-bold flex items-center justify-center text-sm">
+                ${(p.nama || 'P').substring(0, 2).toUpperCase()}
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-on-surface text-base">${p.nama}</span>
+                  ${!p.is_read ? '<span class="bg-error-container text-on-error-container text-[11px] px-2 py-0.5 rounded-full font-bold">Baru</span>' : ''}
+                </div>
+                <div class="text-xs text-outline font-medium">${p.email} • Subjek: <span class="text-on-surface-variant">${p.subjek || 'Konsultasi Petani'}</span></div>
+              </div>
+            </div>
+            <div class="text-xs text-outline">${formatDate(p.created_at)}</div>
+          </div>
+
+          <div class="bg-surface-container-low/60 p-4 rounded-xl text-sm text-on-surface leading-relaxed whitespace-pre-wrap">
+            ${p.pesan}
+          </div>
+
+          <div class="flex items-center justify-between pt-1">
+            <div class="flex items-center gap-2">
+              <a href="https://wa.me/?text=${encodeURIComponent('Halo ' + p.nama + ', kami dari tim Agronomis Go-Tani merespon pertanyaan Anda: ' + p.pesan)}" target="_blank" class="px-4 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold flex items-center gap-1.5 hover:bg-tertiary transition-all">
+                <span class="material-symbols-outlined text-[16px]">chat</span> Balas WhatsApp
+              </a>
+              <a href="mailto:${p.email}?subject=Re: Konsultasi Go-Tani&body=Halo ${p.nama},%0A%0A" class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <span class="material-symbols-outlined text-[16px]">mail</span> Email
+              </a>
+            </div>
+
+            <div class="flex items-center gap-2">
+              ${!p.is_read ? `
+                <button onclick="markPesanAsRead(${p.id})" class="px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-dim text-on-surface text-xs font-semibold">
+                  Tandai Dibaca
+                </button>
+              ` : ''}
+              <button onclick="confirmDeletePesan(${p.id}, '${p.nama.replace(/'/g, "\\'")}')" class="p-1.5 rounded-full hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="Hapus Pesan">
+                <span class="material-symbols-outlined text-[18px]">delete</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function markPesanAsRead(id) {
+      try {
+        await apiFetch(`pesan_kontak?id=eq.${id}`, { method: 'PATCH', body: JSON.stringify({ is_read: true }) });
+        const p = allPesanData.find(x => x.id === id);
+        if (p) p.is_read = true;
+        loadPesanData();
+        showToast('Pesan berhasil ditandai sudah dibaca.');
+      } catch (err) {
+        showToast('Gagal: ' + err.message, 'error');
+      }
+    }
+
+    async function markAllPesanAsRead() {
+      const unread = allPesanData.filter(p => !p.is_read);
+      if (unread.length === 0) {
+        showToast('Semua pesan sudah dibaca.', 'info');
+        return;
+      }
+      try {
+        await Promise.all(unread.map(p => apiFetch(`pesan_kontak?id=eq.${p.id}`, { method: 'PATCH', body: JSON.stringify({ is_read: true }) })));
+        allPesanData.forEach(p => p.is_read = true);
+        loadPesanData();
+        showToast(`${unread.length} pesan berhasil ditandai sudah dibaca!`);
+      } catch (err) {
+        showToast('Gagal: ' + err.message, 'error');
+      }
+    }
+
+    function confirmDeletePesan(id, name) {
+      document.getElementById('delete-confirm-msg').textContent = `Hapus pesan dari "${name}"?`;
+      pendingDeleteAction = async () => {
+        try {
+          await apiFetch(`pesan_kontak?id=eq.${id}`, { method: 'DELETE' });
+          allPesanData = allPesanData.filter(x => x.id !== id);
+          loadPesanData();
+          showToast(`Pesan berhasil dihapus.`);
+        } catch (e) { showToast('Gagal menghapus: ' + e.message, 'error'); }
+      };
+      openModal('modal-confirm-delete');
+    }
+
+    document.getElementById('btn-execute-delete').addEventListener('click', async () => {
+      closeModal('modal-confirm-delete');
+      if (pendingDeleteAction) {
+        await pendingDeleteAction();
+        pendingDeleteAction = null;
+      }
+    });
+
+    function formatDate(dateStr) {
+      if (!dateStr) return 'Hari ini';
+      try {
+        const d = new Date(dateStr);
+        return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      } catch { return 'Baru saja'; }
+    }
+
+    function initAdminPage() {
+      updateNavLinks();
+      if (!checkAuth()) return;
+      loadPesanData();
+      loadSidebarBadges();
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') document.querySelectorAll('.modal-backdrop:not(.hidden)').forEach(el => el.classList.add('hidden'));
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAdminPage);
+    } else {
+      initAdminPage();
+    }
+  </script>
+</body>
+</html>
