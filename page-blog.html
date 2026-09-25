@@ -1,7 +1,7 @@
 <!-- ============================================================ -->
-<!-- GO-TANI: HALAMAN BLOG & ARTIKEL EDUKASI PERTANIAN           -->
-<!-- Salin dan tempel SELURUH KODE INI ke Mode HTML Halaman Blogger -->
-<!-- Judul Halaman di Blogger: Blog (atau Artikel Edukasi)         -->
+<!-- GO-TANI: HALAMAN BLOG & PANDUAN AGRONOMI (Blogger Native)    -->
+<!-- Terhubung Otomatis ke Postingan Blogger (Tanpa Database)      -->
+<!-- Salin dan tempel SELURUH KODE INI ke Mode HTML Halaman Blogger-->
 <!-- ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,449 +9,233 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
 
 <style>
-  .gt-blog-wrap {
+  .gt-blog-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 16px 70px;
+    padding: 24px 16px 80px;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: #1B1C1C;
-    box-sizing: border-box;
-    line-height: 1.6;
-  }
-  .gt-blog-wrap * {
+    color: #1b1c1c;
     box-sizing: border-box;
   }
-
-  /* Breadcrumb */
-  .gt-breadcrumb {
-    font-size: 13px;
-    color: #6B7280;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .gt-breadcrumb a {
-    color: #0D631B;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .gt-breadcrumb a:hover {
-    text-decoration: underline;
+  .gt-blog-container * {
+    box-sizing: border-box;
   }
 
-  /* Top Editorial Meta Bar */
-  .gt-editorial-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #E5E2E1;
-    margin-bottom: 28px;
+  /* Header Section */
+  .gt-blog-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 36px;
   }
-  .gt-meta-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-  }
-  .gt-pulse-dot {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: #0D631B;
-    display: inline-block;
-    box-shadow: 0 0 0 0 rgba(13, 99, 27, 0.7);
-    animation: gt-pulse 2s infinite;
-  }
-  @keyframes gt-pulse {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(13, 99, 27, 0.7); }
-    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(13, 99, 27, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(13, 99, 27, 0); }
-  }
-  .gt-tag-lead {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #126D27;
-  }
-  .gt-tag-sub {
-    color: #5F6368;
-  }
-  .gt-meta-right {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #40493D;
-  }
-
-  /* Featured Hero Card */
-  .gt-hero-card {
-    background: #FFFFFF;
-    border: 1px solid #E5E2E1;
-    border-radius: 24px;
-    overflow: hidden;
-    margin-bottom: 36px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-    display: grid;
-    grid-template-columns: 1fr;
-    transition: all 0.3s ease;
-  }
-  @media (min-width: 992px) {
-    .gt-hero-card {
-      grid-template-columns: 1.2fr 1fr;
-      min-height: 400px;
-    }
-  }
-  .gt-hero-card:hover {
-    box-shadow: 0 12px 32px rgba(13, 99, 27, 0.08);
-    border-color: #A3F69C;
-  }
-  .gt-hero-img-wrap {
-    position: relative;
-    width: 100%;
-    min-height: 260px;
-    background: #E5E2E1;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  .gt-hero-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-  .gt-hero-card:hover .gt-hero-img-wrap img {
-    transform: scale(1.04);
-  }
-  .gt-hero-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: #0D631B;
-    color: #FFFFFF;
-    font-size: 11.5px;
-    font-weight: 700;
-    padding: 4px 14px;
-    border-radius: 20px;
+  .gt-badge-tag {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  .gt-hero-body {
-    padding: 32px 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: #FFFFFF;
-  }
-  .gt-hero-meta-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-    color: #5F6368;
-    margin-bottom: 12px;
-  }
-  .gt-cat-pill {
+    gap: 6px;
     background: #E8F5E9;
     color: #0D631B;
+    font-size: 12px;
     font-weight: 700;
-    font-size: 11.5px;
-    padding: 3px 12px;
-    border-radius: 20px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
   }
-  .gt-hero-title {
+  .gt-blog-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 800;
-    color: #1B1C1C;
-    line-height: 1.35;
-    margin: 0 0 12px 0;
-    cursor: pointer;
-    transition: color 0.2s ease;
+    color: #1b1c1c;
+    line-height: 1.25;
+    margin: 0 0 12px;
   }
-  .gt-hero-title:hover {
-    color: #0D631B;
-  }
-  .gt-hero-excerpt {
-    font-size: 14px;
-    color: #40493D;
+  .gt-blog-subtitle {
+    font-size: 15px;
+    color: #555e52;
     line-height: 1.6;
-    margin: 0 0 20px 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .gt-hero-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 18px;
-    border-top: 1px solid #F0EDED;
-  }
-  .gt-author-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .gt-author-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #2E7D32;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 13px;
-  }
-  .gt-author-name {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1B1C1C;
     margin: 0;
-  }
-  .gt-author-role {
-    font-size: 11px;
-    color: #5F6368;
-    margin: 0;
-  }
-  .gt-btn-read-hero {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 9px 18px;
-    border-radius: 30px;
-    background: #2E7D32;
-    color: #FFFFFF !important;
-    font-size: 13px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none !important;
-  }
-  .gt-btn-read-hero:hover {
-    background: #0D631B;
   }
 
-  /* Filter & Search Bar */
-  .gt-filter-search-wrap {
+  /* Search & Filter Toolbar */
+  .gt-toolbar {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 32px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #E5E2E1;
+    gap: 16px;
+    margin-bottom: 36px;
   }
   @media (min-width: 768px) {
-    .gt-filter-search-wrap {
+    .gt-toolbar {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
     }
   }
-  .gt-filter-chips {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    scrollbar-width: none;
-  }
-  .gt-filter-chips::-webkit-scrollbar {
-    display: none;
-  }
-  .gt-chip-btn {
-    padding: 7px 16px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1px solid #E5E2E1;
-    background: #F6F3F2;
-    color: #40493D;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-  }
-  .gt-chip-btn:hover {
-    background: #E5E2E1;
-    color: #1B1C1C;
-  }
-  .gt-chip-btn.active {
-    background: #2E7D32;
-    color: #FFFFFF;
-    border-color: #2E7D32;
-    box-shadow: 0 2px 8px rgba(46,125,50,0.25);
-  }
   .gt-search-box {
     position: relative;
-    width: 100%;
-    max-width: 280px;
+    flex: 1;
+    max-width: 380px;
   }
   .gt-search-box input {
     width: 100%;
-    padding: 9px 14px 9px 38px;
-    border-radius: 30px;
-    border: 1px solid #E5E2E1;
-    background: #F6F3F2;
-    font-size: 13px;
+    padding: 12px 16px 12px 42px;
+    font-size: 14px;
+    border: 1px solid #dcd9d9;
+    border-radius: 9999px;
     outline: none;
+    background: #ffffff;
     transition: all 0.2s ease;
   }
   .gt-search-box input:focus {
-    background: #FFFFFF;
-    border-color: #2E7D32;
-    box-shadow: 0 0 0 3px rgba(46,125,50,0.12);
+    border-color: #0D631B;
+    box-shadow: 0 0 0 3px rgba(13, 99, 27, 0.12);
   }
   .gt-search-icon {
     position: absolute;
-    left: 12px;
+    left: 14px;
     top: 50%;
     transform: translateY(-50%);
-    color: #5F6368;
-    font-size: 18px;
+    color: #707a6c;
+    font-size: 20px;
     pointer-events: none;
   }
-
-  /* Two Column Main Content Layout */
-  .gt-blog-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  @media (min-width: 992px) {
-    .gt-blog-layout {
-      grid-template-columns: 1fr 340px;
-    }
-  }
-
-  /* Catalog Grid */
-  .gt-catalog-header {
+  .gt-filter-chips {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-  .gt-catalog-title {
-    font-family: 'Outfit', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: #1B1C1C;
-    margin: 0 0 2px 0;
-  }
-  .gt-catalog-sub {
+  .gt-chip {
+    padding: 8px 16px;
     font-size: 13px;
-    color: #5F6368;
-    margin: 0;
+    font-weight: 600;
+    border-radius: 9999px;
+    border: 1px solid #dcd9d9;
+    background: #ffffff;
+    color: #40493D;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
   }
-  .gt-count-badge {
-    font-size: 11.5px;
-    font-weight: 700;
-    background: #9CF49C;
-    color: #0C5216;
-    padding: 3px 12px;
-    border-radius: 20px;
-    white-space: nowrap;
+  .gt-chip:hover {
+    background: #f0eded;
+    border-color: #bfcaba;
+  }
+  .gt-chip.active {
+    background: #0D631B;
+    color: #ffffff;
+    border-color: #0D631B;
+    box-shadow: 0 2px 8px rgba(13, 99, 27, 0.2);
   }
 
-  .gt-articles-grid {
+  /* Articles Grid */
+  .gt-article-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 24px;
   }
-  @media (min-width: 600px) {
-    .gt-articles-grid {
-      grid-template-columns: 1fr 1fr;
+  @media (min-width: 640px) {
+    .gt-article-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .gt-article-grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
+  /* Article Card */
   .gt-article-card {
-    background: #FFFFFF;
-    border: 1px solid #E5E2E1;
-    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #eae7e7;
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    text-decoration: none;
+    color: inherit;
   }
   .gt-article-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(13, 99, 27, 0.08);
-    border-color: #A3F69C;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    border-color: #a3f69c;
   }
-  .gt-article-img {
+  .gt-card-thumb-wrap {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 10;
+    background: #f0eded;
     overflow: hidden;
-    background: #E5E2E1;
   }
-  .gt-article-img img {
+  .gt-card-thumb {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
-  .gt-article-card:hover .gt-article-img img {
+  .gt-article-card:hover .gt-card-thumb {
     transform: scale(1.05);
   }
-  .gt-card-cat-badge {
+  .gt-card-categories {
     position: absolute;
     top: 12px;
     left: 12px;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(6px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-width: calc(100% - 24px);
+    z-index: 2;
+  }
+  .gt-card-category {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
     color: #0D631B;
     font-size: 11px;
     font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    white-space: nowrap;
   }
-  .gt-article-body {
-    padding: 18px;
+  .gt-card-body {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: space-between;
   }
   .gt-card-meta {
-    font-size: 11.5px;
-    color: #5F6368;
+    font-size: 12px;
+    color: #707a6c;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
     margin-bottom: 8px;
   }
   .gt-card-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    color: #1B1C1C;
+    color: #1b1c1c;
     line-height: 1.35;
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    transition: color 0.2s ease;
   }
-  .gt-card-desc {
-    font-size: 12.5px;
-    color: #40493D;
+  .gt-article-card:hover .gt-card-title {
+    color: #0D631B;
+  }
+  .gt-card-excerpt {
+    font-size: 13px;
+    color: #555e52;
     line-height: 1.55;
-    margin: 0 0 14px 0;
+    margin: 0 0 16px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -462,861 +246,347 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 12px;
-    border-top: 1px solid #F0EDED;
-    font-size: 12px;
-    color: #5F6368;
+    padding-top: 14px;
+    border-top: 1px solid #f0eded;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0D631B;
   }
-
-  /* Shimmer Skeleton */
-  .gt-skeleton-card {
-    background: #FFFFFF;
-    border: 1px solid #E5E2E1;
-    border-radius: 18px;
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .gt-shimmer-box {
-    background: linear-gradient(90deg, #ece9e8 25%, #f7f5f4 50%, #ece9e8 75%);
-    background-size: 200% 100%;
-    animation: gt-shimmer 1.5s infinite;
-    border-radius: 8px;
-  }
-  @keyframes gt-shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  /* Empty State */
-  .gt-empty-state {
-    display: none;
-    text-align: center;
-    padding: 50px 20px;
-    background: #F6F3F2;
-    border-radius: 20px;
-    margin: 20px 0;
-  }
-  .gt-empty-state.show {
-    display: block;
-  }
-
-  /* Sidebar Widgets */
-  .gt-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  /* Newsletter Box */
-  .gt-newsletter-widget {
-    background: linear-gradient(135deg, #0D631B 0%, #2E7D32 100%);
-    border-radius: 20px;
-    padding: 24px;
-    color: #FFFFFF;
-    position: relative;
-    overflow: hidden;
-  }
-  .gt-newsletter-title {
-    font-family: 'Outfit', sans-serif;
-    font-size: 19px;
-    font-weight: 800;
-    margin: 8px 0 6px 0;
-  }
-  .gt-newsletter-desc {
-    font-size: 12.5px;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.5;
-    margin: 0 0 16px 0;
-  }
-  .gt-news-input {
-    width: 100%;
-    padding: 10px 14px;
-    border-radius: 30px;
-    border: none;
-    font-size: 12.5px;
-    outline: none;
-    margin-bottom: 8px;
-  }
-  .gt-news-btn {
-    width: 100%;
-    padding: 10px;
-    border-radius: 30px;
-    border: none;
-    background: #A3F69C;
-    color: #002204;
-    font-size: 12.5px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  .gt-news-btn:hover {
-    background: #88D982;
-  }
-
-  /* Popular Widget */
-  .gt-pop-widget {
-    background: #FFFFFF;
-    border: 1px solid #E5E2E1;
-    border-radius: 20px;
-    padding: 22px;
-  }
-  .gt-pop-title-row {
-    display: flex;
+  .gt-read-more {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #F0EDED;
+    gap: 4px;
   }
-  .gt-pop-heading {
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #1B1C1C;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .gt-pop-item {
-    display: flex;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid #F0EDED;
-    cursor: pointer;
+  .gt-article-card:hover .gt-read-more span.material-symbols-outlined {
+    transform: translateX(4px);
     transition: transform 0.2s ease;
   }
-  .gt-pop-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .gt-pop-item:hover {
-    transform: translateX(3px);
-  }
-  .gt-pop-num {
-    font-family: 'Outfit', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    color: #BFCABA;
-    width: 22px;
-    flex-shrink: 0;
-  }
-  .gt-pop-item:hover .gt-pop-num {
-    color: #0D631B;
-  }
-  .gt-pop-text {
-    flex: 1;
-  }
-  .gt-pop-cat {
-    font-size: 10.5px;
-    font-weight: 700;
-    color: #126D27;
-    text-transform: uppercase;
-  }
-  .gt-pop-link {
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: #1B1C1C;
-    line-height: 1.35;
-    margin: 2px 0 0 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .gt-pop-item:hover .gt-pop-link {
-    color: #0D631B;
-  }
 
-  /* Help Consultation Widget */
-  .gt-help-widget {
-    background: #F6F3F2;
-    border: 1px solid #E5E2E1;
+  /* Empty / Loading State */
+  .gt-state-box {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background: #ffffff;
     border-radius: 20px;
-    padding: 22px;
+    border: 1px dashed #bfcaba;
+  }
+  .gt-state-icon {
+    font-size: 48px;
+    color: #707a6c;
+    margin-bottom: 12px;
   }
 
-  /* Reading Modal */
-  .gt-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 23, 42, 0.7);
-    backdrop-filter: blur(6px);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.25s ease;
-    padding: 16px;
-  }
-  .gt-modal-overlay.open {
-    opacity: 1;
-    visibility: visible;
-  }
-  .gt-modal-box {
-    background: #FFFFFF;
-    width: 100%;
-    max-width: 780px;
-    max-height: 88vh;
-    border-radius: 24px;
-    overflow-y: auto;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    transform: scale(0.95);
-    transition: transform 0.25s ease;
-  }
-  .gt-modal-overlay.open .gt-modal-box {
-    transform: scale(1);
-  }
-  .gt-modal-banner {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 21 / 9;
-    background: #E5E2E1;
-    overflow: hidden;
-  }
-  .gt-modal-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .gt-modal-close-icon {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: rgba(0,0,0,0.6);
-    color: #FFFFFF;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  .gt-modal-close-icon:hover {
-    background: rgba(0,0,0,0.85);
-  }
-  .gt-modal-body {
-    padding: 28px 24px 36px;
-  }
-  .gt-modal-prose h2 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #0D631B;
-    margin-top: 24px;
-    margin-bottom: 8px;
-  }
-  .gt-modal-prose p {
-    font-size: 14.5px;
-    color: #40493D;
-    line-height: 1.7;
-    margin-bottom: 14px;
-  }
-  .gt-modal-prose li {
-    font-size: 14.5px;
-    color: #40493D;
-    line-height: 1.6;
-    margin-bottom: 6px;
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
   }
 </style>
 
-<div class="gt-blog-wrap">
-
-  <!-- Breadcrumb -->
-  <div class="gt-breadcrumb">
-    <a href="/">Beranda</a>
-    <span class="material-symbols-outlined" style="font-size:16px;">chevron_right</span>
-    <span>Blog &amp; Edukasi Pertanian</span>
-  </div>
-
-  <!-- Editorial Top Meta Bar -->
-  <div class="gt-editorial-meta">
-    <div class="gt-meta-left">
-      <span class="gt-pulse-dot"></span>
-      <span class="gt-tag-lead">Pusat Pengetahuan Agroteknologi</span>
-      <span style="color:#BFCABA;">•</span>
-      <span class="gt-tag-sub" id="syncStatusBadge">Terkoneksi Database Supabase</span>
+<div class="gt-blog-container">
+  <!-- Header -->
+  <header class="gt-blog-header">
+    <div class="gt-badge-tag">
+      <span class="material-symbols-outlined" style="font-size: 16px;">eco</span>
+      Pojok Agronomi & Wawasan
     </div>
-    <div class="gt-meta-right">
-      <span class="material-symbols-outlined" style="font-size:16px; color:#0D631B;">verified</span>
-      <span>Divalidasi Tim Agronom Go-Tani</span>
-    </div>
-  </div>
+    <h1 class="gt-blog-title">Blog & Panduan Pertanian Go-Tani</h1>
+    <p class="gt-blog-subtitle">
+      Kumpulan artikel terpercaya seputar panduan budidaya, tips perawatan bibit unggul, pemupukan organik, dan wawasan agribisnis Indonesia.
+    </p>
+  </header>
 
-  <!-- Featured Hero Article (Dynamic Supabase Top Article) -->
-  <div id="heroArticleContainer">
-    <!-- Skeleton Hero Placeholder -->
-    <div class="gt-hero-card" style="min-height:360px;">
-      <div class="gt-shimmer-box" style="width:100%; min-height:260px;"></div>
-      <div style="padding:28px; display:flex; flex-direction:column; gap:12px; justify-content:space-between;">
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <div class="gt-shimmer-box" style="width:110px; height:22px; border-radius:20px;"></div>
-          <div class="gt-shimmer-box" style="width:100%; height:32px;"></div>
-          <div class="gt-shimmer-box" style="width:85%; height:32px;"></div>
-          <div class="gt-shimmer-box" style="width:100%; height:48px;"></div>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <div class="gt-shimmer-box" style="width:120px; height:34px;"></div>
-          <div class="gt-shimmer-box" style="width:100px; height:34px; border-radius:30px;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Filter & Search Controls Bar -->
-  <div class="gt-filter-search-wrap">
-    <!-- Category Filter Chips -->
-    <div class="gt-filter-chips" id="categoryFilterContainer">
-      <button class="gt-chip-btn active" data-filter="all">Semua Artikel</button>
-      <button class="gt-chip-btn" data-filter="Tips Menanam">Tips Menanam</button>
-      <button class="gt-chip-btn" data-filter="Hama & Penyakit">Hama &amp; Penyakit</button>
-      <button class="gt-chip-btn" data-filter="Panduan Budidaya">Panduan Budidaya</button>
-      <button class="gt-chip-btn" data-filter="Edukasi Pertanian">Edukasi Pertanian</button>
-      <button class="gt-chip-btn" data-filter="Komoditas Unggulan">Komoditas Unggulan</button>
-    </div>
-
-    <!-- Search Input Box -->
+  <!-- Toolbar: Search & Filter -->
+  <div class="gt-toolbar">
     <div class="gt-search-box">
       <span class="material-symbols-outlined gt-search-icon">search</span>
-      <input type="text" id="blogSearchInput" placeholder="Cari topik artikel pertanian..." />
+      <input type="text" id="gt-blog-search" placeholder="Cari artikel, topik, atau tanaman..." oninput="handleBlogFilter()">
+    </div>
+    <div class="gt-filter-chips" id="gt-filter-chips">
+      <button class="gt-chip active" onclick="setCategoryFilter('Semua', this)">Semua</button>
+      <button class="gt-chip" onclick="setCategoryFilter('Tips Menanam', this)">Tips Menanam</button>
+      <button class="gt-chip" onclick="setCategoryFilter('Varietas Bibit', this)">Varietas Bibit</button>
+      <button class="gt-chip" onclick="setCategoryFilter('Hama & Penyakit', this)">Hama & Penyakit</button>
+      <button class="gt-chip" onclick="setCategoryFilter('Pupuk & Nutrisi', this)">Pupuk & Nutrisi</button>
     </div>
   </div>
 
-  <!-- Main Content 2-Column Grid -->
-  <div class="gt-blog-layout">
-
-    <!-- Left Column: Catalog Articles -->
-    <div>
-      <div class="gt-catalog-header">
-        <div>
-          <h2 class="gt-catalog-title">Katalog Edukasi &amp; Panduan Tani</h2>
-          <p class="gt-catalog-sub">Riset lapangan, panduan teknis agronomis, dan tips hasil panen melimpah</p>
-        </div>
-        <span class="gt-count-badge" id="articleCountBadge">Memuat...</span>
-      </div>
-
-      <!-- Articles Grid (Dynamic Cards) -->
-      <div class="gt-articles-grid" id="articlesGrid">
-        <!-- Skeleton Placeholders -->
-        <div class="gt-skeleton-card">
-          <div class="gt-shimmer-box" style="width:100%; aspect-ratio:16/10; border-radius:12px;"></div>
-          <div class="gt-shimmer-box" style="width:90px; height:18px; border-radius:20px;"></div>
-          <div class="gt-shimmer-box" style="width:100%; height:24px;"></div>
-          <div class="gt-shimmer-box" style="width:100%; height:40px;"></div>
-        </div>
-        <div class="gt-skeleton-card">
-          <div class="gt-shimmer-box" style="width:100%; aspect-ratio:16/10; border-radius:12px;"></div>
-          <div class="gt-shimmer-box" style="width:90px; height:18px; border-radius:20px;"></div>
-          <div class="gt-shimmer-box" style="width:100%; height:24px;"></div>
-          <div class="gt-shimmer-box" style="width:100%; height:40px;"></div>
-        </div>
-      </div>
-
-      <!-- Empty Filter State -->
-      <div class="gt-empty-state" id="noArticlesMsg">
-        <span class="material-symbols-outlined" style="font-size:48px; color:#5F6368;">menu_book</span>
-        <h3 style="font-family:'Outfit',sans-serif; font-size:19px; font-weight:700; margin:8px 0 4px;">Artikel Tidak Ditemukan</h3>
-        <p style="font-size:13.5px; color:#5F6368; max-width:380px; margin:0 auto 16px;">
-          Coba sesuaikan kata kunci pencarian atau pilih kategori artikel lainnya.
-        </p>
-        <button onclick="resetBlogFilters()" style="padding:9px 22px; border-radius:30px; background:#0D631B; color:#FFFFFF; border:none; font-weight:600; font-size:13px; cursor:pointer;">
-          Reset Filter
-        </button>
-      </div>
-    </div>
-
-    <!-- Right Column: Sidebar Widgets -->
-    <div class="gt-sidebar">
-
-      <!-- 1. Newsletter Box -->
-      <div class="gt-newsletter-widget">
-        <div style="width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center;">
-          <span class="material-symbols-outlined" style="font-size:20px;">mark_email_read</span>
-        </div>
-        <h3 class="gt-newsletter-title">Buletin Petani Pintar</h3>
-        <p class="gt-newsletter-desc">
-          Dapatkan tips pengendalian hama musiman, rekomendasi varietas benih, dan analisis harga komoditas langsung di email Anda.
-        </p>
-        <form onsubmit="event.preventDefault(); handleSubscribe();">
-          <input type="email" id="newsletterEmail" class="gt-news-input" placeholder="nama@emailanda.com" required />
-          <button type="submit" class="gt-news-btn">Langganan Buletin</button>
-          <div id="newsletterSuccess" style="display:none; margin-top:8px; font-size:12px; font-weight:600; color:#A3F69C; text-align:center;">
-            ✓ Terima kasih! Anda telah terdaftar.
-          </div>
-        </form>
-      </div>
-
-      <!-- 2. Popular Articles List -->
-      <div class="gt-pop-widget">
-        <div class="gt-pop-title-row">
-          <h4 class="gt-pop-heading">
-            <span class="material-symbols-outlined" style="color:#126D27; font-size:20px;">trending_up</span>
-            Topik Terpopuler
-          </h4>
-          <span style="font-size:11px; font-weight:700; color:#5F6368;">Pilihan Petani</span>
-        </div>
-        <div id="popularArticlesList">
-          <!-- Populated dynamically -->
-        </div>
-      </div>
-
-      <!-- 3. Consultation Card -->
-      <div class="gt-help-widget">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-          <div style="width:36px; height:36px; border-radius:50%; background:#9CF49C; color:#0C5216; display:flex; align-items:center; justify-content:center;">
-            <span class="material-symbols-outlined" style="font-size:20px;">psychology</span>
-          </div>
-          <div>
-            <h4 style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; margin:0;">Punya Kendala Tanaman?</h4>
-            <p style="font-size:11.5px; color:#5F6368; margin:0;">Konsultasi ke Agronom Go-Tani</p>
-          </div>
-        </div>
-        <p style="font-size:12.5px; color:#40493D; line-height:1.5; margin:0 0 14px 0;">
-          Kirimkan foto tanaman atau kendala budidaya Anda untuk mendapatkan rekomendasi penanganan teknis.
-        </p>
-        <a href="/p/kontak.html" style="display:inline-flex; align-items:center; justify-content:center; gap:6px; width:100%; padding:9px; border-radius:30px; background:#0D631B; color:#FFFFFF !important; font-size:12.5px; font-weight:600; text-decoration:none;">
-          <span>Mulai Konsultasi Online</span>
-          <span class="material-symbols-outlined" style="font-size:16px;">support_agent</span>
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-<!-- Reading Pop-up Modal Drawer -->
-<div class="gt-modal-overlay" id="articleModalOverlay">
-  <div class="gt-modal-box">
-    <div class="gt-modal-banner">
-      <img src="" alt="Thumbnail Artikel" id="artModalImg" />
-      <button onclick="closeArticleModal()" class="gt-modal-close-icon" title="Tutup">
-        <span class="material-symbols-outlined" style="font-size:18px;">close</span>
-      </button>
-      <span style="position:absolute; bottom:12px; left:14px; background:#0D631B; color:#FFFFFF; font-size:11px; font-weight:700; padding:3px 12px; border-radius:20px;" id="artModalCategory">
-        Kategori
-      </span>
-    </div>
-
-    <div class="gt-modal-body">
-      <h2 style="font-family:'Outfit',sans-serif; font-size:24px; font-weight:800; color:#1B1C1C; line-height:1.35; margin:0 0 10px 0;" id="artModalTitle">
-        Judul Artikel
-      </h2>
-
-      <div style="display:flex; align-items:center; gap:8px; font-size:12px; color:#5F6368; padding-bottom:14px; margin-bottom:18px; border-bottom:1px solid #F0EDED;">
-        <span style="font-weight:700; color:#1B1C1C;" id="artModalAuthor">Tim Go-Tani</span>
-        <span>•</span>
-        <span id="artModalDate">Tanggal</span>
-        <span>•</span>
-        <span>5 mnt baca</span>
-      </div>
-
-      <div class="gt-modal-prose" id="artModalContent">
-        <!-- Formatted Markdown Content -->
-      </div>
-
-      <div style="margin-top:24px; padding-top:16px; border-top:1px solid #F0EDED; display:flex; justify-content:space-between; align-items:center;">
-        <a href="#" id="artModalShareWa" target="_blank" style="display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:600; color:#0D631B; text-decoration:none;">
-          <span class="material-symbols-outlined" style="font-size:18px;">share</span>
-          <span>Bagikan ke WhatsApp</span>
-        </a>
-        <button onclick="closeArticleModal()" style="padding:8px 20px; border-radius:30px; background:#F6F3F2; color:#1B1C1C; border:none; font-size:13px; font-weight:600; cursor:pointer;">
-          Tutup
-        </button>
-      </div>
+  <!-- Articles Grid -->
+  <div class="gt-article-grid" id="gt-article-grid">
+    <div class="gt-state-box">
+      <span class="material-symbols-outlined gt-state-icon">sync</span>
+      <p style="margin: 0; font-weight: 600; color: #40493D;">Memuat artikel terbaru dari Blogger...</p>
     </div>
   </div>
 </div>
 
-<!-- Client-side Logic Script with Supabase REST API -->
 <script>
-  (function() {
-    // 1. SUPABASE DATABASE CONFIGURATION
-    const SUPABASE_URL = 'https://abeqqbahcigexjwmklqn.supabase.co';
-    const SUPABASE_ANON_KEY = 'sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR';
+  let allBloggerArticles = [];
+  let currentActiveCategory = 'Semua';
 
-    let allArticles = [];
-    let currentFilter = 'all';
-    let searchQuery = '';
+  // Fallback data for local preview or new blogs
+  const FALLBACK_BLOGGER_POSTS = [
+    {
+      title: "Panduan Lengkap Budidaya Cabai Rawit di Musim Kemarau: Dari Olah Lahan, Manajemen Nutrisi hingga Panen Melimpah",
+      url: "/2026/09/panduan-lengkap-budidaya-cabai-rawit-di.html",
+      category: "Tips Menanam",
+      categories: ["Tips Menanam", "Cabai Rawit"],
+      date: "25 Sep 2026",
+      author: "Reza Maulana Nehru",
+      image: "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=600&h=380&fit=crop",
+      snippet: "Langkah teruji menjaga kelembaban tanah dan mencegah serangan hama thrips serta antraknosa pada tanaman cabai saat cuaca terik."
+    },
+    {
+      title: "5 Keunggulan Bibit Tomat Servo F1 yang Wajib Diketahui Petani",
+      url: "#",
+      category: "Varietas Bibit",
+      categories: ["Varietas Bibit", "Tomat Servo"],
+      date: "22 Sep 2026",
+      author: "Reza Maulana Nehru",
+      image: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&h=380&fit=crop",
+      snippet: "Mengenal ketahanan varietas Servo F1 terhadap virus kuning gemini dan potensi panen melimpah hingga puluhan ton per hektar."
+    },
+    {
+      title: "Cara Efektif Mengatasi Hama Ulat Grayak dengan Pestisida Nabati",
+      url: "#",
+      category: "Hama & Penyakit",
+      categories: ["Hama & Penyakit", "Organik"],
+      date: "20 Sep 2026",
+      author: "Reza Maulana Nehru",
+      image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&h=380&fit=crop",
+      snippet: "Formula ramah lingkungan berbahan ekstrak daun mimba dan bawang putih untuk mengendalikan ulat pada tanaman sayuran."
+    },
+    {
+      title: "Rahasia Pemupukan Berimbang untuk Durian Musang King Cepat Berbuah",
+      url: "#",
+      category: "Pupuk & Nutrisi",
+      categories: ["Pupuk & Nutrisi", "Buah Unggul"],
+      date: "18 Sep 2026",
+      author: "Reza Maulana Nehru",
+      image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&h=380&fit=crop",
+      snippet: "Kombinasi pupuk NPK mikro, asam humat, dan pemangkasan pucuk untuk merangsang pembungaan durian di usia muda."
+    },
+    {
+      title: "Tips Memilih Bibit Alpukat Mentega Unggul Asli Sambung Pucuk",
+      url: "#",
+      category: "Varietas Bibit",
+      categories: ["Varietas Bibit", "Tips Menanam"],
+      date: "15 Sep 2026",
+      author: "Reza Maulana Nehru",
+      image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=600&h=380&fit=crop",
+      snippet: "Ciri-ciri fisik bibit alpukat berkualitas tinggi dengan sambungan mata tunas yang sehat dan bebas jamur akar."
+    },
+    {
+      title: "SOP Penyemaian Benih Sayur Daun agar Tumbuh Seragam 99%",
+      url: "#",
+      category: "Tips Menanam",
+      categories: ["Tips Menanam", "Bibit Sayuran"],
+      date: "10 Sep 2026",
+      author: "Reza Maulana Nehru",
+      image: "https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=600&h=380&fit=crop",
+      snippet: "Teknik pemilihan media semai cocopeat + kompos halus serta pengaturan intensitas cahaya matahari pagi."
+    }
+  ];
 
-    const heroContainer = document.getElementById('heroArticleContainer');
-    const articlesGrid = document.getElementById('articlesGrid');
-    const popularList = document.getElementById('popularArticlesList');
-    const searchInput = document.getElementById('blogSearchInput');
-    const countBadge = document.getElementById('articleCountBadge');
-    const noArticlesMsg = document.getElementById('noArticlesMsg');
-    const modalOverlay = document.getElementById('articleModalOverlay');
+  function extractThumbnail(entry) {
+    if (entry.media$thumbnail && entry.media$thumbnail.url) {
+      return entry.media$thumbnail.url.replace(/\/s[0-9]+(-c)?\//, '/w600-h380-c/');
+    }
+    const content = (entry.content && entry.content.$t) || (entry.summary && entry.summary.$t) || '';
+    const match = content.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (match && match[1]) {
+      return match[1];
+    }
+    return "https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?w=600&h=380&fit=crop";
+  }
 
-    function formatDate(dateStr) {
-      if (!dateStr) return 'Terbaru';
+  function cleanSnippet(htmlText) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = htmlText || '';
+    const text = tmp.textContent || tmp.innerText || '';
+    return text.replace(/\s+/g, ' ').trim().slice(0, 135) + '...';
+  }
+
+  function formatBloggerDate(dateStr) {
+    if (!dateStr) return '';
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function parseAndProcessEntries(entries) {
+    if (entries && entries.length > 0) {
+      allBloggerArticles = entries.map(entry => {
+        const alternateLink = (entry.link || []).find(l => l.rel === 'alternate');
+        const postUrl = alternateLink ? alternateLink.href : '#';
+        const title = entry.title ? entry.title.$t : 'Artikel Tanpa Judul';
+        const content = (entry.content && entry.content.$t) || (entry.summary && entry.summary.$t) || '';
+        const snippet = cleanSnippet(content);
+        const image = extractThumbnail(entry);
+        const date = formatBloggerDate(entry.published ? entry.published.$t : '');
+        const author = (entry.author && entry.author[0] && entry.author[0].name) ? entry.author[0].name.$t : 'Reza Maulana Nehru';
+        
+        // Ambil seluruh label/kategori dari Blogger entry
+        const categories = (entry.category || [])
+          .map(c => (c && c.term ? c.term.trim() : ''))
+          .filter(Boolean);
+        const primaryCategory = categories[0] || 'Umum';
+
+        return { 
+          title, 
+          url: postUrl, 
+          category: primaryCategory, 
+          categories: categories.length > 0 ? categories : [primaryCategory], 
+          date, 
+          author, 
+          image, 
+          snippet 
+        };
+      });
+    } else {
+      allBloggerArticles = FALLBACK_BLOGGER_POSTS;
+    }
+    renderArticles();
+  }
+
+  function fetchBloggerPosts() {
+    // 1. Coba via JSONP Script (Paling kompatibel di Blogger)
+    const callbackName = 'onBloggerFeedLoaded_' + Math.floor(Math.random() * 100000);
+    let jsonpSuccess = false;
+
+    window[callbackName] = function(data) {
+      jsonpSuccess = true;
       try {
-        const d = new Date(dateStr);
-        return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
-      } catch (e) {
-        return dateStr;
+        const entries = (data && data.feed && data.feed.entry) || [];
+        parseAndProcessEntries(entries);
+      } catch(e) {
+        allBloggerArticles = FALLBACK_BLOGGER_POSTS;
+        renderArticles();
       }
-    }
+      try { delete window[callbackName]; } catch(e) {}
+    };
 
-    function formatMarkdownToHtml(content) {
-      if (!content) return '<p>Konten artikel belum tersedia.</p>';
-      let html = content
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
-
-      html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-      html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-      html = html.replace(/^# (.*$)/gim, '<h2>$1</h2>');
-      html = html.replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>');
-      html = html.replace(/\*(.*?)\*/gim, '<em>$1</em>');
-      html = html.replace(/^\- (.*$)/gim, '<li>$1</li>');
-      html = html.replace(/^\d+\. (.*$)/gim, '<li>$1</li>');
-
-      const paragraphs = html.split(/\n\n+/);
-      html = paragraphs.map(p => {
-        if (p.startsWith('<h2>') || p.startsWith('<h3>') || p.startsWith('<li>')) {
-          return p;
-        }
-        return `<p>${p.replace(/\n/g, '<br/>')}</p>`;
-      }).join('');
-
-      return html;
-    }
-
-    function renderHeroArticle(hero) {
-      if (!heroContainer) return;
-      if (!hero) {
-        heroContainer.innerHTML = '';
-        return;
+    const script = document.createElement('script');
+    const origin = window.location.origin.includes('http') ? window.location.origin : 'https://go-taniblogspot.blogspot.com';
+    script.src = `${origin}/feeds/posts/default?alt=json-in-script&callback=${callbackName}&max-results=30`;
+    
+    script.onerror = async function() {
+      if (jsonpSuccess) return;
+      // 2. Fallback ke standard fetch
+      try {
+        const response = await fetch(`${origin}/feeds/posts/default?alt=json&max-results=30`);
+        if (!response.ok) throw new Error("Fetch failed");
+        const data = await response.json();
+        parseAndProcessEntries((data.feed && data.feed.entry) || []);
+      } catch (err) {
+        allBloggerArticles = FALLBACK_BLOGGER_POSTS;
+        renderArticles();
       }
+    };
 
-      const formattedDate = formatDate(hero.created_at);
-      const fallbackImg = 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&h=500&fit=crop&q=80';
+    document.head.appendChild(script);
 
-      heroContainer.innerHTML = `
-        <article class="gt-hero-card">
-          <div class="gt-hero-img-wrap" onclick="openArticleModalById(${hero.id})">
-            <img src="${hero.thumbnail_url || fallbackImg}" alt="${hero.judul}" onerror="this.src='${fallbackImg}';" />
-            <div class="gt-hero-badge">
-              <span class="material-symbols-outlined" style="font-size:14px;">star</span> Artikel Utama
-            </div>
-          </div>
-
-          <div class="gt-hero-body">
-            <div>
-              <div class="gt-hero-meta-row">
-                <span class="gt-cat-pill">${hero.kategori || 'Agronomi'}</span>
-                <span>•</span>
-                <span style="display:flex; align-items:center; gap:3px;">
-                  <span class="material-symbols-outlined" style="font-size:14px;">calendar_today</span> ${formattedDate}
-                </span>
-              </div>
-
-              <h2 class="gt-hero-title" onclick="openArticleModalById(${hero.id})">
-                ${hero.judul}
-              </h2>
-
-              <p class="gt-hero-excerpt">
-                ${hero.excerpt || (hero.konten ? hero.konten.substring(0, 160) + '...' : 'Pelajari panduan agronomi lengkap mengenai varietas dan budidaya terkini.')}
-              </p>
-            </div>
-
-            <div class="gt-hero-footer">
-              <div class="gt-author-box">
-                <div class="gt-author-avatar">GT</div>
-                <div>
-                  <p class="gt-author-name">${hero.author || 'Tim Go-Tani'}</p>
-                  <p class="gt-author-role">Spesialis Agronomi</p>
-                </div>
-              </div>
-              <button onclick="openArticleModalById(${hero.id})" class="gt-btn-read-hero">
-                <span>Baca Artikel</span>
-                <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
-              </button>
-            </div>
-          </div>
-        </article>
-      `;
-    }
-
-    function renderArticlesGrid(list) {
-      if (!articlesGrid) return;
-      articlesGrid.innerHTML = '';
-
-      if (!list || list.length === 0) {
-        if (noArticlesMsg) noArticlesMsg.classList.add('show');
-        if (countBadge) countBadge.innerText = '0 Artikel';
-        return;
+    // Timeout safety fallback (jika offline atau lambat)
+    setTimeout(() => {
+      if (!allBloggerArticles || allBloggerArticles.length === 0) {
+        allBloggerArticles = FALLBACK_BLOGGER_POSTS;
+        renderArticles();
       }
+    }, 4000);
+  }
 
-      if (noArticlesMsg) noArticlesMsg.classList.remove('show');
-      if (countBadge) countBadge.innerText = `${list.length} Artikel`;
+  function setCategoryFilter(category, btnElement) {
+    currentActiveCategory = category;
+    const chips = document.querySelectorAll('.gt-chip');
+    chips.forEach(c => c.classList.remove('active'));
+    if (btnElement) btnElement.classList.add('active');
+    handleBlogFilter();
+  }
 
-      list.forEach(art => {
-        const formattedDate = formatDate(art.created_at);
-        const fallbackImg = 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=350&fit=crop&q=80';
+  function handleBlogFilter() {
+    const searchVal = (document.getElementById('gt-blog-search')?.value || '').toLowerCase().trim();
+    
+    const filtered = allBloggerArticles.filter(item => {
+      const itemCats = (item.categories && item.categories.length > 0) ? item.categories : [item.category || ''];
 
-        const card = document.createElement('article');
-        card.className = 'gt-article-card';
-        card.onclick = () => openArticleModalById(art.id);
+      const matchSearch = !searchVal || 
+        item.title.toLowerCase().includes(searchVal) || 
+        item.snippet.toLowerCase().includes(searchVal) ||
+        itemCats.some(c => c.toLowerCase().includes(searchVal));
 
-        card.innerHTML = `
-          <div class="gt-article-img">
-            <img src="${art.thumbnail_url || fallbackImg}" alt="${art.judul}" loading="lazy" onerror="this.src='${fallbackImg}';" />
-            <span class="gt-card-cat-badge">${art.kategori || 'Edukasi'}</span>
-          </div>
-
-          <div class="gt-article-body">
-            <div>
-              <div class="gt-card-meta">
-                <span>${formattedDate}</span>
-                <span>•</span>
-                <span style="display:flex; align-items:center; gap:2px;"><span class="material-symbols-outlined" style="font-size:13px;">timer</span> 4 mnt</span>
-              </div>
-
-              <h3 class="gt-card-title">${art.judul}</h3>
-              <p class="gt-card-desc">${art.excerpt || (art.konten ? art.konten.substring(0, 110) + '...' : '-')}</p>
-            </div>
-
-            <div class="gt-card-footer">
-              <div style="display:flex; align-items:center; gap:6px;">
-                <div style="width:20px; height:20px; border-radius:50%; background:#2E7D32; color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700;">GT</div>
-                <span style="font-weight:600; color:#1B1C1C;">${art.author || 'Tim Go-Tani'}</span>
-              </div>
-              <span class="material-symbols-outlined" style="color:#0D631B; font-size:18px;">arrow_forward</span>
-            </div>
-          </div>
-        `;
-
-        articlesGrid.appendChild(card);
-      });
-    }
-
-    function renderPopularSidebar(list) {
-      if (!popularList) return;
-      popularList.innerHTML = '';
-
-      const topItems = (list && list.length > 0) ? list.slice(0, 4) : [];
-      topItems.forEach((item, idx) => {
-        const num = String(idx + 1).padStart(2, '0');
-        const popEl = document.createElement('div');
-        popEl.className = 'gt-pop-item';
-        popEl.onclick = () => openArticleModalById(item.id);
-
-        popEl.innerHTML = `
-          <span class="gt-pop-num">${num}</span>
-          <div class="gt-pop-text">
-            <span class="gt-pop-cat">${item.kategori || 'Artikel'}</span>
-            <h5 class="gt-pop-link">${item.judul}</h5>
-          </div>
-        `;
-        popularList.appendChild(popEl);
-      });
-    }
-
-    function applyFilters() {
-      let filtered = allArticles;
-
-      if (currentFilter !== 'all') {
-        filtered = filtered.filter(a => (a.kategori || '').toLowerCase().includes(currentFilter.toLowerCase()));
-      }
-
-      if (searchQuery) {
-        filtered = filtered.filter(a => 
-          (a.judul || '').toLowerCase().includes(searchQuery) ||
-          (a.excerpt || '').toLowerCase().includes(searchQuery) ||
-          (a.konten || '').toLowerCase().includes(searchQuery) ||
-          (a.kategori || '').toLowerCase().includes(searchQuery)
+      const matchCategory = currentActiveCategory === 'Semua' || 
+        itemCats.some(c => 
+          c.toLowerCase() === currentActiveCategory.toLowerCase() ||
+          c.toLowerCase().includes(currentActiveCategory.toLowerCase()) ||
+          currentActiveCategory.toLowerCase().includes(c.toLowerCase())
         );
-      }
 
-      renderArticlesGrid(filtered);
-    }
-
-    window.openArticleModalById = function(id) {
-      const art = allArticles.find(a => String(a.id) === String(id));
-      if (!art || !modalOverlay) return;
-
-      const fallbackImg = 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&h=500&fit=crop&q=80';
-      document.getElementById('artModalImg').src = art.thumbnail_url || fallbackImg;
-      document.getElementById('artModalCategory').textContent = art.kategori || 'Edukasi Pertanian';
-      document.getElementById('artModalTitle').textContent = art.judul;
-      document.getElementById('artModalAuthor').textContent = art.author || 'Tim Go-Tani';
-      document.getElementById('artModalDate').textContent = formatDate(art.created_at);
-      document.getElementById('artModalContent').innerHTML = formatMarkdownToHtml(art.konten || art.excerpt);
-
-      const shareWa = document.getElementById('artModalShareWa');
-      if (shareWa) {
-        shareWa.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(art.judul + ' - Baca selengkapnya di Go-Tani')}`;
-      }
-
-      modalOverlay.classList.add('open');
-    };
-
-    window.closeArticleModal = function() {
-      if (modalOverlay) modalOverlay.classList.remove('open');
-    };
-
-    if (modalOverlay) {
-      modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) closeArticleModal();
-      });
-    }
-
-    window.resetBlogFilters = function() {
-      currentFilter = 'all';
-      searchQuery = '';
-      if (searchInput) searchInput.value = '';
-
-      const allButtons = document.querySelectorAll('.gt-chip-btn');
-      allButtons.forEach(b => {
-        if (b.dataset.filter === 'all') b.classList.add('active');
-        else b.classList.remove('active');
-      });
-
-      applyFilters();
-    };
-
-    const filterButtons = document.querySelectorAll('.gt-chip-btn');
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentFilter = btn.getAttribute('data-filter') || 'all';
-        applyFilters();
-      });
+      return matchSearch && matchCategory;
     });
 
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        searchQuery = e.target.value.toLowerCase().trim();
-        applyFilters();
-      });
+    renderArticles(filtered);
+  }
+
+  function renderArticles(dataToRender = allBloggerArticles) {
+    const grid = document.getElementById('gt-article-grid');
+    if (!grid) return;
+
+    if (dataToRender.length === 0) {
+      grid.innerHTML = `
+        <div class="gt-state-box">
+          <span class="material-symbols-outlined gt-state-icon">article</span>
+          <h3 style="margin: 0 0 6px; font-size: 16px; font-weight: 700;">Tidak ada artikel yang cocok</h3>
+          <p style="margin: 0; font-size: 13px; color: #707a6c;">Coba gunakan kata kunci pencarian lain atau pilih kategori Semua.</p>
+        </div>
+      `;
+      return;
     }
 
-    window.handleSubscribe = function() {
-      const input = document.getElementById('newsletterEmail');
-      const msg = document.getElementById('newsletterSuccess');
-      if (input && input.value) {
-        msg.style.display = 'block';
-        input.value = '';
-        setTimeout(() => {
-          msg.style.display = 'none';
-        }, 5000);
+    grid.innerHTML = dataToRender.map(art => {
+      const cats = (art.categories && art.categories.length > 0) ? art.categories : [art.category || 'Umum'];
+      let sortedCats = [...cats];
+      if (currentActiveCategory !== 'Semua') {
+        const matchIdx = sortedCats.findIndex(c => c.toLowerCase().includes(currentActiveCategory.toLowerCase()));
+        if (matchIdx > -1) {
+          const [matched] = sortedCats.splice(matchIdx, 1);
+          sortedCats.unshift(matched);
+        }
       }
-    };
+      const badgesHtml = sortedCats.slice(0, 2).map(c => `<span class="gt-card-category">${c}</span>`).join('');
 
-    async function fetchBlogPostsFromSupabase() {
-      try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/blog_posts?select=*&is_published=eq.true&order=created_at.desc`, {
-          headers: {
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
-          }
-        });
+      return `
+        <a href="${art.url}" class="gt-article-card">
+          <div class="gt-card-thumb-wrap">
+            <img src="${art.image}" alt="${art.title}" class="gt-card-thumb" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?w=600&h=380&fit=crop'">
+            <div class="gt-card-categories">
+              ${badgesHtml}
+            </div>
+          </div>
+          <div class="gt-card-body">
+            <div>
+              <div class="gt-card-meta">
+                <span>${art.date}</span>
+                <span>•</span>
+                <span>${art.author}</span>
+              </div>
+              <h2 class="gt-card-title">${art.title}</h2>
+              <p class="gt-card-excerpt">${art.snippet}</p>
+            </div>
+            <div class="gt-card-footer">
+              <span class="gt-read-more">
+                Baca Selengkapnya
+                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </a>
+      `;
+    }).join('');
+  }
 
-        if (!response.ok) {
-          throw new Error(`HTTP Error ${response.status}`);
-        }
-
-        const data = await response.json();
-        if (Array.isArray(data) && data.length > 0) {
-          allArticles = data;
-          renderHeroArticle(allArticles[0]);
-          renderArticlesGrid(allArticles);
-          renderPopularSidebar(allArticles);
-          return;
-        }
-        throw new Error('Data artikel kosong');
-      } catch (err) {
-        console.warn('Menggunakan fallback artikel lokal:', err);
-        loadFallbackArticles();
-      }
-    }
-
-    function loadFallbackArticles() {
-      const fallback = [
-        {
-          id: 1,
-          judul: 'Tips Menanam Bawang Merah Bima Brebes agar Umbi Besar dan Bobot Padat',
-          kategori: 'Tips Menanam',
-          author: 'Tim Go-Tani',
-          created_at: new Date().toISOString(),
-          thumbnail_url: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&h=500&fit=crop&q=80',
-          excerpt: 'Bawang merah Bima Brebes adalah varietas andalan petani Indonesia. Pelajari teknik budidaya yang benar mulai dari persiapan lahan, jarak tanam ideal, hingga pemupukan kalium tinggi.',
-          konten: `Bawang merah Bima Brebes merupakan varietas unggulan asal Brebes, Jawa Tengah yang paling banyak ditanam petani Indonesia.\n\n## Persiapan Lahan\nSiapkan bedengan dengan lebar 1-1.2 meter dan tinggi 30-40 cm. Pastikan lahan mendapatkan sinar matahari penuh.\n\n## Teknik Penanaman\nGunakan bibit umbi (4-6 gram). Tanam dengan jarak 15x20 cm, kedalaman 2/3 bagian umbi tertanam.\n\n## Pemupukan\n- Pupuk dasar: Kompos 20 ton/ha + NPK 16-16-16 saat tanam.\n- Susulan: Urea dan KCl pada umur 20 dan 35 HST.`
-        },
-        {
-          id: 2,
-          judul: 'Cara Efektif Mengatasi Penyakit Antraknosa (Patek) pada Cabai Rawit',
-          kategori: 'Hama & Penyakit',
-          author: 'Dr. Ir. Hendro Subagyo',
-          created_at: new Date().toISOString(),
-          thumbnail_url: 'https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=800&h=500&fit=crop&q=80',
-          excerpt: 'Antraknosa atau patek adalah penyakit paling merusak pada tanaman cabai saat musim hujan. Kenali gejala awal dan strategi pengendalian hayati serta fungisida rotasi.',
-          konten: `Antraknosa (Colletotrichum spp.) merupakan ancaman utama tanaman cabai di Indonesia.\n\n## Gejala Penyakit\nBercak cekung kehitaman pada buah cabai yang cepat meluas dan menyebabkan buah membusuk.\n\n## Pengendalian Terpadu\n1. Perbaiki drainase bedengan agar tidak tergenang.\n2. Lakukan perompesan daun bawah untuk menjaga sirkulasi udara.\n3. Aplikasi agens hayati Trichoderma dan fungisida preventif.`
-        },
-        {
-          id: 3,
-          judul: 'Panduan Budidaya Pepaya California IPB 9 untuk Pemula',
-          kategori: 'Panduan Budidaya',
-          author: 'Ratih Anggraini, S.P.',
-          created_at: new Date().toISOString(),
-          thumbnail_url: 'https://images.unsplash.com/photo-1526318472351-c75fcf070305?w=800&h=500&fit=crop&q=80',
-          excerpt: 'Pepaya California IPB 9 menjadi primadona pasar dengan produktivitas tinggi. Simak panduan dari pembibitan, lubang tanam, hingga pemupukan buah manis.',
-          konten: `Pepaya California IPB 9 memiliki daging buah oranye tebal manis (Brix 11-14).\n\n## Penanaman\nBuat lubang tanam 50x50x50 cm jarak 2.5x2.5 meter. Isi dengan pupuk kandang matang 20 kg per lubang.`
-        },
-        {
-          id: 4,
-          judul: 'Mengenal Musim Tanam yang Tepat untuk Hasil Panen Optimal',
-          kategori: 'Edukasi Pertanian',
-          author: 'Surya Wardhana, M.T.',
-          created_at: new Date().toISOString(),
-          thumbnail_url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=500&fit=crop&q=80',
-          excerpt: 'Memilih waktu tanam yang tepat adalah kunci keberhasilan panen. Pelajari pola musim tanam Indonesia dan strategi rotasi multi-komoditas.',
-          konten: `Memahami kalender musim tanam membantu petani meminimalisir risiko kekeringan atau banjir.`
-        },
-        {
-          id: 5,
-          judul: 'Pupuk Organik vs Kimia: Mana yang Lebih Baik untuk Bibit Tanaman?',
-          kategori: 'Edukasi Pertanian',
-          author: 'Agung Prasetyo',
-          created_at: new Date().toISOString(),
-          thumbnail_url: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=500&fit=crop&q=80',
-          excerpt: 'Ulasan komprehensif kelebihan dan kekurangan pupuk organik vs pupuk kimia, serta strategi pemupukan berimbang untuk kesuburan jangka panjang.',
-          konten: `Kombinasi ideal 70% pupuk organik sebagai pembenah tanah dan 30% pupuk anorganik sebagai booster fase kritis.`
-        },
-        {
-          id: 6,
-          judul: 'Jahe Merah: Peluang Emas Komoditas Rempah Bernilai Tinggi',
-          kategori: 'Komoditas Unggulan',
-          author: 'Faisal Rahman, S.E.',
-          created_at: new Date().toISOString(),
-          thumbnail_url: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=800&h=500&fit=crop&q=80',
-          excerpt: 'Jahe merah paling diminati industri herbal dan farmasi. Pelajari persiapan rimpang bertunas, naungan mulsa, hingga analisa keuntungan.',
-          konten: `Rimpang jahe merah mengandung gingerol tinggi yang berkhasiat medis dan memiliki harga jual 3-5 kali lipat jahe biasa.`
-        }
-      ];
-
-      allArticles = fallback;
-      renderHeroArticle(allArticles[0]);
-      renderArticlesGrid(allArticles);
-      renderPopularSidebar(allArticles);
-    }
-
-    fetchBlogPostsFromSupabase();
-  })();
+  // Eksekusi langsung tanpa menunggu jika DOM sudah siap
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fetchBloggerPosts);
+  } else {
+    fetchBloggerPosts();
+  }
 </script>

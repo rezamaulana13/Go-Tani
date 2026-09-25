@@ -1,0 +1,584 @@
+<!-- ============================================================ -->
+<!-- GO-TANI: TEMPLATE PREVIEW HALAMAN DETAIL ARTIKEL EDUKASI     -->
+<!-- Desain artikel responsif, terhubung ke Blogger & WhatsApp    -->
+<!-- ============================================================ -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Lengkap Budidaya Cabai Rawit di Lahan Terbuka | Go-Tani</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #FFFFFF;
+      color: #1B1C1C;
+      line-height: 1.6;
+    }
+
+    .gt-article-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+      box-sizing: border-box;
+    }
+    .gt-article-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media (min-width: 1024px) {
+      .gt-article-grid {
+        grid-template-columns: 8fr 4fr;
+        gap: 40px;
+      }
+    }
+    .gt-article-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #6B7280;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .gt-article-breadcrumb a {
+      color: #0D631B;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .gt-article-breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .gt-article-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .gt-article-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: #E8F5E9;
+      color: #0D631B;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .gt-article-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 800;
+      color: #1B1C1C;
+      line-height: 1.25;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.5px;
+    }
+    .gt-article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .gt-article-body {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #374151;
+    }
+    .gt-article-body h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111827;
+      margin: 32px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E8F5E9;
+    }
+    .gt-article-body h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      margin: 24px 0 10px;
+    }
+    .gt-article-body p {
+      margin: 0 0 18px;
+    }
+    .gt-article-body img {
+      width: 100%;
+      height: auto;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin: 20px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .gt-article-body ul, .gt-article-body ol {
+      margin: 0 0 20px 24px;
+      padding: 0;
+    }
+    .gt-article-body li {
+      margin-bottom: 8px;
+    }
+    .gt-article-body blockquote {
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: #F0FDF4;
+      border-left: 4px solid #0D631B;
+      border-radius: 0 12px 12px 0;
+      color: #166534;
+      font-style: italic;
+    }
+    .gt-article-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+    .gt-article-body th, .gt-article-body td {
+      border: 1px solid #E5E7EB;
+      padding: 10px 14px;
+      text-align: left;
+    }
+    .gt-article-body th {
+      background: #F9FAFB;
+      font-weight: 600;
+      color: #111827;
+    }
+    .gt-share-section {
+      margin-top: 36px;
+      padding: 20px 0;
+      border-top: 1px solid #E5E7EB;
+      border-bottom: 1px solid #E5E7EB;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .gt-share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .gt-share-wa {
+      background: #25D366;
+      color: #FFFFFF !important;
+    }
+    .gt-share-wa:hover {
+      background: #1EBE5D;
+    }
+    .gt-share-fb {
+      background: #1877F2;
+      color: #FFFFFF !important;
+    }
+    .gt-share-fb:hover {
+      background: #1464CC;
+    }
+    .gt-share-copy {
+      background: #F3F4F6;
+      color: #374151 !important;
+    }
+    .gt-share-copy:hover {
+      background: #E5E7EB;
+    }
+    .gt-author-card {
+      margin-top: 32px;
+      padding: 20px;
+      border-radius: 20px;
+      background: #F9FAFB;
+      border: 1px solid #E5E7EB;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .gt-sidebar-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 20px;
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .gt-sidebar-cta {
+      background: linear-gradient(135deg, #0D631B 0%, #166534 100%);
+      color: #FFFFFF;
+      border: none;
+      box-shadow: 0 8px 24px rgba(13, 99, 27, 0.25);
+    }
+    .gt-sidebar-cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 10px 16px;
+      border-radius: 9999px;
+      background: #FFFFFF;
+      color: #0D631B !important;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .gt-sidebar-cta-btn:hover {
+      transform: translateY(-2px);
+    }
+    .gt-recent-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #F3F4F6;
+      transition: opacity 0.2s ease;
+    }
+    .gt-recent-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .gt-recent-item:hover {
+      opacity: 0.8;
+    }
+    .gt-recent-thumb {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      min-height: 60px;
+      max-width: 60px;
+      max-height: 60px;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
+      background: #E5E7EB;
+      flex-shrink: 0;
+      display: block;
+    }
+    .gt-recent-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1F2937;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .gt-recent-date {
+      font-size: 11px;
+      color: #9CA3AF;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <article class="gt-article-container">
+    <div class="gt-article-grid">
+      
+      <!-- Main Column (8 cols) -->
+      <div class="gt-article-main">
+        
+        <!-- Breadcrumb -->
+        <nav class="gt-article-breadcrumb">
+          <a href="/">Beranda</a>
+          <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>
+          <a href="/p/blog_0702227196.html">Blog & Panduan</a>
+          <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>
+          <span style="color:#9CA3AF;">Panduan Lengkap Budidaya Cabai Rawit di Musim Kemarau: Dari Olah Lahan, Manajemen Nutrisi hingga Panen Melimpah</span>
+        </nav>
+
+        <!-- Header -->
+        <header class="gt-article-header">
+          <div class="gt-article-tags">
+            <span class="gt-article-badge">Tips Menanam</span>
+          </div>
+
+          <h1 class="gt-article-title">Panduan Lengkap Budidaya Cabai Rawit di Musim Kemarau: Dari Olah Lahan, Manajemen Nutrisi hingga Panen Melimpah</h1>
+
+          <div class="gt-article-meta">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div id="author-avatar" style="width:36px; height:36px; border-radius:50%; background:#E8F5E9; color:#0D631B; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px;">RN</div>
+              <div>
+                <div class="gt-author-name" style="font-weight:600; font-size:13px; color:#111827;">Reza Maulana Nehru</div>
+                <div style="font-size:11.5px; color:#6B7280;">Diterbitkan 25 September 2026 · Diperbarui</div>
+              </div>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:14px; font-size:12.5px; color:#6B7280;">
+              <span style="display:inline-flex; align-items:center; gap:4px;">
+                <span class="material-symbols-outlined" style="font-size:16px;">schedule</span>
+                5 Menit Baca
+              </span>
+              <span style="display:inline-flex; align-items:center; gap:4px; color:#0D631B; font-weight:600;">
+                <span class="material-symbols-outlined" style="font-size:16px;">verified</span>
+                Teruji Agronomis
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Article Body -->
+        <div class="post-body entry-content gt-article-body">
+          <img src="https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=1000&auto=format&fit=crop&q=80" alt="Kebun Cabai Rawit Unggul F1 Go-Tani" />
+
+          <blockquote>
+            <strong>Kunci Keberhasilan:</strong> Pemilihan benih varietas bersertifikat kemurnian tinggi dan persiapan drainase bedengan yang prima adalah faktor penentu 60% hasil panen cabai rawit bebas layu dan patek.
+          </blockquote>
+
+          <h2>1. Syarat Tumbuh & Lokasi Ideal</h2>
+          <p>
+            Cabai rawit (<em>Capsicum frutescens</em>) dapat tumbuh optimal pada dataran rendah hingga tinggi (0 – 1.200 MDPL) dengan suhu ideal 24°C – 32°C. Tanaman membutuhkan penyinaran matahari penuh minimal 8 jam per hari dengan pH tanah optimal antara 6.0 – 6.8.
+          </p>
+
+          <h2>2. Persiapan Semai Benih Berkualitas</h2>
+          <p>
+            Gunakan benih cabai rawit bersertifikat yang memiliki daya kecambah di atas 90%. Tahapan penyemaian:
+          </p>
+          <ul>
+            <li>Rendam benih dalam air hangat kuku (45°C) selama 3-4 jam untuk mematahkan masa dormansi.</li>
+            <li>Gunakan media semai campuran tanah gembur, kompos halus/kascing, dan arang sekam dengan perbandingan 2:1:1.</li>
+            <li>Tutup tray semai dengan kain/plastik gelap selama 3 hari pertama hingga berkecambah.</li>
+            <li>Bibit siap dipindah tanam (transplanting) saat berusia 21-25 HSS (Hari Setelah Semai) atau memiliki 4-5 helai daun sejati.</li>
+          </ul>
+
+          <h2>3. Pengolahan Lahan & Pemasangan Mulsa</h2>
+          <p>
+            Buat bedengan setinggi 30-40 cm pada musim kemarau atau 40-50 cm pada musim hujan untuk mencegah genangan air akar. Berikan pupuk kandang matang 15-20 ton/ha serta dolomit 1-2 ton/ha bila pH tanah di bawah 6.0.
+          </p>
+          <p>
+            Pasang mulsa plastik hitam perak (MPHP) dengan bagian perak menghadap ke atas guna memantulkan sinar matahari (mengurangi serangan hama thrips/kutu kebul) dan menjaga kelembaban perakaran.
+          </p>
+
+          <h2>4. Jadwal Pemupukan & Perawatan Rutin</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Umur Tanaman (HST)</th>
+                <th>Jenis Pupuk</th>
+                <th>Dosis & Cara Aplikasi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>7 - 14 HST</td>
+                <td>NPK 16-16-16 + Asam Humat</td>
+                <td>Kocor 3-5 gram/liter air (200 ml/tanaman)</td>
+              </tr>
+              <tr>
+                <td>21 - 35 HST</td>
+                <td>NPK + Kalsium Nitrat (CNG)</td>
+                <td>Kocor 5-7 gram/liter air</td>
+              </tr>
+              <tr>
+                <td>45 HST ke atas (Generatif)</td>
+                <td>MKP + KNO3 Putih + Boron</td>
+                <td>Semprot daun & kocor bertahap tiap 7 hari</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>5. Pemanenan Berkelanjutan</h2>
+          <p>
+            Pemanenan pertama dapat dilakukan saat tanaman berumur 75-85 HST. Petik buah bersama tangkainya pada pagi hari saat embun sudah kering. Pemetikan rutin dilakukan setiap 3-5 hari sekali untuk merangsang pembentukan bunga dan buah baru.
+          </p>
+        </div>
+
+        <!-- Share Section -->
+        <div class="gt-share-section">
+          <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:#111827;">Bagikan Panduan Ini:</span>
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <a class="gt-share-btn gt-share-wa" href="https://api.whatsapp.com/send?text=Panduan%20Lengkap%20Budidaya%20Cabai%20Rawit%20-%20https://go-taniblogspot.blogspot.com/" target="_blank" rel="noopener noreferrer">
+              <svg style="width:16px; height:16px;" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a class="gt-share-btn gt-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://go-taniblogspot.blogspot.com/" target="_blank" rel="noopener noreferrer">
+              <svg style="width:16px; height:16px;" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook</span>
+            </a>
+            <button class="gt-share-btn gt-share-copy" onclick="copyLink()">
+              <span class="material-symbols-outlined" style="font-size:16px;">link</span>
+              <span id="copy-label">Salin Tautan</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Author Card -->
+        <div class="gt-author-card">
+          <div id="author-card-avatar" style="width:52px; height:52px; border-radius:16px; background:#0D631B; color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-family:'Outfit',sans-serif; font-weight:800; font-size:20px; flex-shrink:0;">RN</div>
+          <div>
+            <h4 class="gt-author-card-name" style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; margin:0 0 4px; color:#111827;">Reza Maulana Nehru</h4>
+            <p class="gt-author-card-bio" style="font-size:12.5px; color:#6B7280; margin:0; line-height:1.5;">Ditulis oleh Reza Maulana Nehru dan diverifikasi oleh praktisi budidaya hortikultura Go-Tani untuk memberikan panduan tepat guna bagi petani Indonesia.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar Column (4 cols) -->
+      <aside class="gt-article-sidebar">
+        
+        <!-- Consultation CTA Box -->
+        <div class="gt-sidebar-card gt-sidebar-cta">
+          <div style="width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; margin-bottom:10px;">
+            <span class="material-symbols-outlined" style="font-size:22px; color:#FFFFFF;">support_agent</span>
+          </div>
+          <h3 style="font-family:'Outfit',sans-serif; font-size:16px; font-weight:700; margin:0 0 6px; color:#FFFFFF;">Konsultasi Masalah Tanaman</h3>
+          <p style="font-size:12px; color:rgba(255,255,255,0.85); line-height:1.5; margin:0 0 14px;">Punya kendala patek, busuk batang, atau daun keriting? Diskusikan langsung dengan agronomis kami via WhatsApp.</p>
+          <a class="gt-sidebar-cta-btn" href="https://wa.me/6288989643555?text=Halo%20Go-Tani%2C%20saya%20membaca%20artikel%20dan%20ingin%20konsultasi%20tanaman." target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined" style="font-size:16px;">chat</span>
+            <span>Tanya Agronomis Go-Tani</span>
+          </a>
+        </div>
+
+        <!-- Seed Catalog Mini Box -->
+        <div class="gt-sidebar-card">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+            <h3 style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; margin:0; color:#111827; display:flex; align-items:center; gap:6px;">
+              <span class="material-symbols-outlined" style="font-size:18px; color:#0D631B;">yard</span>
+              Bibit Unggul Terkait
+            </h3>
+            <a href="/p/bibit.html" style="font-size:11.5px; font-weight:600; color:#0D631B; text-decoration:none;">Katalog</a>
+          </div>
+          <p style="font-size:12.5px; color:#6B7280; margin:0 0 14px; line-height:1.5;">Temukan varietas Cabai Rawit Merah, Tomat Servo, dan benih bersertifikat lainnya di katalog resmi.</p>
+          <a href="/p/bibit.html" style="display:block; width:100%; text-align:center; padding:10px 14px; border-radius:12px; background:#F3F4F6; color:#1F2937; text-decoration:none; font-weight:600; font-size:12.5px; transition:background 0.2s;">
+            Jelajahi Katalog Bibit &rarr;
+          </a>
+        </div>
+
+        <!-- Recent Articles -->
+        <div class="gt-sidebar-card">
+          <h3 style="font-family:'Outfit',sans-serif; font-size:15px; font-weight:700; margin:0 0 16px; color:#111827; display:flex; align-items:center; gap:6px;">
+            <span class="material-symbols-outlined" style="font-size:18px; color:#0D631B;">auto_stories</span>
+            Panduan Edukasi Pilihan
+          </h3>
+
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <a class="gt-recent-item" href="#">
+              <img class="gt-recent-thumb" src="https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=120&fit=crop&q=80" alt="Tomat" />
+              <div>
+                <h4 class="gt-recent-title">SOP Penyemaian Benih Tomat Servo F1 agar Daya Tumbuh 98%</h4>
+                <span class="gt-recent-date">20 September 2026</span>
+              </div>
+            </a>
+            <a class="gt-recent-item" href="#">
+              <img class="gt-recent-thumb" src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=120&fit=crop&q=80" alt="Sayuran Daun" />
+              <div>
+                <h4 class="gt-recent-title">Panduan Panen Cepat Sayuran Daun Hidroponik Skala Rumah Tangga</h4>
+                <span class="gt-recent-date">18 September 2026</span>
+              </div>
+            </a>
+            <a class="gt-recent-item" href="#">
+              <img class="gt-recent-thumb" src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=120&fit=crop&q=80" alt="Melon" />
+              <div>
+                <h4 class="gt-recent-title">Kiat Pembentukan Jaring (Net) Tebal & Kadar Gula Tinggi pada Melon</h4>
+                <span class="gt-recent-date">15 September 2026</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </article>
+
+  <script>
+    function copyLink() {
+      navigator.clipboard.writeText(window.location.href);
+      const el = document.getElementById('copy-label');
+      if (el) {
+        el.textContent = 'Tersalin!';
+        setTimeout(() => { el.textContent = 'Salin Tautan'; }, 2000);
+      }
+    }
+
+    // Auto-fetch real post data from Blogger feed if accessed on Blogger or with ?slug= query
+    (async function initDynamicArticleData() {
+      const params = new URLSearchParams(window.location.search);
+      const targetSlug = params.get('slug') || params.get('post') || window.location.pathname.split('/').pop().replace('.html', '');
+      const origin = window.location.origin.includes('http') ? window.location.origin : 'https://go-taniblogspot.blogspot.com';
+
+      if (!targetSlug || targetSlug === 'page-artikel-detail' || targetSlug === 'index') return;
+
+      try {
+        const res = await fetch(`${origin}/feeds/posts/default?alt=json&max-results=30`);
+        if (!res.ok) return;
+        const data = await res.json();
+        const entries = data?.feed?.entry || [];
+        const matched = entries.find(e => {
+          const altLink = (e.link || []).find(l => l.rel === 'alternate');
+          const href = (altLink ? altLink.href : '').toLowerCase();
+          return href.includes(targetSlug.toLowerCase());
+        });
+
+        if (matched) {
+          const title = matched.title ? matched.title.$t : '';
+          const content = (matched.content && matched.content.$t) || (matched.summary && matched.summary.$t) || '';
+          const categories = (matched.category || []).map(c => c.term);
+          const published = matched.published ? new Date(matched.published.$t).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
+          const author = (matched.author && matched.author[0] && matched.author[0].name) ? matched.author[0].name.$t : 'Reza Maulana Nehru';
+          const initials = author.split(' ').filter(Boolean).map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'RN';
+
+          const authorNameEls = document.querySelectorAll('.gt-author-name, .gt-author-card-name');
+          authorNameEls.forEach(el => el.textContent = author);
+
+          const authorAvatarEls = document.querySelectorAll('#author-avatar, #author-card-avatar');
+          authorAvatarEls.forEach(el => el.textContent = initials);
+
+          const authorBioEl = document.querySelector('.gt-author-card-bio');
+          if (authorBioEl) {
+            authorBioEl.textContent = `Ditulis oleh ${author} dan diverifikasi oleh praktisi budidaya hortikultura Go-Tani untuk memberikan panduan tepat guna bagi petani Indonesia.`;
+          }
+
+          if (title) {
+            document.title = `${title} | Go-Tani`;
+            const titleEl = document.querySelector('.gt-article-title');
+            if (titleEl) titleEl.textContent = title;
+            const breadcrumbEl = document.querySelector('.gt-article-breadcrumb span:last-child');
+            if (breadcrumbEl) breadcrumbEl.textContent = title;
+          }
+
+          if (categories.length > 0) {
+            const tagsEl = document.querySelector('.gt-article-tags');
+            if (tagsEl) {
+              tagsEl.innerHTML = categories.map(c => `<span class="gt-article-badge">${c}</span>`).join('');
+            }
+          }
+
+          if (content) {
+            const bodyEl = document.querySelector('.gt-article-body');
+            if (bodyEl) bodyEl.innerHTML = content;
+          }
+        }
+      } catch (err) {
+        // Keep default content for preview
+      }
+    })();
+  </script>
+</body>
+</html>

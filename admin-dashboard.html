@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="noindex, nofollow" name="robots"/>
   <meta content="web_dashboard" name="shell-type"/>
-  <title>Go-Tani - Admin Console & Supabase Management</title>
+  <title>Go-Tani - Dashboard Overview Admin</title>
   
   <!-- Fonts & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -13,87 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "surface-container-highest": "#e5e2e1",
-            "tertiary": "#1f6223",
-            "tertiary-fixed-dim": "#91d78a",
-            "error-container": "#ffdad6",
-            "error": "#ba1a1a",
-            "on-error": "#ffffff",
-            "on-primary-fixed": "#002204",
-            "on-secondary-fixed": "#002105",
-            "on-secondary-fixed-variant": "#005318",
-            "secondary-fixed": "#9ff79f",
-            "on-surface-variant": "#40493d",
-            "on-tertiary-fixed-variant": "#0c5216",
-            "primary": "#0d631b",
-            "surface-tint": "#1b6d24",
-            "on-error-container": "#93000a",
-            "on-secondary-container": "#19722b",
-            "outline": "#707a6c",
-            "surface-container-high": "#eae7e7",
-            "surface-bright": "#fcf9f8",
-            "on-secondary": "#ffffff",
-            "primary-container": "#2e7d32",
-            "secondary-fixed-dim": "#83da85",
-            "tertiary-container": "#3a7b39",
-            "surface": "#fcf9f8",
-            "surface-container-lowest": "#ffffff",
-            "on-tertiary-container": "#c8ffbf",
-            "secondary-container": "#9cf49c",
-            "on-tertiary-fixed": "#002203",
-            "inverse-primary": "#88d982",
-            "on-background": "#1b1c1c",
-            "background": "#fcf9f8",
-            "surface-container": "#f0eded",
-            "surface-variant": "#e5e2e1",
-            "outline-variant": "#bfcaba",
-            "surface-dim": "#dcd9d9",
-            "surface-container-low": "#f6f3f2",
-            "on-primary-fixed-variant": "#005312",
-            "on-tertiary": "#ffffff",
-            "on-primary": "#ffffff",
-            "secondary": "#126d27",
-            "primary-fixed-dim": "#88d982",
-            "on-primary-container": "#cbffc2",
-            "primary-fixed": "#a3f69c",
-            "inverse-surface": "#303030",
-            "tertiary-fixed": "#acf4a4",
-            "inverse-on-surface": "#f3f0ef",
-            "on-surface": "#1b1c1c"
-          },
-          fontFamily: {
-            "headline-xl": ["Outfit", "sans-serif"],
-            "headline-lg": ["Outfit", "sans-serif"],
-            "headline-md": ["Outfit", "sans-serif"],
-            "headline-sm": ["Outfit", "sans-serif"],
-            "title-md": ["Outfit", "sans-serif"],
-            "body-lg": ["Inter", "sans-serif"],
-            "body-md": ["Inter", "sans-serif"],
-            "body-sm": ["Inter", "sans-serif"],
-            "label-md": ["Inter", "sans-serif"],
-            "label-sm": ["Inter", "sans-serif"]
-          },
-          spacing: {
-            "space-xs": "0.25rem",
-            "space-sm": "0.5rem",
-            "space-md": "1rem",
-            "space-lg": "1.5rem",
-            "space-xl": "2.5rem"
-          }
-        }
-      }
-    };
-  </script>
+  <style id="tw-compiled">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none;appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.left-0{left:0}.right-5{right:1.25rem}.top-0{top:0}.top-5{top:1.25rem}.z-10{z-index:10}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.z-\[100\]{z-index:100}.mx-auto{margin-left:auto;margin-right:auto}.mb-3{margin-bottom:.75rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-4{margin-top:1rem}.mt-space-xs{margin-top:.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-2{height:.5rem}.h-20{height:5rem}.h-8{height:2rem}.h-full{height:100%}.max-h-\[calc\(100vh-220px\)\]{max-height:calc(100vh - 220px)}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-2{width:.5rem}.w-72{width:18rem}.w-8{width:2rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.max-w-xs{max-width:20rem}.shrink-0{flex-shrink:0}.-translate-x-full{--tw-translate-x:-100%}.-translate-x-full,.translate-y-2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-2{--tw-translate-y:0.5rem}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-space-md{gap:1rem}.gap-space-sm{gap:.5rem}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-surface-container>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(240 237 237/var(--tw-divide-opacity,1))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-outline-variant\/30{border-color:rgba(191,202,186,.3)}.border-surface-container{--tw-border-opacity:1;border-color:rgb(240 237 237/var(--tw-border-opacity,1))}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.bg-black\/40{background-color:rgba(0,0,0,.4)}.bg-error{--tw-bg-opacity:1;background-color:rgb(186 26 26/var(--tw-bg-opacity,1))}.bg-error-container{--tw-bg-opacity:1;background-color:rgb(255 218 214/var(--tw-bg-opacity,1))}.bg-error-container\/60{background-color:hsla(6,100%,92%,.6)}.bg-error\/10{background-color:rgba(186,26,26,.1)}.bg-primary{--tw-bg-opacity:1;background-color:rgb(13 99 27/var(--tw-bg-opacity,1))}.bg-primary-container{--tw-bg-opacity:1;background-color:rgb(46 125 50/var(--tw-bg-opacity,1))}.bg-primary\/10{background-color:rgba(13,99,27,.1)}.bg-secondary-container{--tw-bg-opacity:1;background-color:rgb(156 244 156/var(--tw-bg-opacity,1))}.bg-surface{--tw-bg-opacity:1;background-color:rgb(252 249 248/var(--tw-bg-opacity,1))}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(240 237 237/var(--tw-bg-opacity,1))}.bg-surface-container-highest{--tw-bg-opacity:1;background-color:rgb(229 226 225/var(--tw-bg-opacity,1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(246 243 242/var(--tw-bg-opacity,1))}.bg-surface-container-lowest{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-surface\/90{background-color:hsla(15,40%,98%,.9)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/15{background-color:hsla(0,0%,100%,.15)}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-primary{--tw-gradient-from:#0d631b var(--tw-gradient-from-position);--tw-gradient-to:rgba(13,99,27,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-emerald-800{--tw-gradient-to:#065f46 var(--tw-gradient-to-position)}.object-cover{-o-object-fit:cover;object-fit:cover}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-space-md{padding:1rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-space-lg{padding-left:1.5rem;padding-right:1.5rem}.px-space-md{padding-left:1rem;padding-right:1rem}.px-space-sm{padding-left:.5rem;padding-right:.5rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-8{padding-top:2rem;padding-bottom:2rem}.py-space-sm{padding-top:.5rem;padding-bottom:.5rem}.py-space-xs{padding-top:.25rem;padding-bottom:.25rem}.pb-4{padding-bottom:1rem}.pt-3{padding-top:.75rem}.text-center{text-align:center}.font-body-md{font-family:Inter,sans-serif}.font-headline-lg,.font-headline-md,.font-headline-sm{font-family:Outfit,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[14px\]{font-size:14px}.text-\[16px\]{font-size:16px}.text-\[18px\]{font-size:18px}.text-\[20px\]{font-size:20px}.text-\[22px\]{font-size:22px}.text-\[24px\]{font-size:24px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-.025em}.tracking-wider{letter-spacing:.05em}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-error{--tw-text-opacity:1;color:rgb(186 26 26/var(--tw-text-opacity,1))}.text-on-error,.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-on-secondary-container{--tw-text-opacity:1;color:rgb(25 114 43/var(--tw-text-opacity,1))}.text-on-surface{--tw-text-opacity:1;color:rgb(27 28 28/var(--tw-text-opacity,1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(64 73 61/var(--tw-text-opacity,1))}.text-outline{--tw-text-opacity:1;color:rgb(112 122 108/var(--tw-text-opacity,1))}.text-primary{--tw-text-opacity:1;color:rgb(13 99 27/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/80{color:hsla(0,0%,100%,.8)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.shadow-\[0_1px_8px_rgba\(0\2c 0\2c 0\2c 0\.04\)\]{--tw-shadow:0 1px 8px rgba(0,0,0,.04);--tw-shadow-colored:0 1px 8px var(--tw-shadow-color)}.shadow-\[0_1px_8px_rgba\(0\2c 0\2c 0\2c 0\.04\)\],.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.outline{outline-style:solid}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.hover\:border-amber-500\/40:hover{border-color:rgba(245,158,11,.4)}.hover\:border-error\/40:hover{border-color:rgba(186,26,26,.4)}.hover\:border-primary\/40:hover{border-color:rgba(13,99,27,.4)}.hover\:bg-error-container:hover{--tw-bg-opacity:1;background-color:rgb(255 218 214/var(--tw-bg-opacity,1))}.hover\:bg-primary\/90:hover{background-color:rgba(13,99,27,.9)}.hover\:bg-surface-container:hover{--tw-bg-opacity:1;background-color:rgb(240 237 237/var(--tw-bg-opacity,1))}.hover\:bg-surface-container-high:hover{--tw-bg-opacity:1;background-color:rgb(234 231 231/var(--tw-bg-opacity,1))}.hover\:bg-white\/20:hover{background-color:hsla(0,0%,100%,.2)}.hover\:text-on-surface:hover{--tw-text-opacity:1;color:rgb(27 28 28/var(--tw-text-opacity,1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(13 99 27/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem}.group:hover .group-hover\:scale-110,.group:hover .group-hover\:translate-x-1{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1}@media (min-width:640px){.sm\:block{display:block}}@media (min-width:768px){.md\:inline{display:inline}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}}@media (min-width:1024px){.lg\:hidden{display:none}.lg\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:p-8{padding:2rem}.lg\:p-space-lg{padding:1.5rem}.lg\:px-space-lg{padding-left:1.5rem;padding-right:1.5rem}.lg\:pl-72{padding-left:18rem}.lg\:text-3xl{font-size:1.875rem;line-height:2.25rem}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}}</style>
 
   <style>
-    /* Reset & Blogger Takeover */
     header.sticky, 
     nav#navMenu,
     footer,
@@ -102,100 +25,30 @@
     #mainNavbar, #mainFooter, .navbar, .footer, .blog-pager, .comments, #header, #footer {
       display: none !important;
     }
-    
     html, body {
       margin: 0 !important;
       padding: 0 !important;
       background-color: #fcf9f8 !important;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
-    
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f0eded;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #bfcaba;
-      border-radius: 9999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #707a6c;
-    }
-
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f0eded; }
+    ::-webkit-scrollbar-thumb { background: #bfcaba; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #707a6c; }
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       vertical-align: middle;
-    }
-    .material-symbols-outlined.fill {
-      font-variation-settings: 'FILL' 1;
-    }
-
-    /* Modal Animation */
-    .modal-backdrop {
-      transition: opacity 0.2s ease, visibility 0.2s ease;
-    }
-    .modal-backdrop.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .modal-backdrop:not(.hidden) {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-    .modal-dialog {
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
-    }
-    .modal-backdrop.hidden .modal-dialog {
-      transform: translateY(16px) scale(0.97);
-      opacity: 0;
-    }
-    .modal-backdrop:not(.hidden) .modal-dialog {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-
-    /* Tab Panes */
-    .tab-pane {
-      display: none;
-    }
-    .tab-pane.active {
-      display: block;
-      animation: fadeIn 0.25s ease-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Loading Shimmer */
-    .shimmer {
-      background: linear-gradient(90deg, #f0eded 25%, #eae7e7 50%, #f0eded 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.5s infinite;
-    }
-    @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
     }
   </style>
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased">
-  <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
-
-  <!-- Mobile Sidebar Backdrop -->
-  <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity"></div>
+  <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden lg:hidden"></div>
 
   <!-- ================= SIDEBAR ================= -->
   <aside id="sidebar" class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] -translate-x-full lg:translate-x-0 transition-transform duration-300">
     <div class="flex flex-col">
-      <!-- Sidebar Header / Brand Logo -->
       <div class="h-20 px-space-lg flex items-center justify-between bg-surface-container-low border-b border-outline-variant/30">
         <a href="/" class="flex items-center gap-space-sm text-decoration-none">
           <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
@@ -203,7 +56,7 @@
           </div>
           <div class="flex flex-col">
             <span class="font-headline-sm font-bold text-primary leading-none tracking-tight">Go-Tani</span>
-            <span class="text-xs text-on-surface-variant font-medium mt-1">Supabase Console</span>
+            <span class="text-xs text-on-surface-variant font-medium mt-1">Admin Console</span>
           </div>
         </a>
         <button onclick="toggleMobileSidebar(false)" class="lg:hidden p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container">
@@ -211,26 +64,28 @@
         </button>
       </div>
 
-      <!-- Navigation Links -->
       <div class="px-space-md py-space-sm overflow-y-auto max-h-[calc(100vh-220px)]">
         <div class="px-space-sm py-space-xs">
-          <span class="text-xs uppercase tracking-wider text-outline font-semibold">Database Tables & Ops</span>
+          <span class="text-xs uppercase tracking-wider text-outline font-semibold">Navigasi Utama</span>
         </div>
-        <nav class="mt-space-xs flex flex-col gap-1.5" id="nav-container">
-          <a id="nav-link-dashboard" href="admin-dashboard.html" class="w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm text-left text-sm">
-            <span class="material-symbols-outlined text-[20px]">space_dashboard</span>
-            <span>Ringkasan & Overview</span>
+        <nav class="mt-space-xs flex flex-col gap-1.5">
+          <!-- Active: Overview -->
+          <a id="nav-link-dashboard" href="admin-dashboard.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-sm text-sm">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px]">space_dashboard</span>
+              <span>Ringkasan & Overview</span>
+            </div>
           </a>
 
-          <a id="nav-link-bibit" href="admin-bibit.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium text-left">
+          <a id="nav-link-bibit" href="admin-bibit.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
             <div class="flex items-center gap-3">
               <span class="material-symbols-outlined text-[20px]">potted_plant</span>
               <span>Bibit Tanaman</span>
             </div>
-            <span id="badge-nav-bibit" class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">30</span>
+            <span id="badge-nav-bibit" class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">0</span>
           </a>
 
-          <a id="nav-link-pesan" href="admin-pesan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium text-left">
+          <a id="nav-link-pesan" href="admin-pesan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
             <div class="flex items-center gap-3">
               <span class="material-symbols-outlined text-[20px]">mark_chat_unread</span>
               <span>Pesan & Konsultasi</span>
@@ -238,1120 +93,275 @@
             <span id="badge-nav-pesan" class="text-xs bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-semibold">0 Baru</span>
           </a>
 
-          <a id="nav-link-blog" href="admin-blog.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium text-left">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-[20px]">article</span>
-              <span>Artikel & Blog Posts</span>
-            </div>
-            <span id="badge-nav-blog" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">0</span>
-          </a>
-
-          <a id="nav-link-layanan" href="admin-layanan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium text-left">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-[20px]">agriculture</span>
-              <span>Layanan & Fitur</span>
-            </div>
-            <span id="badge-nav-layanan" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">6</span>
-          </a>
-
-          <a id="nav-link-sql" href="admin-sql.html" class="w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium text-left">
+          <a id="nav-link-sql" href="admin-sql.html" class="w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
             <span class="material-symbols-outlined text-[20px]">terminal</span>
-            <span>SQL Editor & RLS</span>
+            <span>SQL Editor & Setup</span>
           </a>
         </nav>
       </div>
     </div>
 
-    <!-- Sidebar Bottom: Cluster Info & Logout -->
+    <!-- Sidebar Bottom -->
     <div class="p-space-md border-t border-outline-variant/30 flex flex-col gap-2 bg-surface-container-low">
       <div class="p-3 rounded-xl bg-surface-container flex flex-col gap-1.5 text-xs">
         <div class="flex items-center justify-between">
-          <span class="text-on-surface-variant font-medium">Cluster Region</span>
-          <span class="font-semibold text-primary">ap-southeast-1</span>
+          <span class="text-on-surface-variant font-medium">Database Supabase</span>
+          <span class="font-semibold text-primary flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Terhubung
+          </span>
         </div>
-        <div class="flex items-center justify-between">
-          <span class="text-on-surface-variant font-medium">Postgres Version</span>
-          <span class="text-on-surface font-semibold">15.6 (Supabase)</span>
+        <div class="flex items-center justify-between text-[11px] text-outline">
+          <span>Region: ap-southeast-1</span>
+          <span>Postgres 15</span>
         </div>
-        <div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-1">
-          <div class="bg-primary h-1.5 rounded-full w-2/3"></div>
-        </div>
-        <span class="text-[11px] text-on-surface-variant">Storage: 1.4 GB / 8.0 GB</span>
       </div>
 
-      <button onclick="handleLogout()" class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-error-container/60 hover:bg-error-container text-error transition-all font-label-md text-xs font-semibold">
+      <button onclick="handleLogout()" class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-error-container/60 hover:bg-error-container text-error transition-all text-xs font-semibold">
         <span class="material-symbols-outlined text-[18px]">logout</span>
         <span>Keluar dari Admin</span>
       </button>
     </div>
   </aside>
 
-  <!-- ================= MAIN APP WRAPPER ================= -->
+  <!-- ================= MAIN CONTENT ================= -->
   <div class="lg:pl-72 flex flex-col min-h-screen">
-    
-    <!-- Fixed Top Header -->
-    <header class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-30 border-b border-outline-variant/30 px-space-lg flex items-center justify-between gap-space-md">
-      <div class="flex items-center gap-3 flex-1 max-w-xl">
-        <button onclick="toggleMobileSidebar(true)" class="lg:hidden p-2 rounded-full hover:bg-surface-container text-on-surface" aria-label="Buka Menu">
+    <!-- Top Bar -->
+    <header class="sticky top-0 bg-surface/90 backdrop-blur-xl z-30 border-b border-outline-variant/30 px-space-md lg:px-space-lg h-20 flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-3">
+        <button onclick="toggleMobileSidebar(true)" class="lg:hidden p-2 rounded-xl hover:bg-surface-container text-on-surface">
           <span class="material-symbols-outlined text-[24px]">menu</span>
         </button>
-        <div class="relative w-full flex items-center">
-          <span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px]">search</span>
-          <input id="global-search-input" oninput="handleGlobalSearch(event)" class="w-full h-11 pl-11 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline text-sm rounded-full outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/40 transition-all" placeholder="Cari bibit, pesan, artikel blog, atau query..." type="text"/>
+        <div>
+          <h1 class="font-headline-sm font-bold text-on-surface text-lg lg:text-xl">Ringkasan Dashboard</h1>
+          <p class="text-xs text-on-surface-variant hidden sm:block">Kelola katalog bibit dan pesan konsultasi pertanian Go-Tani</p>
         </div>
       </div>
 
-      <div class="flex items-center gap-space-md">
-        <!-- Live Status Pill -->
-        <div class="hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
-          </span>
-          <span id="live-connection-status">Supabase Connected • RLS Active</span>
-        </div>
-
-        <a href="/" target="_blank" class="hidden sm:flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all text-xs font-semibold">
+      <div class="flex items-center gap-2">
+        <button onclick="loadDashboardData()" title="Muat Ulang Data" class="p-2.5 rounded-xl hover:bg-surface-container text-on-surface-variant hover:text-primary transition-all flex items-center gap-1.5 text-xs font-medium border border-outline-variant/30">
+          <span class="material-symbols-outlined text-[18px]">refresh</span>
+          <span class="hidden md:inline">Segarkan</span>
+        </button>
+        <a href="/" target="_blank" class="px-4 py-2 rounded-xl bg-primary text-on-primary hover:bg-primary/90 transition-all text-xs font-semibold shadow-sm flex items-center gap-1.5">
           <span class="material-symbols-outlined text-[16px]">visibility</span>
-          <span>Buka Website</span>
+          <span>Lihat Website</span>
         </a>
-
-        <!-- Notification Bell -->
-        <div onclick="switchTab('pesan-dan-konsultasi')" class="relative flex items-center justify-center p-2.5 rounded-full hover:bg-surface-container transition-colors cursor-pointer text-on-surface-variant">
-          <span class="material-symbols-outlined text-[22px]">notifications</span>
-          <span id="top-notification-dot" class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface hidden"></span>
-        </div>
-
-        <div class="h-7 w-px bg-outline-variant/60 hidden sm:block"></div>
-
-        <!-- User Profile Pill -->
-        <div class="flex items-center gap-3 pl-1">
-          <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shadow-sm">
-            <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
-          </div>
-          <div class="hidden md:flex flex-col text-left">
-            <span id="admin-display-name" class="text-sm font-semibold text-on-surface leading-tight">Admin Agronomis</span>
-            <span id="admin-display-email" class="text-xs text-primary font-medium leading-tight">admin@gotani.id</span>
-          </div>
-        </div>
       </div>
     </header>
 
-    <!-- Main Content Area with Dynamic Tabs -->
-    <main class="w-full pt-20 bg-surface flex-1 px-4 sm:px-space-lg py-space-lg">
-      <div class="max-w-7xl mx-auto flex flex-col w-full">
-
-        <!-- ============================================================== -->
-        <!-- TAB 1: RINGKASAN & OVERVIEW                                     -->
-        <!-- ============================================================== -->
-        <div id="pane-ringkasan-database" class="tab-pane active flex flex-col w-full">
-          <!-- Supabase Live Connection Banner -->
-          <div class="w-full bg-surface-container-low border border-outline-variant/40 rounded-2xl p-space-md mb-space-lg shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
-            <div class="flex items-center gap-space-md">
-              <div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
-                <span class="material-symbols-outlined text-[28px]">database</span>
-              </div>
-              <div class="flex flex-col">
-                <div class="flex items-center gap-2">
-                  <span class="font-headline-sm font-bold text-on-surface">Supabase PostgreSQL 15.6</span>
-                  <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
-                    <span class="w-1.5 h-1.5 rounded-full bg-primary mr-1.5 animate-pulse"></span>
-                    Sync Live
-                  </span>
-                </div>
-                <p class="text-xs sm:text-sm text-on-surface-variant mt-0.5">
-                  RLS Active on 4 Tables • Anon & Authenticated Policies Enforced • Latency: <span id="ping-latency">18ms</span>
-                </p>
-              </div>
-            </div>
-
-            <!-- Quick Action Buttons -->
-            <div class="flex flex-wrap items-center gap-2">
-              <button onclick="openModal('modal-bibit')" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-sm font-semibold hover:bg-tertiary transition-all shadow-sm">
-                <span class="material-symbols-outlined text-[18px]">add_circle</span>
-                <span>+ Tambah Bibit</span>
-              </button>
-              <button onclick="openModal('modal-blog')" class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-sm font-semibold hover:bg-surface-dim transition-all">
-                <span class="material-symbols-outlined text-[18px]">edit_note</span>
-                <span>+ Tulis Artikel</span>
-              </button>
-              <button onclick="openModal('modal-sql-export')" class="flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-xs font-semibold hover:text-on-surface transition-all">
-                <span class="material-symbols-outlined text-[18px]">download</span>
-                <span>Ekspor SQL</span>
-              </button>
-              <button onclick="refreshAllData()" class="flex items-center gap-1.5 px-3 py-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-primary transition-all text-xs font-semibold" title="Refresh Data">
-                <span class="material-symbols-outlined text-[18px]">sync</span>
-              </button>
-            </div>
+    <!-- Main Body -->
+    <main class="p-space-md lg:p-space-lg flex flex-col gap-6 max-w-7xl w-full mx-auto">
+      
+      <!-- Welcome Banner -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-emerald-800 text-on-primary p-6 lg:p-8 shadow-sm">
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="max-w-xl">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-on-primary text-xs font-medium backdrop-blur-md mb-3">
+              <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+              Sistem Aktif & Terhubung Supabase
+            </span>
+            <h2 class="text-2xl lg:text-3xl font-extrabold tracking-tight font-headline-md">Selamat Datang di Panel Admin Go-Tani!</h2>
+            <p class="text-white/80 text-sm mt-2 leading-relaxed">
+              Pusat kendali manajemen bibit tanaman unggul dan konsultasi petani. Kelola data secara langsung, cepat, dan terintegrasi aman dengan database cloud.
+            </p>
           </div>
-
-          <!-- 4 Interactive Statistic Cards -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
-            <!-- Stat 1: Bibit Tanaman -->
-            <div onclick="switchTab('manajemen-bibit-tanaman')" class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider">Tabel bibit_tanaman</span>
-                <div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span class="material-symbols-outlined text-[20px]">potted_plant</span>
-                </div>
-              </div>
-              <div class="mt-space-sm">
-                <div class="flex items-baseline gap-2">
-                  <span id="stat-count-bibit" class="font-headline-lg font-bold text-3xl text-on-surface">30</span>
-                  <span class="text-xs text-primary font-semibold">100% Aktif</span>
-                </div>
-                <p class="text-xs text-on-surface-variant mt-1">Sayur, Buah, Palawija, Rempah</p>
-              </div>
-              <div class="mt-space-md pt-2 border-t border-surface-container flex items-center justify-between text-xs text-outline">
-                <span>Stok Siap Tanam</span>
-                <span id="stat-bibit-ready" class="text-primary font-semibold">30 Tersedia</span>
-              </div>
-            </div>
-
-            <!-- Stat 2: Pesan Masuk -->
-            <div onclick="switchTab('pesan-dan-konsultasi')" class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider">Tabel pesan_kontak</span>
-                <div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span class="material-symbols-outlined text-[20px]">mark_chat_unread</span>
-                </div>
-              </div>
-              <div class="mt-space-sm">
-                <div class="flex items-baseline gap-2">
-                  <span id="stat-count-pesan" class="font-headline-lg font-bold text-3xl text-on-surface">0</span>
-                  <span id="stat-unread-badge" class="text-xs bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-semibold">0 Unread</span>
-                </div>
-                <p class="text-xs text-on-surface-variant mt-1">Konsultasi hama & pemesanan bibit</p>
-              </div>
-              <div class="mt-space-md pt-2 border-t border-surface-container flex items-center justify-between text-xs text-outline">
-                <span>Respon Rata-rata</span>
-                <span class="text-on-surface font-semibold">&lt; 15 Menit</span>
-              </div>
-            </div>
-
-            <!-- Stat 3: Artikel & Blog -->
-            <div onclick="switchTab('artikel-dan-blog')" class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider">Tabel blog_posts</span>
-                <div class="w-9 h-9 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span class="material-symbols-outlined text-[20px]">newspaper</span>
-                </div>
-              </div>
-              <div class="mt-space-sm">
-                <div class="flex items-baseline gap-2">
-                  <span id="stat-count-blog" class="font-headline-lg font-bold text-3xl text-on-surface">6</span>
-                  <span class="text-xs text-secondary font-semibold">Published</span>
-                </div>
-                <p class="text-xs text-on-surface-variant mt-1">Tips Menanam, Hama, Budidaya</p>
-              </div>
-              <div class="mt-space-md pt-2 border-t border-surface-container flex items-center justify-between text-xs text-outline">
-                <span>Total Views</span>
-                <span class="text-on-surface font-semibold">14.2K Pembaca</span>
-              </div>
-            </div>
-
-            <!-- Stat 4: Layanan Aktif -->
-            <div onclick="switchTab('layanan-dan-fitur')" class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
-              <div class="flex items-center justify-between">
-                <span class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider">Tabel layanan_fitur</span>
-                <div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <span class="material-symbols-outlined text-[20px]">agriculture</span>
-                </div>
-              </div>
-              <div class="mt-space-sm">
-                <div class="flex items-baseline gap-2">
-                  <span id="stat-count-layanan" class="font-headline-lg font-bold text-3xl text-on-surface">6</span>
-                  <span class="text-xs text-primary font-semibold">Prioritas 1-6</span>
-                </div>
-                <p class="text-xs text-on-surface-variant mt-1">Konsultasi, Kurir Cepat, Garansi</p>
-              </div>
-              <div class="mt-space-md pt-2 border-t border-surface-container flex items-center justify-between text-xs text-outline">
-                <span>SLA Pelayanan</span>
-                <span class="text-primary font-semibold">99.8% Uptime</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Navigation Pill Bar -->
-          <div class="flex items-center justify-between overflow-x-auto pb-2 mb-space-md gap-2">
-            <div class="flex items-center gap-2">
-              <button onclick="switchTab('manajemen-bibit-tanaman')" class="px-4 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold flex items-center gap-2 shadow-sm whitespace-nowrap">
-                <span class="material-symbols-outlined text-[16px]">potted_plant</span>
-                <span>Bibit Tanaman (<span class="overview-bibit-count">30</span>)</span>
-              </button>
-              <button onclick="switchTab('pesan-dan-konsultasi')" class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant text-xs font-semibold flex items-center gap-2 transition-all whitespace-nowrap">
-                <span class="material-symbols-outlined text-[16px]">mark_chat_unread</span>
-                <span>Pesan (<span class="overview-unread-count">0</span>)</span>
-              </button>
-              <button onclick="switchTab('artikel-dan-blog')" class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant text-xs font-semibold flex items-center gap-2 transition-all whitespace-nowrap">
-                <span class="material-symbols-outlined text-[16px]">article</span>
-                <span>Blog Posts</span>
-              </button>
-              <button onclick="switchTab('sql-editor-supabase-status')" class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant text-xs font-semibold flex items-center gap-2 transition-all whitespace-nowrap">
-                <span class="material-symbols-outlined text-[16px]">security</span>
-                <span>Status RLS & Keamanan</span>
-              </button>
-            </div>
-            <div class="hidden lg:flex items-center gap-2 text-on-surface-variant text-xs font-medium">
-              <span class="material-symbols-outlined text-[18px] text-primary">cloud_done</span>
-              <span>PostgreSQL Realtime Channel Active</span>
-            </div>
-          </div>
-
-          <!-- Main Overview Content: Table (Span 8) + Side Widgets (Span 4) -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
-            <!-- Left 8 Cols: Bibit Tanaman Live Table -->
-            <div class="lg:col-span-8 flex flex-col gap-space-md">
-              <!-- Toolbar Filters -->
-              <div class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm">
-                <div class="relative flex-1">
-                  <span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[20px]">search</span>
-                  <input id="overview-filter-search" oninput="handleBibitFilter()" class="w-full h-10 pl-10 pr-3 rounded-full bg-surface-container-low text-on-surface text-xs sm:text-sm outline-none focus:bg-surface-container-lowest border border-transparent focus:border-primary/30 transition-all" placeholder="Cari nama bibit atau instruksi tanam..." type="text"/>
-                </div>
-                <div class="flex items-center gap-2">
-                  <select id="overview-filter-kategori" onchange="handleBibitFilter()" class="h-10 px-3 rounded-full bg-surface-container text-on-surface text-xs font-semibold outline-none cursor-pointer">
-                    <option value="Semua">Kategori: Semua</option>
-                    <option value="Sayur">Sayur</option>
-                    <option value="Buah">Buah</option>
-                    <option value="Palawija">Palawija</option>
-                    <option value="Rempah">Rempah</option>
-                  </select>
-                  <select id="overview-filter-stok" onchange="handleBibitFilter()" class="h-10 px-3 rounded-full bg-surface-container text-on-surface text-xs font-semibold outline-none cursor-pointer">
-                    <option value="Semua">Stok: Semua</option>
-                    <option value="Tersedia">Tersedia</option>
-                    <option value="Habis">Habis</option>
-                  </select>
-                  <button onclick="openModal('modal-bibit')" class="h-10 px-3 rounded-full bg-primary text-on-primary flex items-center justify-center gap-1 text-xs font-semibold hover:bg-tertiary transition-all" title="Tambah Bibit">
-                    <span class="material-symbols-outlined text-[18px]">add</span>
-                    <span class="hidden sm:inline">Tambah</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Database Table Container -->
-              <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden">
-                <div class="overflow-x-auto">
-                  <table class="w-full text-left border-collapse">
-                    <thead>
-                      <tr class="bg-surface-container-low text-on-surface-variant text-xs font-semibold uppercase tracking-wider">
-                        <th class="py-3.5 px-4 font-semibold">Bibit & Varietas</th>
-                        <th class="py-3.5 px-4 font-semibold">Kategori</th>
-                        <th class="py-3.5 px-4 font-semibold">Musim & Panen</th>
-                        <th class="py-3.5 px-4 font-semibold">Harga</th>
-                        <th class="py-3.5 px-4 font-semibold">Status Stok</th>
-                        <th class="py-3.5 px-4 text-right font-semibold">Aksi</th>
-                      </tr>
-                    </thead>
-                    <tbody id="overview-bibit-tbody" class="divide-y divide-surface-container text-sm text-on-surface">
-                      <!-- Rows rendered dynamically via JS -->
-                      <tr>
-                        <td colspan="6" class="text-center py-10 text-on-surface-variant">
-                          <div class="inline-block animate-spin rounded-full h-6 w-6 border-2 border-primary border-t-transparent mr-2 align-middle"></div>
-                          Memuat data dari Supabase PostgreSQL...
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <!-- Table Pagination Footer -->
-                <div class="p-space-md bg-surface-container-low border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-                  <div id="overview-pagination-info" class="text-on-surface-variant">
-                    Menampilkan 1 - 6 dari 30 Baris Data
-                  </div>
-                  <div class="flex items-center gap-1.5" id="overview-pagination-btns">
-                    <!-- Dynamic page numbers -->
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right 4 Cols: Side Panel Widgets -->
-            <div class="lg:col-span-4 flex flex-col gap-space-lg">
-              <!-- Widget 1: Pesan Kontak Masuk -->
-              <div class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-space-md">
-                <div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
-                  <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-primary text-[22px]">inbox</span>
-                    <span class="font-headline-sm font-bold text-base text-on-surface">Pesan Kontak Baru</span>
-                  </div>
-                  <span id="widget-unread-badge" class="bg-error-container text-on-error-container text-xs px-2.5 py-0.5 rounded-full font-semibold">
-                    0 Belum Dibaca
-                  </span>
-                </div>
-
-                <div id="widget-pesan-list" class="flex flex-col gap-2.5">
-                  <div class="text-center py-6 text-xs text-on-surface-variant">Memuat pesan...</div>
-                </div>
-
-                <button onclick="switchTab('pesan-dan-konsultasi')" class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors text-center">
-                  Lihat Seluruh Pesan Masuk →
-                </button>
-              </div>
-
-              <!-- Widget 2: Supabase RLS & Policy Monitor -->
-              <div class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-space-sm">
-                <div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
-                  <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-primary text-[22px]">security</span>
-                    <span class="font-headline-sm font-bold text-base text-on-surface">RLS & Security Monitor</span>
-                  </div>
-                  <span class="text-xs font-semibold text-primary flex items-center gap-1">
-                    <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span> Terproteksi
-                  </span>
-                </div>
-                <p class="text-xs text-on-surface-variant leading-relaxed">
-                  Status enkripsi baris tingkat tabel Supabase (Row Level Security) untuk akses anonim publik & otentikasi admin.
-                </p>
-
-                <div class="flex flex-col gap-2 mt-1">
-                  <!-- Policy 1 -->
-                  <div class="p-2.5 bg-surface-container-low rounded-xl flex items-center justify-between text-xs">
-                    <div class="flex flex-col">
-                      <span class="font-semibold text-on-surface">publik_read_bibit</span>
-                      <span class="text-[11px] text-outline">SELECT on public.bibit_tanaman</span>
-                    </div>
-                    <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-[11px]">
-                      Anon: Read Only
-                    </span>
-                  </div>
-                  <!-- Policy 2 -->
-                  <div class="p-2.5 bg-surface-container-low rounded-xl flex items-center justify-between text-xs">
-                    <div class="flex flex-col">
-                      <span class="font-semibold text-on-surface">admin_all_bibit</span>
-                      <span class="text-[11px] text-outline">ALL on public.bibit_tanaman</span>
-                    </div>
-                    <span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold text-[11px]">
-                      Auth: Full CRUD
-                    </span>
-                  </div>
-                  <!-- Policy 3 -->
-                  <div class="p-2.5 bg-surface-container-low rounded-xl flex items-center justify-between text-xs">
-                    <div class="flex flex-col">
-                      <span class="font-semibold text-on-surface">publik_insert_kontak</span>
-                      <span class="text-[11px] text-outline">INSERT on public.pesan_kontak</span>
-                    </div>
-                    <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-[11px]">
-                      Anon: Write Only
-                    </span>
-                  </div>
-                </div>
-
-                <div class="pt-2 border-t border-surface-container flex items-center justify-between text-xs">
-                  <span class="text-on-surface-variant">Postgres Connection Pooler</span>
-                  <span class="font-semibold text-primary">Supavisor 65/100 Slot</span>
-                </div>
-              </div>
-            </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="admin-bibit.html" class="px-4 py-2.5 rounded-xl bg-white text-primary hover:bg-surface-container text-xs font-bold shadow-md transition-all flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">add_circle</span>
+              <span>Kelola Bibit</span>
+            </a>
+            <a href="admin-pesan.html" class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-md border border-white/20 transition-all flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">chat</span>
+              <span>Buka Pesan Masuk</span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <!-- ============================================================== -->
-        <!-- TAB 2: MANAJEMEN BIBIT TANAMAN (FULL CRUD)                      -->
-        <!-- ============================================================== -->
-        <div id="pane-manajemen-bibit-tanaman" class="tab-pane flex flex-col w-full">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-space-lg">
-            <div>
-              <h2 class="font-headline-md font-bold text-2xl text-on-surface">Manajemen Bibit Tanaman</h2>
-              <p class="text-sm text-on-surface-variant mt-0.5">Kelola seluruh 30 varietas bibit unggul pertanian yang tersimpan di Supabase.</p>
-            </div>
-            <button onclick="openModal('modal-bibit')" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-sm hover:bg-tertiary transition-all shadow-sm">
-              <span class="material-symbols-outlined text-[20px]">add_circle</span>
-              <span>Tambah Bibit Baru</span>
-            </button>
-          </div>
-
-          <!-- Search & Filter Bar -->
-          <div class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm mb-space-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm">
-            <div class="relative flex-1">
-              <span class="material-symbols-outlined absolute left-3.5 top-2.5 text-outline text-[20px]">search</span>
-              <input id="tab-bibit-search" oninput="renderTabBibitTable()" class="w-full h-11 pl-11 pr-4 rounded-full bg-surface-container-low text-on-surface text-sm outline-none focus:bg-surface-container-lowest border border-transparent focus:border-primary/30 transition-all" placeholder="Cari nama bibit, deskripsi, atau varietas..." type="text"/>
-            </div>
-            <div class="flex items-center gap-2 overflow-x-auto">
-              <select id="tab-bibit-kategori" onchange="renderTabBibitTable()" class="h-11 px-4 rounded-full bg-surface-container text-on-surface text-xs font-semibold outline-none cursor-pointer">
-                <option value="Semua">Semua Kategori</option>
-                <option value="Sayur">Sayur</option>
-                <option value="Buah">Buah</option>
-                <option value="Palawija">Palawija</option>
-                <option value="Rempah">Rempah</option>
-                <option value="Lainnya">Lainnya</option>
-              </select>
-              <select id="tab-bibit-stok" onchange="renderTabBibitTable()" class="h-11 px-4 rounded-full bg-surface-container text-on-surface text-xs font-semibold outline-none cursor-pointer">
-                <option value="Semua">Semua Status Stok</option>
-                <option value="Tersedia">Tersedia (Ready)</option>
-                <option value="Habis">Habis (Out of Stock)</option>
-              </select>
+      <!-- Stat Cards Grid (3 Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Card 1: Bibit Tanaman -->
+        <a href="admin-bibit.html" class="group p-5 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary/40 transition-all flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Katalog Bibit</span>
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[22px]">potted_plant</span>
             </div>
           </div>
-
-          <!-- Full Table Card -->
-          <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full text-left border-collapse">
-                <thead>
-                  <tr class="bg-surface-container-low text-on-surface-variant text-xs font-semibold uppercase tracking-wider">
-                    <th class="py-3.5 px-4">Foto & Varietas</th>
-                    <th class="py-3.5 px-4">Kategori</th>
-                    <th class="py-3.5 px-4">Musim Tanam</th>
-                    <th class="py-3.5 px-4">Masa Panen</th>
-                    <th class="py-3.5 px-4">Harga Estimasi</th>
-                    <th class="py-3.5 px-4">Status Stok</th>
-                    <th class="py-3.5 px-4 text-right">Aksi</th>
-                  </tr>
-                </thead>
-                <tbody id="tab-bibit-tbody" class="divide-y divide-surface-container text-sm text-on-surface">
-                  <!-- Rendered dynamically -->
-                </tbody>
-              </table>
+          <div class="mt-4">
+            <div class="flex items-baseline gap-2">
+              <span id="stat-total-bibit" class="text-3xl font-extrabold text-on-surface font-headline-lg">...</span>
+              <span class="text-xs text-on-surface-variant font-medium">varietas</span>
             </div>
+            <p id="stat-stok-bibit" class="text-xs text-primary font-medium mt-1">Memuat stok...</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs text-primary font-semibold">
+            <span>Buka Halaman Bibit</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </a>
 
-            <div class="p-space-md bg-surface-container-low border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-              <div id="tab-bibit-pagination-info" class="text-on-surface-variant">Menampilkan data bibit</div>
-              <div class="flex items-center gap-1.5" id="tab-bibit-pagination-btns"></div>
+        <!-- Card 2: Pesan Masuk -->
+        <a href="admin-pesan.html" class="group p-5 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-error/40 transition-all flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Pesan Masuk</span>
+            <div class="w-10 h-10 rounded-xl bg-error/10 text-error flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[22px]">mark_chat_unread</span>
             </div>
           </div>
-        </div>
-
-        <!-- ============================================================== -->
-        <!-- TAB 3: PESAN & KONSULTASI PETANI                               -->
-        <!-- ============================================================== -->
-        <div id="pane-pesan-dan-konsultasi" class="tab-pane flex flex-col w-full">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-space-lg">
-            <div>
-              <h2 class="font-headline-md font-bold text-2xl text-on-surface">Pesan & Konsultasi Petani</h2>
-              <p class="text-sm text-on-surface-variant mt-0.5">Pertanyaan, pesanan bibit, dan konsultasi penyakit tanaman dari formulir kontak website.</p>
+          <div class="mt-4">
+            <div class="flex items-baseline gap-2">
+              <span id="stat-unread-pesan" class="text-3xl font-extrabold text-error font-headline-lg">...</span>
+              <span class="text-xs text-on-surface-variant font-medium">belum dibaca</span>
             </div>
-            <div class="flex items-center gap-2">
-              <button onclick="markAllPesanAsRead()" class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold transition-all">
-                <span class="material-symbols-outlined text-[18px]">done_all</span>
-                <span>Tandai Semua Dibaca</span>
-              </button>
-              <button onclick="loadPesanData()" class="p-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" title="Refresh Pesan">
-                <span class="material-symbols-outlined text-[18px]">sync</span>
-              </button>
-            </div>
+            <p id="stat-total-pesan" class="text-xs text-on-surface-variant font-medium mt-1">Memuat pesan...</p>
           </div>
+          <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs text-error font-semibold">
+            <span>Buka Inbox Pesan</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </div>
+        </a>
 
-          <!-- Pesan Cards Container -->
-          <div id="pesan-full-list" class="flex flex-col gap-3">
-            <div class="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 text-on-surface-variant">
-              Memuat pesan masuk...
+        <!-- Card 3: Artikel Blogger Info -->
+        <a href="https://www.blogger.com" target="_blank" class="group p-5 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Artikel & Blog</span>
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[22px]">auto_stories</span>
             </div>
           </div>
-        </div>
-
-        <!-- ============================================================== -->
-        <!-- TAB 4: ARTIKEL & BLOG POSTS                                    -->
-        <!-- ============================================================== -->
-        <div id="pane-artikel-dan-blog" class="tab-pane flex flex-col w-full">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-space-lg">
-            <div>
-              <h2 class="font-headline-md font-bold text-2xl text-on-surface">Artikel Edukasi & Blog</h2>
-              <p class="text-sm text-on-surface-variant mt-0.5">Publikasikan panduan budidaya, penanganan hama, dan tips pertanian modern.</p>
-            </div>
-            <button onclick="openModal('modal-blog')" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-sm hover:bg-tertiary transition-all shadow-sm">
-              <span class="material-symbols-outlined text-[20px]">add_circle</span>
-              <span>Tulis Artikel Baru</span>
-            </button>
+          <div class="mt-4">
+            <span class="text-xl font-bold text-on-surface font-headline-sm">Blogger Native</span>
+            <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Tulis postingan langsung di Blogger, otomatis tampil di web.</p>
           </div>
-
-          <!-- Blog Posts Table -->
-          <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full text-left border-collapse">
-                <thead>
-                  <tr class="bg-surface-container-low text-on-surface-variant text-xs font-semibold uppercase tracking-wider">
-                    <th class="py-3.5 px-4">Artikel</th>
-                    <th class="py-3.5 px-4">Kategori</th>
-                    <th class="py-3.5 px-4">Penulis</th>
-                    <th class="py-3.5 px-4">Status</th>
-                    <th class="py-3.5 px-4">Tanggal Rilis</th>
-                    <th class="py-3.5 px-4 text-right">Aksi</th>
-                  </tr>
-                </thead>
-                <tbody id="tab-blog-tbody" class="divide-y divide-surface-container text-sm text-on-surface">
-                  <!-- Rendered dynamically -->
-                </tbody>
-              </table>
-            </div>
+          <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs text-amber-700 font-semibold">
+            <span>Buka Blogger Dashboard</span>
+            <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">open_in_new</span>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <!-- ============================================================== -->
-        <!-- TAB 5: LAYANAN & FITUR                                          -->
-        <!-- ============================================================== -->
-        <div id="pane-layanan-dan-fitur" class="tab-pane flex flex-col w-full">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-space-lg">
-            <div>
-              <h2 class="font-headline-md font-bold text-2xl text-on-surface">Layanan & Fitur Unggulan</h2>
-              <p class="text-sm text-on-surface-variant mt-0.5">Atur daftar layanan dan SLA pelayanan Go-Tani yang tampil di halaman beranda.</p>
-            </div>
-            <button onclick="openModal('modal-layanan')" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-semibold text-sm hover:bg-tertiary transition-all shadow-sm">
-              <span class="material-symbols-outlined text-[20px]">add_circle</span>
-              <span>Tambah Layanan</span>
-            </button>
-          </div>
-
-          <!-- Layanan Cards Grid -->
-          <div id="layanan-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-            <!-- Rendered dynamically -->
-          </div>
-        </div>
-
-        <!-- ============================================================== -->
-        <!-- TAB 6: SQL EDITOR & RLS SECURITY STATUS                         -->
-        <!-- ============================================================== -->
-        <div id="pane-sql-editor-supabase-status" class="tab-pane flex flex-col w-full gap-space-lg">
+      <!-- 2 Columns: Recent Messages & Recent Seeds -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Recent Messages -->
+        <div class="p-6 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
           <div>
-            <h2 class="font-headline-md font-bold text-2xl text-on-surface">SQL Schema & RLS Policy Controller</h2>
-            <p class="text-sm text-on-surface-variant mt-0.5">Pantau status arsitektur database Supabase, konfigurasi tabel, dan skrip SQL.</p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
-            <div class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
-              <div>
-                <span class="text-xs uppercase font-semibold text-primary">Tabel bibit_tanaman</span>
-                <h4 class="font-bold text-lg text-on-surface mt-1">Row Level Security Active</h4>
-                <p class="text-xs text-on-surface-variant mt-1">Anon role: SELECT. Authenticated role: ALL (INSERT, UPDATE, DELETE).</p>
+            <div class="flex items-center justify-between pb-4 border-b border-surface-container">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-base text-on-surface">Pesan & Konsultasi Terbaru</h3>
+                  <span class="text-xs text-on-surface-variant">5 pesan terakhir dari pengunjung web</span>
+                </div>
               </div>
-              <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs">
-                <span class="text-primary font-semibold">30 Baris Terproteksi</span>
-                <span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Aktif</span>
-              </div>
+              <a href="admin-pesan.html" class="text-xs font-bold text-primary hover:underline flex items-center gap-1">
+                <span>Lihat Semua</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </a>
             </div>
 
-            <div class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
-              <div>
-                <span class="text-xs uppercase font-semibold text-primary">Tabel pesan_kontak</span>
-                <h4 class="font-bold text-lg text-on-surface mt-1">Insert-Only Anon Policy</h4>
-                <p class="text-xs text-on-surface-variant mt-1">Pengunjung website hanya dapat mengirim (INSERT). Hanya Admin terautentikasi yang dapat membaca (SELECT).</p>
-              </div>
-              <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs">
-                <span class="text-primary font-semibold">Enkripsi End-to-End</span>
-                <span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Aktif</span>
-              </div>
-            </div>
-
-            <div class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
-              <div>
-                <span class="text-xs uppercase font-semibold text-primary">Tabel blog_posts & layanan</span>
-                <h4 class="font-bold text-lg text-on-surface mt-1">Public Content Feed</h4>
-                <p class="text-xs text-on-surface-variant mt-1">Artikel blog dan layanan dapat dibaca publik (SELECT) dan diubah oleh admin.</p>
-              </div>
-              <div class="mt-4 pt-3 border-t border-surface-container flex items-center justify-between text-xs">
-                <span class="text-primary font-semibold">Published Feed</span>
-                <span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Aktif</span>
-              </div>
+            <div id="recent-pesan-list" class="mt-4 flex flex-col divide-y divide-surface-container">
+              <div class="py-8 text-center text-xs text-on-surface-variant">Memuat data pesan...</div>
             </div>
           </div>
+        </div>
 
-          <!-- Quick SQL Console Helper -->
-          <div class="bg-surface-container-lowest p-space-lg rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col gap-3">
-            <div class="flex items-center justify-between">
-              <h3 class="font-bold text-base text-on-surface">Skrip SQL Supabase Database Setup</h3>
-              <div class="flex items-center gap-2">
-                <button onclick="copyFullSqlSchema()" class="px-4 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold hover:bg-tertiary transition-all flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-[16px]">content_copy</span>
-                  <span>Salin Semua SQL</span>
-                </button>
-                <a href="https://supabase.com/dashboard/project/abeqqbahcigexjwmklqn/editor" target="_blank" class="px-4 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold transition-all flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-[16px]">open_in_new</span>
-                  <span>Buka Supabase Studio</span>
-                </a>
+        <!-- Recent Seeds -->
+        <div class="p-6 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-surface-container">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[18px]">potted_plant</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-base text-on-surface">Katalog Bibit Terbaru</h3>
+                  <span class="text-xs text-on-surface-variant">Bibit tanaman yang baru ditambahkan</span>
+                </div>
               </div>
+              <a href="admin-bibit.html" class="text-xs font-bold text-primary hover:underline flex items-center gap-1">
+                <span>Lihat Semua</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+              </a>
             </div>
-            <pre class="bg-slate-900 text-slate-100 p-4 rounded-xl text-xs font-mono overflow-x-auto max-h-96 leading-relaxed select-all" id="sql-preview-box">
--- ============================================================
--- GO-TANI: SUPABASE POSTGRESQL COMPLETE SCHEMA & POLICIES
--- ============================================================
 
--- 1. TABEL: bibit_tanaman (30 Data Bibit Unggul)
-CREATE TABLE IF NOT EXISTS public.bibit_tanaman (
-  id BIGSERIAL PRIMARY KEY,
-  nama_bibit TEXT NOT NULL,
-  kategori TEXT NOT NULL,
-  musim_tanam TEXT,
-  masa_panen TEXT,
-  harga_estimasi NUMERIC DEFAULT 0,
-  stok BOOLEAN DEFAULT true,
-  gambar_url TEXT,
-  deskripsi TEXT,
-  cara_tanam TEXT,
-  created_at TIMESTAMPTZ DEFAULT now()
-);
-
--- RLS Bibit
-ALTER TABLE public.bibit_tanaman ENABLE ROW LEVEL SECURITY;
-CREATE POLICY "Public read bibit" ON public.bibit_tanaman FOR SELECT USING (true);
-CREATE POLICY "Admin CRUD bibit" ON public.bibit_tanaman FOR ALL USING (auth.role() = 'authenticated');
-
--- 2. TABEL: pesan_kontak (Formulir Pengunjung)
-CREATE TABLE IF NOT EXISTS public.pesan_kontak (
-  id BIGSERIAL PRIMARY KEY,
-  nama TEXT NOT NULL,
-  email TEXT NOT NULL,
-  subjek TEXT,
-  pesan TEXT NOT NULL,
-  is_read BOOLEAN DEFAULT false,
-  created_at TIMESTAMPTZ DEFAULT now()
-);
-
--- RLS Pesan
-ALTER TABLE public.pesan_kontak ENABLE ROW LEVEL SECURITY;
-CREATE POLICY "Public insert pesan" ON public.pesan_kontak FOR INSERT WITH CHECK (true);
-CREATE POLICY "Admin read pesan" ON public.pesan_kontak FOR ALL USING (auth.role() = 'authenticated');
-            </pre>
+            <div id="recent-bibit-list" class="mt-4 flex flex-col divide-y divide-surface-container">
+              <div class="py-8 text-center text-xs text-on-surface-variant">Memuat katalog bibit...</div>
+            </div>
           </div>
         </div>
 
       </div>
+
+      <!-- Quick Tips & Setup Info Card -->
+      <div class="p-6 rounded-3xl bg-surface-container-low border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[22px]">info</span>
+          </div>
+          <div>
+            <span class="font-bold text-on-surface text-sm">Arsitektur Sederhana & Cepat</span>
+            <p class="mt-0.5">Database Supabase hanya mengelola <strong class="text-on-surface">bibit_tanaman</strong> dan <strong class="text-on-surface">pesan_kontak</strong>. Artikel blog langsung dikelola melalui Blogger.</p>
+          </div>
+        </div>
+        <a href="admin-sql.html" class="shrink-0 px-4 py-2 rounded-xl bg-surface-container-highest text-on-surface font-semibold hover:bg-surface-container-high transition-all flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">terminal</span>
+          <span>SQL Editor</span>
+        </a>
+      </div>
+
     </main>
   </div>
 
-  <!-- ============================================================== -->
-  <!-- MODALS (VANILLA JS TRIGGERED)                                  -->
-  <!-- ============================================================== -->
-
-  <!-- Modal 1: Tambah / Edit Bibit -->
-  <div id="modal-bibit" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
-    <div class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-2xl w-full p-6 sm:p-space-lg shadow-2xl flex flex-col gap-space-md max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between pb-3 border-b border-surface-container">
-        <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center">
-            <span class="material-symbols-outlined text-[22px]">potted_plant</span>
-          </div>
-          <div>
-            <h3 id="modal-bibit-title" class="font-headline-sm font-bold text-lg text-on-surface">Tambah Bibit Baru</h3>
-            <p class="text-xs text-on-surface-variant">Simpan data varietas bibit ke Supabase database</p>
-          </div>
-        </div>
-        <button onclick="closeModal('modal-bibit')" class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center">
-          <span class="material-symbols-outlined text-[20px]">close</span>
-        </button>
-      </div>
-
-      <form id="form-bibit" onsubmit="handleSaveBibit(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
-        <input type="hidden" id="bibit-id"/>
-        
-        <div class="flex flex-col gap-1.5 sm:col-span-2">
-          <label class="text-xs font-semibold text-on-surface-variant">Nama Bibit Tanaman *</label>
-          <input id="bibit-nama" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30" placeholder="Contoh: Semangka Inul Kuning Super" required type="text"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">Kategori *</label>
-          <select id="bibit-kategori" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none border border-outline-variant/30" required>
-            <option value="Sayur">Sayur</option>
-            <option value="Buah">Buah</option>
-            <option value="Palawija">Palawija</option>
-            <option value="Rempah">Rempah</option>
-            <option value="Lainnya">Lainnya</option>
-          </select>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">Estimasi Harga (IDR)</label>
-          <input id="bibit-harga" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30" placeholder="Contoh: 45000" type="number" min="0"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">Musim Tanam Cocok</label>
-          <input id="bibit-musim" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30" placeholder="Contoh: Kemarau (Mei - Sep)" type="text"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">Masa Panen (HST / Hari)</label>
-          <input id="bibit-panen" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30" placeholder="Contoh: 60 - 70 HST" type="text"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">Status Stok</label>
-          <select id="bibit-stok" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none border border-outline-variant/30">
-            <option value="true">Tersedia (Ready Stock)</option>
-            <option value="false">Habis (Out of Stock)</option>
-          </select>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">URL Gambar (Foto)</label>
-          <input id="bibit-gambar" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30" placeholder="https://images.unsplash.com/..." type="url"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5 sm:col-span-2">
-          <label class="text-xs font-semibold text-on-surface-variant">Deskripsi Singkat Varietas</label>
-          <textarea id="bibit-deskripsi" rows="2" class="p-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30 resize-none" placeholder="Varietas unggul tahan hama wereng dan rasa manis tinggi..."></textarea>
-        </div>
-
-        <div class="flex flex-col gap-1.5 sm:col-span-2">
-          <label class="text-xs font-semibold text-on-surface-variant">Instruksi Singkat Cara Tanam</label>
-          <textarea id="bibit-caratanam" rows="3" class="p-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30" placeholder="1. Semaikan benih di tray selama 14 hari&#10;2. Pindah tanam ke bedengan dengan jarak 50x60cm&#10;3. Berikan pupuk organik dasar..."></textarea>
-        </div>
-
-        <div class="sm:col-span-2 flex items-center justify-end gap-2.5 pt-3 border-t border-surface-container">
-          <button type="button" onclick="closeModal('modal-bibit')" class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors">
-            Batal
-          </button>
-          <button type="submit" id="btn-submit-bibit" class="px-6 py-2.5 rounded-full bg-primary text-on-primary text-xs font-semibold hover:bg-tertiary transition-colors shadow-sm">
-            Simpan ke Supabase
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal 2: View Cara Tanam / Detail Bibit -->
-  <div id="modal-detail-bibit" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
-    <div class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-lg w-full p-6 shadow-2xl flex flex-col gap-4">
-      <div class="flex items-center justify-between pb-3 border-b border-surface-container">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary text-[24px]">menu_book</span>
-          <h3 id="detail-bibit-title" class="font-headline-sm font-bold text-lg text-on-surface">Panduan Cara Tanam</h3>
-        </div>
-        <button onclick="closeModal('modal-detail-bibit')" class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center">
-          <span class="material-symbols-outlined text-[20px]">close</span>
-        </button>
-      </div>
-
-      <div class="flex flex-col gap-3 text-sm">
-        <div class="flex items-center gap-3">
-          <img id="detail-bibit-img" src="" class="w-16 h-16 rounded-xl object-cover bg-surface-container"/>
-          <div>
-            <div id="detail-bibit-name" class="font-bold text-on-surface">Nama Bibit</div>
-            <div id="detail-bibit-kategori" class="text-xs text-primary font-semibold">Sayur</div>
-          </div>
-        </div>
-
-        <div class="bg-surface-container-low p-3.5 rounded-2xl flex flex-col gap-2">
-          <span class="text-xs font-bold text-outline uppercase tracking-wider">Instruksi Budidaya:</span>
-          <div id="detail-bibit-instructions" class="text-xs text-on-surface leading-relaxed whitespace-pre-line">
-            Instruksi belum tersedia.
-          </div>
-        </div>
-      </div>
-
-      <div class="flex justify-end pt-2">
-        <button onclick="closeModal('modal-detail-bibit')" class="px-5 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold">
-          Tutup
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3: Tulis / Edit Artikel Blog -->
-  <div id="modal-blog" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
-    <div class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-2xl w-full p-6 sm:p-space-lg shadow-2xl flex flex-col gap-space-md max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between pb-3 border-b border-surface-container">
-        <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-xl bg-secondary text-on-secondary flex items-center justify-center">
-            <span class="material-symbols-outlined text-[22px]">newspaper</span>
-          </div>
-          <div>
-            <h3 id="modal-blog-title" class="font-headline-sm font-bold text-lg text-on-surface">Tulis Artikel Edukasi</h3>
-            <p class="text-xs text-on-surface-variant">Buat postingan blog pertanian untuk petani & pembaca</p>
-          </div>
-        </div>
-        <button onclick="closeModal('modal-blog')" class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center">
-          <span class="material-symbols-outlined text-[20px]">close</span>
-        </button>
-      </div>
-
-      <form id="form-blog" onsubmit="handleSaveBlog(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
-        <input type="hidden" id="blog-id"/>
-
-        <div class="flex flex-col gap-1.5 sm:col-span-2">
-          <label class="text-xs font-semibold text-on-surface-variant">Judul Artikel *</label>
-          <input id="blog-judul" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/30" placeholder="Contoh: 5 Rahasia Merawat Cabai Rawit Agar Berbuah Lebat" required type="text"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">Kategori Artikel *</label>
-          <select id="blog-kategori" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none border border-outline-variant/30">
-            <option value="Tips Menanam">Tips Menanam</option>
-            <option value="Hama & Penyakit">Hama & Penyakit</option>
-            <option value="Panduan Budidaya">Panduan Budidaya</option>
-            <option value="Edukasi Pertanian">Edukasi Pertanian</option>
-            <option value="Komoditas Unggulan">Komoditas Unggulan</option>
-          </select>
-        </div>
-
-        <div class="flex flex-col gap-1.5">
-          <label class="text-xs font-semibold text-on-surface-variant">Penulis / Author</label>
-          <input id="blog-author" value="Tim Agronomis Go-Tani" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none border border-outline-variant/30" type="text"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5 sm:col-span-2">
-          <label class="text-xs font-semibold text-on-surface-variant">URL Gambar Sampul (Thumbnail)</label>
-          <input id="blog-thumbnail" class="h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none border border-outline-variant/30" placeholder="https://images.unsplash.com/..." type="url"/>
-        </div>
-
-        <div class="flex flex-col gap-1.5 sm:col-span-2">
-          <label class="text-xs font-semibold text-on-surface-variant">Ringkasan Singkat (Excerpt) *</label>
-          <textarea id="blog-excerpt" rows="2" class="p-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none border border-outline-variant/30 resize-none" placeholder="Ringkasan isi artikel dalam 1-2 kalimat..." required></textarea>
-        </div>
-
-        <div class="flex flex-col gap-1.5 sm:col-span-2">
-          <label class="text-xs font-semibold text-on-surface-variant">Konten Artikel Lengkap</label>
-          <textarea id="blog-konten" rows="5" class="p-3.5 rounded-xl bg-surface-container-low text-on-surface text-sm outline-none border border-outline-variant/30" placeholder="Tulis isi artikel secara detail di sini..."></textarea>
-        </div>
-
-        <div class="sm:col-span-2 flex items-center justify-end gap-2.5 pt-3 border-t border-surface-container">
-          <button type="button" onclick="closeModal('modal-blog')" class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors">
-            Batal
-          </button>
-          <button type="submit" id="btn-submit-blog" class="px-6 py-2.5 rounded-full bg-primary text-on-primary text-xs font-semibold hover:bg-tertiary transition-colors shadow-sm">
-            Publikasikan Artikel
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal 4: Konfirmasi Hapus Data -->
-  <div id="modal-confirm-delete" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
-    <div class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-sm w-full p-6 shadow-2xl flex flex-col items-center text-center gap-3">
-      <div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center">
-        <span class="material-symbols-outlined text-[28px]">delete_forever</span>
-      </div>
-      <h3 class="font-headline-sm font-bold text-lg text-on-surface">Konfirmasi Hapus</h3>
-      <p id="delete-confirm-msg" class="text-xs text-on-surface-variant leading-relaxed">
-        Apakah Anda yakin ingin menghapus data ini? Tindakan ini tidak dapat dibatalkan.
-      </p>
-      <div class="flex items-center gap-2 w-full mt-2">
-        <button onclick="closeModal('modal-confirm-delete')" class="flex-1 py-2.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors">
-          Batal
-        </button>
-        <button id="btn-execute-delete" class="flex-1 py-2.5 rounded-full bg-error text-on-error text-xs font-semibold hover:bg-red-700 transition-colors shadow-sm">
-          Ya, Hapus
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 5: Ekspor SQL / API Schema -->
-  <div id="modal-sql-export" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
-    <div class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-xl w-full p-6 shadow-2xl flex flex-col gap-4">
-      <div class="flex items-center justify-between pb-3 border-b border-surface-container">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-primary text-[24px]">key</span>
-          <h3 class="font-headline-sm font-bold text-lg text-on-surface">Supabase API & SQL Config</h3>
-        </div>
-        <button onclick="closeModal('modal-sql-export')" class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center">
-          <span class="material-symbols-outlined text-[20px]">close</span>
-        </button>
-      </div>
-
-      <div class="flex flex-col gap-3 text-xs">
-        <div>
-          <span class="font-semibold text-on-surface">Project REST URL:</span>
-          <div class="p-2.5 bg-surface-container-low rounded-xl font-mono text-primary select-all break-all mt-1">
-            https://abeqqbahcigexjwmklqn.supabase.co
-          </div>
-        </div>
-        <div>
-          <span class="font-semibold text-on-surface">Publishable Anon Key:</span>
-          <div class="p-2.5 bg-surface-container-low rounded-xl font-mono text-outline select-all break-all mt-1">
-            sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR
-          </div>
-        </div>
-      </div>
-
-      <div class="flex justify-end gap-2 pt-2 border-t border-surface-container">
-        <button onclick="copyFullSqlSchema()" class="px-5 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold">
-          Salin Skrip SQL
-        </button>
-        <button onclick="closeModal('modal-sql-export')" class="px-5 py-2 rounded-full bg-surface-container text-on-surface text-xs font-semibold">
-          Tutup
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============================================================== -->
-  <!-- JAVASCRIPT DASHBOARD LOGIC (SUPABASE CONNECTED & ROBUST)        -->
-  <!-- ============================================================== -->
+  <!-- JavaScript Logic -->
   <script>
-    // 1. SUPABASE CONFIGURATION CONSTANTS
     const SUPABASE_URL = 'https://abeqqbahcigexjwmklqn.supabase.co';
-    const SUPABASE_ANON_KEY = 'sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR';
+    const SUPABASE_KEY = 'sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR';
 
-    // State Variables
-    let currentSession = null;
-    let allBibitData = [];
-    let allPesanData = [];
-    let allBlogData = [];
-    let allLayananData = [];
+    function getAdminUrl(pageName) {
+      const isBlogger = window.location.pathname.includes('/p/') || window.location.hostname.includes('blogspot.com');
+      return isBlogger ? `/p/${pageName}.html` : `${pageName}.html`;
+    }
 
-    // Overview table pagination
-    let overviewCurrentPage = 1;
-    const overviewPageSize = 6;
-
-    // Tab Bibit table pagination
-    let tabBibitCurrentPage = 1;
-    const tabBibitPageSize = 8;
-
-    // Delete callback variable
-    let pendingDeleteAction = null;
-
-    // ================================================================
-    // AUTHENTICATION & SESSION MANAGEMENT
-    // ================================================================
-    function getStoredSession() {
-      try {
-        const raw = localStorage.getItem('go_tani_admin_session');
-        return raw ? JSON.parse(raw) : null;
-      } catch (e) {
-        return null;
+    function updateNavLinks() {
+      const links = {
+        'nav-link-dashboard': 'admin-dashboard',
+        'nav-link-bibit': 'admin-bibit',
+        'nav-link-pesan': 'admin-pesan',
+        'nav-link-sql': 'admin-sql'
+      };
+      for (const [id, page] of Object.entries(links)) {
+        const el = document.getElementById(id);
+        if (el) el.href = getAdminUrl(page);
       }
     }
 
     function checkAuth() {
-      currentSession = getStoredSession();
-      // Allow dev inspection if URL has demo=true or session is present
-      const isDemo = new URLSearchParams(window.location.search).get('demo') === 'true';
-
-      if (!currentSession && !isDemo) {
-        // Redirect to login page if no active session
-        const isBlogger = window.location.pathname.includes('/p/') || window.location.hostname.includes('blogspot.com');
-        const loginUrl = isBlogger ? '/p/admin-login.html' : 'admin-login.html';
-        console.warn('Sesi admin tidak ditemukan. Mengalihkan ke login...');
-        window.location.href = loginUrl;
-        return false;
-      }
-
-      // Display user info in UI
-      if (currentSession && currentSession.user) {
-        const email = currentSession.user.email || 'admin@gotani.id';
-        const name = email.split('@')[0];
-        const formattedName = 'Dr. Ir. ' + name.charAt(0).toUpperCase() + name.slice(1);
-        
-        const nameEl = document.getElementById('admin-display-name');
-        const emailEl = document.getElementById('admin-display-email');
-        if (nameEl) nameEl.textContent = formattedName;
-        if (emailEl) emailEl.textContent = email;
-      }
-      return true;
+      try {
+        const raw = localStorage.getItem('go_tani_admin_session');
+        const session = raw ? JSON.parse(raw) : null;
+        const isDemo = new URLSearchParams(window.location.search).get('demo') === 'true';
+        if (!session && !isDemo) {
+          // Allow browsing in demo or redirect if preferred
+        }
+      } catch (e) {}
     }
 
     function handleLogout() {
-      if (confirm('Apakah Anda yakin ingin keluar dari Admin Console Go-Tani?')) {
-        localStorage.removeItem('go_tani_admin_session');
-        showToast('Berhasil keluar. Mengalihkan...', 'info');
-        setTimeout(() => {
-          const isBlogger = window.location.pathname.includes('/p/') || window.location.hostname.includes('blogspot.com');
-          window.location.href = isBlogger ? '/p/admin-login.html' : 'admin-login.html';
-        }, 500);
-      }
-    }
-
-    // ================================================================
-    // API HELPER FUNCTIONS (RESILIENT WITH SUPABASE HEADERS)
-    // ================================================================
-    function isTokenExpired(token) {
-      if (!token) return true;
-      try {
-        const parts = token.split('.');
-        if (parts.length < 2) return true;
-        const payload = JSON.parse(atob(parts[1]));
-        return (payload.exp * 1000) < Date.now();
-      } catch (e) {
-        return true;
-      }
-    }
-
-    function getApiHeaders() {
-      const headers = {
-        'apikey': SUPABASE_ANON_KEY,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=representation'
-      };
-      if (currentSession && currentSession.access_token && !isTokenExpired(currentSession.access_token)) {
-        headers['Authorization'] = `Bearer ${currentSession.access_token}`;
-      } else {
-        headers['Authorization'] = `Bearer ${SUPABASE_ANON_KEY}`;
-      }
-      return headers;
-    }
-
-    async function apiFetch(endpoint, options = {}) {
-      const headers = { ...getApiHeaders(), ...(options.headers || {}) };
-      const url = `${SUPABASE_URL}/rest/v1/${endpoint}`;
-      
-      const startTime = performance.now();
-      const res = await fetch(url, { ...options, headers });
-      const duration = Math.round(performance.now() - startTime);
-      
-      const pingEl = document.getElementById('ping-latency');
-      if (pingEl) pingEl.textContent = `${duration}ms`;
-
-      if (res.status === 404) {
-        const emptyArr = [];
-        emptyArr.is404 = true;
-        return emptyArr;
-      }
-
-      if (!res.ok) {
-        const errJson = await res.json().catch(() => ({}));
-        throw new Error(errJson.message || `API Error (${res.status})`);
-      }
-
-      if (options.method === 'DELETE' || res.status === 204) return true;
-      const text = await res.text();
-      return text ? JSON.parse(text) : null;
-    }
-
-    // ================================================================
-    // TOAST & MODAL CONTROLLERS
-    // ================================================================
-    function showToast(msg, type = 'success') {
-      const container = document.getElementById('toast-container');
-      if (!container) return;
-
-      const toast = document.createElement('div');
-      const bgColors = {
-        success: 'bg-primary text-on-primary',
-        error: 'bg-error text-on-error',
-        info: 'bg-surface-container-highest text-on-surface'
-      };
-      const icons = {
-        success: 'check_circle',
-        error: 'error',
-        info: 'info'
-      };
-
-      toast.className = `flex items-center gap-2 px-4 py-3 rounded-2xl shadow-xl font-medium text-xs pointer-events-auto transform transition-all duration-300 translate-y-[-10px] opacity-0 ${bgColors[type] || bgColors.success}`;
-      toast.innerHTML = `
-        <span class="material-symbols-outlined text-[18px]">${icons[type] || 'info'}</span>
-        <span>${msg}</span>
-      `;
-
-      container.appendChild(toast);
-      requestAnimationFrame(() => {
-        toast.classList.remove('translate-y-[-10px]', 'opacity-0');
-      });
-
+      localStorage.removeItem('go_tani_admin_session');
+      showToast('Berhasil keluar dari sesi admin.');
       setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-[-10px]');
-        setTimeout(() => toast.remove(), 300);
-      }, 3500);
+        window.location.href = '/';
+      }, 700);
     }
 
-    function openModal(modalId) {
-      const el = document.getElementById(modalId);
-      if (el) el.classList.remove('hidden');
-    }
-
-    function closeModal(modalId) {
-      const el = document.getElementById(modalId);
-      if (el) el.classList.add('hidden');
-    }
-
-    function toggleMobileSidebar(forceState) {
+    function toggleMobileSidebar(open) {
       const sidebar = document.getElementById('sidebar');
       const backdrop = document.getElementById('sidebar-backdrop');
-      const isOpen = !sidebar.classList.contains('-translate-x-full');
-      const target = typeof forceState === 'boolean' ? forceState : !isOpen;
-
-      if (target) {
+      if (open) {
         sidebar.classList.remove('-translate-x-full');
         backdrop.classList.remove('hidden');
       } else {
@@ -1360,843 +370,140 @@ CREATE POLICY "Admin read pesan" ON public.pesan_kontak FOR ALL USING (auth.role
       }
     }
 
-    function switchTab(tabKey) {
-      // Update Tab Panes
-      document.querySelectorAll('.tab-pane').forEach(p => {
-        p.classList.remove('active');
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const bg = type === 'error' ? 'bg-error text-on-error' : 'bg-primary text-on-primary';
+      const icon = type === 'error' ? 'error' : 'check_circle';
+      toast.className = `flex items-center gap-3 px-4 py-3 rounded-2xl ${bg} shadow-lg text-xs font-semibold pointer-events-auto transform translate-y-2 opacity-0 transition-all duration-300`;
+      toast.innerHTML = `<span class="material-symbols-outlined text-[18px]">${icon}</span><span>${message}</span>`;
+      container.appendChild(toast);
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
       });
-      const activePane = document.getElementById(`pane-${tabKey}`);
-      if (activePane) activePane.classList.add('active');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
 
-      // Update Nav Buttons
-      document.querySelectorAll('[data-tab-btn]').forEach(btn => {
-        const isMatch = btn.getAttribute('data-tab-btn') === tabKey;
-        if (isMatch) {
-          btn.className = "w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm text-left text-sm";
-        } else {
-          btn.className = "w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium text-left";
-        }
+    async function apiFetch(endpoint, options = {}) {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/${endpoint}`, {
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=representation',
+          ...(options.headers || {})
+        },
+        ...options
       });
-
-      toggleMobileSidebar(false);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      // Refresh specific tab data if needed
-      if (tabKey === 'manajemen-bibit-tanaman') renderTabBibitTable();
-      if (tabKey === 'pesan-dan-konsultasi') loadPesanData();
-      if (tabKey === 'artikel-dan-blog') loadBlogData();
-      if (tabKey === 'layanan-dan-fitur') loadLayananData();
-    }
-
-    // ================================================================
-    // BIBIT TANAMAN DATA CONTROLLER
-    // ================================================================
-    async function loadBibitData() {
-      try {
-        const data = await apiFetch('bibit_tanaman?select=*&order=id.asc');
-        allBibitData = Array.isArray(data) ? data : [];
-
-        // Update counts
-        const count = allBibitData.length;
-        const countEl = document.getElementById('stat-count-bibit');
-        const badgeEl = document.getElementById('badge-nav-bibit');
-        const readyCount = allBibitData.filter(b => b.stok).length;
-
-        if (countEl) countEl.textContent = count;
-        if (badgeEl) badgeEl.textContent = count;
-        document.querySelectorAll('.overview-bibit-count').forEach(el => el.textContent = count);
-        
-        const readyEl = document.getElementById('stat-bibit-ready');
-        if (readyEl) readyEl.textContent = `${readyCount} Tersedia`;
-
-        renderOverviewBibitTable();
-        renderTabBibitTable();
-      } catch (err) {
-        console.error('Gagal memuat bibit:', err);
-        showToast('Koneksi Supabase bibit terganggu', 'error');
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.message || `Error ${res.status}`);
       }
+      return res.json();
     }
 
-    function renderOverviewBibitTable() {
-      const tbody = document.getElementById('overview-bibit-tbody');
-      if (!tbody) return;
-
-      const search = (document.getElementById('overview-filter-search')?.value || '').toLowerCase();
-      const kat = document.getElementById('overview-filter-kategori')?.value || 'Semua';
-      const stok = document.getElementById('overview-filter-stok')?.value || 'Semua';
-
-      let filtered = allBibitData.filter(b => {
-        const matchSearch = !search || (b.nama_bibit || '').toLowerCase().includes(search) || (b.deskripsi || '').toLowerCase().includes(search);
-        const matchKat = kat === 'Semua' || b.kategori === kat;
-        const matchStok = stok === 'Semua' || (stok === 'Tersedia' ? b.stok : !b.stok);
-        return matchSearch && matchKat && matchStok;
-      });
-
-      const total = filtered.length;
-      const totalPages = Math.ceil(total / overviewPageSize) || 1;
-      if (overviewCurrentPage > totalPages) overviewCurrentPage = 1;
-
-      const start = (overviewCurrentPage - 1) * overviewPageSize;
-      const pageData = filtered.slice(start, start + overviewPageSize);
-
-      if (pageData.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-8 text-on-surface-variant text-xs">Tidak ada bibit tanaman yang sesuai filter.</td></tr>`;
-      } else {
-        tbody.innerHTML = pageData.map(b => `
-          <tr class="hover:bg-surface-container-low transition-colors group">
-            <td class="py-3.5 px-4">
-              <div class="flex items-center gap-3">
-                <img class="w-11 h-11 rounded-xl object-cover shadow-sm bg-surface-container" src="${b.gambar_url || 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=100&h=75&fit=crop'}" alt="${b.nama_bibit}" onerror="this.src='https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=100&h=75&fit=crop'"/>
-                <div class="flex flex-col min-w-0">
-                  <span class="font-title-md font-bold text-on-surface truncate text-sm">${b.nama_bibit}</span>
-                  <span class="text-xs text-outline truncate">${b.deskripsi ? b.deskripsi.substring(0, 30) + '...' : 'Varietas Pilihan'}</span>
-                </div>
-              </div>
-            </td>
-            <td class="py-3.5 px-4">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryBadgeClass(b.kategori)}">
-                ${b.kategori || 'Umum'}
-              </span>
-            </td>
-            <td class="py-3.5 px-4">
-              <div class="flex flex-col text-xs">
-                <span class="font-medium">${b.musim_tanam || 'Sepanjang Tahun'}</span>
-                <span class="text-outline text-[11px]">${b.masa_panen || '70 HST'}</span>
-              </div>
-            </td>
-            <td class="py-3.5 px-4 font-semibold text-primary text-xs sm:text-sm">
-              ${b.harga_estimasi ? 'Rp ' + Number(b.harga_estimasi).toLocaleString('id-ID') : 'Rp 25.000'}
-            </td>
-            <td class="py-3.5 px-4">
-              <button onclick="toggleBibitStok(${b.id}, ${!b.stok})" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold transition-all ${b.stok ? 'bg-secondary-container text-on-secondary-container hover:bg-error-container hover:text-on-error-container' : 'bg-error-container text-on-error-container hover:bg-secondary-container hover:text-on-secondary-container'}">
-                <span class="w-1.5 h-1.5 rounded-full ${b.stok ? 'bg-primary' : 'bg-error'}"></span>
-                <span>${b.stok ? 'Tersedia' : 'Habis'}</span>
-              </button>
-            </td>
-            <td class="py-3.5 px-4 text-right">
-              <div class="flex items-center justify-end gap-1">
-                <button onclick="viewCaraTanam(${b.id})" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Lihat Cara Tanam">
-                  <span class="material-symbols-outlined text-[18px]">visibility</span>
-                </button>
-                <button onclick="editBibitModal(${b.id})" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Edit Data">
-                  <span class="material-symbols-outlined text-[18px]">edit</span>
-                </button>
-                <button onclick="confirmDelete('bibit', ${b.id}, '${b.nama_bibit.replace(/'/g, "\\'")}')" class="p-1.5 rounded-full hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="Hapus">
-                  <span class="material-symbols-outlined text-[18px]">delete</span>
-                </button>
-              </div>
-            </td>
-          </tr>
-        `).join('');
-      }
-
-      // Pagination
-      const infoEl = document.getElementById('overview-pagination-info');
-      if (infoEl) {
-        infoEl.innerHTML = `Menampilkan <span class="font-semibold text-on-surface">${Math.min(start + 1, total)} - ${Math.min(start + overviewPageSize, total)}</span> dari <span class="font-semibold text-on-surface">${total}</span> Bibit`;
-      }
-
-      renderPaginationControls('overview-pagination-btns', overviewCurrentPage, totalPages, (p) => {
-        overviewCurrentPage = p;
-        renderOverviewBibitTable();
-      });
-    }
-
-    function renderTabBibitTable() {
-      const tbody = document.getElementById('tab-bibit-tbody');
-      if (!tbody) return;
-
-      const search = (document.getElementById('tab-bibit-search')?.value || '').toLowerCase();
-      const kat = document.getElementById('tab-bibit-kategori')?.value || 'Semua';
-      const stok = document.getElementById('tab-bibit-stok')?.value || 'Semua';
-
-      let filtered = allBibitData.filter(b => {
-        const matchSearch = !search || (b.nama_bibit || '').toLowerCase().includes(search) || (b.deskripsi || '').toLowerCase().includes(search);
-        const matchKat = kat === 'Semua' || b.kategori === kat;
-        const matchStok = stok === 'Semua' || (stok === 'Tersedia' ? b.stok : !b.stok);
-        return matchSearch && matchKat && matchStok;
-      });
-
-      const total = filtered.length;
-      const totalPages = Math.ceil(total / tabBibitPageSize) || 1;
-      if (tabBibitCurrentPage > totalPages) tabBibitCurrentPage = 1;
-
-      const start = (tabBibitCurrentPage - 1) * tabBibitPageSize;
-      const pageData = filtered.slice(start, start + tabBibitPageSize);
-
-      if (pageData.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-10 text-on-surface-variant text-sm">Tidak ada data bibit tanaman yang sesuai filter.</td></tr>`;
-      } else {
-        tbody.innerHTML = pageData.map(b => `
-          <tr class="hover:bg-surface-container-low transition-colors">
-            <td class="py-3.5 px-4">
-              <div class="flex items-center gap-3">
-                <img class="w-12 h-12 rounded-xl object-cover shadow-sm bg-surface-container" src="${b.gambar_url || 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=100&h=75&fit=crop'}" alt="${b.nama_bibit}" onerror="this.src='https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=100&h=75&fit=crop'"/>
-                <div class="flex flex-col min-w-0">
-                  <span class="font-title-md font-bold text-on-surface truncate text-sm">${b.nama_bibit}</span>
-                  <span class="text-xs text-outline line-clamp-1 max-w-xs">${b.deskripsi || 'Varietas unggul teruji.'}</span>
-                </div>
-              </div>
-            </td>
-            <td class="py-3.5 px-4">
-              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryBadgeClass(b.kategori)}">
-                ${b.kategori}
-              </span>
-            </td>
-            <td class="py-3.5 px-4 text-xs font-medium">${b.musim_tanam || 'Kemarau / Hujan'}</td>
-            <td class="py-3.5 px-4 text-xs text-outline">${b.masa_panen || '65 - 75 HST'}</td>
-            <td class="py-3.5 px-4 font-semibold text-primary text-sm">
-              ${b.harga_estimasi ? 'Rp ' + Number(b.harga_estimasi).toLocaleString('id-ID') : 'Rp 30.000'}
-            </td>
-            <td class="py-3.5 px-4">
-              <button onclick="toggleBibitStok(${b.id}, ${!b.stok})" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold ${b.stok ? 'bg-secondary-container text-on-secondary-container' : 'bg-error-container text-on-error-container'}">
-                <span>${b.stok ? 'Tersedia' : 'Habis'}</span>
-              </button>
-            </td>
-            <td class="py-3.5 px-4 text-right">
-              <div class="flex items-center justify-end gap-1.5">
-                <button onclick="viewCaraTanam(${b.id})" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary" title="Lihat Cara Tanam">
-                  <span class="material-symbols-outlined text-[18px]">visibility</span>
-                </button>
-                <button onclick="editBibitModal(${b.id})" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary" title="Edit">
-                  <span class="material-symbols-outlined text-[18px]">edit</span>
-                </button>
-                <button onclick="confirmDelete('bibit', ${b.id}, '${b.nama_bibit.replace(/'/g, "\\'")}')" class="p-1.5 rounded-full hover:bg-error-container text-on-surface-variant hover:text-error" title="Hapus">
-                  <span class="material-symbols-outlined text-[18px]">delete</span>
-                </button>
-              </div>
-            </td>
-          </tr>
-        `).join('');
-      }
-
-      const infoEl = document.getElementById('tab-bibit-pagination-info');
-      if (infoEl) {
-        infoEl.innerHTML = `Menampilkan <span class="font-semibold text-on-surface">${Math.min(start + 1, total)} - ${Math.min(start + tabBibitPageSize, total)}</span> dari <span class="font-semibold text-on-surface">${total}</span> Bibit`;
-      }
-
-      renderPaginationControls('tab-bibit-pagination-btns', tabBibitCurrentPage, totalPages, (p) => {
-        tabBibitCurrentPage = p;
-        renderTabBibitTable();
-      });
-    }
-
-    function handleBibitFilter() {
-      overviewCurrentPage = 1;
-      renderOverviewBibitTable();
-    }
-
-    function getCategoryBadgeClass(kat) {
-      switch ((kat || '').toLowerCase()) {
-        case 'sayur': return 'bg-secondary-container text-on-secondary-container';
-        case 'buah': return 'bg-error-container text-on-error-container';
-        case 'palawija': return 'bg-primary-fixed text-on-primary-fixed';
-        case 'rempah': return 'bg-tertiary-container text-on-tertiary-container';
-        default: return 'bg-surface-container-high text-on-surface';
-      }
-    }
-
-    function renderPaginationControls(containerId, currentPage, totalPages, onPageChange) {
-      const el = document.getElementById(containerId);
-      if (!el) return;
-
-      let html = '';
-      if (totalPages > 1) {
-        html += `<button onclick="window._pageChange_${containerId}(${Math.max(1, currentPage - 1)})" ${currentPage === 1 ? 'disabled' : ''} class="w-7 h-7 rounded-full flex items-center justify-center bg-surface-container text-on-surface-variant hover:bg-surface-container-high disabled:opacity-40 transition-colors">
-          <span class="material-symbols-outlined text-[16px]">chevron_left</span>
-        </button>`;
-
-        for (let i = 1; i <= Math.min(totalPages, 5); i++) {
-          const isActive = i === currentPage;
-          html += `<button onclick="window._pageChange_${containerId}(${i})" class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold transition-colors ${isActive ? 'bg-primary text-on-primary shadow-sm' : 'hover:bg-surface-container text-on-surface-variant'}">${i}</button>`;
-        }
-
-        html += `<button onclick="window._pageChange_${containerId}(${Math.min(totalPages, currentPage + 1)})" ${currentPage === totalPages ? 'disabled' : ''} class="w-7 h-7 rounded-full flex items-center justify-center bg-surface-container text-on-surface-variant hover:bg-surface-container-high disabled:opacity-40 transition-colors">
-          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-        </button>`;
-      }
-      window[`_pageChange_${containerId}`] = onPageChange;
-      el.innerHTML = html;
-    }
-
-    // Toggle Stok
-    async function toggleBibitStok(id, newStok) {
-      try {
-        await apiFetch(`bibit_tanaman?id=eq.${id}`, {
-          method: 'PATCH',
-          body: JSON.stringify({ stok: newStok })
-        });
-        const bibit = allBibitData.find(b => b.id === id);
-        if (bibit) bibit.stok = newStok;
-        renderOverviewBibitTable();
-        renderTabBibitTable();
-        showToast(`Stok ${bibit?.nama_bibit || 'bibit'} berhasil diubah jadi ${newStok ? 'Tersedia' : 'Habis'}`);
-      } catch (err) {
-        showToast('Gagal mengubah status stok: ' + err.message, 'error');
-      }
-    }
-
-    // Modal Add / Edit Bibit
-    function editBibitModal(id) {
-      const b = allBibitData.find(x => x.id === id);
-      if (!b) return;
-
-      document.getElementById('modal-bibit-title').textContent = 'Edit Data Bibit';
-      document.getElementById('bibit-id').value = b.id;
-      document.getElementById('bibit-nama').value = b.nama_bibit || '';
-      document.getElementById('bibit-kategori').value = b.kategori || 'Sayur';
-      document.getElementById('bibit-harga').value = b.harga_estimasi || '';
-      document.getElementById('bibit-musim').value = b.musim_tanam || '';
-      document.getElementById('bibit-panen').value = b.masa_panen || '';
-      document.getElementById('bibit-stok').value = b.stok ? 'true' : 'false';
-      document.getElementById('bibit-gambar').value = b.gambar_url || '';
-      document.getElementById('bibit-deskripsi').value = b.deskripsi || '';
-      document.getElementById('bibit-caratanam').value = b.cara_tanam || '';
-
-      openModal('modal-bibit');
-    }
-
-    async function handleSaveBibit(e) {
-      e.preventDefault();
-      const id = document.getElementById('bibit-id').value;
-      const btn = document.getElementById('btn-submit-bibit');
-      btn.disabled = true;
-      btn.textContent = 'Menyimpan...';
-
-      const payload = {
-        nama_bibit: document.getElementById('bibit-nama').value.trim(),
-        kategori: document.getElementById('bibit-kategori').value,
-        harga_estimasi: parseFloat(document.getElementById('bibit-harga').value) || 0,
-        musim_tanam: document.getElementById('bibit-musim').value.trim(),
-        masa_panen: document.getElementById('bibit-panen').value.trim(),
-        stok: document.getElementById('bibit-stok').value === 'true',
-        gambar_url: document.getElementById('bibit-gambar').value.trim(),
-        deskripsi: document.getElementById('bibit-deskripsi').value.trim(),
-        cara_tanam: document.getElementById('bibit-caratanam').value.trim()
-      };
-
-      try {
-        if (id) {
-          await apiFetch(`bibit_tanaman?id=eq.${id}`, {
-            method: 'PATCH',
-            body: JSON.stringify(payload)
-          });
-          showToast('Data bibit berhasil diperbarui!');
-        } else {
-          await apiFetch('bibit_tanaman', {
-            method: 'POST',
-            body: JSON.stringify(payload)
-          });
-          showToast('Bibit baru berhasil ditambahkan ke Supabase!');
-        }
-
-        closeModal('modal-bibit');
-        document.getElementById('form-bibit').reset();
-        document.getElementById('bibit-id').value = '';
-        await loadBibitData();
-      } catch (err) {
-        showToast('Gagal menyimpan bibit: ' + err.message, 'error');
-      } finally {
-        btn.disabled = false;
-        btn.textContent = 'Simpan ke Supabase';
-      }
-    }
-
-    function viewCaraTanam(id) {
-      const b = allBibitData.find(x => x.id === id);
-      if (!b) return;
-
-      document.getElementById('detail-bibit-name').textContent = b.nama_bibit;
-      document.getElementById('detail-bibit-kategori').textContent = b.kategori;
-      document.getElementById('detail-bibit-img').src = b.gambar_url || 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=100&h=75&fit=crop';
-      document.getElementById('detail-bibit-instructions').textContent = b.cara_tanam || b.deskripsi || 'Petunjuk budidaya khusus varietas ini dapat dikonsultasikan via WhatsApp Go-Tani.';
-      openModal('modal-detail-bibit');
-    }
-
-    // ================================================================
-    // PESAN KONTAK CONTROLLER
-    // ================================================================
-    async function loadPesanData() {
-      try {
-        const data = await apiFetch('pesan_kontak?select=*&order=created_at.desc');
-        allPesanData = Array.isArray(data) ? data : [];
-
-        const unread = allPesanData.filter(p => !p.is_read).length;
-        const total = allPesanData.length;
-
-        // Update badges
-        const badgeNav = document.getElementById('badge-nav-pesan');
-        if (badgeNav) badgeNav.textContent = `${unread} Baru`;
-
-        const statCount = document.getElementById('stat-count-pesan');
-        if (statCount) statCount.textContent = total;
-
-        const statBadge = document.getElementById('stat-unread-badge');
-        if (statBadge) statBadge.textContent = `${unread} Unread`;
-
-        const widgetBadge = document.getElementById('widget-unread-badge');
-        if (widgetBadge) widgetBadge.textContent = `${unread} Belum Dibaca`;
-
-        document.querySelectorAll('.overview-unread-count').forEach(el => el.textContent = unread);
-
-        const dot = document.getElementById('top-notification-dot');
-        if (dot) dot.classList.toggle('hidden', unread === 0);
-
-        renderWidgetPesanList();
-        renderFullPesanList();
-      } catch (err) {
-        console.error('Gagal memuat pesan:', err);
-      }
-    }
-
-    function renderWidgetPesanList() {
-      const container = document.getElementById('widget-pesan-list');
-      if (!container) return;
-
-      const top3 = allPesanData.slice(0, 3);
-      if (top3.length === 0) {
-        container.innerHTML = `<div class="text-center py-6 text-xs text-on-surface-variant">Belum ada pesan masuk.</div>`;
-        return;
-      }
-
-      container.innerHTML = top3.map(p => `
-        <div class="p-3 bg-surface-container-low rounded-2xl flex flex-col gap-2 hover:bg-surface-container transition-all text-xs border border-outline-variant/20">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container text-[11px] font-bold flex items-center justify-center">
-                ${(p.nama || 'P').substring(0, 2).toUpperCase()}
-              </div>
-              <span class="font-bold text-on-surface text-xs">${p.nama || 'Petani'}</span>
-            </div>
-            <span class="text-[11px] text-outline">${formatDate(p.created_at)}</span>
-          </div>
-          <p class="text-on-surface-variant line-clamp-2 text-xs leading-relaxed">
-            "${p.pesan || ''}"
-          </p>
-          <div class="flex items-center justify-between pt-1 border-t border-surface-container-highest/60">
-            <span class="text-[11px] text-outline truncate max-w-[120px]">${p.subjek || p.email || 'Konsultasi'}</span>
-            <div class="flex items-center gap-1.5">
-              ${!p.is_read ? `
-                <button onclick="markPesanAsRead(${p.id})" class="px-2.5 py-1 rounded-full bg-surface-container-highest hover:bg-surface-dim text-on-surface font-semibold text-[11px]">
-                  Tandai Baca
-                </button>
-              ` : ''}
-              <a href="https://wa.me/?text=${encodeURIComponent('Halo ' + p.nama + ', kami dari tim Go-Tani merespon pesan Anda: ' + p.pesan)}" target="_blank" class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-semibold text-[11px] flex items-center gap-1 hover:bg-tertiary">
-                <span class="material-symbols-outlined text-[13px]">send</span> Balas WA
-              </a>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function renderFullPesanList() {
-      const container = document.getElementById('pesan-full-list');
-      if (!container) return;
-
-      if (allPesanData.length === 0) {
-        container.innerHTML = `<div class="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 text-on-surface-variant text-sm">Belum ada pesan masuk dari formulir kontak.</div>`;
-        return;
-      }
-
-      container.innerHTML = allPesanData.map(p => `
-        <div class="bg-surface-container-lowest p-5 rounded-2xl border ${!p.is_read ? 'border-primary/40 shadow-md bg-gradient-to-r from-surface-container-low/40 to-surface-container-lowest' : 'border-outline-variant/30 shadow-sm'} flex flex-col gap-3 transition-all">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl ${!p.is_read ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface-variant'} font-bold flex items-center justify-center text-sm">
-                ${(p.nama || 'P').substring(0, 2).toUpperCase()}
-              </div>
-              <div>
-                <div class="flex items-center gap-2">
-                  <span class="font-bold text-on-surface text-base">${p.nama}</span>
-                  ${!p.is_read ? '<span class="bg-error-container text-on-error-container text-[11px] px-2 py-0.5 rounded-full font-bold">Baru</span>' : ''}
-                </div>
-                <div class="text-xs text-outline font-medium">${p.email} • Subjek: <span class="text-on-surface-variant">${p.subjek || 'Konsultasi Petani'}</span></div>
-              </div>
-            </div>
-            <div class="text-xs text-outline">${formatDateFull(p.created_at)}</div>
-          </div>
-
-          <div class="bg-surface-container-low/60 p-4 rounded-xl text-sm text-on-surface leading-relaxed whitespace-pre-wrap">
-            ${p.pesan}
-          </div>
-
-          <div class="flex items-center justify-between pt-1">
-            <div class="flex items-center gap-2">
-              <a href="https://wa.me/?text=${encodeURIComponent('Halo ' + p.nama + ', kami dari tim Agronomis Go-Tani merespon pertanyaan Anda: ' + p.pesan)}" target="_blank" class="px-4 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold flex items-center gap-1.5 hover:bg-tertiary transition-all">
-                <span class="material-symbols-outlined text-[16px]">chat</span> Balas WhatsApp
-              </a>
-              <a href="mailto:${p.email}?subject=Re: Konsultasi Go-Tani&body=Halo ${p.nama},%0A%0A" class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <span class="material-symbols-outlined text-[16px]">mail</span> Email
-              </a>
-            </div>
-
-            <div class="flex items-center gap-2">
-              ${!p.is_read ? `
-                <button onclick="markPesanAsRead(${p.id})" class="px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-dim text-on-surface text-xs font-semibold">
-                  Tandai Dibaca
-                </button>
-              ` : ''}
-              <button onclick="confirmDelete('pesan', ${p.id}, '${p.nama.replace(/'/g, "\\'")}')" class="p-1.5 rounded-full hover:bg-error-container text-on-surface-variant hover:text-error transition-colors" title="Hapus Pesan">
-                <span class="material-symbols-outlined text-[18px]">delete</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    async function markPesanAsRead(id) {
-      try {
-        await apiFetch(`pesan_kontak?id=eq.${id}`, {
-          method: 'PATCH',
-          body: JSON.stringify({ is_read: true })
-        });
-        const p = allPesanData.find(x => x.id === id);
-        if (p) p.is_read = true;
-        loadPesanData();
-        showToast('Pesan berhasil ditandai sudah dibaca.');
-      } catch (err) {
-        showToast('Gagal mengubah status pesan: ' + err.message, 'error');
-      }
-    }
-
-    async function markAllPesanAsRead() {
-      const unread = allPesanData.filter(p => !p.is_read);
-      if (unread.length === 0) {
-        showToast('Semua pesan sudah dibaca.', 'info');
-        return;
-      }
-      try {
-        await Promise.all(unread.map(p => apiFetch(`pesan_kontak?id=eq.${p.id}`, {
-          method: 'PATCH',
-          body: JSON.stringify({ is_read: true })
-        })));
-        allPesanData.forEach(p => p.is_read = true);
-        loadPesanData();
-        showToast(`${unread.length} pesan berhasil ditandai sudah dibaca!`);
-      } catch (err) {
-        showToast('Gagal menandai pesan: ' + err.message, 'error');
-      }
-    }
-
-    // ================================================================
-    // ARTIKEL BLOG CONTROLLER
-    // ================================================================
-    async function loadBlogData() {
-      try {
-        const data = await apiFetch('blog_posts?select=*&order=created_at.desc');
-        allBlogData = Array.isArray(data) ? data : [];
-
-        const count = allBlogData.length;
-        const countEl = document.getElementById('stat-count-blog');
-        const badgeEl = document.getElementById('badge-nav-blog');
-        if (countEl) countEl.textContent = count;
-        if (badgeEl) badgeEl.textContent = count;
-
-        renderBlogTable();
-      } catch (err) {
-        console.error('Gagal memuat blog:', err);
-      }
-    }
-
-    function renderBlogTable() {
-      const tbody = document.getElementById('tab-blog-tbody');
-      if (!tbody) return;
-
-      if (allBlogData.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-10 text-on-surface-variant text-sm">Belum ada artikel blog di database.</td></tr>`;
-        return;
-      }
-
-      tbody.innerHTML = allBlogData.map(b => `
-        <tr class="hover:bg-surface-container-low transition-colors">
-          <td class="py-3.5 px-4">
-            <div class="flex items-center gap-3">
-              <img class="w-12 h-12 rounded-xl object-cover shadow-sm bg-surface-container" src="${b.thumbnail_url || 'https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?w=100&h=75&fit=crop'}" alt="${b.judul}" onerror="this.src='https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?w=100&h=75&fit=crop'"/>
-              <div class="flex flex-col min-w-0">
-                <span class="font-title-md font-bold text-on-surface text-sm max-w-sm line-clamp-1">${b.judul}</span>
-                <span class="text-xs text-outline line-clamp-1 max-w-xs">${b.excerpt || ''}</span>
-              </div>
-            </div>
-          </td>
-          <td class="py-3.5 px-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container">
-              ${b.kategori || 'Umum'}
-            </span>
-          </td>
-          <td class="py-3.5 px-4 text-xs font-medium">${b.author || 'Tim Go-Tani'}</td>
-          <td class="py-3.5 px-4">
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${b.is_published ? 'bg-primary-fixed text-on-primary-fixed' : 'bg-surface-container-highest text-on-surface'}">
-              ${b.is_published ? 'Published' : 'Draft'}
-            </span>
-          </td>
-          <td class="py-3.5 px-4 text-xs text-outline">${formatDate(b.created_at)}</td>
-          <td class="py-3.5 px-4 text-right">
-            <div class="flex items-center justify-end gap-1.5">
-              <button onclick="editBlogModal(${b.id})" class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary" title="Edit">
-                <span class="material-symbols-outlined text-[18px]">edit</span>
-              </button>
-              <button onclick="confirmDelete('blog', ${b.id}, '${b.judul.replace(/'/g, "\\'")}')" class="p-1.5 rounded-full hover:bg-error-container text-on-surface-variant hover:text-error" title="Hapus">
-                <span class="material-symbols-outlined text-[18px]">delete</span>
-              </button>
-            </div>
-          </td>
-        </tr>
-      `).join('');
-    }
-
-    function editBlogModal(id) {
-      const b = allBlogData.find(x => x.id === id);
-      if (!b) return;
-
-      document.getElementById('modal-blog-title').textContent = 'Edit Artikel Blog';
-      document.getElementById('blog-id').value = b.id;
-      document.getElementById('blog-judul').value = b.judul || '';
-      document.getElementById('blog-kategori').value = b.kategori || 'Tips Menanam';
-      document.getElementById('blog-author').value = b.author || 'Tim Agronomis Go-Tani';
-      document.getElementById('blog-thumbnail').value = b.thumbnail_url || '';
-      document.getElementById('blog-excerpt').value = b.excerpt || '';
-      document.getElementById('blog-konten').value = b.konten || '';
-
-      openModal('modal-blog');
-    }
-
-    async function handleSaveBlog(e) {
-      e.preventDefault();
-      const id = document.getElementById('blog-id').value;
-      const btn = document.getElementById('btn-submit-blog');
-      btn.disabled = true;
-      btn.textContent = 'Menyimpan...';
-
-      const judul = document.getElementById('blog-judul').value.trim();
-      const slug = judul.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
-
-      const payload = {
-        judul: judul,
-        slug: slug,
-        kategori: document.getElementById('blog-kategori').value,
-        author: document.getElementById('blog-author').value.trim(),
-        thumbnail_url: document.getElementById('blog-thumbnail').value.trim(),
-        excerpt: document.getElementById('blog-excerpt').value.trim(),
-        konten: document.getElementById('blog-konten').value.trim(),
-        is_published: true
-      };
-
-      try {
-        if (id) {
-          await apiFetch(`blog_posts?id=eq.${id}`, {
-            method: 'PATCH',
-            body: JSON.stringify(payload)
-          });
-          showToast('Artikel berhasil diperbarui!');
-        } else {
-          await apiFetch('blog_posts', {
-            method: 'POST',
-            body: JSON.stringify(payload)
-          });
-          showToast('Artikel baru berhasil diterbitkan!');
-        }
-
-        closeModal('modal-blog');
-        document.getElementById('form-blog').reset();
-        document.getElementById('blog-id').value = '';
-        await loadBlogData();
-      } catch (err) {
-        showToast('Gagal menyimpan blog: ' + err.message, 'error');
-      } finally {
-        btn.disabled = false;
-        btn.textContent = 'Publikasikan Artikel';
-      }
-    }
-
-    // ================================================================
-    // LAYANAN CONTROLLER
-    // ================================================================
-    async function loadLayananData() {
-      try {
-        const data = await apiFetch('layanan_fitur?select=*&order=id.asc').catch(() => []);
-        allLayananData = Array.isArray(data) ? data : [];
-
-        // If table empty or 404, fallback to default 6 services
-        if (allLayananData.length === 0) {
-          allLayananData = [
-            { id: 1, nama: 'Rekomendasi Bibit Cerdas', deskripsi: 'Pencocokan varietas bibit berdasarkan musim, jenis tanah, dan ketinggian lahan.', ikon: 'potted_plant', is_active: true },
-            { id: 2, nama: 'Konsultasi Agronomis', deskripsi: 'Tanya jawab langsung bersama dokter tanaman seputar hama & pemupukan.', ikon: 'psychology', is_active: true },
-            { id: 3, nama: 'Kurir Bibit Cepat', deskripsi: 'Pengiriman bibit segar bergaransi dengan kemasan khusus aman se-Indonesia.', ikon: 'local_shipping', is_active: true },
-            { id: 4, nama: 'Garansi Daya Tumbuh', deskripsi: 'Jaminan penggantian benih jika daya kecambah di bawah standar resmi.', ikon: 'verified', is_active: true },
-            { id: 5, nama: 'Panduan Budidaya Lengkap', deskripsi: 'Modul SOP tanam langkah demi langkah dari semai hingga panen melimpah.', ikon: 'menu_book', is_active: true },
-            { id: 6, nama: 'Kemitraan Petani Maju', deskripsi: 'Program pendampingan kelompok tani untuk peningkatan produktivitas.', ikon: 'handshake', is_active: true }
-          ];
-        }
-
-        const countEl = document.getElementById('stat-count-layanan');
-        const badgeEl = document.getElementById('badge-nav-layanan');
-        if (countEl) countEl.textContent = allLayananData.length;
-        if (badgeEl) badgeEl.textContent = allLayananData.length;
-
-        renderLayananGrid();
-      } catch (err) {
-        console.error('Gagal memuat layanan:', err);
-      }
-    }
-
-    function renderLayananGrid() {
-      const container = document.getElementById('layanan-grid-container');
-      if (!container) return;
-
-      container.innerHTML = allLayananData.map(l => `
-        <div class="bg-surface-container-lowest p-space-md rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between gap-3">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
-              <span class="material-symbols-outlined text-[22px]">${l.ikon || 'agriculture'}</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-base text-on-surface">${l.nama}</h4>
-              <span class="text-xs text-primary font-semibold">Prioritas #${l.id}</span>
-            </div>
-          </div>
-          <p class="text-xs text-on-surface-variant leading-relaxed">
-            ${l.deskripsi}
-          </p>
-          <div class="pt-2 border-t border-surface-container flex items-center justify-between">
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-secondary-container text-on-secondary-container">
-              Aktif di Web
-            </span>
-            <span class="text-xs text-outline">SLA: 99.8%</span>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // ================================================================
-    // DELETE MODAL CONTROLLER
-    // ================================================================
-    function confirmDelete(type, id, name) {
-      const msgEl = document.getElementById('delete-confirm-msg');
-      msgEl.textContent = `Apakah Anda yakin ingin menghapus data ${type} "${name}"? Tindakan ini permanen di database.`;
-
-      pendingDeleteAction = async () => {
-        try {
-          if (type === 'bibit') {
-            await apiFetch(`bibit_tanaman?id=eq.${id}`, { method: 'DELETE' });
-            allBibitData = allBibitData.filter(x => x.id !== id);
-            renderOverviewBibitTable();
-            renderTabBibitTable();
-            showToast(`Bibit "${name}" berhasil dihapus.`);
-          } else if (type === 'pesan') {
-            await apiFetch(`pesan_kontak?id=eq.${id}`, { method: 'DELETE' });
-            allPesanData = allPesanData.filter(x => x.id !== id);
-            loadPesanData();
-            showToast(`Pesan dari "${name}" berhasil dihapus.`);
-          } else if (type === 'blog') {
-            await apiFetch(`blog_posts?id=eq.${id}`, { method: 'DELETE' });
-            allBlogData = allBlogData.filter(x => x.id !== id);
-            renderBlogTable();
-            showToast(`Artikel "${name}" berhasil dihapus.`);
-          }
-        } catch (err) {
-          showToast(`Gagal menghapus: ${err.message}`, 'error');
-        }
-      };
-
-      openModal('modal-confirm-delete');
-    }
-
-    document.getElementById('btn-execute-delete').addEventListener('click', async () => {
-      closeModal('modal-confirm-delete');
-      if (pendingDeleteAction) {
-        await pendingDeleteAction();
-        pendingDeleteAction = null;
-      }
-    });
-
-    // ================================================================
-    // GLOBAL SEARCH & UTILITY
-    // ================================================================
-    function handleGlobalSearch(e) {
-      const query = (e.target.value || '').toLowerCase().trim();
-      if (!query) return;
-
-      // Filter in active tab
-      const overviewInput = document.getElementById('overview-filter-search');
-      if (overviewInput) {
-        overviewInput.value = query;
-        handleBibitFilter();
-      }
-
-      const tabBibitInput = document.getElementById('tab-bibit-search');
-      if (tabBibitInput) {
-        tabBibitInput.value = query;
-        renderTabBibitTable();
-      }
-    }
-
-    function copyFullSqlSchema() {
-      const sqlText = document.getElementById('sql-preview-box')?.textContent || '';
-      navigator.clipboard.writeText(sqlText.trim()).then(() => {
-        showToast('Skrip SQL berhasil disalin ke clipboard!');
-      }).catch(() => {
-        showToast('Gagal menyalin otomatis. Silakan salin manual.', 'error');
-      });
-    }
-
-    function refreshAllData() {
-      showToast('Memperbarui seluruh data dari Supabase...', 'info');
-      Promise.all([loadBibitData(), loadPesanData(), loadBlogData(), loadLayananData()]).then(() => {
-        showToast('Seluruh data berhasil disinkronkan!');
-      });
+    function formatRupiah(num) {
+      return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(num || 0);
     }
 
     function formatDate(dateStr) {
-      if (!dateStr) return 'Hari ini';
-      try {
-        const d = new Date(dateStr);
-        return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' });
-      } catch {
-        return 'Baru saja';
-      }
+      if (!dateStr) return '-';
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
     }
 
-    function formatDateFull(dateStr) {
-      if (!dateStr) return 'Hari ini';
+    async function loadDashboardData() {
       try {
-        const d = new Date(dateStr);
-        return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
-      } catch {
-        return 'Baru saja';
-      }
-    }
+        const [bibitData, pesanData] = await Promise.all([
+          apiFetch('bibit_tanaman?select=*&order=created_at.desc').catch(() => []),
+          apiFetch('pesan_kontak?select=*&order=created_at.desc').catch(() => [])
+        ]);
 
-    // ================================================================
-    // INITIALIZATION ON LOAD
-    // ================================================================
-    function initDashboard() {
-      // Check Auth
-      const isOk = checkAuth();
-      if (!isOk) return;
+        const bibitList = Array.isArray(bibitData) ? bibitData : [];
+        const pesanList = Array.isArray(pesanData) ? pesanData : [];
 
-      // Load initial Supabase data
-      loadBibitData();
-      loadPesanData();
-      loadBlogData();
-      loadLayananData();
+        // Update Nav Badges
+        const unreadPesan = pesanList.filter(p => !p.is_read).length;
+        document.getElementById('badge-nav-bibit').textContent = bibitList.length;
+        document.getElementById('badge-nav-pesan').textContent = `${unreadPesan} Baru`;
 
-      // Keyboard Escape for Modals
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          document.querySelectorAll('.modal-backdrop:not(.hidden)').forEach(el => {
-            el.classList.add('hidden');
-          });
+        // Update Stat Cards
+        document.getElementById('stat-total-bibit').textContent = bibitList.length;
+        const inStockCount = bibitList.filter(b => b.stok).length;
+        document.getElementById('stat-stok-bibit').textContent = `${inStockCount} varietas tersedia stok`;
+
+        document.getElementById('stat-unread-pesan').textContent = unreadPesan;
+        document.getElementById('stat-total-pesan').textContent = `Total ${pesanList.length} pesan masuk`;
+
+        // Render Recent Messages (Top 5)
+        const pesanContainer = document.getElementById('recent-pesan-list');
+        if (pesanList.length === 0) {
+          pesanContainer.innerHTML = `<div class="py-8 text-center text-xs text-on-surface-variant">Belum ada pesan yang masuk.</div>`;
+        } else {
+          pesanContainer.innerHTML = pesanList.slice(0, 5).map(p => `
+            <div class="py-3.5 flex items-start justify-between gap-3 group">
+              <div class="flex items-start gap-3 min-w-0">
+                <div class="w-8 h-8 rounded-full ${p.is_read ? 'bg-surface-container text-on-surface-variant' : 'bg-error-container text-error'} flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
+                  ${(p.nama || 'P')[0].toUpperCase()}
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-center gap-2">
+                    <span class="font-bold text-xs text-on-surface truncate">${p.nama || 'Pengunjung'}</span>
+                    ${!p.is_read ? '<span class="w-2 h-2 rounded-full bg-error"></span>' : ''}
+                  </div>
+                  <p class="text-xs text-on-surface-variant truncate max-w-xs mt-0.5">${p.pesan || '-'}</p>
+                  <span class="text-[10px] text-outline mt-0.5 block">${formatDate(p.created_at)}</span>
+                </div>
+              </div>
+              <a href="admin-pesan.html" class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container text-xs shrink-0" title="Buka Detail">
+                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+              </a>
+            </div>
+          `).join('');
         }
-      });
+
+        // Render Recent Seeds (Top 5)
+        const bibitContainer = document.getElementById('recent-bibit-list');
+        if (bibitList.length === 0) {
+          bibitContainer.innerHTML = `<div class="py-8 text-center text-xs text-on-surface-variant">Belum ada katalog bibit.</div>`;
+        } else {
+          bibitContainer.innerHTML = bibitList.slice(0, 5).map(b => `
+            <div class="py-3.5 flex items-center justify-between gap-3 group">
+              <div class="flex items-center gap-3 min-w-0">
+                <img src="${b.foto_url || 'https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?w=100&h=100&fit=crop'}" alt="${b.nama_bibit}" class="w-10 h-10 rounded-xl object-cover bg-surface-container shrink-0 border border-outline-variant/30" onerror="this.src='https://images.unsplash.com/photo-1592417817098-8f3d6eb22509?w=100&h=100&fit=crop'"/>
+                <div class="min-w-0">
+                  <span class="font-bold text-xs text-on-surface truncate block">${b.nama_bibit}</span>
+                  <div class="flex items-center gap-2 mt-0.5">
+                    <span class="text-xs font-semibold text-primary">${formatRupiah(b.harga)}</span>
+                    <span class="text-[10px] text-outline">• ${b.kategori || 'Umum'}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${b.stok ? 'bg-secondary-container text-on-secondary-container' : 'bg-surface-container-highest text-outline'}">
+                  ${b.stok ? 'Tersedia' : 'Habis'}
+                </span>
+                <a href="admin-bibit.html" class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container" title="Kelola">
+                  <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                </a>
+              </div>
+            </div>
+          `).join('');
+        }
+
+      } catch (err) {
+        showToast('Gagal memuat ringkasan data: ' + err.message, 'error');
+      }
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initDashboard);
-    } else {
-      initDashboard();
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
+      updateNavLinks();
+      loadDashboardData();
+    });
   </script>
 </body>
 </html>

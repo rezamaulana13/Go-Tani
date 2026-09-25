@@ -13,7 +13,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px 16px 70px;
+    padding: 16px 16px 60px;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: #1B1C1C;
     box-sizing: border-box;
@@ -41,460 +41,351 @@
     text-decoration: underline;
   }
 
-  /* Top Banner */
-  .gt-banner-box {
-    position: relative;
-    background: #F6F3F2;
-    border: 1px solid #E5E2E1;
-    border-radius: 20px;
-    padding: 36px 32px;
+  /* Compact Header */
+  .gt-page-header {
     margin-bottom: 28px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  @media (min-width: 768px) {
-    .gt-banner-box {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
   }
   .gt-badge-tag {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(46, 125, 50, 0.12);
+    background: rgba(13, 99, 27, 0.08);
     color: #0D631B;
     font-size: 12px;
     font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 30px;
-    margin-bottom: 12px;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(13, 99, 27, 0.15);
   }
-  .gt-banner-title {
+  .gt-page-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 32px;
+    font-size: clamp(26px, 4vw, 36px);
     font-weight: 800;
     color: #1B1C1C;
-    line-height: 1.25;
-    margin: 0 0 10px 0;
+    line-height: 1.2;
+    margin: 0 0 8px 0;
     letter-spacing: -0.5px;
   }
-  .gt-banner-desc {
+  .gt-page-desc {
     font-size: 15px;
-    color: #40493D;
-    max-width: 640px;
+    color: #4B5563;
+    max-width: 620px;
     margin: 0;
     line-height: 1.6;
   }
-  .gt-metrics-pill {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    background: #FFFFFF;
-    border: 1px solid #E5E2E1;
-    padding: 16px 22px;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    flex-shrink: 0;
-  }
-  .metric-col {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .metric-icon-box {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #0D631B;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .metric-icon-box.sec {
-    background: #9CF49C;
-    color: #19722B;
-  }
-  .metric-num {
-    font-family: 'Outfit', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    color: #1B1C1C;
-    line-height: 1;
-    margin-bottom: 3px;
-  }
-  .metric-lbl {
-    font-size: 12px;
-    color: #5F6368;
-  }
-  .metric-divider {
-    width: 1px;
-    height: 32px;
-    background: #E5E2E1;
-  }
 
-  /* Filter & Search Bar Container */
-  .gt-controls-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-  .gt-search-sort-bar {
+  /* Search & Filter Bar (Unified & Streamlined) */
+  .gt-filter-card {
     background: #FFFFFF;
     border: 1px solid #E5E7EB;
-    border-radius: 18px;
-    padding: 14px 18px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-radius: 20px;
+    padding: 18px 20px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
     gap: 14px;
   }
-  @media (min-width: 992px) {
-    .gt-search-sort-bar {
+  .gt-search-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .gt-search-row {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
     }
   }
-  .gt-search-input-box {
-    position: relative;
-    flex: 1;
+  .gt-search-input-wrap {
     display: flex;
     align-items: center;
-  }
-  .gt-search-input-box span.search-icon {
-    position: absolute;
-    left: 14px;
-    color: #5F6368;
-    pointer-events: none;
-  }
-  .gt-search-input-box input {
-    width: 100%;
-    height: 46px;
-    padding: 10px 42px 10px 44px;
-    border-radius: 30px;
-    border: 1px solid #E5E2E1;
+    gap: 10px;
     background: #F6F3F2;
-    font-size: 14px;
-    font-family: inherit;
-    outline: none;
+    border: 1px solid #E5E2E1;
+    border-radius: 9999px;
+    padding: 8px 16px;
+    flex: 1;
     transition: all 0.2s ease;
   }
-  .gt-search-input-box input:focus {
+  .gt-search-input-wrap:focus-within {
     background: #FFFFFF;
     border-color: #0D631B;
     box-shadow: 0 0 0 3px rgba(13, 99, 27, 0.1);
   }
-  .gt-clear-btn {
-    position: absolute;
-    right: 14px;
-    background: transparent;
+  .gt-search-input-wrap input {
     border: none;
-    color: #5F6368;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #1B1C1C;
+    width: 100%;
+    font-family: inherit;
+  }
+  .gt-search-input-wrap input::placeholder {
+    color: #9CA3AF;
+  }
+  .gt-clear-btn {
+    background: none;
+    border: none;
+    color: #9CA3AF;
     cursor: pointer;
     display: none;
+    padding: 0;
+    line-height: 1;
   }
-  .gt-sort-box {
+  .gt-clear-btn:hover {
+    color: #1B1C1C;
+  }
+  .gt-sort-wrap {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-  .gt-sort-box label {
-    font-size: 13px;
-    color: #5F6368;
-    font-weight: 500;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    flex-shrink: 0;
   }
   .gt-sort-select {
-    height: 44px;
-    padding: 0 18px;
-    border-radius: 30px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 9999px;
     border: 1px solid #E5E2E1;
     background: #F6F3F2;
-    font-size: 13px;
-    font-family: inherit;
-    color: #1B1C1C;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #374151;
     outline: none;
     cursor: pointer;
-  }
-
-  /* Filter Badges Box */
-  .gt-chips-filter-box {
-    background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 18px;
-    padding: 20px 22px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .filter-row {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  @media (min-width: 768px) {
-    .filter-row {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-  .filter-row-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: #40493D;
-    min-width: 140px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .chips-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .filter-chip {
-    padding: 6px 16px;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 500;
-    border: 1px solid #E5E2E1;
-    background: #F6F3F2;
-    color: #40493D;
-    cursor: pointer;
-    transition: all 0.2s ease;
     font-family: inherit;
   }
-  .filter-chip:hover {
-    background: #EAE7E7;
-  }
-  .filter-chip.active {
-    background: #0D631B;
-    color: #FFFFFF;
+  .gt-sort-select:focus {
     border-color: #0D631B;
-    font-weight: 600;
-  }
-  .summary-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 8px;
-    border-top: 1px solid #F0EDED;
-    font-size: 13px;
-    color: #5F6368;
+    background: #FFFFFF;
   }
 
-  /* Grid of Seed Cards */
+  /* Category Filter Pills */
+  .gt-pills-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .gt-pills-row::-webkit-scrollbar {
+    display: none;
+  }
+  .gt-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 9999px;
+    background: #F6F3F2;
+    border: 1px solid transparent;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4B5563;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+  .gt-pill-btn:hover {
+    background: #EDEAE9;
+    color: #1B1C1C;
+  }
+  .gt-pill-btn.active {
+    background: #0D631B;
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(13, 99, 27, 0.2);
+  }
+
+  .gt-counter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12.5px;
+    color: #6B7280;
+    padding-top: 8px;
+    border-top: 1px solid #F3F4F6;
+  }
+  .gt-counter-row strong {
+    color: #0D631B;
+  }
+
+  /* Cards Grid */
   .gt-cards-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 24px;
-    margin-bottom: 48px;
+    gap: 22px;
   }
-  @media (min-width: 640px) {
-    .gt-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 600px) {
+    .gt-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-  @media (min-width: 1024px) {
-    .gt-cards-grid { grid-template-columns: repeat(4, 1fr); }
+  @media (min-width: 960px) {
+    .gt-cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 1200px) {
+    .gt-cards-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
-  .seed-item-card {
+  /* Clean Seed Card */
+  .seed-card-clean {
     background: #FFFFFF;
     border: 1px solid #E5E7EB;
     border-radius: 20px;
-    padding: 16px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
-  .seed-item-card:hover {
+  .seed-card-clean:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(13, 99, 27, 0.1);
-    border-color: #88D982;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border-color: #C8E6C9;
   }
-  .seed-img-wrap {
+  .seed-thumb-wrap {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
-    border-radius: 14px;
+    background: #F3F4F6;
     overflow: hidden;
-    background: #E5E2E1;
-    margin-bottom: 14px;
   }
-  .seed-img-wrap img {
+  .seed-thumb-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
   }
-  .seed-item-card:hover .seed-img-wrap img {
-    transform: scale(1.04);
+  .seed-card-clean:hover .seed-thumb-wrap img {
+    transform: scale(1.05);
   }
-  .seed-badge-type {
+  .seed-badge-cat {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: #126d27;
-    color: #FFFFFF;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-  }
-  .seed-germ-pill {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(255,255,255,0.92);
+    background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     color: #0D631B;
     font-size: 11px;
     font-weight: 700;
     padding: 3px 10px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 3px;
+    border-radius: 9999px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
-  .seed-category-row {
+  .seed-badge-stock-out {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(220, 38, 38, 0.92);
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 9999px;
+  }
+  .seed-body-clean {
+    padding: 16px;
     display: flex;
+    flex-direction: column;
+    flex: 1;
     justify-content: space-between;
-    align-items: center;
-    font-size: 11.5px;
-    color: #5F6368;
-    margin-bottom: 4px;
+    gap: 12px;
   }
-  .seed-category-row span.mdpl {
-    color: #0D631B;
-    font-weight: 600;
+  .seed-info-top {
     display: flex;
-    align-items: center;
-    gap: 2px;
+    flex-direction: column;
+    gap: 4px;
   }
-  .seed-name {
+  .seed-name-clean {
     font-family: 'Outfit', sans-serif;
     font-size: 17px;
     font-weight: 700;
     color: #1B1C1C;
-    margin: 0 0 6px 0;
+    margin: 0;
     line-height: 1.3;
   }
-  .seed-desc {
+  .seed-desc-clean {
     font-size: 12.5px;
-    color: #40493D;
-    line-height: 1.5;
-    margin: 0 0 12px 0;
+    color: #6B7280;
+    margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    line-height: 1.5;
   }
-  .seed-specs-grid {
-    background: #F6F3F2;
-    border-radius: 12px;
-    padding: 8px 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    font-size: 11.5px;
-    color: #1B1C1C;
-    margin-bottom: 14px;
-  }
-  .spec-item {
+  .seed-quick-meta {
     display: flex;
     align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    gap: 10px;
+    font-size: 11.5px;
+    color: #4B5563;
+    padding-top: 4px;
   }
-  .spec-item span.icon {
-    color: #0D631B;
-    font-size: 15px;
+  .seed-quick-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
   }
-  .seed-card-footer {
+  .seed-footer-clean {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-top: 10px;
-    border-top: 1px solid #F0EDED;
-  }
-  .seed-price-row {
-    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: baseline;
+    padding-top: 10px;
+    border-top: 1px solid #F3F4F6;
+    gap: 10px;
   }
-  .seed-price-label {
-    font-size: 11px;
-    color: #5F6368;
-  }
-  .seed-price-num {
+  .seed-price-clean {
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
     font-weight: 800;
     color: #0D631B;
   }
-  .btn-seed-detail {
-    width: 100%;
-    padding: 9px 14px;
-    border-radius: 30px;
-    background: #2E7D32;
-    color: #FFFFFF !important;
-    font-size: 13px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
+  .btn-detail-clean {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 6px;
+    gap: 4px;
+    padding: 7px 14px;
+    border-radius: 9999px;
+    background: #E8F5E9;
+    color: #0D631B !important;
+    font-size: 12.5px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
     transition: all 0.2s ease;
-    text-decoration: none !important;
   }
-  .btn-seed-detail:hover {
+  .seed-card-clean:hover .btn-detail-clean {
     background: #0D631B;
+    color: #FFFFFF !important;
   }
 
-  /* Empty state */
-  .gt-empty-state {
-    display: none;
-    padding: 48px 20px;
-    text-align: center;
-    background: #F6F3F2;
-    border-radius: 20px;
-    margin: 20px 0;
-  }
-  .gt-empty-state.show {
-    display: block;
-  }
-
-  /* Skeleton Loading & Stock Badge */
+  /* Skeleton Loading */
   .seed-skeleton-card {
     background: #FFFFFF;
-    border: 1px solid #E5E2E1;
+    border: 1px solid #E5E7EB;
     border-radius: 20px;
-    padding: 16px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 440px;
+    min-height: 320px;
   }
   .skeleton-box {
-    background: linear-gradient(90deg, #ece9e8 25%, #f7f5f4 50%, #ece9e8 75%);
+    background: linear-gradient(90deg, #f0eeee 25%, #f9f8f8 50%, #f0eeee 75%);
     background-size: 200% 100%;
     animation: skeleton-shimmer 1.5s infinite;
     border-radius: 8px;
@@ -503,155 +394,144 @@
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
   }
-  .seed-badge-stock {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(220, 38, 38, 0.92);
-    color: #FFFFFF;
-    font-size: 10.5px;
-    font-weight: 700;
-    padding: 3px 8px;
+
+  /* Empty State */
+  .gt-empty-state {
+    display: none;
+    padding: 48px 20px;
+    text-align: center;
+    background: #F6F3F2;
     border-radius: 20px;
+    margin: 20px 0;
+    grid-column: 1 / -1;
+  }
+  .gt-empty-state.show {
+    display: block;
   }
 
-  /* Seed Calculator Widget */
-  .gt-calc-section {
-    background: #F6F3F2;
-    border: 1px solid #E5E2E1;
-    border-radius: 24px;
-    padding: 36px 28px;
-    margin-bottom: 48px;
-  }
-  .gt-calc-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  @media (min-width: 992px) {
-    .gt-calc-grid { grid-template-columns: 1fr 1.2fr; align-items: center; }
-  }
-  .calc-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #ACF4A4;
-    color: #0C5216;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-  .calc-title {
-    font-family: 'Outfit', sans-serif;
-    font-size: 26px;
-    font-weight: 800;
-    color: #1B1C1C;
-    margin: 0 0 10px 0;
-  }
-  .calc-desc {
-    font-size: 14px;
-    color: #40493D;
-    line-height: 1.6;
-    margin: 0 0 18px 0;
-  }
-  .calc-tip-box {
-    background: #FFFFFF;
-    border-radius: 14px;
-    padding: 14px;
-    display: flex;
-    gap: 10px;
-    font-size: 12.5px;
-    color: #40493D;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-  }
-  .calc-tool-card {
+  /* Collapsible Seed Calculator (Clean & Unobtrusive) */
+  .gt-calc-accordion {
+    margin-top: 48px;
     background: #FFFFFF;
     border: 1px solid #E5E7EB;
     border-radius: 20px;
-    padding: 24px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
   }
-  .calc-inputs-grid {
+  .gt-calc-toggle-btn {
+    width: 100%;
+    padding: 18px 22px;
+    background: #F9FAFB;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s ease;
+  }
+  .gt-calc-toggle-btn:hover {
+    background: #F3F4F6;
+  }
+  .gt-calc-toggle-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .gt-calc-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #0D631B;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .gt-calc-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1B1C1C;
+    margin: 0;
+  }
+  .gt-calc-subtitle {
+    font-size: 12px;
+    color: #6B7280;
+    margin: 0;
+  }
+  .gt-calc-body {
+    display: none;
+    padding: 24px;
+    border-top: 1px solid #E5E7EB;
+    background: #FFFFFF;
+  }
+  .gt-calc-body.open {
+    display: block;
+  }
+  .gt-calc-grid-inner {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin-bottom: 20px;
+    gap: 20px;
   }
-  @media (min-width: 600px) {
-    .calc-inputs-grid { grid-template-columns: 1fr 1fr; }
-    .calc-inputs-grid .full { grid-column: span 2; }
-  }
-  .calc-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #40493D;
-    display: block;
-    margin-bottom: 6px;
-  }
-  .calc-input, .calc-select {
-    width: 100%;
-    height: 44px;
-    padding: 0 14px;
-    border-radius: 12px;
-    border: 1px solid #E5E2E1;
-    background: #F6F3F2;
-    font-size: 14px;
-    font-family: inherit;
-    outline: none;
-  }
-  .calc-result-box {
-    background: rgba(13, 99, 27, 0.08);
-    border: 1px solid rgba(13, 99, 27, 0.15);
-    border-radius: 16px;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  @media (min-width: 600px) {
-    .calc-result-box {
-      flex-direction: row;
-      justify-content: space-between;
+  @media (min-width: 768px) {
+    .gt-calc-grid-inner {
+      grid-template-columns: 1fr 1fr;
       align-items: center;
     }
   }
-  .calc-res-title {
-    font-size: 12px;
-    font-weight: 600;
-    color: #0D631B;
+  .calc-form-group {
+    margin-bottom: 12px;
   }
-  .calc-res-val {
+  .calc-form-group label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+  }
+  .calc-form-group select,
+  .calc-form-group input {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+    background: #F9FAFB;
+    font-size: 13.5px;
+    font-family: inherit;
+    outline: none;
+  }
+  .calc-form-group select:focus,
+  .calc-form-group input:focus {
+    background: #FFFFFF;
+    border-color: #0D631B;
+  }
+  .calc-result-clean {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .calc-res-num {
     font-family: 'Outfit', sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 800;
     color: #0D631B;
-    line-height: 1.1;
-  }
-  .calc-res-unit {
-    font-size: 15px;
-    font-weight: 700;
-    color: #0D631B;
-  }
-  .calc-res-sub {
-    font-size: 12px;
-    color: #5F6368;
-  }
-  .calc-saran-card {
-    background: #FFFFFF;
-    padding: 10px 16px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    text-align: right;
+    line-height: 1;
   }
 
-  /* Modal Detail */
+  /* Modal Popup (Clean Detail Dialog) */
   .gt-modal-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     z-index: 9999;
     display: none;
     align-items: center;
@@ -663,20 +543,17 @@
   }
   .gt-modal-card {
     background: #FFFFFF;
-    border-radius: 22px;
-    padding: 28px;
-    max-width: 520px;
+    border-radius: 24px;
     width: 100%;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px 24px;
+    box-shadow: 0 20px 48px rgba(0,0,0,0.2);
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    animation: modalPop 0.25s ease-out;
-  }
-  @keyframes modalPop {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
   }
   .modal-close-btn {
     position: absolute;
@@ -685,206 +562,214 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #F6F3F2;
+    background: #F3F4F6;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #4B5563;
+    transition: background 0.2s ease;
+  }
+  .modal-close-btn:hover {
+    background: #E5E7EB;
+    color: #111827;
+  }
+  .modal-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 12px 14px;
+  }
+  .modal-spec-item {
+    font-size: 12px;
+  }
+  .modal-spec-item span {
+    display: block;
+    color: #6B7280;
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+  .modal-spec-item strong {
+    color: #111827;
+    font-size: 13.5px;
+  }
+  .modal-note-box {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.5;
+  }
+  .modal-actions-row {
+    display: flex;
+    gap: 10px;
+    padding-top: 6px;
+  }
+  .modal-btn-wa {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #25D366;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 12px;
+    border-radius: 9999px;
+    transition: background 0.2s ease;
+  }
+  .modal-btn-wa:hover {
+    background: #1EBE5D;
+  }
+  .modal-btn-close {
+    padding: 12px 20px;
+    border-radius: 9999px;
+    background: #F3F4F6;
+    color: #374151;
+    border: none;
+    font-weight: 600;
+    font-size: 13.5px;
+    cursor: pointer;
+  }
+  .modal-btn-close:hover {
+    background: #E5E7EB;
   }
 </style>
 
 <div class="gt-bibit-wrap">
 
-  <!-- Breadcrumb -->
-  <div class="gt-breadcrumb">
+  <!-- 1. Breadcrumb -->
+  <nav class="gt-breadcrumb">
     <a href="/">Beranda</a>
     <span>/</span>
     <span>Katalog Bibit</span>
+  </nav>
+
+  <!-- 2. Clean Header -->
+  <div class="gt-page-header">
+    <div class="gt-badge-tag">
+      <span class="material-symbols-outlined" style="font-size:16px;">potted_plant</span>
+      Varietas Unggul Bersertifikat
+    </div>
+    <h1 class="gt-page-title">Katalog Bibit Tanaman</h1>
+    <p class="gt-page-desc">
+      Temukan pilihan varietas benih dan bibit tanaman teruji dengan daya tumbuh tinggi untuk kebun rumah hingga agribisnis skala luas.
+    </p>
   </div>
 
-  <!-- 1. Top Context Banner -->
-  <div class="gt-banner-box">
-    <div>
-      <div class="gt-badge-tag">
-        <span class="material-symbols-outlined" style="font-size:16px;">verified</span>
-        <span>Basis Data Benih Tersertifikasi BPSB &amp; Kementan RI</span>
-      </div>
-      <h1 class="gt-banner-title">Katalog Bibit &amp; Varietas Unggul</h1>
-      <p class="gt-banner-desc">
-        Temukan rekomendasi bibit presisi berdaya kecambah tinggi (&gt;85%) dengan kecocokan agroklimat mikrokosmos, elevasi MDPL, dan ketahanan spesifik hama-penyakit di Indonesia.
-      </p>
-    </div>
-
-    <!-- Quick Metrics -->
-    <div class="gt-metrics-pill">
-      <div class="metric-col">
-        <div class="metric-icon-box">
-          <span class="material-symbols-outlined" style="font-size:20px;">spa</span>
-        </div>
-        <div>
-          <div class="metric-num">148+</div>
-          <div class="metric-lbl">Varietas Terdaftar</div>
-        </div>
-      </div>
-      <div class="metric-divider"></div>
-      <div class="metric-col">
-        <div class="metric-icon-box sec">
-          <span class="material-symbols-outlined" style="font-size:20px;">psychology_alt</span>
-        </div>
-        <div>
-          <div class="metric-num">98.2%</div>
-          <div class="metric-lbl">Akurasi MDPL</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. Search & Controls -->
-  <div class="gt-controls-wrap">
-    
-    <div class="gt-search-sort-bar">
-      <div class="gt-search-input-box">
-        <span class="material-symbols-outlined search-icon" style="font-size:20px;">search</span>
-        <input type="text" id="seed-search-input" placeholder="Cari nama varietas, hama toleran, atau komoditas (misal: Ori 212, Gemini, Servo)..." />
-        <button id="clear-search-btn" class="gt-clear-btn" title="Hapus">
+  <!-- 3. Streamlined Search & Category Filters -->
+  <div class="gt-filter-card">
+    <div class="gt-search-row">
+      <!-- Search Input -->
+      <div class="gt-search-input-wrap">
+        <span class="material-symbols-outlined" style="color:#6B7280; font-size:20px;">search</span>
+        <input type="text" id="seed-search-input" placeholder="Cari nama varietas (misal: Cabai Ori 212, Tomat Servo, Melon)..." />
+        <button id="clear-search-btn" class="gt-clear-btn" title="Hapus pencarian">
           <span class="material-symbols-outlined" style="font-size:18px;">close</span>
         </button>
       </div>
 
-      <div class="gt-sort-box">
-        <label for="sort-select">
-          <span class="material-symbols-outlined" style="font-size:18px;">swap_vert</span>
-          Urutkan:
-        </label>
+      <!-- Sort Dropdown -->
+      <div class="gt-sort-wrap">
         <select id="sort-select" class="gt-sort-select">
-          <option value="popular">Paling Populer</option>
+          <option value="popular">Urutan: Rekomendasi</option>
           <option value="germination">Daya Tumbuh Tertinggi</option>
-          <option value="harvest">Waktu Panen Tercepat</option>
-          <option value="yield">Potensi Hasil Tertinggi</option>
+          <option value="harvest">Masa Panen Tercepat</option>
+          <option value="price-asc">Harga Terendah</option>
+          <option value="price-desc">Harga Tertinggi</option>
         </select>
       </div>
     </div>
 
-    <!-- Multi-dimension Filter Chips -->
-    <div class="gt-chips-filter-box">
-      <!-- Elevasi MDPL -->
-      <div class="filter-row">
-        <span class="filter-row-title">
-          <span class="material-symbols-outlined" style="font-size:16px;">landscape</span>
-          Ketinggian Lahan:
-        </span>
-        <div class="chips-group" id="mdpl-filters">
-          <button class="filter-chip active filter-mdpl" data-mdpl="all">Semua MDPL</button>
-          <button class="filter-chip filter-mdpl" data-mdpl="low">Dataran Rendah (0-400 mdpl)</button>
-          <button class="filter-chip filter-mdpl" data-mdpl="medium">Dataran Menengah (400-800 mdpl)</button>
-          <button class="filter-chip filter-mdpl" data-mdpl="high">Dataran Tinggi (&gt;800 mdpl)</button>
-        </div>
-      </div>
-
-      <!-- Komoditas -->
-      <div class="filter-row">
-        <span class="filter-row-title">
-          <span class="material-symbols-outlined" style="font-size:16px;">category</span>
-          Komoditas:
-        </span>
-        <div class="chips-group" id="commodity-filters">
-          <button class="filter-chip active filter-cat" data-cat="all">Semua Jenis</button>
-          <button class="filter-chip filter-cat" data-cat="Sayur">Sayuran</button>
-          <button class="filter-chip filter-cat" data-cat="Buah">Buah-buahan</button>
-          <button class="filter-chip filter-cat" data-cat="Palawija">Pangan &amp; Palawija</button>
-          <button class="filter-chip filter-cat" data-cat="Rempah">Rempah &amp; Herbal</button>
-        </div>
-      </div>
-
-      <!-- Tipe Varietas -->
-      <div class="summary-row">
-        <div class="chips-group" style="align-items:center;">
-          <span style="font-weight:600; color:#40493D; margin-right:4px;">Jenis Bibit:</span>
-          <button class="filter-chip active filter-type" data-type="all">Semua</button>
-          <button class="filter-chip filter-type" data-type="f1">Hibrida (F1)</button>
-          <button class="filter-chip filter-type" data-type="local">Unggul Bebas / Lokal</button>
-        </div>
-        <div>
-          Menampilkan <strong id="visible-count" style="color:#0D631B; font-size:15px;">...</strong> dari <span id="total-count" style="font-weight:600;">...</span> bibit terdaftar
-        </div>
-      </div>
+    <!-- Category Pills -->
+    <div class="gt-pills-row">
+      <button class="gt-pill-btn active filter-cat" data-cat="all">Semua Kategori</button>
+      <button class="gt-pill-btn filter-cat" data-cat="Cabai &amp; Tomat">Cabai &amp; Tomat</button>
+      <button class="gt-pill-btn filter-cat" data-cat="Sayuran Daun">Sayuran Daun</button>
+      <button class="gt-pill-btn filter-cat" data-cat="Buah &amp; Melon">Buah &amp; Melon</button>
+      <button class="gt-pill-btn filter-cat" data-cat="Padi &amp; Palawija">Padi &amp; Palawija</button>
+      <button class="gt-pill-btn filter-cat" data-cat="Perkebunan &amp; Rempah">Perkebunan &amp; Rempah</button>
     </div>
 
+    <!-- Live Counter -->
+    <div class="gt-counter-row">
+      <div>
+        Menampilkan <strong id="visible-count">...</strong> dari <span id="total-count">...</span> varietas
+      </div>
+      <div id="filter-status-text" style="font-size:12px; color:#9CA3AF;">
+        Pilihan terbaik dari petani binaan Go-Tani
+      </div>
+    </div>
   </div>
 
-  <!-- 3. Seed Cards Grid (Dynamic Supabase Container) -->
+  <!-- 4. Cards Grid (Dynamic from Supabase) -->
   <div class="gt-cards-grid" id="seed-cards-container">
-    <!-- Skeleton Loaders -->
+    <!-- Skeleton Loading Cards -->
     <div class="seed-skeleton-card">
-      <div>
-        <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:14px; border-radius:14px;"></div>
-        <div class="skeleton-box" style="width:40%; height:14px; margin-bottom:8px;"></div>
-        <div class="skeleton-box" style="width:80%; height:20px; margin-bottom:10px;"></div>
-        <div class="skeleton-box" style="width:100%; height:36px; margin-bottom:12px;"></div>
-        <div class="skeleton-box" style="width:100%; height:40px; margin-bottom:14px;"></div>
-      </div>
-      <div class="skeleton-box" style="width:100%; height:38px; border-radius:30px;"></div>
+      <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:12px; border-radius:14px;"></div>
+      <div class="skeleton-box" style="width:50%; height:14px; margin-bottom:8px;"></div>
+      <div class="skeleton-box" style="width:85%; height:20px; margin-bottom:12px;"></div>
+      <div class="skeleton-box" style="width:100%; height:32px;"></div>
     </div>
     <div class="seed-skeleton-card">
-      <div>
-        <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:14px; border-radius:14px;"></div>
-        <div class="skeleton-box" style="width:40%; height:14px; margin-bottom:8px;"></div>
-        <div class="skeleton-box" style="width:80%; height:20px; margin-bottom:10px;"></div>
-        <div class="skeleton-box" style="width:100%; height:36px; margin-bottom:12px;"></div>
-        <div class="skeleton-box" style="width:100%; height:40px; margin-bottom:14px;"></div>
-      </div>
-      <div class="skeleton-box" style="width:100%; height:38px; border-radius:30px;"></div>
+      <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:12px; border-radius:14px;"></div>
+      <div class="skeleton-box" style="width:50%; height:14px; margin-bottom:8px;"></div>
+      <div class="skeleton-box" style="width:85%; height:20px; margin-bottom:12px;"></div>
+      <div class="skeleton-box" style="width:100%; height:32px;"></div>
     </div>
     <div class="seed-skeleton-card">
-      <div>
-        <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:14px; border-radius:14px;"></div>
-        <div class="skeleton-box" style="width:40%; height:14px; margin-bottom:8px;"></div>
-        <div class="skeleton-box" style="width:80%; height:20px; margin-bottom:10px;"></div>
-        <div class="skeleton-box" style="width:100%; height:36px; margin-bottom:12px;"></div>
-        <div class="skeleton-box" style="width:100%; height:40px; margin-bottom:14px;"></div>
-      </div>
-      <div class="skeleton-box" style="width:100%; height:38px; border-radius:30px;"></div>
+      <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:12px; border-radius:14px;"></div>
+      <div class="skeleton-box" style="width:50%; height:14px; margin-bottom:8px;"></div>
+      <div class="skeleton-box" style="width:85%; height:20px; margin-bottom:12px;"></div>
+      <div class="skeleton-box" style="width:100%; height:32px;"></div>
+    </div>
+    <div class="seed-skeleton-card">
+      <div class="skeleton-box" style="width:100%; aspect-ratio:4/3; margin-bottom:12px; border-radius:14px;"></div>
+      <div class="skeleton-box" style="width:50%; height:14px; margin-bottom:8px;"></div>
+      <div class="skeleton-box" style="width:85%; height:20px; margin-bottom:12px;"></div>
+      <div class="skeleton-box" style="width:100%; height:32px;"></div>
     </div>
   </div>
 
   <!-- Empty State Alert -->
   <div class="gt-empty-state" id="no-results-msg">
-    <span class="material-symbols-outlined" style="font-size:48px; color:#5F6368;">search_off</span>
-    <h3 style="font-family:'Outfit',sans-serif; font-size:20px; font-weight:700; margin:8px 0 4px;">Varietas Tidak Ditemukan</h3>
-    <p style="font-size:14px; color:#5F6368; max-width:400px; margin:0 auto 16px;">Coba sesuaikan kata kunci pencarian atau ubah kriteria filter MDPL dan jenis komoditas.</p>
-    <button onclick="resetAllFilters()" style="padding:10px 24px; border-radius:30px; background:#0D631B; color:#FFFFFF; border:none; cursor:pointer; font-weight:600; font-size:13px;">
-      Reset Semua Filter
+    <span class="material-symbols-outlined" style="font-size:44px; color:#9CA3AF;">search_off</span>
+    <h3 style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:700; margin:8px 0 4px;">Varietas Tidak Ditemukan</h3>
+    <p style="font-size:13.5px; color:#6B7280; max-width:380px; margin:0 auto 16px;">Coba gunakan kata kunci pencarian yang lebih umum atau pilih kategori "Semua Kategori".</p>
+    <button onclick="resetAllFilters()" style="padding:8px 20px; border-radius:9999px; background:#0D631B; color:#FFFFFF; border:none; cursor:pointer; font-weight:600; font-size:13px;">
+      Reset Pencarian
     </button>
   </div>
 
-  <!-- 4. Interactive Seed Quantity Calculator -->
-  <div class="gt-calc-section">
-    <div class="gt-calc-grid">
-      
-      <div>
-        <div class="calc-badge">
-          <span class="material-symbols-outlined" style="font-size:16px;">calculate</span>
-          Fitur Pintar Agronomi
+  <!-- 5. Collapsible Seed Quantity Calculator (Minimalist Accordion) -->
+  <div class="gt-calc-accordion">
+    <button class="gt-calc-toggle-btn" id="calcToggleBtn" type="button">
+      <div class="gt-calc-toggle-left">
+        <div class="gt-calc-icon-box">
+          <span class="material-symbols-outlined" style="font-size:20px;">calculate</span>
         </div>
-        <h2 class="calc-title">Kalkulator Kebutuhan Benih</h2>
-        <p class="calc-desc">
-          Hindari pemborosan modal atau kekurangan populasi tanaman di lahan. Hitung estimasi gramatur dan jumlah sachet benih berdasarkan luas lahan dan jarak tanam rekomendasi.
-        </p>
-
-        <div class="calc-tip-box">
-          <span class="material-symbols-outlined" style="color:#0D631B; font-size:22px; flex-shrink:0;">tips_and_updates</span>
-          <p style="margin:0; line-height:1.5;">
-            Perhitungan telah menyertakan faktor pengaman penyulaman mandiri sebesar <strong>10-15%</strong> dari total populasi lubang tanam.
-          </p>
+        <div>
+          <h3 class="gt-calc-title">Kalkulator Estimasi Kebutuhan Benih Lahan</h3>
+          <p class="gt-calc-subtitle">Klik untuk menghitung perkiraan gramatur sachet benih berdasarkan luas lahan Anda</p>
         </div>
       </div>
+      <span class="material-symbols-outlined" id="calcToggleIcon" style="color:#6B7280; transition: transform 0.3s ease;">expand_more</span>
+    </button>
 
-      <div class="calc-tool-card">
-        <div class="calc-inputs-grid">
-          <div>
-            <label class="calc-label" for="calc-crop">Pilih Komoditas Tanaman</label>
-            <select id="calc-crop" class="calc-select">
+    <div class="gt-calc-body" id="calcBody">
+      <div class="gt-calc-grid-inner">
+        <div>
+          <div class="calc-form-group">
+            <label for="calc-crop">Pilih Komoditas</label>
+            <select id="calc-crop">
               <option value="chili" data-rate="150" data-pop="18000" data-pack="10">Cabai Rawit / Keriting</option>
               <option value="tomato" data-rate="120" data-pop="20000" data-pack="5">Tomat Sayur / Buah</option>
               <option value="corn" data-rate="15000" data-pop="65000" data-pack="250">Jagung Manis</option>
@@ -893,96 +778,92 @@
             </select>
           </div>
 
-          <div>
-            <label class="calc-label" for="calc-area-unit">Satuan Luas Lahan</label>
-            <select id="calc-area-unit" class="calc-select">
-              <option value="sqm">Meter Persegi (m²)</option>
-              <option value="ha">Hektar (Ha)</option>
-            </select>
-          </div>
-
-          <div class="full">
-            <label class="calc-label" for="calc-area-val">Masukkan Luas Lahan</label>
-            <input type="number" id="calc-area-val" class="calc-input" value="1000" min="10" step="10" />
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <div class="calc-form-group">
+              <label for="calc-area-val">Luas Lahan</label>
+              <input type="number" id="calc-area-val" value="1000" min="10" step="10" />
+            </div>
+            <div class="calc-form-group">
+              <label for="calc-area-unit">Satuan</label>
+              <select id="calc-area-unit">
+                <option value="sqm">Meter Persegi (m²)</option>
+                <option value="ha">Hektar (Ha)</option>
+              </select>
+            </div>
           </div>
         </div>
 
-        <div class="calc-result-box">
+        <div class="calc-result-clean">
+          <div style="font-size:12px; color:#166534; font-weight:600;">HASIL ESTIMASI AGRONOMIS:</div>
           <div>
-            <div class="calc-res-title">Estimasi Kebutuhan Benih:</div>
-            <div>
-              <span id="res-weight" class="calc-res-val">15.0</span>
-              <span id="res-weight-unit" class="calc-res-unit">Gram</span>
+            <div style="font-size:12px; color:#4B5563;">Estimasi Kebutuhan Benih:</div>
+            <div class="calc-res-num">
+              <span id="res-weight">15.0</span> <span id="res-weight-unit" style="font-size:16px; font-weight:600;">Gram</span>
             </div>
-            <div id="res-population" class="calc-res-sub">Estimasi ±1.800 lubang tanam</div>
+            <div id="res-population" style="font-size:12px; color:#4B5563; margin-top:2px;">±1.800 lubang tanam</div>
           </div>
-
-          <div class="calc-saran-card">
-            <div style="font-size:11px; color:#5F6368;">Saran Pembelian:</div>
-            <div id="res-packs" style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:800; color:#0D631B;">2 Sachet</div>
-            <div style="font-size:11px; color:#5F6368;">Ukuran reguler</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px dashed #BBF7D0; padding-top:8px; margin-top:4px;">
+            <span style="font-size:12.5px; color:#166534;">Rekomendasi Pembelian:</span>
+            <strong id="res-packs" style="font-family:'Outfit',sans-serif; font-size:16px; color:#0D631B;">2 Sachet Reguler</strong>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- Modal Pop-up Drawer -->
+  <!-- 6. Detail Modal Dialog -->
   <div class="gt-modal-backdrop" id="seed-modal">
     <div class="gt-modal-card">
-      <button class="modal-close-btn" onclick="closeSeedModal()">
+      <button class="modal-close-btn" onclick="closeSeedModal()" title="Tutup">
         <span class="material-symbols-outlined" style="font-size:18px;">close</span>
       </button>
-      
-      <div style="display:flex; align-items:center; gap:6px; color:#0D631B; font-size:12px; font-weight:700;">
-        <span class="material-symbols-outlined" style="font-size:16px;">verified_user</span>
-        <span>Spesifikasi &amp; Rekomendasi Agronomis</span>
-      </div>
 
       <div>
-        <h3 id="modal-title" style="font-family:'Outfit',sans-serif; font-size:22px; font-weight:700; color:#1B1C1C; margin:0 0 2px;">Nama Benih</h3>
-        <p id="modal-category" style="font-size:13px; color:#5F6368; margin:0;">Kategori</p>
+        <span id="modal-category" style="font-size:12px; font-weight:700; color:#0D631B; text-transform:uppercase; letter-spacing:0.5px;">Kategori</span>
+        <h2 id="modal-title" style="font-family:'Outfit',sans-serif; font-size:22px; font-weight:800; color:#1B1C1C; margin:2px 0 0;">Nama Benih</h2>
       </div>
 
-      <div style="background:#F6F3F2; border-radius:14px; padding:12px 14px; display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:12px;">
-        <div>
-          <span style="color:#5F6368; display:block; font-size:11px;">Daya Berkecambah:</span>
-          <strong id="modal-germ" style="color:#0D631B; font-size:14px;">95%</strong>
+      <!-- 4 Agronomic Specs Grid -->
+      <div class="modal-spec-grid">
+        <div class="modal-spec-item">
+          <span>Daya Berkecambah</span>
+          <strong id="modal-germ" style="color:#0D631B;">95%</strong>
         </div>
-        <div>
-          <span style="color:#5F6368; display:block; font-size:11px;">Estimasi Panen:</span>
-          <strong id="modal-harvest" style="font-size:14px;">85 - 90 HST</strong>
+        <div class="modal-spec-item">
+          <span>Estimasi Panen</span>
+          <strong id="modal-harvest">85 - 90 HST</strong>
         </div>
-        <div>
-          <span style="color:#5F6368; display:block; font-size:11px;">Estimasi Harga:</span>
-          <strong id="modal-yield" style="font-size:14px;">Rp35.000</strong>
+        <div class="modal-spec-item">
+          <span>Estimasi Harga</span>
+          <strong id="modal-price" style="color:#0D631B;">Rp35.000</strong>
         </div>
-        <div>
-          <span style="color:#5F6368; display:block; font-size:11px;">Musim &amp; Elevasi:</span>
-          <strong id="modal-mdpl" style="font-size:14px;">0 - 800 mdpl</strong>
+        <div class="modal-spec-item">
+          <span>Rekomendasi Lahan</span>
+          <strong id="modal-mdpl">0 - 800 mdpl</strong>
         </div>
       </div>
 
       <div>
-        <span style="font-size:11px; font-weight:700; color:#5F6368; text-transform:uppercase; letter-spacing:0.5px;">Deskripsi Keunggulan:</span>
-        <p id="modal-notes" style="font-size:13px; color:#1B1C1C; background:rgba(246,243,242,0.6); padding:10px 12px; border-radius:10px; margin:4px 0 0; line-height:1.5;">
+        <span style="font-size:12px; font-weight:700; color:#4B5563; text-transform:uppercase; letter-spacing:0.5px;">Keunggulan Varietas:</span>
+        <div id="modal-notes" class="modal-note-box" style="margin-top:4px;">
           Instruksi budidaya...
-        </p>
+        </div>
       </div>
 
       <div id="modal-caratanam-wrap">
-        <span style="font-size:11px; font-weight:700; color:#5F6368; text-transform:uppercase; letter-spacing:0.5px;">Panduan Cara Tanam:</span>
-        <p id="modal-caratanam" style="font-size:13px; color:#1B1C1C; background:rgba(246,243,242,0.6); padding:10px 12px; border-radius:10px; margin:4px 0 0; line-height:1.5;">
+        <span style="font-size:12px; font-weight:700; color:#4B5563; text-transform:uppercase; letter-spacing:0.5px;">Panduan Cara Tanam Singkat:</span>
+        <div id="modal-caratanam" class="modal-note-box" style="margin-top:4px;">
           -
-        </p>
+        </div>
       </div>
 
-      <div style="display:flex; gap:10px; margin-top:6px;">
-        <a href="/p/kontak.html" style="flex:1; padding:11px; border-radius:30px; background:#0D631B; color:#FFFFFF !important; text-align:center; font-size:13px; font-weight:600; text-decoration:none;">
-          Konsultasi Agronomis Gratis
+      <!-- Action Buttons -->
+      <div class="modal-actions-row">
+        <a id="modal-wa-link" class="modal-btn-wa" href="https://wa.me/6288989643555" target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined" style="font-size:18px;">chat</span>
+          Tanya / Pesan via WhatsApp
         </a>
-        <button onclick="closeSeedModal()" style="padding:11px 20px; border-radius:30px; background:#F6F3F2; color:#1B1C1C; border:none; cursor:pointer; font-size:13px; font-weight:600;">
+        <button class="modal-btn-close" onclick="closeSeedModal()">
           Tutup
         </button>
       </div>
@@ -994,17 +875,15 @@
 <!-- Client-side Logic Script with Supabase Database Connection -->
 <script>
   (function() {
-    // 1. SUPABASE CONFIGURATION
     const SUPABASE_URL = 'https://abeqqbahcigexjwmklqn.supabase.co';
     const SUPABASE_ANON_KEY = 'sb_publishable_WCHTRDOVsPJj8Cb1ykIJLw_DE6_v7dR';
+    const WA_PHONE = '6288989643555';
 
     let allSeeds = [];
     let currentCards = [];
     const currentFilters = {
       search: '',
-      mdpl: 'all',
       cat: 'all',
-      type: 'all',
       sort: 'popular'
     };
 
@@ -1016,36 +895,7 @@
     const noResultsMsg = document.getElementById('no-results-msg');
     const cardsContainer = document.getElementById('seed-cards-container');
 
-    // Utility: Deteksi ketinggian MDPL dari teks musim tanam / deskripsi
-    function detectMdpl(text) {
-      const t = (text || '').toLowerCase();
-      const mdpls = [];
-      if (t.includes('rendah') || t.includes('<400') || t.includes('0-400') || t.includes('0-600') || t.includes('0-800') || t.includes('0 - 800') || t.includes('<600') || t.includes('rawa')) {
-        mdpls.push('low');
-      }
-      if (t.includes('menengah') || t.includes('400-800') || t.includes('400-1200') || t.includes('700-1000') || t.includes('700-1200') || t.includes('0-800') || t.includes('0 - 800') || t.includes('600-1500')) {
-        mdpls.push('medium');
-      }
-      if (t.includes('tinggi') || t.includes('>800') || t.includes('700-1000') || t.includes('700-1200') || t.includes('400-1200') || t.includes('600-1500')) {
-        mdpls.push('high');
-      }
-      if (mdpls.length === 0 || t.includes('sepanjang tahun') || t.includes('adaptif')) {
-        return 'low,medium,high';
-      }
-      return mdpls.join(',');
-    }
-
-    // Utility: Deteksi tipe varietas (F1 vs Lokal)
-    function detectType(item) {
-      const name = (item.nama_bibit || '').toUpperCase();
-      const desc = (item.deskripsi || '').toUpperCase();
-      if (name.includes('F1') || name.includes('G9') || name.includes('IPB') || name.includes('TM ') || name.includes('TM 999') || desc.includes('HIBRIDA')) {
-        return { code: 'f1', label: name.includes('F1') ? 'Hibrida F1' : 'Kultivar Unggul' };
-      }
-      return { code: 'local', label: 'Unggul Lokal' };
-    }
-
-    // Utility: Parse estimasi hari panen untuk sorting
+    // Parse Harvest Days for sorting
     function parseHarvestDays(str) {
       if (!str) return 70;
       const s = str.toLowerCase();
@@ -1061,27 +911,33 @@
       return m ? parseInt(m[0]) : 60;
     }
 
-    // Modal Details Opener
+    // Modal Controller
     const modal = document.getElementById('seed-modal');
-    window.openSeedDetail = function(title, cat, germ, harvest, yld, mdpl, notes, caraTanam) {
+    window.openSeedDetail = function(title, cat, germ, harvest, price, mdpl, notes, caraTanam) {
       if (!modal) return;
       document.getElementById('modal-title').innerText = title || '-';
-      document.getElementById('modal-category').innerText = `Kategori: ${cat || 'Tanaman Unggul'}`;
+      document.getElementById('modal-category').innerText = cat || 'Tanaman Unggul';
       document.getElementById('modal-germ').innerText = germ || '95%';
       document.getElementById('modal-harvest').innerText = harvest || '-';
-      document.getElementById('modal-yield').innerText = yld || '-';
-      document.getElementById('modal-mdpl').innerText = mdpl || 'Adaptif';
+      document.getElementById('modal-price').innerText = price || '-';
+      document.getElementById('modal-mdpl').innerText = mdpl || 'Adaptif MDPL';
       document.getElementById('modal-notes').innerText = notes || '-';
       
       const caraTanamEl = document.getElementById('modal-caratanam');
       const caraTanamWrap = document.getElementById('modal-caratanam-wrap');
       if (caraTanamEl && caraTanamWrap) {
-        if (caraTanam && caraTanam.trim()) {
+        if (caraTanam && caraTanam.trim() && caraTanam !== '-') {
           caraTanamEl.innerText = caraTanam;
           caraTanamWrap.style.display = 'block';
         } else {
           caraTanamWrap.style.display = 'none';
         }
+      }
+
+      const waLink = document.getElementById('modal-wa-link');
+      if (waLink) {
+        const text = encodeURIComponent(`Halo Go-Tani, saya tertarik dan ingin konsultasi/order bibit "${title}". Apakah stoknya tersedia?`);
+        waLink.href = `https://wa.me/${WA_PHONE}?text=${text}`;
       }
 
       modal.classList.add('open');
@@ -1097,7 +953,7 @@
       });
     }
 
-    // Render Cards dari Database
+    // Render Cards Clean
     function renderCards(seeds) {
       if (!cardsContainer) return;
       cardsContainer.innerHTML = '';
@@ -1106,10 +962,10 @@
         if (visibleCountEl) visibleCountEl.innerText = '0';
         if (totalCountEl) totalCountEl.innerText = '0';
         cardsContainer.innerHTML = `
-          <div class="gt-empty-state show" style="display:block; grid-column: 1 / -1; padding: 48px 16px; text-align: center;">
-            <span class="material-symbols-outlined" style="font-size: 48px; color: #707A6C;">potted_plant</span>
-            <h3 style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; margin: 10px 0 6px; color: #1B1C1C;">Belum Ada Bibit Terdaftar</h3>
-            <p style="font-size: 14px; color: #5F6368; max-width: 440px; margin: 0 auto;">Saat ini belum ada varietas bibit tanaman di database. Silakan tambahkan bibit baru melalui Admin Dashboard.</p>
+          <div class="gt-empty-state show">
+            <span class="material-symbols-outlined" style="font-size:44px; color:#9CA3AF;">potted_plant</span>
+            <h3 style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:700; margin:8px 0 4px;">Belum Ada Bibit Terdaftar</h3>
+            <p style="font-size:13.5px; color:#6B7280; max-width:380px; margin:0 auto;">Data bibit tanaman belum tersedia di database.</p>
           </div>
         `;
         if (noResultsMsg) noResultsMsg.classList.remove('show');
@@ -1117,81 +973,51 @@
       }
 
       seeds.forEach((item, index) => {
-        const typeInfo = detectType(item);
-        const mdplCodes = detectMdpl((item.musim_tanam || '') + ' ' + (item.deskripsi || ''));
         const harvestDays = parseHarvestDays(item.masa_panen);
         const germVal = 92 + (Number(item.id || index) % 7); // 92-98%
-        const fallbackImg = 'https://images.wsrv.nl/?url=images.unsplash.com/photo-1592841200221-a6898f307baa?w=500&output=webp';
+        const fallbackImg = 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=500&auto=format&fit=crop&q=80';
         const formattedPrice = Number(item.harga_estimasi || 0) > 0 
           ? `Rp${Number(item.harga_estimasi).toLocaleString('id-ID')}` 
           : 'Hubungi Kami';
 
-        let mdplLabel = '0 - 800 mdpl';
-        if (item.musim_tanam) {
-          const mMatch = item.musim_tanam.match(/\d+[\s-–]+\d+\s*mdpl|\d+\s*mdpl|<\s*\d+\s*mdpl|>\s*\d+\s*mdpl/i);
-          if (mMatch) mdplLabel = mMatch[0];
-          else if (item.musim_tanam.toLowerCase().includes('tinggi')) mdplLabel = '> 700 mdpl';
-          else if (item.musim_tanam.toLowerCase().includes('rendah')) mdplLabel = '0 - 400 mdpl';
-          else if (item.musim_tanam.toLowerCase().includes('sepanjang tahun')) mdplLabel = 'Adaptif MDPL';
-        }
-
         const card = document.createElement('article');
-        card.className = 'seed-item-card';
-        card.dataset.cat = item.kategori || 'Sayur';
-        card.dataset.type = typeInfo.code;
-        card.dataset.mdpl = mdplCodes;
+        card.className = 'seed-card-clean';
+        card.dataset.cat = item.kategori || 'Lainnya';
         card.dataset.germ = germVal;
         card.dataset.harvest = harvestDays;
-        card.dataset.price = item.harga_estimasi || 0;
+        card.dataset.price = Number(item.harga_estimasi || 0);
         card.dataset.id = item.id || index;
 
         card.innerHTML = `
           <div>
-            <div class="seed-img-wrap">
+            <div class="seed-thumb-wrap">
               <img src="${item.gambar_url || fallbackImg}" alt="${item.nama_bibit}" loading="lazy" onerror="this.src='${fallbackImg}';" />
-              <span class="seed-badge-type">${typeInfo.label}</span>
-              ${item.stok === false ? '<span class="seed-badge-stock">Stok Kosong</span>' : ''}
-              <div class="seed-germ-pill">
-                <span class="material-symbols-outlined" style="font-size:14px;">eco</span>
-                ${germVal}% Tumbuh
-              </div>
+              <span class="seed-badge-cat">${item.kategori || 'Bibit Unggul'}</span>
+              ${item.stok === false ? '<span class="seed-badge-stock-out">Stok Kosong</span>' : ''}
             </div>
-
-            <div class="seed-category-row">
-              <span>${item.kategori || 'Varietas Unggul'}</span>
-              <span class="mdpl">
-                <span class="material-symbols-outlined" style="font-size:14px;">terrain</span> ${mdplLabel}
-              </span>
-            </div>
-
-            <h2 class="seed-name">${item.nama_bibit}</h2>
-            <p class="seed-desc">${item.deskripsi || 'Bibit tanaman unggul pilihan petani dengan kualitas dan produktivitas teruji.'}</p>
-
-            <div class="seed-specs-grid">
-              <div class="spec-item" title="Masa Panen: ${item.masa_panen || '-'}">
-                <span class="material-symbols-outlined icon">calendar_today</span>
-                <span>${item.masa_panen ? item.masa_panen.slice(0, 16) : 'Panen Cepat'}</span>
-              </div>
-              <div class="spec-item" title="Kondisi: ${item.musim_tanam || '-'}">
-                <span class="material-symbols-outlined icon">water_drop</span>
-                <span>${item.musim_tanam ? item.musim_tanam.split(',')[0].slice(0, 16) : 'Irigasi Rutin'}</span>
+            <div class="seed-body-clean">
+              <div class="seed-info-top">
+                <h3 class="seed-name-clean">${item.nama_bibit}</h3>
+                <p class="seed-desc-clean">${item.deskripsi || 'Varietas bibit tanaman unggul berkualitas teruji.'}</p>
+                <div class="seed-quick-meta">
+                  <span><span class="material-symbols-outlined" style="font-size:14px; color:#0D631B;">eco</span> ${germVal}% Tumbuh</span>
+                  <span><span class="material-symbols-outlined" style="font-size:14px; color:#0D631B;">schedule</span> ${item.masa_panen ? item.masa_panen.split(',')[0].slice(0, 15) : 'Cepat Panen'}</span>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="seed-card-footer">
-            <div class="seed-price-row">
-              <span class="seed-price-label">Estimasi Harga:</span>
-              <span class="seed-price-num">${formattedPrice}</span>
+          <div style="padding: 0 16px 16px;">
+            <div class="seed-footer-clean">
+              <span class="seed-price-clean">${formattedPrice}</span>
+              <button class="btn-detail-clean" type="button">
+                <span>Detail</span>
+                <span class="material-symbols-outlined" style="font-size:15px;">arrow_forward</span>
+              </button>
             </div>
-            <button class="btn-seed-detail">
-              <span>Detail &amp; Panduan</span>
-              <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
-            </button>
           </div>
         `;
 
-        const btn = card.querySelector('.btn-seed-detail');
+        const btn = card.querySelector('.btn-detail-clean');
         if (btn) {
           btn.addEventListener('click', () => {
             openSeedDetail(
@@ -1200,7 +1026,7 @@
               `${germVal}%`,
               item.masa_panen || '60 - 90 HST',
               formattedPrice,
-              item.musim_tanam || mdplLabel,
+              item.musim_tanam || 'Adaptif Semua Dataran',
               item.deskripsi || '-',
               item.cara_tanam || 'Siapkan lahan dan media tanam yang gembur, siram teratur serta berikan pupuk berimbang secara berkala.'
             );
@@ -1210,12 +1036,12 @@
         cardsContainer.appendChild(card);
       });
 
-      currentCards = Array.from(cardsContainer.querySelectorAll('.seed-item-card'));
+      currentCards = Array.from(cardsContainer.querySelectorAll('.seed-card-clean'));
       if (totalCountEl) totalCountEl.innerText = seeds.length;
       applyFilters();
     }
 
-    // Filter and Sort Engine
+    // Filter & Sort Engine
     function applyFilters() {
       if (!currentCards || currentCards.length === 0) return;
       let visibleCount = 0;
@@ -1223,17 +1049,31 @@
       currentCards.forEach(card => {
         const textContent = card.innerText.toLowerCase();
         const matchesSearch = !currentFilters.search || textContent.includes(currentFilters.search.toLowerCase());
-        
-        const cardMdpls = (card.dataset.mdpl || '').split(',');
-        const matchesMdpl = currentFilters.mdpl === 'all' || cardMdpls.includes(currentFilters.mdpl);
-
         const cardCat = card.dataset.cat;
-        const matchesCat = currentFilters.cat === 'all' || cardCat === currentFilters.cat;
+        
+        let matchesCat = currentFilters.cat === 'all';
+        if (!matchesCat) {
+          const selCat = (currentFilters.cat || '').toLowerCase();
+          const cardCat = (card.dataset.cat || '').toLowerCase();
 
-        const cardType = card.dataset.type;
-        const matchesType = currentFilters.type === 'all' || cardType === currentFilters.type;
+          if (cardCat === selCat) {
+            matchesCat = true;
+          } else if (selCat === 'cabai & tomat') {
+            matchesCat = cardCat.includes('cabai') || cardCat.includes('tomat') || cardCat.includes('sayuran buah');
+          } else if (selCat === 'sayuran daun') {
+            matchesCat = cardCat.includes('daun') || cardCat.includes('hijau') || cardCat.includes('sayuran') || cardCat === 'sayur';
+          } else if (selCat === 'buah & melon') {
+            matchesCat = cardCat.includes('buah') || cardCat.includes('melon') || cardCat.includes('semangka');
+          } else if (selCat === 'padi & palawija') {
+            matchesCat = cardCat.includes('padi') || cardCat.includes('jagung') || cardCat.includes('palawija');
+          } else if (selCat === 'perkebunan & rempah') {
+            matchesCat = cardCat.includes('rempah') || cardCat.includes('kebun') || cardCat.includes('perkebunan');
+          } else {
+            matchesCat = cardCat === selCat;
+          }
+        }
 
-        if (matchesSearch && matchesMdpl && matchesCat && matchesType) {
+        if (matchesSearch && matchesCat) {
           card.style.display = 'flex';
           visibleCount++;
         } else {
@@ -1241,14 +1081,16 @@
         }
       });
 
-      // Sort cards
+      // Sort Cards
       const visibleCards = currentCards.filter(card => card.style.display !== 'none');
       visibleCards.sort((a, b) => {
         if (currentFilters.sort === 'germination') {
           return parseInt(b.dataset.germ || 0) - parseInt(a.dataset.germ || 0);
         } else if (currentFilters.sort === 'harvest') {
           return parseInt(a.dataset.harvest || 0) - parseInt(b.dataset.harvest || 0);
-        } else if (currentFilters.sort === 'yield') {
+        } else if (currentFilters.sort === 'price-asc') {
+          return parseInt(a.dataset.price || 0) - parseInt(b.dataset.price || 0);
+        } else if (currentFilters.sort === 'price-desc') {
           return parseInt(b.dataset.price || 0) - parseInt(a.dataset.price || 0);
         }
         return parseInt(a.dataset.id || 0) - parseInt(b.dataset.id || 0);
@@ -1266,7 +1108,7 @@
       }
     }
 
-    // Search input listener
+    // Search Listener
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         currentFilters.search = e.target.value.trim();
@@ -1295,39 +1137,30 @@
       });
     }
 
-    function setupFilterButtons(selector, filterKey) {
-      const buttons = document.querySelectorAll(selector);
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          buttons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          currentFilters[filterKey] = btn.getAttribute(`data-${filterKey}`);
-          applyFilters();
-        });
+    // Category Pills Listener
+    const catButtons = document.querySelectorAll('.filter-cat');
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilters.cat = btn.getAttribute('data-cat');
+        applyFilters();
       });
-    }
-
-    setupFilterButtons('.filter-mdpl', 'mdpl');
-    setupFilterButtons('.filter-cat', 'cat');
-    setupFilterButtons('.filter-type', 'type');
+    });
 
     window.resetAllFilters = function() {
       if (searchInput) searchInput.value = '';
       currentFilters.search = '';
       if (clearSearchBtn) clearSearchBtn.style.display = 'none';
 
-      const defMdpl = document.querySelector('.filter-mdpl[data-mdpl="all"]');
-      if (defMdpl) defMdpl.click();
       const defCat = document.querySelector('.filter-cat[data-cat="all"]');
       if (defCat) defCat.click();
-      const defType = document.querySelector('.filter-type[data-type="all"]');
-      if (defType) defType.click();
       if (sortSelect) sortSelect.value = 'popular';
       currentFilters.sort = 'popular';
       applyFilters();
     };
 
-    // Load from Supabase Database (100% Dynamic & Synchronized with Admin)
+    // Load from Supabase Database
     async function loadSeedsFromSupabase() {
       try {
         const response = await fetch(`${SUPABASE_URL}/rest/v1/bibit_tanaman?select=*&order=id.asc`, {
@@ -1337,9 +1170,7 @@
           }
         });
 
-        if (!response.ok) {
-          throw new Error(`HTTP Error ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP Error ${response.status}`);
 
         const data = await response.json();
         allSeeds = Array.isArray(data) ? data : [];
@@ -1348,19 +1179,34 @@
         console.error('Koneksi Supabase bibit:', err);
         if (cardsContainer) {
           cardsContainer.innerHTML = `
-            <div class="gt-empty-state show" style="display:block; grid-column: 1 / -1; padding: 48px 16px; text-align: center;">
-              <span class="material-symbols-outlined" style="font-size: 48px; color: #BA1A1A;">cloud_off</span>
-              <h3 style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; margin: 10px 0 6px; color: #1B1C1C;">Koneksi Database Terputus</h3>
-              <p style="font-size: 14px; color: #5F6368; max-width: 440px; margin: 0 auto 18px;">Tidak dapat mengambil data bibit dari Supabase database. Silakan periksa koneksi internet Anda.</p>
-              <button onclick="loadSeedsFromSupabase()" style="padding: 10px 24px; border-radius: 30px; background: #0D631B; color: #FFFFFF; border: none; cursor: pointer; font-weight: 600; font-size: 13px;">
-                Coba Muat Ulang
+            <div class="gt-empty-state show">
+              <span class="material-symbols-outlined" style="font-size:44px; color:#DC2626;">cloud_off</span>
+              <h3 style="font-family:'Outfit',sans-serif; font-size:18px; font-weight:700; margin:8px 0 4px;">Koneksi Database Terputus</h3>
+              <p style="font-size:13.5px; color:#6B7280; max-width:380px; margin:0 auto 16px;">Gagal memuat data dari database. Silakan periksa koneksi internet.</p>
+              <button onclick="loadSeedsFromSupabase()" style="padding:8px 20px; border-radius:9999px; background:#0D631B; color:#FFFFFF; border:none; cursor:pointer; font-weight:600; font-size:13px;">
+                Muat Ulang
               </button>
             </div>
           `;
         }
-        if (visibleCountEl) visibleCountEl.innerText = '0';
-        if (totalCountEl) totalCountEl.innerText = '0';
       }
+    }
+
+    // Accordion Toggle for Calculator
+    const calcToggleBtn = document.getElementById('calcToggleBtn');
+    const calcBody = document.getElementById('calcBody');
+    const calcToggleIcon = document.getElementById('calcToggleIcon');
+    if (calcToggleBtn && calcBody && calcToggleIcon) {
+      calcToggleBtn.addEventListener('click', () => {
+        const isOpen = calcBody.classList.contains('open');
+        if (isOpen) {
+          calcBody.classList.remove('open');
+          calcToggleIcon.style.transform = 'rotate(0deg)';
+        } else {
+          calcBody.classList.add('open');
+          calcToggleIcon.style.transform = 'rotate(180deg)';
+        }
+      });
     }
 
     // Seed Quantity Calculator Logic
@@ -1389,15 +1235,15 @@
       if (resWeight && resWeightUnit) {
         if (totalGramsNeeded >= 1000) {
           resWeight.innerText = (totalGramsNeeded / 1000).toFixed(2);
-          resWeightUnit.innerText = 'Kilogram (Kg)';
+          resWeightUnit.innerText = 'Kg';
         } else {
           resWeight.innerText = totalGramsNeeded < 1 ? totalGramsNeeded.toFixed(2) : totalGramsNeeded.toFixed(1);
           resWeightUnit.innerText = 'Gram';
         }
       }
 
-      if (resPopulation) resPopulation.innerText = `Estimasi ±${totalPop.toLocaleString('id-ID')} lubang tanam`;
-      if (resPacks) resPacks.innerText = `${packsNeeded} Sachet`;
+      if (resPopulation) resPopulation.innerText = `±${totalPop.toLocaleString('id-ID')} lubang tanam`;
+      if (resPacks) resPacks.innerText = `${packsNeeded} Sachet Reguler`;
     }
 
     if (cropSelect) cropSelect.addEventListener('change', calculateSeedRequirement);
@@ -1405,8 +1251,6 @@
     if (areaInput) areaInput.addEventListener('input', calculateSeedRequirement);
 
     calculateSeedRequirement();
-    
-    // Inisialisasi Memuat Data Supabase
     loadSeedsFromSupabase();
   })();
 </script>

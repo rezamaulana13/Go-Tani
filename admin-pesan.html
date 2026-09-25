@@ -1,135 +1,1446 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="web_dashboard" name="shell-type"/>
-  <title>Go-Tani Admin - Pesan & Konsultasi Petani</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "surface-container-highest": "#e5e2e1",
-            "tertiary": "#1f6223",
-            "tertiary-fixed-dim": "#91d78a",
-            "error-container": "#ffdad6",
-            "error": "#ba1a1a",
-            "on-error": "#ffffff",
-            "on-primary-fixed": "#002204",
-            "on-secondary-fixed": "#002105",
-            "on-secondary-fixed-variant": "#005318",
-            "secondary-fixed": "#9ff79f",
-            "on-surface-variant": "#40493d",
-            "on-tertiary-fixed-variant": "#0c5216",
-            "primary": "#0d631b",
-            "surface-tint": "#1b6d24",
-            "on-error-container": "#93000a",
-            "on-secondary-container": "#19722b",
-            "outline": "#707a6c",
-            "surface-container-high": "#eae7e7",
-            "surface-bright": "#fcf9f8",
-            "on-secondary": "#ffffff",
-            "primary-container": "#2e7d32",
-            "secondary-fixed-dim": "#83da85",
-            "tertiary-container": "#3a7b39",
-            "surface": "#fcf9f8",
-            "surface-container-lowest": "#ffffff",
-            "on-tertiary-container": "#c8ffbf",
-            "secondary-container": "#9cf49c",
-            "on-tertiary-fixed": "#002203",
-            "inverse-primary": "#88d982",
-            "on-background": "#1b1c1c",
-            "background": "#fcf9f8",
-            "surface-container": "#f0eded",
-            "surface-variant": "#e5e2e1",
-            "outline-variant": "#bfcaba",
-            "surface-dim": "#dcd9d9",
-            "surface-container-low": "#f6f3f2",
-            "on-primary-fixed-variant": "#005312",
-            "on-tertiary": "#ffffff",
-            "on-primary": "#ffffff",
-            "secondary": "#126d27",
-            "primary-fixed-dim": "#88d982",
-            "on-primary-container": "#cbffc2",
-            "primary-fixed": "#a3f69c",
-            "inverse-surface": "#303030",
-            "tertiary-fixed": "#acf4a4",
-            "inverse-on-surface": "#f3f0ef",
-            "on-surface": "#1b1c1c"
-          },
-          fontFamily: {
-            "headline-xl": ["Outfit", "sans-serif"],
-            "headline-lg": ["Outfit", "sans-serif"],
-            "headline-md": ["Outfit", "sans-serif"],
-            "headline-sm": ["Outfit", "sans-serif"],
-            "title-md": ["Outfit", "sans-serif"],
-            "body-lg": ["Inter", "sans-serif"],
-            "body-md": ["Inter", "sans-serif"],
-            "body-sm": ["Inter", "sans-serif"],
-            "label-md": ["Inter", "sans-serif"],
-            "label-sm": ["Inter", "sans-serif"]
-          },
-          spacing: {
-            "space-xs": "0.25rem",
-            "space-sm": "0.5rem",
-            "space-md": "1rem",
-            "space-lg": "1.5rem",
-            "space-xl": "2.5rem"
-          }
-        }
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <title>Go-Tani Admin - Pesan & Konsultasi Petani</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+
+  <style id="tw-compiled">
+    *,
+    :after,
+    :before {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgba(59, 130, 246, .5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgba(59, 130, 246, .5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
+
+    /*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+      border: 0 solid #e5e7eb
+    }
+
+    :after,
+    :before {
+      --tw-content: ""
+    }
+
+    :host,
+    html {
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+      font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      -webkit-tap-highlight-color: transparent
+    }
+
+    body {
+      margin: 0;
+      line-height: inherit
+    }
+
+    hr {
+      height: 0;
+      color: inherit;
+      border-top-width: 1px
+    }
+
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit
+    }
+
+    b,
+    strong {
+      font-weight: bolder
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      font-size: 1em
+    }
+
+    small {
+      font-size: 80%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sub {
+      bottom: -.25em
+    }
+
+    sup {
+      top: -.5em
+    }
+
+    table {
+      text-indent: 0;
+      border-color: inherit;
+      border-collapse: collapse
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      margin: 0;
+      padding: 0
+    }
+
+    button,
+    select {
+      text-transform: none
+    }
+
+    button,
+    input:where([type=button]),
+    input:where([type=reset]),
+    input:where([type=submit]) {
+      -webkit-appearance: button;
+      appearance: button;
+      background-color: transparent;
+      background-image: none
+    }
+
+    :-moz-focusring {
+      outline: auto
+    }
+
+    :-moz-ui-invalid {
+      box-shadow: none
+    }
+
+    progress {
+      vertical-align: baseline
+    }
+
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto
+    }
+
+    [type=search] {
+      -webkit-appearance: textfield;
+      appearance: textfield;
+      outline-offset: -2px
+    }
+
+    ::-webkit-search-decoration {
+      -webkit-appearance: none;
+      appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      appearance: button;
+      font: inherit
+    }
+
+    summary {
+      display: list-item
+    }
+
+    blockquote,
+    dd,
+    dl,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    pre {
+      margin: 0
+    }
+
+    fieldset {
+      margin: 0
+    }
+
+    fieldset,
+    legend {
+      padding: 0
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    dialog {
+      padding: 0
+    }
+
+    textarea {
+      resize: vertical
+    }
+
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+      opacity: 1;
+      color: #9ca3af
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      color: #9ca3af
+    }
+
+    [role=button],
+    button {
+      cursor: pointer
+    }
+
+    :disabled {
+      cursor: default
+    }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+      display: block
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto
+    }
+
+    [hidden]:where(:not([hidden=until-found])) {
+      display: none
+    }
+
+    .\!container {
+      width: 100% !important
+    }
+
+    .container {
+      width: 100%
+    }
+
+    @media (min-width:640px) {
+      .\!container {
+        max-width: 640px !important
       }
-    };
-  </script>
+
+      .container {
+        max-width: 640px
+      }
+    }
+
+    @media (min-width:768px) {
+      .\!container {
+        max-width: 768px !important
+      }
+
+      .container {
+        max-width: 768px
+      }
+    }
+
+    @media (min-width:1024px) {
+      .\!container {
+        max-width: 1024px !important
+      }
+
+      .container {
+        max-width: 1024px
+      }
+    }
+
+    @media (min-width:1280px) {
+      .\!container {
+        max-width: 1280px !important
+      }
+
+      .container {
+        max-width: 1280px
+      }
+    }
+
+    @media (min-width:1536px) {
+      .\!container {
+        max-width: 1536px !important
+      }
+
+      .container {
+        max-width: 1536px
+      }
+    }
+
+    .pointer-events-none {
+      pointer-events: none
+    }
+
+    .pointer-events-auto {
+      pointer-events: auto
+    }
+
+    .visible {
+      visibility: visible
+    }
+
+    .fixed {
+      position: fixed
+    }
+
+    .absolute {
+      position: absolute
+    }
+
+    .relative {
+      position: relative
+    }
+
+    .sticky {
+      position: sticky
+    }
+
+    .inset-0 {
+      inset: 0
+    }
+
+    .left-0 {
+      left: 0
+    }
+
+    .left-3\.5 {
+      left: .875rem
+    }
+
+    .right-0 {
+      right: 0
+    }
+
+    .right-5 {
+      right: 1.25rem
+    }
+
+    .top-0 {
+      top: 0
+    }
+
+    .top-5 {
+      top: 1.25rem
+    }
+
+    .z-30 {
+      z-index: 30
+    }
+
+    .z-40 {
+      z-index: 40
+    }
+
+    .z-50 {
+      z-index: 50
+    }
+
+    .z-\[100\] {
+      z-index: 100
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .mb-space-lg {
+      margin-bottom: 1.5rem
+    }
+
+    .mb-space-md {
+      margin-bottom: 1rem
+    }
+
+    .mr-2 {
+      margin-right: .5rem
+    }
+
+    .mt-0\.5 {
+      margin-top: .125rem
+    }
+
+    .mt-1 {
+      margin-top: .25rem
+    }
+
+    .mt-2 {
+      margin-top: .5rem
+    }
+
+    .mt-space-xs {
+      margin-top: .25rem
+    }
+
+    .inline-block {
+      display: inline-block
+    }
+
+    .flex {
+      display: flex
+    }
+
+    .hidden {
+      display: none
+    }
+
+    .h-1\.5 {
+      height: .375rem
+    }
+
+    .h-10 {
+      height: 2.5rem
+    }
+
+    .h-11 {
+      height: 2.75rem
+    }
+
+    .h-12 {
+      height: 3rem
+    }
+
+    .h-20 {
+      height: 5rem
+    }
+
+    .h-6 {
+      height: 1.5rem
+    }
+
+    .h-9 {
+      height: 2.25rem
+    }
+
+    .h-full {
+      height: 100%
+    }
+
+    .max-h-\[calc\(100vh-220px\)\] {
+      max-height: calc(100vh - 220px)
+    }
+
+    .min-h-screen {
+      min-height: 100vh
+    }
+
+    .w-10 {
+      width: 2.5rem
+    }
+
+    .w-12 {
+      width: 3rem
+    }
+
+    .w-2\/3 {
+      width: 66.666667%
+    }
+
+    .w-6 {
+      width: 1.5rem
+    }
+
+    .w-72 {
+      width: 18rem
+    }
+
+    .w-9 {
+      width: 2.25rem
+    }
+
+    .w-full {
+      width: 100%
+    }
+
+    .max-w-7xl {
+      max-width: 80rem
+    }
+
+    .max-w-sm {
+      max-width: 24rem
+    }
+
+    .max-w-xl {
+      max-width: 36rem
+    }
+
+    .flex-1 {
+      flex: 1 1 0%
+    }
+
+    .-translate-x-full {
+      --tw-translate-x: -100%
+    }
+
+    .-translate-x-full,
+    .translate-y-\[-10px\] {
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    .translate-y-\[-10px\] {
+      --tw-translate-y: -10px
+    }
+
+    .transform {
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(1turn)
+      }
+    }
+
+    .animate-spin {
+      animation: spin 1s linear infinite
+    }
+
+    .flex-col {
+      flex-direction: column
+    }
+
+    .items-center {
+      align-items: center
+    }
+
+    .justify-center {
+      justify-content: center
+    }
+
+    .justify-between {
+      justify-content: space-between
+    }
+
+    .gap-1\.5 {
+      gap: .375rem
+    }
+
+    .gap-2 {
+      gap: .5rem
+    }
+
+    .gap-3 {
+      gap: .75rem
+    }
+
+    .gap-4,
+    .gap-space-md {
+      gap: 1rem
+    }
+
+    .gap-space-sm {
+      gap: .5rem
+    }
+
+    .overflow-y-auto {
+      overflow-y: auto
+    }
+
+    .whitespace-pre-wrap {
+      white-space: pre-wrap
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem
+    }
+
+    .rounded-3xl {
+      border-radius: 1.5rem
+    }
+
+    .rounded-full {
+      border-radius: 9999px
+    }
+
+    .rounded-lg {
+      border-radius: .5rem
+    }
+
+    .rounded-xl {
+      border-radius: .75rem
+    }
+
+    .border {
+      border-width: 1px
+    }
+
+    .border-2 {
+      border-width: 2px
+    }
+
+    .border-b {
+      border-bottom-width: 1px
+    }
+
+    .border-t {
+      border-top-width: 1px
+    }
+
+    .border-outline-variant\/30 {
+      border-color: rgba(191, 202, 186, .3)
+    }
+
+    .border-outline-variant\/40 {
+      border-color: rgba(191, 202, 186, .4)
+    }
+
+    .border-primary {
+      --tw-border-opacity: 1;
+      border-color: rgb(13 99 27/var(--tw-border-opacity, 1))
+    }
+
+    .border-primary\/40 {
+      border-color: rgba(13, 99, 27, .4)
+    }
+
+    .border-t-transparent {
+      border-top-color: transparent
+    }
+
+    .bg-black\/40 {
+      background-color: rgba(0, 0, 0, .4)
+    }
+
+    .bg-error {
+      --tw-bg-opacity: 1;
+      background-color: rgb(186 26 26/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-error-container {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 218 214/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-error-container\/60 {
+      background-color: hsla(6, 100%, 92%, .6)
+    }
+
+    .bg-primary {
+      --tw-bg-opacity: 1;
+      background-color: rgb(13 99 27/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-primary-container {
+      --tw-bg-opacity: 1;
+      background-color: rgb(46 125 50/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-secondary-container {
+      --tw-bg-opacity: 1;
+      background-color: rgb(156 244 156/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-surface {
+      --tw-bg-opacity: 1;
+      background-color: rgb(252 249 248/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-surface-container {
+      --tw-bg-opacity: 1;
+      background-color: rgb(240 237 237/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-surface-container-highest {
+      --tw-bg-opacity: 1;
+      background-color: rgb(229 226 225/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-surface-container-low {
+      --tw-bg-opacity: 1;
+      background-color: rgb(246 243 242/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-surface-container-low\/60 {
+      background-color: hsla(15, 18%, 96%, .6)
+    }
+
+    .bg-surface-container-lowest {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255/var(--tw-bg-opacity, 1))
+    }
+
+    .bg-surface\/90 {
+      background-color: hsla(15, 40%, 98%, .9)
+    }
+
+    .bg-gradient-to-r {
+      background-image: linear-gradient(to right, var(--tw-gradient-stops))
+    }
+
+    .from-surface-container-low\/40 {
+      --tw-gradient-from: hsla(15, 18%, 96%, .4) var(--tw-gradient-from-position);
+      --tw-gradient-to: hsla(15, 18%, 96%, 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .to-surface-container-lowest {
+      --tw-gradient-to: #fff var(--tw-gradient-to-position)
+    }
+
+    .p-1\.5 {
+      padding: .375rem
+    }
+
+    .p-2 {
+      padding: .5rem
+    }
+
+    .p-2\.5 {
+      padding: .625rem
+    }
+
+    .p-3 {
+      padding: .75rem
+    }
+
+    .p-4 {
+      padding: 1rem
+    }
+
+    .p-5 {
+      padding: 1.25rem
+    }
+
+    .p-6 {
+      padding: 1.5rem
+    }
+
+    .p-space-md {
+      padding: 1rem
+    }
+
+    .px-2 {
+      padding-left: .5rem;
+      padding-right: .5rem
+    }
+
+    .px-3 {
+      padding-left: .75rem;
+      padding-right: .75rem
+    }
+
+    .px-3\.5 {
+      padding-left: .875rem;
+      padding-right: .875rem
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem
+    }
+
+    .px-space-lg {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+    }
+
+    .px-space-md {
+      padding-left: 1rem;
+      padding-right: 1rem
+    }
+
+    .px-space-sm {
+      padding-left: .5rem;
+      padding-right: .5rem
+    }
+
+    .py-0\.5 {
+      padding-top: .125rem;
+      padding-bottom: .125rem
+    }
+
+    .py-1\.5 {
+      padding-top: .375rem;
+      padding-bottom: .375rem
+    }
+
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem
+    }
+
+    .py-2 {
+      padding-top: .5rem;
+      padding-bottom: .5rem
+    }
+
+    .py-2\.5 {
+      padding-top: .625rem;
+      padding-bottom: .625rem
+    }
+
+    .py-3 {
+      padding-top: .75rem;
+      padding-bottom: .75rem
+    }
+
+    .py-space-lg {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem
+    }
+
+    .py-space-sm {
+      padding-top: .5rem;
+      padding-bottom: .5rem
+    }
+
+    .py-space-xs {
+      padding-top: .25rem;
+      padding-bottom: .25rem
+    }
+
+    .pl-1 {
+      padding-left: .25rem
+    }
+
+    .pl-11 {
+      padding-left: 2.75rem
+    }
+
+    .pr-4 {
+      padding-right: 1rem
+    }
+
+    .pt-1 {
+      padding-top: .25rem
+    }
+
+    .pt-20 {
+      padding-top: 5rem
+    }
+
+    .text-left {
+      text-align: left
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .align-middle {
+      vertical-align: middle
+    }
+
+    .font-body-md {
+      font-family: Inter, sans-serif
+    }
+
+    .font-headline-md,
+    .font-headline-sm {
+      font-family: Outfit, sans-serif
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem
+    }
+
+    .text-\[11px\] {
+      font-size: 11px
+    }
+
+    .text-\[16px\] {
+      font-size: 16px
+    }
+
+    .text-\[18px\] {
+      font-size: 18px
+    }
+
+    .text-\[20px\] {
+      font-size: 20px
+    }
+
+    .text-\[24px\] {
+      font-size: 24px
+    }
+
+    .text-\[28px\] {
+      font-size: 28px
+    }
+
+    .text-base {
+      font-size: 1rem;
+      line-height: 1.5rem
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem
+    }
+
+    .text-sm {
+      font-size: .875rem;
+      line-height: 1.25rem
+    }
+
+    .text-xs {
+      font-size: .75rem;
+      line-height: 1rem
+    }
+
+    .font-bold {
+      font-weight: 700
+    }
+
+    .font-medium {
+      font-weight: 500
+    }
+
+    .font-semibold {
+      font-weight: 600
+    }
+
+    .uppercase {
+      text-transform: uppercase
+    }
+
+    .leading-none {
+      line-height: 1
+    }
+
+    .leading-relaxed {
+      line-height: 1.625
+    }
+
+    .leading-tight {
+      line-height: 1.25
+    }
+
+    .tracking-tight {
+      letter-spacing: -.025em
+    }
+
+    .tracking-wider {
+      letter-spacing: .05em
+    }
+
+    .text-error {
+      --tw-text-opacity: 1;
+      color: rgb(186 26 26/var(--tw-text-opacity, 1))
+    }
+
+    .text-on-error {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255/var(--tw-text-opacity, 1))
+    }
+
+    .text-on-error-container {
+      --tw-text-opacity: 1;
+      color: rgb(147 0 10/var(--tw-text-opacity, 1))
+    }
+
+    .text-on-primary {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255/var(--tw-text-opacity, 1))
+    }
+
+    .text-on-primary-container {
+      --tw-text-opacity: 1;
+      color: rgb(203 255 194/var(--tw-text-opacity, 1))
+    }
+
+    .text-on-secondary-container {
+      --tw-text-opacity: 1;
+      color: rgb(25 114 43/var(--tw-text-opacity, 1))
+    }
+
+    .text-on-surface {
+      --tw-text-opacity: 1;
+      color: rgb(27 28 28/var(--tw-text-opacity, 1))
+    }
+
+    .text-on-surface-variant {
+      --tw-text-opacity: 1;
+      color: rgb(64 73 61/var(--tw-text-opacity, 1))
+    }
+
+    .text-outline {
+      --tw-text-opacity: 1;
+      color: rgb(112 122 108/var(--tw-text-opacity, 1))
+    }
+
+    .text-primary {
+      --tw-text-opacity: 1;
+      color: rgb(13 99 27/var(--tw-text-opacity, 1))
+    }
+
+    .antialiased {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
+    }
+
+    .opacity-0 {
+      opacity: 0
+    }
+
+    .shadow-2xl {
+      --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
+      --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color)
+    }
+
+    .shadow-2xl,
+    .shadow-\[0_1px_8px_rgba\(0\2c 0\2c 0\2c 0\.04\)\] {
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-\[0_1px_8px_rgba\(0\2c 0\2c 0\2c 0\.04\)\] {
+      --tw-shadow: 0 1px 8px rgba(0, 0, 0, .04);
+      --tw-shadow-colored: 0 1px 8px var(--tw-shadow-color)
+    }
+
+    .shadow-md {
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color)
+    }
+
+    .shadow-md,
+    .shadow-sm {
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-sm {
+      --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+      --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color)
+    }
+
+    .shadow-xl {
+      --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .outline-none {
+      outline: 2px solid transparent;
+      outline-offset: 2px
+    }
+
+    .outline {
+      outline-style: solid
+    }
+
+    .filter {
+      filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+
+    .backdrop-blur-sm {
+      --tw-backdrop-blur: blur(4px)
+    }
+
+    .backdrop-blur-sm,
+    .backdrop-blur-xl {
+      -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+    }
+
+    .backdrop-blur-xl {
+      --tw-backdrop-blur: blur(24px)
+    }
+
+    .transition {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s
+    }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s
+    }
+
+    .transition-colors {
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s
+    }
+
+    .transition-transform {
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+      transition-duration: .15s
+    }
+
+    .duration-300 {
+      transition-duration: .3s
+    }
+
+    .placeholder\:text-outline::-moz-placeholder {
+      --tw-text-opacity: 1;
+      color: rgb(112 122 108/var(--tw-text-opacity, 1))
+    }
+
+    .placeholder\:text-outline::placeholder {
+      --tw-text-opacity: 1;
+      color: rgb(112 122 108/var(--tw-text-opacity, 1))
+    }
+
+    .hover\:bg-error-container:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 218 214/var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-red-700:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(185 28 28/var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-surface-container:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(240 237 237/var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-surface-container-high:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(234 231 231/var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-surface-dim:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(220 217 217/var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-tertiary:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(31 98 35/var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:text-error:hover {
+      --tw-text-opacity: 1;
+      color: rgb(186 26 26/var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-on-surface:hover {
+      --tw-text-opacity: 1;
+      color: rgb(27 28 28/var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-primary:hover {
+      --tw-text-opacity: 1;
+      color: rgb(13 99 27/var(--tw-text-opacity, 1))
+    }
+
+    .focus\:ring-2:focus {
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+    }
+
+    .focus\:ring-primary\/20:focus {
+      --tw-ring-color: rgba(13, 99, 27, .2)
+    }
+
+    @media (min-width:640px) {
+      .sm\:flex {
+        display: flex
+      }
+
+      .sm\:flex-row {
+        flex-direction: row
+      }
+
+      .sm\:items-center {
+        align-items: center
+      }
+
+      .sm\:justify-between {
+        justify-content: space-between
+      }
+
+      .sm\:px-space-lg {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+      }
+    }
+
+    @media (min-width:768px) {
+      .md\:flex {
+        display: flex
+      }
+    }
+
+    @media (min-width:1024px) {
+      .lg\:left-72 {
+        left: 18rem
+      }
+
+      .lg\:hidden {
+        display: none
+      }
+
+      .lg\:translate-x-0 {
+        --tw-translate-x: 0px;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+      }
+
+      .lg\:pl-72 {
+        padding-left: 18rem
+      }
+    }
+  </style>
 
   <style>
-    header.sticky, 
+    header.sticky,
     nav#navMenu,
     footer,
     .gt-footer,
     #homeLandingWrapper,
-    #mainNavbar, #mainFooter, .navbar, .footer, .blog-pager, .comments, #header, #footer {
+    #mainNavbar,
+    #mainFooter,
+    .navbar,
+    .footer,
+    .blog-pager,
+    .comments,
+    #header,
+    #footer {
       display: none !important;
     }
-    html, body {
+
+    html,
+    body {
       margin: 0 !important;
       padding: 0 !important;
       background-color: #fcf9f8 !important;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: #f0eded; }
-    ::-webkit-scrollbar-thumb { background: #bfcaba; border-radius: 9999px; }
-    ::-webkit-scrollbar-thumb:hover { background: #707a6c; }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f0eded;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #bfcaba;
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #707a6c;
+    }
+
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       vertical-align: middle;
     }
-    .modal-backdrop { transition: opacity 0.2s ease, visibility 0.2s ease; }
-    .modal-backdrop.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-    .modal-backdrop:not(.hidden) { opacity: 1; visibility: visible; pointer-events: auto; }
-    .modal-dialog { transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease; }
-    .modal-backdrop.hidden .modal-dialog { transform: translateY(16px) scale(0.97); opacity: 0; }
-    .modal-backdrop:not(.hidden) .modal-dialog { transform: translateY(0) scale(1); opacity: 1; }
+
+    .modal-backdrop {
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
+    .modal-backdrop.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .modal-backdrop:not(.hidden) {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .modal-dialog {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    }
+
+    .modal-backdrop.hidden .modal-dialog {
+      transform: translateY(16px) scale(0.97);
+      opacity: 0;
+    }
+
+    .modal-backdrop:not(.hidden) .modal-dialog {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
   </style>
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased">
   <div id="toast-container" class="fixed top-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
-  <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden lg:hidden"></div>
+  <div id="sidebar-backdrop" onclick="toggleMobileSidebar(false)"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden lg:hidden"></div>
 
   <!-- SIDEBAR -->
-  <aside id="sidebar" class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] -translate-x-full lg:translate-x-0 transition-transform duration-300">
+  <aside id="sidebar"
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] -translate-x-full lg:translate-x-0 transition-transform duration-300">
     <div class="flex flex-col">
-      <div class="h-20 px-space-lg flex items-center justify-between bg-surface-container-low border-b border-outline-variant/30">
+      <div
+        class="h-20 px-space-lg flex items-center justify-between bg-surface-container-low border-b border-outline-variant/30">
         <a href="/" class="flex items-center gap-space-sm text-decoration-none">
           <div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-sm">
             <span class="material-symbols-outlined text-[24px]">potted_plant</span>
@@ -139,7 +1450,8 @@
             <span class="text-xs text-on-surface-variant font-medium mt-1">Supabase Console</span>
           </div>
         </a>
-        <button onclick="toggleMobileSidebar(false)" class="lg:hidden p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container">
+        <button onclick="toggleMobileSidebar(false)"
+          class="lg:hidden p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container">
           <span class="material-symbols-outlined text-[20px]">close</span>
         </button>
       </div>
@@ -149,47 +1461,40 @@
           <span class="text-xs uppercase tracking-wider text-outline font-semibold">Database Tables & Ops</span>
         </div>
         <nav class="mt-space-xs flex flex-col gap-1.5">
-          <a id="nav-link-dashboard" href="admin-dashboard.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+          <a id="nav-link-dashboard" href="admin-dashboard.html"
+            class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
             <div class="flex items-center gap-3">
               <span class="material-symbols-outlined text-[20px]">space_dashboard</span>
               <span>Ringkasan & Overview</span>
             </div>
           </a>
 
-          <a id="nav-link-bibit" href="admin-bibit.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+          <a id="nav-link-bibit" href="admin-bibit.html"
+            class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
             <div class="flex items-center gap-3">
               <span class="material-symbols-outlined text-[20px]">potted_plant</span>
               <span>Bibit Tanaman</span>
             </div>
-            <span id="badge-nav-bibit" class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">...</span>
+            <span id="badge-nav-bibit"
+              class="text-xs bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">...</span>
           </a>
 
           <!-- Active: Pesan & Konsultasi -->
-          <a id="nav-link-pesan" href="admin-pesan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm text-sm">
+          <a id="nav-link-pesan" href="admin-pesan.html"
+            class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm text-sm">
             <div class="flex items-center gap-3">
               <span class="material-symbols-outlined text-[20px]">mark_chat_unread</span>
               <span>Pesan & Konsultasi</span>
             </div>
-            <span id="badge-nav-pesan" class="text-xs bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-semibold">0 Baru</span>
+            <span id="badge-nav-pesan"
+              class="text-xs bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-semibold">0
+              Baru</span>
           </a>
 
-          <a id="nav-link-blog" href="admin-blog.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-[20px]">article</span>
-              <span>Artikel & Blog Posts</span>
-            </div>
-            <span id="badge-nav-blog" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">0</span>
-          </a>
 
-          <a id="nav-link-layanan" href="admin-layanan.html" class="w-full flex items-center justify-between px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-[20px]">agriculture</span>
-              <span>Layanan & Fitur</span>
-            </div>
-            <span id="badge-nav-layanan" class="text-xs bg-surface-container-highest text-on-surface px-2 py-0.5 rounded-full font-semibold">0</span>
-          </a>
 
-          <a id="nav-link-sql" href="admin-sql.html" class="w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
+          <a id="nav-link-sql" href="admin-sql.html"
+            class="w-full flex items-center gap-3 px-space-md py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all text-sm font-medium">
             <span class="material-symbols-outlined text-[20px]">terminal</span>
             <span>SQL Editor & RLS</span>
           </a>
@@ -213,7 +1518,8 @@
         <span class="text-[11px] text-on-surface-variant">Storage: 1.4 GB / 8.0 GB</span>
       </div>
 
-      <button onclick="handleLogout()" class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-error-container/60 hover:bg-error-container text-error transition-all text-xs font-semibold">
+      <button onclick="handleLogout()"
+        class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-error-container/60 hover:bg-error-container text-error transition-all text-xs font-semibold">
         <span class="material-symbols-outlined text-[18px]">logout</span>
         <span>Keluar dari Admin</span>
       </button>
@@ -222,19 +1528,24 @@
 
   <!-- MAIN CONTENT -->
   <div class="lg:pl-72 flex flex-col min-h-screen">
-    <header class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-30 border-b border-outline-variant/30 px-space-lg flex items-center justify-between gap-space-md">
+    <header
+      class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-30 border-b border-outline-variant/30 px-space-lg flex items-center justify-between gap-space-md">
       <div class="flex items-center gap-3 flex-1 max-w-xl">
-        <button onclick="toggleMobileSidebar(true)" class="lg:hidden p-2 rounded-full hover:bg-surface-container text-on-surface">
+        <button onclick="toggleMobileSidebar(true)"
+          class="lg:hidden p-2 rounded-full hover:bg-surface-container text-on-surface">
           <span class="material-symbols-outlined text-[24px]">menu</span>
         </button>
         <div class="relative w-full flex items-center">
           <span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px]">search</span>
-          <input id="search-input" oninput="renderPesanList()" class="w-full h-11 pl-11 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline text-sm rounded-full outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/40 transition-all" placeholder="Cari nama pengirim, email, atau isi pesan..." type="text"/>
+          <input id="search-input" oninput="renderPesanList()"
+            class="w-full h-11 pl-11 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline text-sm rounded-full outline-none focus:ring-2 focus:ring-primary/20 border border-outline-variant/40 transition-all"
+            placeholder="Cari nama pengirim, email, atau isi pesan..." type="text" />
         </div>
       </div>
 
       <div class="flex items-center gap-space-md">
-        <a href="page-kontak.html" target="_blank" class="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all text-xs font-semibold">
+        <a href="page-kontak.html" target="_blank"
+          class="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all text-xs font-semibold">
           <span class="material-symbols-outlined text-[16px]">visibility</span>
           <span>Buka Form Kontak User</span>
         </a>
@@ -243,7 +1554,8 @@
             <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
           </div>
           <div class="hidden md:flex flex-col text-left">
-            <span id="admin-display-name" class="text-sm font-semibold text-on-surface leading-tight">Admin Agronomis</span>
+            <span id="admin-display-name" class="text-sm font-semibold text-on-surface leading-tight">Admin
+              Agronomis</span>
             <span id="admin-display-email" class="text-xs text-primary font-medium leading-tight">admin@gotani.id</span>
           </div>
         </div>
@@ -255,14 +1567,18 @@
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-space-lg">
           <div>
             <h2 class="font-headline-md font-bold text-2xl text-on-surface">Pesan & Konsultasi Petani</h2>
-            <p class="text-sm text-on-surface-variant mt-0.5">Pertanyaan, pemesanan bibit, dan permohonan konsultasi dari formulir kontak website Go-Tani.</p>
+            <p class="text-sm text-on-surface-variant mt-0.5">Pertanyaan, pemesanan bibit, dan permohonan konsultasi
+              dari formulir kontak website Go-Tani.</p>
           </div>
           <div class="flex items-center gap-2">
-            <button onclick="markAllPesanAsRead()" class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold transition-all">
+            <button onclick="markAllPesanAsRead()"
+              class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold transition-all">
               <span class="material-symbols-outlined text-[18px]">done_all</span>
               <span>Tandai Semua Dibaca</span>
             </button>
-            <button onclick="loadPesanData()" class="p-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" title="Refresh Pesan">
+            <button onclick="loadPesanData()"
+              class="p-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-all"
+              title="Refresh Pesan">
               <span class="material-symbols-outlined text-[18px]">sync</span>
             </button>
           </div>
@@ -270,21 +1586,27 @@
 
         <!-- Filter Status Tabs -->
         <div class="flex items-center gap-2 mb-space-md">
-          <button onclick="setFilterStatus('all')" id="btn-filter-all" class="px-4 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold shadow-sm transition-all">
+          <button onclick="setFilterStatus('all')" id="btn-filter-all"
+            class="px-4 py-2 rounded-full bg-primary text-on-primary text-xs font-semibold shadow-sm transition-all">
             Semua Pesan (<span id="count-all">0</span>)
           </button>
-          <button onclick="setFilterStatus('unread')" id="btn-filter-unread" class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-xs font-semibold transition-all">
+          <button onclick="setFilterStatus('unread')" id="btn-filter-unread"
+            class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-xs font-semibold transition-all">
             Belum Dibaca (<span id="count-unread">0</span>)
           </button>
-          <button onclick="setFilterStatus('read')" id="btn-filter-read" class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-xs font-semibold transition-all">
+          <button onclick="setFilterStatus('read')" id="btn-filter-read"
+            class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high text-xs font-semibold transition-all">
             Sudah Dibaca (<span id="count-read">0</span>)
           </button>
         </div>
 
         <!-- Messages List Container -->
         <div id="pesan-container" class="flex flex-col gap-3">
-          <div class="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 text-on-surface-variant text-sm">
-            <div class="inline-block animate-spin rounded-full h-6 w-6 border-2 border-primary border-t-transparent mr-2 align-middle"></div>
+          <div
+            class="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 text-on-surface-variant text-sm">
+            <div
+              class="inline-block animate-spin rounded-full h-6 w-6 border-2 border-primary border-t-transparent mr-2 align-middle">
+            </div>
             Memuat pesan masuk dari Supabase...
           </div>
         </div>
@@ -293,8 +1615,10 @@
   </div>
 
   <!-- MODAL: Confirm Delete -->
-  <div id="modal-confirm-delete" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
-    <div class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-sm w-full p-6 shadow-2xl flex flex-col items-center text-center gap-3">
+  <div id="modal-confirm-delete"
+    class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm hidden">
+    <div
+      class="modal-dialog bg-surface-container-lowest rounded-3xl max-w-sm w-full p-6 shadow-2xl flex flex-col items-center text-center gap-3">
       <div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center">
         <span class="material-symbols-outlined text-[28px]">delete_forever</span>
       </div>
@@ -303,10 +1627,12 @@
         Apakah Anda yakin ingin menghapus pesan ini dari database?
       </p>
       <div class="flex items-center gap-2 w-full mt-2">
-        <button onclick="closeModal('modal-confirm-delete')" class="flex-1 py-2.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors">
+        <button onclick="closeModal('modal-confirm-delete')"
+          class="flex-1 py-2.5 rounded-full bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high transition-colors">
           Batal
         </button>
-        <button id="btn-execute-delete" class="flex-1 py-2.5 rounded-full bg-error text-on-error text-xs font-semibold hover:bg-red-700 transition-colors shadow-sm">
+        <button id="btn-execute-delete"
+          class="flex-1 py-2.5 rounded-full bg-error text-on-error text-xs font-semibold hover:bg-red-700 transition-colors shadow-sm">
           Ya, Hapus
         </button>
       </div>
@@ -332,8 +1658,6 @@
         'nav-link-dashboard': 'admin-dashboard',
         'nav-link-bibit': 'admin-bibit',
         'nav-link-pesan': 'admin-pesan',
-        'nav-link-blog': 'admin-blog',
-        'nav-link-layanan': 'admin-layanan',
         'nav-link-sql': 'admin-sql'
       };
       for (const [id, page] of Object.entries(links)) {
@@ -384,8 +1708,8 @@
     }
 
     function getApiHeaders() {
-      const headers = { 
-        'apikey': SUPABASE_ANON_KEY, 
+      const headers = {
+        'apikey': SUPABASE_ANON_KEY,
         'Content-Type': 'application/json',
         'Prefer': 'return=representation'
       };
@@ -455,15 +1779,10 @@
 
     async function loadSidebarBadges() {
       try {
-        const [bibit, blog, layanan] = await Promise.all([
-          apiFetch('bibit_tanaman?select=id').catch(() => []),
-          apiFetch('blog_posts?select=id').catch(() => []),
-          apiFetch('layanan_fitur?select=id').catch(() => [])
-        ]);
-        document.getElementById('badge-nav-bibit').textContent = Array.isArray(bibit) ? bibit.length : 0;
-        document.getElementById('badge-nav-blog').textContent = Array.isArray(blog) ? blog.length : 0;
-        document.getElementById('badge-nav-layanan').textContent = Array.isArray(layanan) ? layanan.length : 6;
-      } catch (e) {}
+        const bibit = await apiFetch('bibit_tanaman?select=id').catch(() => []);
+        const elBibit = document.getElementById('badge-nav-bibit');
+        if (elBibit) elBibit.textContent = Array.isArray(bibit) ? bibit.length : 0;
+      } catch (e) { }
     }
 
     function setFilterStatus(status) {
@@ -521,11 +1840,8 @@
 
           <div class="flex items-center justify-between pt-1">
             <div class="flex items-center gap-2">
-              <a href="https://wa.me/?text=${encodeURIComponent('Halo ' + p.nama + ', kami dari tim Agronomis Go-Tani merespon pertanyaan Anda: ' + p.pesan)}" target="_blank" class="px-4 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold flex items-center gap-1.5 hover:bg-tertiary transition-all">
+              <a href="https://wa.me/${(p.email || '').replace(/[^0-9]/g, '').replace(/^0/, '62')}?text=${encodeURIComponent('Halo ' + p.nama + ', kami dari tim Go-Tani merespon pesan Anda: ' + p.pesan)}" target="_blank" class="px-4 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold flex items-center gap-1.5 hover:bg-tertiary transition-all">
                 <span class="material-symbols-outlined text-[16px]">chat</span> Balas WhatsApp
-              </a>
-              <a href="mailto:${p.email}?subject=Re: Konsultasi Go-Tani&body=Halo ${p.nama},%0A%0A" class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <span class="material-symbols-outlined text-[16px]">mail</span> Email
               </a>
             </div>
 
@@ -618,4 +1934,5 @@
     }
   </script>
 </body>
+
 </html>
